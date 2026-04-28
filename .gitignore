@@ -1,0 +1,11 @@
+# Ignore downloaded images
+images/
+
+# Ignore Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore system files
+.DS_Store
+Thumbs.db
