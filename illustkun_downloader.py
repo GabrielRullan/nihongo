@@ -3,6 +3,7 @@ import csv
 import time
 import requests
 import sys
+import re
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 
@@ -19,27 +20,31 @@ def get_post_details(post_url):
         soup = BeautifulSoup(response.text, 'html.parser')
         
         full_title = soup.title.string if soup.title else "No Title"
-        image_title = full_title.split('|')[0].strip()
+        image_title = full_title.split('-')[0].strip()
         
-        img_container = soup.select_one('.separator img') or soup.select_one('.post-body img')
-        img_url = img_container['src'] if img_container else None
-        
-        return image_title, img_url
+        img_container = soup.select_one('figure.wp-block-image img') or soup.select_one('.entry-content img') or soup.select_one('article img')
+        if img_container:
+            img_url = img_container.get('src')
+            # Try to get full resolution by removing the dimensions suffix (e.g. -300x300)
+            img_url = re.sub(r'-\d+x\d+(?=\.(png|jpe?g|gif)$)', '', img_url, flags=re.IGNORECASE)
+            return image_title, img_url
+            
+        return image_title, None
     except:
         return "Unknown Title", None
 
-def search_irasutoya(target_word):
+def search_illustkun(target_word):
     """Searches for a word and returns the top 3 post URLs."""
     headers = {"User-Agent": "Mozilla/5.0"}
     encoded_query = quote(target_word)
-    search_url = f"https://www.irasutoya.com/search?q={encoded_query}"
+    search_url = f"https://illustkun.com/?s={encoded_query}"
     
     try:
         response = requests.get(search_url, headers=headers)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        potential_links = soup.select('.boxm h2 a') or soup.select('.post-title a') or soup.select('h2 a')
-        links = [a['href'] for a in potential_links if '/20' in a.get('href', '')]
+        potential_links = soup.select('article a')
+        links = [a.get('href') for a in potential_links if a.get('href')]
         
         # Return top 3 unique links
         seen = set()
@@ -48,7 +53,7 @@ def search_irasutoya(target_word):
             if l not in seen:
                 unique_links.append(l)
                 seen.add(l)
-            if len(unique_links) == 3: break
+            if len(unique_links) == 10: break
             
         return unique_links
     except:
@@ -71,7 +76,7 @@ def download_image(img_url, filename, save_dir="images"):
         return None
 
 def process_workflow(input_path, summary_path="download_summary.csv"):
-    print(f"Processing all 90 verbs. Downloading top 3 options for each...")
+    print(f"Processing all verbs. Downloading top 3 options for each from illustkun...")
     
     data_to_process = []
     with open(input_path, mode='r', encoding='utf-8') as f:
@@ -81,34 +86,53 @@ def process_workflow(input_path, summary_path="download_summary.csv"):
             if row: data_to_process.append(row[0].strip())
 
     final_results = []
+    downloaded_img_urls = set()
     
     for word in data_to_process:
         print(f"\n--- {word} ---", flush=True)
-        links = search_irasutoya(word)
+        links = search_illustkun(word)
         entry = {"Original Word": word}
         
-        for i in range(3):
-            url = links[i] if i < len(links) else None
+        saved_count = 0
+        link_index = 0
+        
+        while saved_count < 3 and link_index < len(links):
+            url = links[link_index]
+            link_index += 1
+            
             title, img_url = get_post_details(url)
             
-            entry[f"Option {i+1} Title"] = title
-            entry[f"Option {i+1} URL"] = url if url else "N/A"
-            
-            if url and img_url:
-                filename = f"{word}-{i+1}"
-                ext = "png" if ".png" in img_url.lower() else "jpg"
-                check_path = os.path.join("images", f"{filename}.{ext}")
+            if not img_url or img_url in downloaded_img_urls:
+                if img_url in downloaded_img_urls:
+                    print(f"  [-] Skipping duplicate image: {title}", flush=True)
+                continue
                 
-                if os.path.exists(check_path):
-                    entry[f"Option {i+1} Path"] = check_path
-                    print(f"  [{i+1}] Skipping (already exists): {title}", flush=True)
-                else:
-                    path = download_image(img_url, filename)
-                    entry[f"Option {i+1} Path"] = path if path else "Failed"
-                    print(f"  [{i+1}] Downloaded: {title}", flush=True)
+            downloaded_img_urls.add(img_url)
+            
+            i = saved_count
+            entry[f"Option {i+1} Title"] = title
+            entry[f"Option {i+1} URL"] = url
+            
+            filename = f"{word}-{i+1}"
+            ext = "png" if ".png" in img_url.lower() else "jpg"
+            check_path = os.path.join("images", f"{filename}.{ext}")
+            
+            if os.path.exists(check_path):
+                entry[f"Option {i+1} Path"] = check_path
+                print(f"  [{i+1}] Skipping (already exists): {title}", flush=True)
             else:
-                entry[f"Option {i+1} Path"] = "N/A"
-                print(f"  [{i+1}] No result found", flush=True)
+                path = download_image(img_url, filename)
+                entry[f"Option {i+1} Path"] = path if path else "Failed"
+                print(f"  [{i+1}] Downloaded: {title}", flush=True)
+                
+            saved_count += 1
+            
+        # Fill remaining options with N/A if less than 3 were found
+        for i in range(saved_count, 3):
+            entry[f"Option {i+1} Title"] = "N/A"
+            entry[f"Option {i+1} URL"] = "N/A"
+            entry[f"Option {i+1} Path"] = "N/A"
+            print(f"  [{i+1}] No result found", flush=True)
                 
         final_results.append(entry)
         # Small delay to be polite

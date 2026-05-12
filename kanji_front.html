@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanji Flashcards - Front</title>
+<style>
+    :root {
+        /* Standard business card size or slightly larger */
+        --card-width: 60mm;
+        --card-height: 80mm;
+        --grid-gap: 0mm;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #f0f0f0;
+        font-family: "Yu Mincho", "MS Mincho", "Hiragino Mincho Pro", serif;
+    }
+    
+    .page {
+        /* A4 dimensions */
+        width: 210mm;
+        min-height: 297mm;
+        padding: 20mm;
+        margin: 10mm auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, var(--card-width));
+        grid-template-rows: repeat(3, var(--card-height));
+        gap: var(--grid-gap);
+    }
+    
+    .card {
+        width: var(--card-width);
+        height: var(--card-height);
+        border: 1px dashed #ccc;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35mm;
+        color: #111;
+        position: relative;
+    }
+    
+    .card-number {
+        position: absolute;
+        top: 3mm;
+        left: 3mm;
+        font-size: 3mm;
+        font-family: sans-serif;
+        color: #aaa;
+    }
+    
+    /* Print specific styling */
+    @media print {
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body { 
+            background: none; 
+            -webkit-print-color-adjust: exact;
+        }
+        .page { 
+            margin: 0; 
+            padding: 0; 
+            box-shadow: none; 
+            width: 210mm; 
+            height: 297mm;
+            min-height: auto;
+        }
+        .card { 
+            border: 0.5px solid #ccc; /* Guidelines for cutting */
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="page">
+        <div class="grid">
+            <!-- Front Cards: 1 to 9 -->
+            <div class="card"><span class="card-number">1</span>一</div>
+            <div class="card"><span class="card-number">2</span>二</div>
+            <div class="card"><span class="card-number">3</span>三</div>
+            
+            <div class="card"><span class="card-number">4</span>四</div>
+            <div class="card"><span class="card-number">5</span>五</div>
+            <div class="card"><span class="card-number">6</span>六</div>
+            
+            <div class="card"><span class="card-number">7</span>七</div>
+            <div class="card"><span class="card-number">8</span>八</div>
+            <div class="card"><span class="card-number">9</span>九</div>
+        </div>
+    </div>
+</body>
+</html>
