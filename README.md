@@ -6,8 +6,9 @@ A simple Python utility to automate the downloading of illustrative images from 
 
 - **Automated Search**: Takes a list of Japanese verbs from a CSV file.
 - **Multi-Option Retrieval**: Fetches up to 3 unique, high-resolution image options for each verb.
-- **Smart Management**: Global duplicate tracking ensures that no repeated images are downloaded across different words, saving time and bandwidth.
-- **Detailed Summary**: Generates a `download_summary.csv` mapping verbs to their local image paths and original URLs.
+- **Smart Management**: Global duplicate tracking ensures that no repeated images are downloaded across different words.
+- **Interactive Study**: Includes `kanji-card.html`, a premium web-based flashcard system with 3D flip animations and JLPT metadata.
+- **Detailed Summary**: Generates a `download_summary.csv` mapping verbs to their local image paths.
 
 ## 🛠️ Installation
 
@@ -34,11 +35,13 @@ A simple Python utility to automate the downloading of illustrative images from 
 
 ## 📁 Project Structure
 
-- `illustkun_downloader.py`: The main Python script.
+- `illustkun_downloader.py`: The main Python script for image retrieval.
+- `kanji-card.html`: Interactive web-based Kanji study tool with 3D flip animations.
 - `verbos.csv`: Input file containing the list of words to process.
-- `kanji_front.html` / `kanji_back.html`: HTML templates for printing double-sided Kanji flashcards.
+- `kanji_front.html` / `kanji_back.html`: HTML templates for printing physical flashcards.
 - `images/`: (Ignored by git) Directory where downloaded images are stored.
 - `download_summary.csv`: Output report of the download process.
+- `agent.md`: Technical documentation and instructions for AI agents.
 
 ## ⚖️ License
 
