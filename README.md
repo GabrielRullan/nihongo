@@ -2,6 +2,11 @@
 
 Este proyecto es una herramienta para generar tarjetas de estudio de Kanji interactivas (tipo Flashcards) de forma automatizada, utilizando datos lingüísticos, descarga de imágenes de Illustkun y una interfaz web moderna.
 
+## 🔗 Enlaces en Vivo
+
+*   **[Tarjetas de Kanji (Producción)](https://www.data-partner.xyz/nihongo/docs/)**: El set completo de 80 tarjetas dinámicas.
+*   **[Ejemplo de Diseño](https://www.data-partner.xyz/nihongo/cards-example/)**: Una demostración estática del diseño original.
+
 ## 🚀 Flujo de Trabajo
 
 El sistema está diseñado para ser modular y fácil de actualizar:
