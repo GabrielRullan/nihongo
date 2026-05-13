@@ -1,6 +1,11 @@
 import os
 import csv
 import shutil
+import sys
+
+# Set stdout to UTF-8 for Windows consoles
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding='utf-8')
 
 def copy_chosen_images(summary_path="summary.csv", target_dir="images-chosen"):
     """Copies images marked in the 'Chosen' column to the target directory."""

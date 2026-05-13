@@ -1,6 +1,6 @@
 # 🇯🇵 Nihongo Illustkun Downloader
 
-A simple Python utility to automate the downloading of illustrative images from **Illustkun** for Japanese vocabulary learning. This tool is specifically designed to help create visual aids (like flashcards) for Japanese verbs.
+A simple Python utility to automate the downloading of illustrative images from **Illustkun** for Japanese vocabulary learning. This tool is specifically designed to help create visual aids (like flashcards) for Japanese verbs. The whole project repo is located at https://github.com/GabrielRullan/nihongo
 
 ## 🚀 Features
 
@@ -14,7 +14,7 @@ A simple Python utility to automate the downloading of illustrative images from 
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/GabrielRullan/nihongo
    cd nihongo
    ```
 
