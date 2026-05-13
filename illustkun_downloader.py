@@ -4,6 +4,7 @@ import time
 import requests
 import sys
 import re
+import shutil
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 
@@ -75,9 +76,47 @@ def download_image(img_url, filename, save_dir="images"):
     except:
         return None
 
-def process_workflow(input_path, summary_path="download_summary.csv"):
+def copy_chosen_images(summary_path, target_dir="cards/images-chosen"):
+    """Copies images marked in the 'Chosen' column to the target directory."""
+    if not os.path.exists(summary_path):
+        return
+
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+
+    print(f"\nChecking for chosen images to copy to '{target_dir}'...")
+    
+    with open(summary_path, mode='r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            chosen = row.get("Chosen", "").strip()
+            if chosen in ["1", "2", "3"]:
+                option_path = row.get(f"Option {chosen} Path")
+                if option_path and os.path.exists(option_path):
+                    # Keep original extension
+                    ext = os.path.splitext(option_path)[1]
+                    dest_path = os.path.join(target_dir, f"{row['Original Word']}{ext}")
+                    shutil.copy2(option_path, dest_path)
+                    print(f"  [+] Copied: {row['Original Word']} (Option {chosen})")
+                else:
+                    print(f"  [!] Failed to copy {row['Original Word']}: Path not found.")
+
+def process_workflow(input_path, summary_path="summary.csv"):
     print(f"Processing all verbs. Downloading top 3 options for each from illustkun...")
     
+    # 1. Load existing choices to preserve them
+    existing_choices = {}
+    if os.path.exists(summary_path):
+        try:
+            with open(summary_path, mode='r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row.get("Original Word") and row.get("Chosen"):
+                        existing_choices[row["Original Word"]] = row["Chosen"]
+        except:
+            pass
+
+    # 2. Get list of words to process
     data_to_process = []
     with open(input_path, mode='r', encoding='utf-8') as f:
         reader = csv.reader(f)
@@ -91,7 +130,7 @@ def process_workflow(input_path, summary_path="download_summary.csv"):
     for word in data_to_process:
         print(f"\n--- {word} ---", flush=True)
         links = search_illustkun(word)
-        entry = {"Original Word": word}
+        entry = {"Original Word": word, "Chosen": existing_choices.get(word, "")}
         
         saved_count = 0
         link_index = 0
@@ -137,20 +176,24 @@ def process_workflow(input_path, summary_path="download_summary.csv"):
         final_results.append(entry)
         # Small delay to be polite
         print(f"--- Finished {word} ---", flush=True)
-        time.sleep(1)
+        time.sleep(0.5)
 
-    # Save summary
-    fieldnames = ["Original Word", 
-                  "Option 1 Title", "Option 1 URL", "Option 1 Path",
-                  "Option 2 Title", "Option 2 URL", "Option 2 Path",
-                  "Option 3 Title", "Option 3 URL", "Option 3 Path"]
+    # 3. Save summary
+    fieldnames = ["Original Word", "Chosen",
+                  "Option 1 Title", "Option 1 Path", "Option 1 URL",
+                  "Option 2 Title", "Option 2 Path", "Option 2 URL",
+                  "Option 3 Title", "Option 3 Path", "Option 3 URL"]
     
     with open(summary_path, mode='w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(final_results)
     
-    print(f"\nWork complete. Summary created: {summary_path}", flush=True)
+    print(f"\nWork complete. Summary updated: {summary_path}", flush=True)
+    
+    # 4. Process choices
+    copy_chosen_images(summary_path)
 
 if __name__ == "__main__":
     process_workflow("verbos.csv")
+

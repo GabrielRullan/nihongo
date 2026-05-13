@@ -36,12 +36,22 @@ A simple Python utility to automate the downloading of illustrative images from 
 ## 📁 Project Structure
 
 - `illustkun_downloader.py`: The main Python script for image retrieval.
-- `kanji-card.html`: Interactive web-based Kanji study tool with 3D flip animations.
+- `cards/`: Folder containing the web-based interactive cards.
+  - `index.html`: Main interactive study page (served via GitHub Pages).
+  - `images-chosen/`: High-quality images selected for the cards.
+- `summary.csv`: Central registry of words, options, and chosen images.
 - `verbos.csv`: Input file containing the list of words to process.
 - `kanji_front.html` / `kanji_back.html`: HTML templates for printing physical flashcards.
-- `images/`: (Ignored by git) Directory where downloaded images are stored.
-- `download_summary.csv`: Output report of the download process.
-- `agent.md`: Technical documentation and instructions for AI agents.
+- `images/`: (Ignored by git) Raw downloaded image options.
+- `agent.md`: Technical documentation for AI agents.
+
+## 🌐 GitHub Pages
+
+To serve the interactive cards:
+1. Go to your repository settings on GitHub.
+2. Navigate to **Pages**.
+3. Select the branch (usually `main`) and the folder `/cards` (if you want to serve only the cards) or `/` (root).
+4. Your cards will be available at `https://<username>.github.io/<repo>/`.
 
 ## ⚖️ License
 
