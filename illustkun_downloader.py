@@ -4,7 +4,6 @@ import time
 import requests
 import sys
 import re
-import shutil
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 
@@ -75,31 +74,6 @@ def download_image(img_url, filename, save_dir="images"):
         return file_path
     except:
         return None
-
-def copy_chosen_images(summary_path, target_dir="cards/images-chosen"):
-    """Copies images marked in the 'Chosen' column to the target directory."""
-    if not os.path.exists(summary_path):
-        return
-
-    if not os.path.exists(target_dir):
-        os.makedirs(target_dir)
-
-    print(f"\nChecking for chosen images to copy to '{target_dir}'...")
-    
-    with open(summary_path, mode='r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            chosen = row.get("Chosen", "").strip()
-            if chosen in ["1", "2", "3"]:
-                option_path = row.get(f"Option {chosen} Path")
-                if option_path and os.path.exists(option_path):
-                    # Keep original extension
-                    ext = os.path.splitext(option_path)[1]
-                    dest_path = os.path.join(target_dir, f"{row['Original Word']}{ext}")
-                    shutil.copy2(option_path, dest_path)
-                    print(f"  [+] Copied: {row['Original Word']} (Option {chosen})")
-                else:
-                    print(f"  [!] Failed to copy {row['Original Word']}: Path not found.")
 
 def process_workflow(input_path, summary_path="summary.csv"):
     print(f"Processing all verbs. Downloading top 3 options for each from illustkun...")
@@ -190,9 +164,6 @@ def process_workflow(input_path, summary_path="summary.csv"):
         writer.writerows(final_results)
     
     print(f"\nWork complete. Summary updated: {summary_path}", flush=True)
-    
-    # 4. Process choices
-    copy_chosen_images(summary_path)
 
 if __name__ == "__main__":
     process_workflow("verbos.csv")
