@@ -4,7 +4,7 @@ Este proyecto es una herramienta para generar tarjetas de estudio de Kanji inter
 
 ## 🔗 Enlaces en Vivo
 
-*   **[Tarjetas de Kanji (Producción)](https://www.data-partner.xyz/nihongo/docs/)**: El set completo de 80 tarjetas dinámicas.
+*   **[Tarjetas de Kanji (Producción)](https://www.data-partner.xyz/nihongo/cards/)**: El set completo de 80 tarjetas dinámicas.
 *   **[Ejemplo de Diseño](https://www.data-partner.xyz/nihongo/cards-example/)**: Una demostración estática del diseño original.
 
 ## 🚀 Flujo de Trabajo
@@ -19,8 +19,8 @@ El sistema está diseñado para ser modular y fácil de actualizar:
 3.  **Selección de Imágenes (`process_choices.py`)**: 
     *   Copia la imagen seleccionada en `summary.csv` a la carpeta `images-chosen/` con el nombre final.
 4.  **Sincronización Web (`sync_cards.py`)**: 
-    *   Combina los datos del CSV y las imágenes seleccionadas para generar `docs/data.js`.
-5.  **Interfaz Web (`docs/index.html`)**: 
+    *   Combina los datos del CSV y las imágenes seleccionadas para generar `cards/data.js`.
+5.  **Interfaz Web (`cards/index.html`)**: 
     *   Renderiza las tarjetas en formato "Poker" (375x525px).
     *   Incluye lógica para mostrar Furigana y Okurigana con tamaños optimizados (Okurigana al 80%).
 
