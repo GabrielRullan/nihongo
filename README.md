@@ -1,59 +1,57 @@
-# 🇯🇵 Nihongo Illustkun Downloader
+# Sistema de Tarjetas de Kanji Automático (N5)
 
-A simple Python utility to automate the downloading of illustrative images from **Illustkun** for Japanese vocabulary learning. This tool is specifically designed to help create visual aids (like flashcards) for Japanese verbs. The whole project repo is located at https://github.com/GabrielRullan/nihongo
+Este proyecto es una herramienta para generar tarjetas de estudio de Kanji interactivas (tipo Flashcards) de forma automatizada, utilizando datos lingüísticos, descarga de imágenes de Illustkun y una interfaz web moderna.
 
-## 🚀 Features
+## 🚀 Flujo de Trabajo
 
-- **Automated Search**: Takes a list of Japanese verbs from a CSV file.
-- **Multi-Option Retrieval**: Fetches up to 3 unique, high-resolution image options for each verb.
-- **Smart Management**: Global duplicate tracking ensures that no repeated images are downloaded across different words.
-- **Interactive Study**: Includes `kanji-card.html`, a premium web-based flashcard system with 3D flip animations and JLPT metadata.
-- **Detailed Summary**: Generates a `download_summary.csv` mapping verbs to their local image paths.
+El sistema está diseñado para ser modular y fácil de actualizar:
 
-## 🛠️ Installation
+1.  **Datos de Origen (`kanjis-80.csv`)**: Contiene la lista de 80 Kanjis N5 con su tipo, furigana estilo Anki (`漢字[ふりがな]`), significado, romaji y frases de ejemplo.
+2.  **Descarga de Imágenes (`kanji_downloader.py`)**: 
+    *   Lee la lista de kanjis y busca ilustraciones automáticamente en `illustkun.com`.
+    *   Descarga hasta 3 opciones por cada palabra.
+    *   Genera un archivo `summary.csv` con las opciones encontradas y selecciona la **Opción 1** por defecto.
+3.  **Selección de Imágenes (`process_choices.py`)**: 
+    *   Copia la imagen seleccionada en `summary.csv` a la carpeta `images-chosen/` con el nombre final.
+4.  **Sincronización Web (`sync_cards.py`)**: 
+    *   Combina los datos del CSV y las imágenes seleccionadas para generar `docs/data.js`.
+5.  **Interfaz Web (`docs/index.html`)**: 
+    *   Renderiza las tarjetas en formato "Poker" (375x525px).
+    *   Incluye lógica para mostrar Furigana y Okurigana con tamaños optimizados (Okurigana al 80%).
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/GabrielRullan/nihongo
-   cd nihongo
-   ```
+## 🖼️ Cómo cambiar las imágenes de las tarjetas
 
-2. **Install dependencies**:
-   This project uses `requests` and `BeautifulSoup4`.
-   ```bash
-   pip install requests beautifulsoup4
-   ```
+Si no te gusta la imagen seleccionada por defecto para un Kanji, puedes cambiarla fácilmente:
 
-## 📖 Usage
+1.  Abre el archivo `summary.csv`.
+2.  Busca el Kanji que quieres modificar.
+3.  Verás columnas llamadas `Option 1 Title`, `Option 2 Title`, etc. Revisa las opciones disponibles (puedes ver las imágenes en la carpeta `images/`).
+4.  En la columna **`Chosen`**, cambia el número (`1`, `2` o `3`) por la opción que prefieras.
+5.  Ejecuta el script de procesamiento:
+    ```bash
+    python process_choices.py
+    ```
+6.  Sincroniza los datos con la web:
+    ```bash
+    python sync_cards.py
+    ```
 
-1. Prepare your input file `verbos.csv`. It should contain the Japanese words (Kanji/Kana) in the first column.
-2. Run the downloader script:
-   ```bash
-   python illustkun_downloader.py
-   ```
-3. The images will be saved in the `images/` directory, and a summary will be created as `download_summary.csv`.
+## 🛠️ Scripts Principales
 
-## 📁 Project Structure
+*   `python kanji_downloader.py`: Descarga imágenes nuevas y actualiza el resumen.
+*   `python process_choices.py`: Mueve las imágenes elegidas a la carpeta de producción.
+*   `python sync_cards.py`: Actualiza el contenido de las tarjetas en la web.
 
-- `illustkun_downloader.py`: Scrapes image options and maintains `summary.csv`.
-- `process_choices.py`: Copies images marked in `summary.csv` to `images-chosen/`.
-- `cards/`: Folder containing the web-based interactive cards.
-  - `index.html`: Main interactive study page (served via GitHub Pages).
-- `images-chosen/`: High-quality images selected for the cards.
-- `summary.csv`: Central registry of words, options, and chosen images.
-- `verbos.csv`: Input file containing the list of words to process.
-- `kanji_front.html` / `kanji_back.html`: HTML templates for printing physical flashcards.
-- `images/`: (Ignored by git) Raw downloaded image options.
-- `agent.md`: Technical documentation for AI agents.
+## 🎨 Diseño de las Tarjetas
 
-## 🌐 GitHub Pages
+Las tarjetas están optimizadas para una experiencia de estudio premium:
+*   **Anverso**: Muestra solo el Kanji en gran tamaño.
+*   **Reverso**:
+    *   Furigana estilo Anki con Okurigana escalado.
+    *   Romaji en color índigo.
+    *   Ilustración central.
+    *   Significado en negrita y etiquetas de tipo (nom., ver., adj.).
+    *   Sección de frases con traducción al español.
 
-To serve the interactive cards:
-1. Go to your repository settings on GitHub.
-2. Navigate to **Pages**.
-3. Select the branch (usually `main`) and the folder `/cards`.
-4. Your cards will be available at `https://<username>.github.io/<repo>/`.
-
-## ⚖️ License
-
-This project is for educational and personal use. All images are property of **Illustkun** ([illustkun.com](https://illustkun.com/)). Please respect their terms of use.
+---
+Desarrollado para facilitar el aprendizaje del japonés de forma visual y efectiva.
