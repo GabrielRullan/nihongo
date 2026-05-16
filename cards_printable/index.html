@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Card Printer Pro - Optimized Rectangles</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-grey: #64748b;
+            --text-romaji-phrase: #475569;
+            --accent-indigo: #6366f1;
+            --border-color: #e2e8f0;
+            --badge-bg: #4f46e5;
+
+            /* Portrait Rectangles for 3-per-page */
+            --card-width: 65mm;
+            --card-height: 95mm;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .no-print {
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .controls { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .control-group { display: flex; flex-direction: column; gap: 5px; }
+        label { font-size: 11px; font-weight: 700; color: var(--text-grey); text-transform: uppercase; }
+        select, button { padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; font-size: 13px; cursor: pointer; }
+        .btn-primary { background-color: var(--accent-indigo); color: white; border: none; font-weight: 600; padding: 10px 25px; }
+
+        .print-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5mm 0;
+            gap: 2mm; /* Minimize gap to fit 3 on a page */
+        }
+
+        .print-unit {
+            background: white;
+            position: relative;
+            page-break-inside: avoid;
+            box-sizing: border-box;
+            border: 0.1pt solid #eee;
+        }
+
+        .mode-folding .print-unit { display: flex; width: calc(var(--card-width) * 2); }
+        .mode-duplex .print-unit { display: block; width: var(--card-width); }
+
+        .fold-line {
+            position: absolute;
+            left: var(--card-width);
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1px dashed #cbd5e1;
+            z-index: 10;
+        }
+
+        .card-face {
+            width: var(--card-width);
+            height: var(--card-height);
+            background-color: var(--card-bg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            padding: 10px;
+        }
+
+        .card-front {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-back {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Content Styling */
+        .kanji-display {
+            font-size: 5rem;
+            font-family: "Yu Mincho", "MS Mincho", serif;
+        }
+
+        .header { width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
+        .badge-n5 { background-color: var(--badge-bg); color: white; padding: 1px 4px; border-radius: 3px; font-size: 8px; font-weight: bold; }
+        .anki-furigana-display ruby { font-size: 24px; }
+        .romaji-header { font-size: 13px; color: var(--accent-indigo); font-weight: 800; text-transform: uppercase; margin-top: 2px; }
+        
+        .illustration-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-height: 0;
+            padding: 5px 0;
+        }
+
+        .meaning-text { font-size: 16px; font-weight: 900; margin: 4px 0; text-align: center; text-transform: uppercase; }
+        
+        .phrase-section { 
+            width: 100%; 
+            text-align: center; 
+            border-top: 0.5pt solid #eee; 
+            padding-top: 6px;
+        }
+        .phrase-jp { font-size: 12px; color: var(--text-grey); margin-bottom: 1px; }
+        .phrase-romaji { font-size: 10px; font-weight: 700; }
+        .phrase-es { font-size: 9px; font-style: italic; color: var(--text-grey); margin: 0; }
+
+        /* Mini Size */
+        body.size-mini {
+            --card-width: 48mm;
+            --card-height: 70mm;
+        }
+        body.size-mini .print-container { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 5mm; }
+        body.size-mini .kanji-display { font-size: 3rem; }
+        body.size-mini .phrase-section { display: none; }
+
+        .page-separator { width: 100%; height: 0; page-break-after: always; display: none; }
+        .mode-duplex .page-separator { display: block; }
+
+        @media print {
+            body { background-color: white; }
+            .no-print { display: none; }
+            .print-container { 
+                width: 210mm; 
+                margin: 0 auto; 
+                padding: 0; 
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="mode-folding size-standard">
+
+    <div class="no-print">
+        <h1 style="margin:0;">🖨️ Kanji Printer Pro</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Método de Impresión</label>
+                <select id="mode-select" onchange="render()">
+                    <option value="folding">Plegable (Centrado)</option>
+                    <option value="duplex">Doble Cara (Centrado)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Tamaño / Cantidad</label>
+                <select id="size-select" onchange="render()">
+                    <option value="standard">3 por página (Rectangular Estrecho)</option>
+                    <option value="mini">Mini (8 por página - Parrilla)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Acciones</label>
+                <button class="btn-primary" onclick="window.print()">🖨️ Imprimir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="print-container" id="cards-container">
+        <!-- Content injected here -->
+    </div>
+
+    <script src="data.js"></script>
+
+    <script>
+        function parseFurigana(text) {
+            if (!text) return '';
+            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
+            let match;
+            let lastIndex = 0;
+            let html = '';
+            while ((match = regex.exec(text)) !== null) {
+                const before = text.substring(lastIndex, match.index);
+                if (before) html += `<span class="okurigana">${before}</span>`;
+                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
+                lastIndex = regex.lastIndex;
+            }
+            const after = text.substring(lastIndex);
+            if (after) html += `<span class="okurigana">${after}</span>`;
+            return html;
+        }
+
+        function getCardFrontHTML(data) {
+            return `<div class="card-face card-front"><span class="kanji-display">${data.kanji}</span></div>`;
+        }
+
+        function getCardBackHTML(data) {
+            const furiganaHtml = parseFurigana(data.anki_furigana);
+            let illustrationHtml = data.image 
+                ? `<img src="${data.image}" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">`
+                : (data.icon || '?');
+            
+            return `
+                <div class="card-face card-back">
+                    <div class="header">
+                        <div style="width:20px"></div>
+                        <div style="text-align:center; flex:1;">
+                            <div class="anki-furigana-display">${furiganaHtml}</div>
+                            <div class="romaji-header">${data.romaji || ''}</div>
+                        </div>
+                        <div class="badge-n5">${data.level}</div>
+                    </div>
+                    <div class="illustration-box">
+                        ${illustrationHtml}
+                        <div class="meaning-text">${data.meaning || ''}</div>
+                    </div>
+                    <div class="phrase-section" style="${data.phraseJp ? '' : 'display:none;'}">
+                        <div class="phrase-jp">${data.phraseJp}</div>
+                        <div class="phrase-romaji">${data.phraseRomaji}</div>
+                        <p class="phrase-es">"${data.phraseEs}"</p>
+                    </div>
+                </div>`;
+        }
+
+        function render() {
+            const mode = document.getElementById('mode-select').value;
+            const size = document.getElementById('size-select').value;
+            const container = document.getElementById('cards-container');
+            
+            document.body.className = `mode-${mode} size-${size}`;
+            container.innerHTML = '';
+
+            const cardsPerPage = (size === 'standard') ? 3 : 8;
+
+            if (mode === 'folding') {
+                cardsData.forEach(data => {
+                    const unit = document.createElement('div');
+                    unit.className = 'print-unit';
+                    unit.innerHTML = `<div class="fold-line"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                    container.appendChild(unit);
+                });
+            } else {
+                for (let i = 0; i < cardsData.length; i += cardsPerPage) {
+                    const chunk = cardsData.slice(i, i + cardsPerPage);
+                    chunk.forEach(data => {
+                        const unit = document.createElement('div');
+                        unit.className = 'print-unit';
+                        unit.innerHTML = getCardFrontHTML(data);
+                        container.appendChild(unit);
+                    });
+                    const sep1 = document.createElement('div');
+                    sep1.className = 'page-separator';
+                    container.appendChild(sep1);
+                    chunk.forEach(data => {
+                        const unit = document.createElement('div');
+                        unit.className = 'print-unit';
+                        unit.innerHTML = getCardBackHTML(data);
+                        container.appendChild(unit);
+                    });
+                    if (i + cardsPerPage < cardsData.length) {
+                        const sep2 = document.createElement('div');
+                        sep2.className = 'page-separator';
+                        container.appendChild(sep2);
+                    }
+                }
+            }
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
