@@ -4,8 +4,17 @@ Este proyecto es una herramienta para generar tarjetas de estudio de Kanji inter
 
 ## 🔗 Enlaces en Vivo
 
-*   **[Tarjetas de Kanji (Producción)](https://www.data-partner.xyz/nihongo/cards/)**: El set completo de 80 tarjetas dinámicas.
-*   **[Ejemplo de Diseño](https://www.data-partner.xyz/nihongo/cards-example/)**: Una demostración estática del diseño original.
+*   **[Tarjetas de Kanji (Producción)](https://www.data-partner.xyz/nihongo/cards/)**: El set completo de 80 tarjetas dinámicas de japonés N5.
+*   **[Tarjetas de Chino (Nuevas)](https://www.data-partner.xyz/nihongo/cards-chinese/)**: Set premium con voz (TTS), búsqueda, radical, trazos y frases para HSK 1.
+*   **[Tarjetas de Gramática (Nuevas)](https://www.data-partner.xyz/nihongo/cards-grammar/)**: Set de gramática japonesa N5/N4 con soporte de furigana, fórmulas y pronunciación de ejemplos por voz (TTS).
+*   **[Ejemplo de Diseño](https://www.data-partner.xyz/nihongo/cards-example/)**: Una demostración estática del diseño original de kanjis.
+
+## 🚀 Estructura de Carpetas
+
+*   `cards/`: Tarjetas de Kanji para producción.
+*   `cards-chinese/`: Tarjetas interactivas de Chino HSK 1.
+*   `cards-grammar/`: Tarjetas interactivas de Gramática Japonesa N5/N4.
+*   `cards-example/`: Ejemplo estático original.
 
 ## 🚀 Flujo de Trabajo
 

@@ -27,6 +27,10 @@ This repository is dedicated to automating the creation of Japanese learning mat
 - **UX**: Ensure the interface feels "alive" with transitions and hover effects.
 
 ## 📁 File Organization
+- `cards/`: Production Japanese N5 Kanji cards loaded from `data.js`.
+- `cards-chinese/`: Interactive Chinese HSK 1 characters cards with built-in voice synthesis (TTS), radical definitions, stroke counts, search, and pinyin example phrases.
+- `cards-grammar/`: Interactive Japanese grammar cards (JLPT N5/N4) featuring connecting formulas, full explanations, category filtering, search, and voice pronunciation of Japanese sentences.
 - `images/`: Stores downloaded assets.
 - `verbos.csv`: The source of truth for vocabulary to be processed.
 - `*.html`: Flashcard templates (Static/Print and Interactive).
+
