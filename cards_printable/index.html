@@ -97,6 +97,29 @@
             gap: 2mm;
         }
 
+        body.size-grid2x4.mode-folding .print-page {
+            grid-template-columns: repeat(4, var(--card-width));
+            grid-template-rows: repeat(1, calc(var(--card-height) * 2));
+            gap: 2mm;
+        }
+
+        body.size-grid2x4.mode-folding .print-unit {
+            display: flex;
+            flex-direction: column;
+            width: var(--card-width);
+            height: calc(var(--card-height) * 2);
+        }
+
+        .fold-line-horizontal {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: var(--card-height);
+            height: 0;
+            border-top: 1px dashed #cbd5e1;
+            z-index: 10;
+        }
+
         /* Print Units and Card Faces */
         .print-unit {
             background: white;
@@ -206,7 +229,7 @@
                     <option value="3_portrait_duplex">3 por página sin plegar</option>
                     <option value="3_portrait_folding">3 por página plegando</option>
                     <option value="8_landscape_duplex">8 por página horizontal sin plegar</option>
-                    <option value="8_portrait_folding">8 por página plegando</option>
+                    <option value="8_landscape_folding">8 por página plegando</option>
                 </select>
             </div>
 
@@ -299,12 +322,6 @@
                 translation: ['14px', '18px', '22px', '26px', '30px'],
                 defaultKanji: '6.8rem',
                 defaultTranslation: '22px'
-            },
-            mini: {
-                kanji: ['3.2rem', '4.0rem', '4.8rem', '5.6rem', '6.4rem'],
-                translation: ['11px', '13px', '15px', '18px', '21px'],
-                defaultKanji: '4.8rem',
-                defaultTranslation: '15px'
             }
         };
 
@@ -333,10 +350,10 @@
                 mode = 'duplex';
                 size = 'grid2x4';
                 cardsPerPage = 8;
-            } else if (selectedLayout === '8_portrait_folding') {
+            } else if (selectedLayout === '8_landscape_folding') {
                 mode = 'folding';
-                size = 'mini';
-                cardsPerPage = 8;
+                size = 'grid2x4';
+                cardsPerPage = 4;
             }
 
             document.body.className = `mode-${mode} size-${size}`;
@@ -381,7 +398,7 @@
                 document.head.appendChild(dynamicStyle);
             }
 
-            if (selectedLayout === '8_landscape_duplex') {
+            if (selectedLayout === '8_landscape_duplex' || selectedLayout === '8_landscape_folding') {
                 dynamicStyle.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
             } else {
                 dynamicStyle.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
@@ -396,7 +413,11 @@
                     chunk.forEach(data => {
                         const unit = document.createElement('div');
                         unit.className = 'print-unit';
-                        unit.innerHTML = `<div class="fold-line"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                        if (size === 'grid2x4') {
+                            unit.innerHTML = `<div class="fold-line-horizontal"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                        } else {
+                            unit.innerHTML = `<div class="fold-line"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                        }
                         page.appendChild(unit);
                     });
                     container.appendChild(page);
