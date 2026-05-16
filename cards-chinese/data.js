@@ -1,0 +1,107 @@
+// Datos de tarjetas de chino para el set interactivo (HSK 1)
+const cardsData = [
+    {
+        character: "猫",
+        pinyin: "māo",
+        meaning: "GATO",
+        type: "Sustantivo",
+        level: "HSK 1",
+        strokeCount: 11,
+        radical: "犭 (Perro/Animal)",
+        phraseCn: "我喜欢我的小猫。",
+        phrasePinyin: "Wǒ xǐhuan wǒ de xiǎo māo.",
+        phraseEs: "Me gusta mi gatito.",
+        colorTheme: "from-pink-500 to-rose-600"
+    },
+    {
+        character: "吃",
+        pinyin: "chī",
+        meaning: "COMER",
+        type: "Verbo",
+        level: "HSK 1",
+        strokeCount: 6,
+        radical: "口 (Boca)",
+        phraseCn: "你喜欢吃什么？",
+        phrasePinyin: "Nǐ xǐhuan chī shénme?",
+        phraseEs: "¿Qué te gusta comer?",
+        colorTheme: "from-amber-500 to-orange-600"
+    },
+    {
+        character: "大",
+        pinyin: "dà",
+        meaning: "GRANDE",
+        type: "Adjetivo",
+        level: "HSK 1",
+        strokeCount: 3,
+        radical: "大 (Grande)",
+        phraseCn: "这个学校很大。",
+        phrasePinyin: "Zhège xuéxiào hěn dà.",
+        phraseEs: "Esta escuela es muy grande.",
+        colorTheme: "from-emerald-500 to-teal-600"
+    },
+    {
+        character: "好",
+        pinyin: "hǎo",
+        meaning: "BUENO / BIEN",
+        type: "Adjetivo",
+        level: "HSK 1",
+        strokeCount: 6,
+        radical: "女 (Mujer) + 子 (Hijo)",
+        phraseCn: "今天天气很好。",
+        phrasePinyin: "Jīntiān tiānqì hěn hǎo.",
+        phraseEs: "Hoy hace muy buen tiempo.",
+        colorTheme: "from-cyan-500 to-blue-600"
+    },
+    {
+        character: "谢谢",
+        pinyin: "xièxie",
+        meaning: "GRACIAS",
+        type: "Expresión",
+        level: "HSK 1",
+        strokeCount: 24,
+        radical: "讠 (Habla)",
+        phraseCn: "谢谢你的帮助！",
+        phrasePinyin: "Xièxie nǐ de bāngzhù!",
+        phraseEs: "¡Gracias por tu ayuda!",
+        colorTheme: "from-indigo-500 to-purple-600"
+    },
+    {
+        character: "水",
+        pinyin: "shuǐ",
+        meaning: "AGUA",
+        type: "Sustantivo",
+        level: "HSK 1",
+        strokeCount: 4,
+        radical: "水 (Agua)",
+        phraseCn: "请给我一杯水。",
+        phrasePinyin: "Qǐng gěi wǒ yì bēi shuǐ.",
+        phraseEs: "Por favor, dame un vaso de agua.",
+        colorTheme: "from-sky-500 to-indigo-600"
+    },
+    {
+        character: "人",
+        pinyin: "rén",
+        meaning: "PERSONA",
+        type: "Sustantivo",
+        level: "HSK 1",
+        strokeCount: 2,
+        radical: "人 (Persona)",
+        phraseCn: "商店里有很多人。",
+        phrasePinyin: "Shāngdiàn lǐ yǒu hěn duō rén.",
+        phraseEs: "Hay mucha gente en la tienda.",
+        colorTheme: "from-violet-500 to-fuchsia-600"
+    },
+    {
+        character: "看",
+        pinyin: "kàn",
+        meaning: "VER / LEER",
+        type: "Verbo",
+        level: "HSK 1",
+        strokeCount: 9,
+        radical: "目 (Ojo)",
+        phraseCn: "我喜欢看汉语书。",
+        phrasePinyin: "Wǒ xǐhuan kàn hànyǔ shū.",
+        phraseEs: "Me gusta leer libros en chino.",
+        colorTheme: "from-rose-500 to-red-600"
+    }
+];
