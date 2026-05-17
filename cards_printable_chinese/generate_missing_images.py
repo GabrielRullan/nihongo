@@ -26,23 +26,27 @@ PENDING_CSV_PATH = os.path.join(SCRIPT_DIR, "pending.csv")
 # This ensures every image perfectly fits the Illustkun cute flat pastel vector style!
 PROMPT_CONCEPTS = {
     # Verbos
-    "爱": "a cute chibi character hugging a large soft pink heart with a warm, joyful smile",
-    "认识": "two cute chibi characters shaking hands with warm smiles and little sparkles, showing to know or meet",
+    "爱": "a cute pastel teddy bear hugging a large soft pink heart with a warm, joyful smile",
+    "喜欢": "a cute chibi character with hearts in their eyes looking at a sweet pastry, showing like or love",
+    "认识": "two cute different pastel animal friends (a little brown bear and a white puppy) waving happily at each other with warm friendly smiles",
     "能": "a cute chibi superhero character flying with a determined, happy smile, representing ability or power",
-    "谢谢": "a cute chibi character bowing slightly with hands together and a warm smile, expressing thank you",
-    "再见": "a cute chibi character waving goodbye with a big happy smile",
+    "请": "a cute pastel puppy standing by an open door and holding a welcome sign with a friendly smile",
+    "谢谢": "a cute pastel squirrel holding a big colorful bouquet of flowers with a warm, grateful smile and small sparkles",
+    "再见": "a cute pastel bunny waving goodbye with a big happy smile and small floating stars",
     
     # Sustantivos
-    "儿子": "a cute young chibi boy smiling with rosy cheeks",
+    "儿子": "a cute fluffy baby bear cub sitting next to a tree and smiling happily with rosy cheeks",
     "女儿": "a cute young chibi girl smiling with rosy cheeks",
     "小姐": "a cute young chibi woman wearing a nice pastel dress and waving politely, representing miss or lady",
     "学校": "a cute simple pastel-colored elementary school building with a small clock tower",
     "饭馆": "a cute small pastel restaurant storefront with warm lights and a tiny menu sign",
+    "商店": "a cute small pastel storefront shop with a striped pink awning and items on display, representing a store or shop",
     "火车站": "a cute pastel-colored train station with a small train parked at the platform",
     "北京": "a cute minimalist pastel illustration of the Temple of Heaven in Beijing",
     "上": "a cute chubby cat sitting happily on top of a simple wooden box",
     "后面": "a cute little puppy peeking out from behind a large potted plant with a curious smile, showing behind",
-    "里面": "a cute little kitten sitting cozily inside a warm cardboard box, showing inside",
+    "里面": "a cute little kitten sitting cozy inside a warm cardboard box, showing inside",
+    "日": "a cute shining yellow sun with a warm, happy face, representing day or sun",
     "星期": "a cute pastel-colored weekly desk calendar sheet with a little smiley face sticker",
     "点": "a cute pastel wall clock showing the time, with a small happy face in the center",
     "分钟": "a cute simple hourglass with soft pastel sand flowing down, representing minutes",
@@ -58,8 +62,9 @@ PROMPT_CONCEPTS = {
     "菜": "a cute plate of hot food with steam rising and a small fork and spoon next to it",
     "苹果": "a cute shiny red apple with a small green leaf",
     "汉语": "a cute open book with Chinese characters and a small talking speech bubble, showing Chinese language",
-    "电视": "a cute retro-style television showing a happy cartoon",
+    "电视": "a beautiful vintage pastel-colored retro television set with two antennae, showing a cute smiley face on the screen with small sparkles",
     "出租车": "a cute little yellow taxi cab driving happily",
+    "现在": "a cute pastel alarm clock with small bells on top, a friendly smiley face on the clock face, and little colorful stars",
     
     # Clasificadores
     "岁": "a cute birthday cake with a single burning candle and colorful sprinkles, representing years of age",
@@ -71,8 +76,10 @@ PROMPT_CONCEPTS = {
     "五": "a cute hand showing five fingers, or a stylized big number five with happy eyes",
     
     # Adverbios, Conjunciones y Preposiciones
+    "不": "a cute pastel kitten shaking its head and holding a tiny red cross sign with a gentle 'no' expression",
     "很": "a cute smiling character thumbs-up, or a shining double star, showing very much",
-    "和": "two cute chibi friends holding hands, showing conjunction or togetherness",
+    "都": "a group of three cute different animal friends (a little bear, a kitten, and a bunny) raising their paws happily together",
+    "和": "two cute pastel puzzle pieces (one blue, one pink) with small friendly smiley faces connecting perfectly together",
     "在": "a cute pin drop location icon on a simple flat map of a house, representing being at or in",
     
     # Partículas
@@ -162,6 +169,11 @@ def regenerate_pending_csv():
             image_val = image_match.group(1).strip()
             if not image_val:
                 is_missing = True
+            else:
+                # Failsafe: check if the image file physically exists in the images directory
+                full_image_path = os.path.join(SCRIPT_DIR, image_val)
+                if not os.path.exists(full_image_path):
+                    is_missing = True
                 
         if is_missing:
             pinyin_match = re.search(r"pinyin:\s*\"([^\"]+)\"", block) or re.search(r"pints:\s*\"([^\"]+)\"", block)
@@ -252,20 +264,22 @@ def main():
         print(f"  Prompt: \"{concept}\"")
         
         try:
-            # Generate the image using Imagen 3
+            # Generate the image using Imagen 3 with person generation allowed
             response = client.models.generate_images(
                 model='imagen-4.0-generate-001',
                 prompt=full_prompt,
                 config=types.GenerateImagesConfig(
                     number_of_images=1,
-                    aspect_ratio="1:1"
+                    aspect_ratio="1:1",
+                    person_generation="allow_adult" # Required to generate chibi characters/people under safety policy
                 )
             )
             
             if response.generated_images:
-                # Save generated image
+                # Save generated image from raw bytes
                 generated_image = response.generated_images[0]
-                generated_image.image.save(dest_path)
+                with open(dest_path, "wb") as f:
+                    f.write(generated_image.image.image_bytes)
                 print(f"  └─ Saved successfully to images-chosen-chinese/{dest_filename}")
                 
                 # Update data.js

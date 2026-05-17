@@ -433,7 +433,7 @@ const cardsData = [
     },
     {
         character: "爱",
-        image: "",
+        image: "images-chosen-chinese/爱.png",
         pinyin: "ài",
         meaning: "Amar",
         type: "Verbo",
@@ -466,6 +466,7 @@ const cardsData = [
     },
     {
         character: "认识",
+        image: "images-chosen-chinese/认识.png",
         pinyin: "rènshi",
         meaning: "Conocer",
         type: "Verbo",
@@ -487,7 +488,7 @@ const cardsData = [
     },
     {
         character: "能",
-        image: "",
+        image: "images-chosen-chinese/能.png",
         pinyin: "néng",
         meaning: "Poder",
         type: "Verbo",
@@ -499,7 +500,7 @@ const cardsData = [
     {
         character: "请",
         image: "images-chosen-chinese/请.png",
-        pints: "qǐng",
+        pinyin: "qǐng",
         meaning: "Por favor",
         type: "Verbo",
         level: "HSK 1",
@@ -509,7 +510,7 @@ const cardsData = [
     },
     {
         character: "谢谢",
-        image: "",
+        image: "images-chosen-chinese/谢谢.png",
         pinyin: "xièxie",
         meaning: "Agradecer",
         type: "Verbo",
@@ -520,6 +521,7 @@ const cardsData = [
     },
     {
         character: "再见",
+        image: "images-chosen-chinese/再见.png",
         pinyin: "zàijiàn",
         meaning: "Despedirse",
         type: "Verbo",
@@ -587,7 +589,7 @@ const cardsData = [
     },
     {
         character: "儿子",
-        image: "",
+        image: "images-chosen-chinese/儿子.png",
         pinyin: "érzi",
         meaning: "Hijo",
         type: "Sustantivo",
@@ -598,7 +600,7 @@ const cardsData = [
     },
     {
         character: "女儿",
-        image: "",
+        image: "images-chosen-chinese/女儿.png",
         pinyin: "nǚ'ér",
         meaning: "Hija",
         type: "Sustantivo",
@@ -675,7 +677,7 @@ const cardsData = [
     },
     {
         character: "小姐",
-        image: "",
+        image: "images-chosen-chinese/小姐.png",
         pinyin: "xiǎojiě",
         meaning: "Señorita",
         type: "Sustantivo",
@@ -697,7 +699,7 @@ const cardsData = [
     },
     {
         character: "学校",
-        image: "",
+        image: "images-chosen-chinese/学校.png",
         pinyin: "xuéxiào",
         meaning: "Escuela",
         type: "Sustantivo",
@@ -708,7 +710,7 @@ const cardsData = [
     },
     {
         character: "饭馆",
-        image: "",
+        image: "images-chosen-chinese/饭馆.png",
         pinyin: "fànguǎn",
         meaning: "Restaurante",
         type: "Sustantivo",
@@ -741,7 +743,7 @@ const cardsData = [
     },
     {
         character: "火车站",
-        image: "",
+        image: "images-chosen-chinese/火车站.png",
         pinyin: "huǒchēzhàn",
         meaning: "Estación",
         type: "Sustantivo",
@@ -763,6 +765,7 @@ const cardsData = [
     },
     {
         character: "北京",
+        image: "images-chosen-chinese/北京.png",
         pinyin: "Běijīng",
         meaning: "Pekín",
         type: "Sustantivo",
@@ -773,7 +776,7 @@ const cardsData = [
     },
     {
         character: "上",
-        image: "",
+        image: "images-chosen-chinese/上.png",
         pinyin: "shàng",
         meaning: "Encima",
         type: "Sustantivo",
@@ -806,7 +809,7 @@ const cardsData = [
     },
     {
         character: "后面",
-        image: "",
+        image: "images-chosen-chinese/后面.png",
         pinyin: "hòumiàn",
         meaning: "Detrás",
         type: "Sustantivo",
@@ -817,7 +820,7 @@ const cardsData = [
     },
     {
         character: "里面",
-        image: "",
+        image: "images-chosen-chinese/里面.png",
         pinyin: "lǐmiàn",
         meaning: "Dentro",
         type: "Sustantivo",
@@ -861,7 +864,7 @@ const cardsData = [
     },
     {
         character: "星期",
-        image: "",
+        image: "images-chosen-chinese/星期.png",
         pinyin: "xīngqī",
         meaning: "Semana",
         type: "Sustantivo",
@@ -872,7 +875,7 @@ const cardsData = [
     },
     {
         character: "点",
-        image: "",
+        image: "images-chosen-chinese/点.png",
         pinyin: "diǎn",
         meaning: "Hora",
         type: "Sustantivo",
@@ -883,7 +886,7 @@ const cardsData = [
     },
     {
         character: "分钟",
-        image: "",
+        image: "images-chosen-chinese/分钟.png",
         pinyin: "fēnzhōng",
         meaning: "Minuto",
         type: "Sustantivo",
@@ -916,7 +919,7 @@ const cardsData = [
     },
     {
         character: "今天",
-        image: "",
+        image: "images-chosen-chinese/今天.png",
         pinyin: "jīntiān",
         meaning: "Hoy",
         type: "Sustantivo",
@@ -927,7 +930,7 @@ const cardsData = [
     },
     {
         character: "明天",
-        image: "",
+        image: "images-chosen-chinese/明天.png",
         pinyin: "míngtiān",
         meaning: "Mañana",
         type: "Sustantivo",
@@ -938,7 +941,7 @@ const cardsData = [
     },
     {
         character: "昨天",
-        image: "",
+        image: "images-chosen-chinese/昨天.png",
         pinyin: "zuótiān",
         meaning: "Ayer",
         type: "Sustantivo",
@@ -949,7 +952,7 @@ const cardsData = [
     },
     {
         character: "上午",
-        image: "",
+        image: "images-chosen-chinese/上午.png",
         pinyin: "shàngwǔ",
         meaning: "Por la mañana",
         type: "Sustantivo",
@@ -960,7 +963,7 @@ const cardsData = [
     },
     {
         character: "中午",
-        image: "",
+        image: "images-chosen-chinese/中午.png",
         pinyin: "zhōngwǔ",
         meaning: "Mediodía",
         type: "Sustantivo",
@@ -971,6 +974,7 @@ const cardsData = [
     },
     {
         character: "下午",
+        image: "images-chosen-chinese/下午.png",
         pinyin: "xiàwǔ",
         meaning: "Tarde",
         type: "Sustantivo",
@@ -992,7 +996,7 @@ const cardsData = [
     },
     {
         character: "椅子",
-        image: "",
+        image: "images-chosen-chinese/椅子.png",
         pinyin: "yǐzi",
         meaning: "Silla",
         type: "Sustantivo",
@@ -1014,7 +1018,7 @@ const cardsData = [
     },
     {
         character: "茶",
-        image: "",
+        image: "images-chosen-chinese/茶.png",
         pinyin: "chá",
         meaning: "Té",
         type: "Sustantivo",
@@ -1025,7 +1029,7 @@ const cardsData = [
     },
     {
         character: "水",
-        image: "",
+        image: "images-chosen-chinese/水.png",
         pinyin: "shuǐ",
         meaning: "Agua",
         type: "Sustantivo",
@@ -1036,7 +1040,7 @@ const cardsData = [
     },
     {
         character: "菜",
-        image: "",
+        image: "images-chosen-chinese/菜.png",
         pinyin: "cài",
         meaning: "Plato",
         type: "Sustantivo",
@@ -1058,7 +1062,7 @@ const cardsData = [
     },
     {
         character: "苹果",
-        image: "",
+        image: "images-chosen-chinese/苹果.png",
         pinyin: "píngguǒ",
         meaning: "Manzana",
         type: "Sustantivo",
@@ -1102,7 +1106,7 @@ const cardsData = [
     },
     {
         character: "汉语",
-        image: "",
+        image: "images-chosen-chinese/汉语.png",
         pinyin: "Hànyǔ",
         meaning: "Chino",
         type: "Sustantivo",
@@ -1146,7 +1150,7 @@ const cardsData = [
     },
     {
         character: "电视",
-        image: "",
+        image: "images-chosen-chinese/电视.png",
         pinyin: "diànshì",
         meaning: "Televisión",
         type: "Sustantivo",
@@ -1179,7 +1183,7 @@ const cardsData = [
     },
     {
         character: "出租车",
-        image: "",
+        image: "images-chosen-chinese/出租车.png",
         pinyin: "chūzūchē",
         meaning: "Taxi",
         type: "Sustantivo",
@@ -1247,7 +1251,7 @@ const cardsData = [
     },
     {
         character: "岁",
-        image: "",
+        image: "images-chosen-chinese/岁.png",
         pinyin: "suì",
         meaning: "Años",
         type: "Clasificador",
@@ -1258,7 +1262,7 @@ const cardsData = [
     },
     {
         character: "本",
-        image: "",
+        image: "images-chosen-chinese/本.png",
         pinyin: "běn",
         meaning: "Tomo (libros)",
         type: "Clasificador",
@@ -1269,7 +1273,7 @@ const cardsData = [
     },
     {
         character: "些",
-        image: "",
+        image: "images-chosen-chinese/些.png",
         pinyin: "xiē",
         meaning: "Algunos",
         type: "Clasificador",
@@ -1280,7 +1284,7 @@ const cardsData = [
     },
     {
         character: "块",
-        image: "",
+        image: "images-chosen-chinese/块.png",
         pinyin: "kuài",
         meaning: "Pedazo",
         type: "Clasificador",
@@ -1337,6 +1341,7 @@ const cardsData = [
     },
     {
         character: "五",
+        image: "images-chosen-chinese/五.png",
         pinyin: "wǔ",
         meaning: "Cinco",
         type: "Número",
@@ -1437,7 +1442,7 @@ const cardsData = [
     },
     {
         character: "很",
-        image: "",
+        image: "images-chosen-chinese/很.png",
         pinyin: "hěn",
         meaning: "Muy",
         type: "Adverbio",
@@ -1472,7 +1477,7 @@ const cardsData = [
     // Conjunciones y Preposiciones
     {
         character: "和",
-        image: "",
+        image: "images-chosen-chinese/和.png",
         pinyin: "hé",
         meaning: "Y",
         type: "Conjunción",
@@ -1483,7 +1488,7 @@ const cardsData = [
     },
     {
         character: "在",
-        image: "",
+        image: "images-chosen-chinese/在.png",
         pinyin: "zài",
         meaning: "En",
         type: "Preposición",
@@ -1496,7 +1501,7 @@ const cardsData = [
     // Partículas
     {
         character: "吗",
-        image: "",
+        image: "images-chosen-chinese/吗.png",
         pinyin: "ma",
         meaning: "Interrogativa",
         type: "Partícula",
@@ -1507,7 +1512,7 @@ const cardsData = [
     },
     {
         character: "呢",
-        image: "",
+        image: "images-chosen-chinese/呢.png",
         pinyin: "ne",
         meaning: "Sujetiva",
         type: "Partícula",
@@ -1542,7 +1547,7 @@ const cardsData = [
     // Adjetivos
     {
         character: "大",
-        image: "",
+        image: "images-chosen-chinese/大.png",
         pinyin: "dà",
         meaning: "Grande",
         type: "Adjetivo",
@@ -1553,7 +1558,7 @@ const cardsData = [
     },
     {
         character: "小",
-        image: "",
+        image: "images-chosen-chinese/小.png",
         pinyin: "xiǎo",
         meaning: "Pequeño",
         type: "Adjetivo",
@@ -1564,7 +1569,7 @@ const cardsData = [
     },
     {
         character: "多",
-        image: "",
+        image: "images-chosen-chinese/多.png",
         pinyin: "duō",
         meaning: "Mucho",
         type: "Adjetivo",
