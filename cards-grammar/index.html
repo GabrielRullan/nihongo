@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Gramática Interactiva</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --accent: #6366f1;
+            --focus-color: #e11d48;
+            --border: rgba(0, 0, 0, 0.08);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+        }
+
+        .card-container {
+            width: 550px;
+            height: 320px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: var(--shadow);
+            border-radius: 20px;
+        }
+
+        .card-container.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        /* Frontal */
+        .card-front {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kanji-display {
+            font-size: 4.5rem;
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            line-height: 1.2;
+            text-align: center;
+            padding: 0 40px;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .focus {
+            color: var(--focus-color);
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+        }
+
+        /* Trasera */
+        .card-back {
+            transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 25px;
+            align-items: center;
+            text-align: left;
+            padding: 30px;
+        }
+
+        .badge-n5 {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--text-main);
+            color: var(--card-bg);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid var(--border);
+            padding-right: 20px;
+            height: 100%;
+        }
+
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .badge-grammar {
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .furigana-box {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .romaji-title {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .romaji-translation {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+            text-align: center;
+        }
+
+        .illustration {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 2px;
+        }
+
+        .explanation-text {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .label-side {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--text-sub);
+            letter-spacing: 1px;
+        }
+
+        ruby {
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            ruby-position: over;
+        }
+
+        ruby rt {
+            font-size: 0.45em;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-wrapper" id="cards-wrapper">
+        <!-- Cards will be injected here -->
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        function highlightPattern(furiganaTitle, pattern) {
+            if (!furiganaTitle || !pattern) return '';
+            let display = furiganaTitle.replace(/\[.*?\]/g, ''); // Quitamos furigana para el display frontal
+            let corePattern = pattern.replace(/〜/g, '').trim(); // Extraemos la gramática pura
+            
+            if (corePattern && display.includes(corePattern)) {
+                return display.replace(corePattern, `<span class="focus">${corePattern}</span>`);
+            }
+            return `<span class="focus">${display}</span>`;
+        }
+
+        function parseFurigana(text) {
+            if (!text) return '';
+            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
+            let match;
+            let lastIndex = 0;
+            let html = '';
+            while ((match = regex.exec(text)) !== null) {
+                const before = text.substring(lastIndex, match.index);
+                if (before) html += `<span class="okurigana">${before}</span>`;
+                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
+                lastIndex = regex.lastIndex;
+            }
+            const after = text.substring(lastIndex);
+            if (after) html += `<span class="okurigana">${after}</span>`;
+            return html;
+        }
+
+        function renderCards() {
+            const wrapper = document.getElementById('cards-wrapper');
+            let html = '';
+
+            grammarData.forEach((data, index) => {
+                const frontDisplay = highlightPattern(data.furiganaTitle, data.pattern);
+                const furiganaHtml = parseFurigana(data.furiganaTitle);
+                const badgeTag = (data.tags && data.tags.length > 0) ? data.tags[0] : 'Gramática';
+
+                html += `
+                <div class="card-container" onclick="this.classList.toggle('is-flipped')">
+                    <div class="card-inner">
+                        <!-- Frontal -->
+                        <div class="card-face card-front">
+                            <span class="label-side">Anverso</span>
+                            <div class="kanji-display">${frontDisplay}</div>
+                        </div>
+
+                        <!-- Trasera -->
+                        <div class="card-face card-back">
+                            <span class="label-side">Reverso</span>
+                            <div class="badge-n5">${data.level}</div>
+                            
+                            <div class="left-col">
+                                <div class="illustration">${data.illustration || '📝'}</div>
+                                <div class="furigana-box">
+                                    ${furiganaHtml}
+                                </div>
+                                <div class="romaji-title">${data.romajiTitle || ''}</div>
+                                <div class="romaji-translation">${data.meaning || ''}</div>
+                            </div>
+
+                            <div class="right-col">
+                                <div>
+                                    <span class="badge-grammar">${badgeTag}</span>
+                                    <div class="card-title">${data.pattern}</div>
+                                </div>
+                                
+                                <div class="phrase-container">
+                                    <div class="explanation-text">
+                                        ${data.explanation || ''}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+
+            wrapper.innerHTML = html;
+        }
+
+        renderCards();
+    </script>
+</body>
+</html>
