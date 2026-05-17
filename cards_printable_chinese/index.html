@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Card Printer Pro</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-grey: #64748b;
+            --text-romaji-phrase: #475569;
+            --accent-indigo: #6366f1;
+            --border-color: #e2e8f0;
+            --badge-bg: #4f46e5;
+
+            /* Colores de etiquetas (Tipos de palabra) */
+            --tag-pron-bg: #f1f5f9;
+            --tag-pron-text: #64748b;
+            --tag-sust-bg: #cbd5e1;
+            --tag-sust-text: #334155;
+            --tag-adj-bg: #dcfce7;
+            --tag-adj-text: #14532d;
+            --tag-adv-bg: #dcfce7;
+            --tag-adv-text: #14532d;
+            --tag-ver-bg: #ffedd5;
+            --tag-ver-text: #c2410c;
+            --tag-exp-bg: #fce7f3;
+            --tag-exp-text: #be185d;
+            --tag-default-bg: #f8fafc;
+            --tag-default-text: #64748b;
+
+            /* Standard Portrait Dimensions */
+            --card-width: 65mm;
+            --card-height: 95mm;
+        }
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+        }
+
+        /* UI Controls */
+        .no-print {
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .controls { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .control-group { display: flex; flex-direction: column; gap: 5px; }
+        label { font-size: 11px; font-weight: 700; color: var(--text-grey); text-transform: uppercase; }
+        select, button { padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; font-size: 13px; cursor: pointer; }
+        .btn-primary { background-color: var(--accent-indigo); color: white; border: none; font-weight: 600; padding: 10px 25px; }
+
+        /* Print Container and Pages */
+        .print-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10mm;
+            padding: 10mm 0;
+        }
+
+        .print-page {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            background: white;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            page-break-after: always;
+            page-break-inside: avoid;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Portrait Standard Grid (3 per page) */
+        body.size-standard .print-page {
+            grid-template-columns: repeat(1, var(--card-width));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 2mm;
+        }
+        body.size-standard.mode-folding .print-page {
+            grid-template-columns: repeat(1, calc(var(--card-width) * 2));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 2mm;
+        }
+
+        /* Landscape Grid 2x4 (8 per page) */
+        body.size-grid2x4 {
+            --card-width: 65mm;
+            --card-height: 90mm;
+        }
+        body.size-grid2x4 .print-page {
+            width: 297mm;
+            height: 210mm;
+            grid-template-columns: repeat(4, var(--card-width));
+            grid-template-rows: repeat(2, var(--card-height));
+            gap: 2mm;
+        }
+
+        body.size-grid2x4.mode-folding .print-page {
+            grid-template-columns: repeat(4, var(--card-width));
+            grid-template-rows: repeat(1, calc(var(--card-height) * 2));
+            gap: 2mm;
+        }
+
+        body.size-grid2x4.mode-folding .print-unit {
+            display: flex;
+            flex-direction: column;
+            width: var(--card-width);
+            height: calc(var(--card-height) * 2);
+        }
+
+        body.size-grid2x4.mode-folding .print-unit .card-front {
+            transform: rotate(180deg);
+        }
+
+        .fold-line-horizontal {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: var(--card-height);
+            height: 0;
+            border-top: 1px dashed #cbd5e1;
+            z-index: 10;
+        }
+
+        /* Print Units and Card Faces */
+        .print-unit {
+            background: white;
+            position: relative;
+            box-sizing: border-box;
+            border: 0.1pt solid #ddd;
+        }
+
+        .mode-folding .print-unit { display: flex; width: calc(var(--card-width) * 2); }
+        .mode-duplex .print-unit { display: block; width: var(--card-width); }
+
+        .fold-line {
+            position: absolute;
+            left: var(--card-width);
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1px dashed #cbd5e1;
+            z-index: 10;
+        }
+
+        .card-face {
+            width: var(--card-width);
+            height: var(--card-height);
+            background-color: var(--card-bg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            padding: 10px;
+        }
+
+        .card-front {
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+        }
+
+        .card-back {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Content Styling */
+        .kanji-display {
+            font-size: var(--kanji-font-size, 7.5rem);
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header { width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
+        .badge-n5 { background-color: var(--badge-bg); color: white; padding: 1px 4px; border-radius: 3px; font-size: 8px; font-weight: bold; }
+        .anki-furigana-display ruby { font-size: 24px; }
+        body.size-grid2x4 .anki-furigana-display ruby { font-size: 20px; }
+        .romaji-header { font-size: 13px; color: var(--accent-indigo); font-weight: 800; text-transform: uppercase; margin-top: 2px; }
+        
+        .illustration-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-height: 0;
+            padding: 5px 0;
+        }
+
+        .meaning-text { font-size: var(--meaning-font-size, 22px); font-weight: 900; margin: 4px 0; text-align: center; text-transform: uppercase; }
+        
+        .tag-container {
+            display: flex;
+            gap: 6px;
+            margin-top: 6px;
+            justify-content: center;
+        }
+
+        .type-tag {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: lowercase;
+        }
+
+        .tag-pronombre { background-color: var(--tag-pron-bg); color: var(--tag-pron-text); }
+        .tag-sustantivo { background-color: var(--tag-sust-bg); color: var(--tag-sust-text); }
+        .tag-adjetivo { background-color: var(--tag-adj-bg); color: var(--tag-adj-text); }
+        .tag-adverbio { background-color: var(--tag-adv-bg); color: var(--tag-adv-text); }
+        .tag-verbo { background-color: var(--tag-ver-bg); color: var(--tag-ver-text); }
+        .tag-expresion { background-color: var(--tag-exp-bg); color: var(--tag-exp-text); }
+        .tag-default { background-color: var(--tag-default-bg); color: var(--tag-default-text); }
+
+        .phrase-section { 
+            width: 100%; 
+            text-align: center; 
+            border-top: 0.5pt solid #eee; 
+            padding-top: 6px;
+        }
+        .phrase-jp { font-size: 12px; color: var(--text-grey); margin-bottom: 1px; }
+        .phrase-romaji { font-size: 10px; font-weight: 700; }
+        .phrase-es { font-size: 9px; font-style: italic; color: var(--text-grey); margin: 0; }
+
+        body.size-grid2x4 .card-back { padding: 8px; }
+
+        @media print {
+            body { background-color: white; }
+            .no-print { display: none; }
+            .print-container { padding: 0; gap: 0; }
+            .print-page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body class="mode-duplex size-standard">
+
+    <div class="no-print">
+        <h1 style="margin:0;">🖨️ Kanji Printer Pro</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Formato de Impresión</label>
+                <select id="layout-select" onchange="render()">
+                    <option value="3_portrait_duplex">3 por página sin plegar</option>
+                    <option value="3_portrait_folding">3 por página plegando</option>
+                    <option value="8_landscape_duplex">8 por página horizontal sin plegar</option>
+                    <option value="8_landscape_folding">8 por página plegando</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Tamaño Kanji (Frente)</label>
+                <select id="kanji-size-select" onchange="updateCustomSizes()">
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Tamaño Traducción (Reverso)</label>
+                <select id="translation-size-select" onchange="updateCustomSizes()">
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Acciones</label>
+                <button class="btn-primary" onclick="window.print()">🖨️ Imprimir</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="print-container" id="cards-container">
+        <!-- Pages will be dynamically injected here -->
+    </div>
+
+    <script src="data.js"></script>
+
+    <script>
+        function parseFurigana(text) {
+            if (!text) return '';
+            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
+            let match;
+            let lastIndex = 0;
+            let html = '';
+            while ((match = regex.exec(text)) !== null) {
+                const before = text.substring(lastIndex, match.index);
+                if (before) html += `<span class="okurigana">${before}</span>`;
+                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
+                lastIndex = regex.lastIndex;
+            }
+            const after = text.substring(lastIndex);
+            if (after) html += `<span class="okurigana">${after}</span>`;
+            return html;
+        }
+
+        function getCardFrontHTML(data) {
+            const isMultiple = data.character.length > 1;
+            const extraStyle = isMultiple ? ' style="writing-mode: vertical-rl; text-orientation: upright;"' : '';
+            return `<div class="card-face card-front"><span class="kanji-display"${extraStyle}>${data.character}</span></div>`;
+        }
+
+        function getTypeTagClass(type) {
+            if (!type) return 'tag-default';
+            const t = type.toLowerCase();
+            if (t.includes('pronombre')) return 'tag-pronombre';
+            if (t.includes('sustantivo') || t.includes('nombre')) return 'tag-sustantivo';
+            if (t.includes('adjetivo')) return 'tag-adjetivo';
+            if (t.includes('adverbio')) return 'tag-adverbio';
+            if (t.includes('verbo')) return 'tag-verbo';
+            if (t.includes('expresi')) return 'tag-expresion';
+            return 'tag-default';
+        }
+
+        function getCardBackHTML(data) {
+            let illustrationHtml = data.image 
+                ? `<img src="${data.image}" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">`
+                : `<div style="font-size: 24px; font-weight: bold; color: var(--text-grey);">${data.radical || '?'}</div>`;
+            
+            return `
+                <div class="card-face card-back">
+                    <div class="header">
+                        <div style="width:20px"></div>
+                        <div style="text-align:center; flex:1;">
+                            <div class="anki-furigana-display"><ruby>${data.pinyin}</ruby></div>
+                            <div class="romaji-header"></div>
+                        </div>
+                        ${data.level ? `<div class="badge-n5">${data.level}</div>` : `<div style="width: 30px;"></div>`}
+                    </div>
+                    <div class="illustration-box">
+                        ${illustrationHtml}
+                        <div class="meaning-text">${data.meaning || ''}</div>
+                        ${data.type ? `<div class="tag-container"><span class="type-tag ${getTypeTagClass(data.type)}">${data.type}</span></div>` : ''}
+                    </div>
+                    <div class="phrase-section" style="${data.phraseCn ? '' : 'display:none;'}">
+                        <div class="phrase-jp">${data.phraseCn}</div>
+                        <div class="phrase-romaji">${data.phrasePinyin}</div>
+                        <p class="phrase-es">"${data.phraseEs}"</p>
+                    </div>
+                </div>`;
+        }
+
+        const SIZES_CONFIG = {
+            standard: {
+                kanji: ['5.5rem', '6.5rem', '7.5rem', '8.5rem', '9.5rem'],
+                translation: ['14px', '18px', '22px', '26px', '30px'],
+                defaultKanji: '7.5rem',
+                defaultTranslation: '22px'
+            },
+            grid2x4: {
+                kanji: ['4.8rem', '5.8rem', '6.8rem', '7.8rem', '8.8rem'],
+                translation: ['14px', '18px', '22px', '26px', '30px'],
+                defaultKanji: '6.8rem',
+                defaultTranslation: '22px'
+            }
+        };
+
+        function updateCustomSizes() {
+            const kanjiSize = document.getElementById('kanji-size-select').value;
+            const translationSize = document.getElementById('translation-size-select').value;
+
+            document.documentElement.style.setProperty('--kanji-font-size', kanjiSize);
+            document.documentElement.style.setProperty('--meaning-font-size', translationSize);
+        }
+
+        function render() {
+            const selectedLayout = document.getElementById('layout-select').value;
+            const container = document.getElementById('cards-container');
+            container.innerHTML = '';
+
+            let mode = 'duplex';
+            let size = 'standard';
+            let cardsPerPage = 3;
+
+            if (selectedLayout === '3_portrait_folding') {
+                mode = 'folding';
+                size = 'standard';
+                cardsPerPage = 3;
+            } else if (selectedLayout === '8_landscape_duplex') {
+                mode = 'duplex';
+                size = 'grid2x4';
+                cardsPerPage = 8;
+            } else if (selectedLayout === '8_landscape_folding') {
+                mode = 'folding';
+                size = 'grid2x4';
+                cardsPerPage = 4;
+            }
+
+            document.body.className = `mode-${mode} size-${size}`;
+
+            // Populate Size Selectors Dynamically with precise values suited for the active layout size
+            const config = SIZES_CONFIG[size];
+            const kanjiSelect = document.getElementById('kanji-size-select');
+            const transSelect = document.getElementById('translation-size-select');
+            
+            const prevKanji = kanjiSelect.value;
+            const prevTrans = transSelect.value;
+
+            kanjiSelect.innerHTML = '';
+            config.kanji.forEach(val => {
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.textContent = val;
+                if (val === config.defaultKanji) opt.selected = true;
+                kanjiSelect.appendChild(opt);
+            });
+            if (config.kanji.includes(prevKanji)) {
+                kanjiSelect.value = prevKanji;
+            }
+
+            transSelect.innerHTML = '';
+            config.translation.forEach(val => {
+                const opt = document.createElement('option');
+                opt.value = val;
+                opt.textContent = val;
+                if (val === config.defaultTranslation) opt.selected = true;
+                transSelect.appendChild(opt);
+            });
+            if (config.translation.includes(prevTrans)) {
+                transSelect.value = prevTrans;
+            }
+
+            // Force global page orientation rule dynamically so browser applies it to ALL pages
+            let dynamicStyle = document.getElementById('dynamic-page-style');
+            if (!dynamicStyle) {
+                dynamicStyle = document.createElement('style');
+                dynamicStyle.id = 'dynamic-page-style';
+                document.head.appendChild(dynamicStyle);
+            }
+
+            if (selectedLayout === '8_landscape_duplex' || selectedLayout === '8_landscape_folding') {
+                dynamicStyle.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
+            } else {
+                dynamicStyle.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
+            }
+
+            if (mode === 'folding') {
+                for (let i = 0; i < cardsData.length; i += cardsPerPage) {
+                    const chunk = cardsData.slice(i, i + cardsPerPage);
+                    const page = document.createElement('div');
+                    page.className = 'print-page';
+                    
+                    chunk.forEach(data => {
+                        const unit = document.createElement('div');
+                        unit.className = 'print-unit';
+                        if (size === 'grid2x4') {
+                            unit.innerHTML = `<div class="fold-line-horizontal"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                        } else {
+                            unit.innerHTML = `<div class="fold-line"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
+                        }
+                        page.appendChild(unit);
+                    });
+                    container.appendChild(page);
+                }
+            } else {
+                // DUPLEX MODE
+                for (let i = 0; i < cardsData.length; i += cardsPerPage) {
+                    const chunk = cardsData.slice(i, i + cardsPerPage);
+                    
+                    // FRONTS Page
+                    const frontPage = document.createElement('div');
+                    frontPage.className = 'print-page';
+                    chunk.forEach(data => {
+                        const unit = document.createElement('div');
+                        unit.className = 'print-unit';
+                        unit.innerHTML = getCardFrontHTML(data);
+                        frontPage.appendChild(unit);
+                    });
+                    container.appendChild(frontPage);
+
+                    // BACKS Page (Mirrored to align perfectly on double-sided printing)
+                    const backPage = document.createElement('div');
+                    backPage.className = 'print-page';
+                    
+                    let mirroredChunk = [...chunk];
+                    if (size === 'grid2x4' && chunk.length === 8) {
+                        // Mirror 2x4 grid columns to align correctly when printed duplex
+                        mirroredChunk = [
+                            chunk[3], chunk[2], chunk[1], chunk[0],
+                            chunk[7], chunk[6], chunk[5], chunk[4]
+                        ].filter(Boolean);
+                    }
+                    
+                    mirroredChunk.forEach(data => {
+                        const unit = document.createElement('div');
+                        unit.className = 'print-unit';
+                        unit.innerHTML = getCardBackHTML(data);
+                        backPage.appendChild(unit);
+                    });
+                    container.appendChild(backPage);
+                }
+            }
+
+            // Sync custom sizes after rendering
+            updateCustomSizes();
+        }
+
+        render();
+    </script>
+</body>
+
+</html>
