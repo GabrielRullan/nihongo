@@ -810,7 +810,7 @@
 
                         <!-- Current Image Display -->
                         <div class="current-image-box">
-                            <img v-if="activeKanji.image" :src="'/' + activeKanji.image.replace('../', '') + '?t=' + refreshTimestamp" alt="Current illustration">
+                            <img v-if="activeKanji.image" :src="imgPrefix + activeKanji.image.replace('../', '') + '?t=' + refreshTimestamp" alt="Current illustration">
                             <div v-else class="current-image-placeholder">🖼️</div>
                             <div class="image-box-label">Imagen Activa</div>
                         </div>
@@ -826,7 +826,7 @@
                         <div class="choices-grid">
                             <div v-for="opt in activeKanji.options" :key="opt.index" class="choice-card" :class="{active: activeKanji.chosen_val === String(opt.index)}">
                                 <div class="choice-img-box">
-                                    <img :src="'/' + opt.path" alt="Option image" onerror="this.src='https://placehold.co/200?text=Error+Carga'">
+                                    <img :src="imgPrefix + opt.path" alt="Option image" onerror="this.src='https://placehold.co/200?text=Error+Carga'">
                                     <div class="image-box-label">Opción {{ opt.index }}</div>
                                 </div>
                                 <div class="choice-info">
@@ -877,7 +877,7 @@
                         <div class="ai-preview-box">
                             <img v-if="generatedImgBase64" :src="generatedImgBase64" alt="AI Generated Image">
                             <div v-else-if="activeKanji.chosen_val === 'custom'" class="ai-loading-overlay" style="background: transparent;">
-                                <img :src="'/' + activeKanji.image.replace('../', '') + '?t=' + refreshTimestamp" alt="Current Custom Illustration">
+                                <img :src="imgPrefix + activeKanji.image.replace('../', '') + '?t=' + refreshTimestamp" alt="Current Custom Illustration">
                             </div>
                             <div v-else style="color: var(--border-color); font-size: 3rem;">🤖</div>
                             
@@ -997,6 +997,9 @@
 
         createApp({
             setup() {
+                const apiBase = window.location.protocol === 'file:' ? 'http://localhost:8088' : '';
+                const imgPrefix = computed(() => window.location.protocol === 'file:' ? 'http://localhost:8088/' : '/');
+
                 const kanjis = ref([]);
                 const searchQuery = ref('');
                 const activeFilter = ref('all');
@@ -1016,7 +1019,7 @@
                 // Fetch data on load
                 const fetchKanjis = async () => {
                     try {
-                        const response = await fetch('/api/kanjis');
+                        const response = await fetch(`${apiBase}/api/kanjis`);
                         const data = await response.json();
                         kanjis.value = data;
                         
@@ -1101,7 +1104,7 @@
                     if (!activeKanji.value) return;
                     loadingCount.value++;
                     try {
-                        const response = await fetch('/api/select-option', {
+                        const response = await fetch(`${apiBase}/api/select-option`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
@@ -1132,7 +1135,7 @@
                     generating.value = true;
                     generatedImgBase64.value = '';
                     try {
-                        const response = await fetch('/api/generate-image', {
+                        const response = await fetch(`${apiBase}/api/generate-image`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
@@ -1149,7 +1152,7 @@
                             refreshTimestamp.value = Date.now();
                             
                             // Load it as generated preview so the user knows it's generated
-                            generatedImgBase64.value = '/' + data.image_path.replace('../', '') + '?t=' + Date.now();
+                            generatedImgBase64.value = imgPrefix.value + data.image_path.replace('../', '') + '?t=' + Date.now();
                             
                             await fetchKanjis();
                         } else {
@@ -1205,7 +1208,8 @@
                     updatePrompt,
                     selectOption,
                     generateImage,
-                    saveGeneratedImage
+                    saveGeneratedImage,
+                    imgPrefix
                 };
             }
         }).mount('#app');
