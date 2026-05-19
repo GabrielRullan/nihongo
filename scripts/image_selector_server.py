@@ -210,9 +210,9 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_json_response(401, {"error": "Missing Gemini API Key. Provide it in the GUI or set GEMINI_API_KEY env var."})
                 return
 
-            # Prepare Call to Google GenAI API for Imagen 3
+            # Prepare Call to Google GenAI API for Imagen 4
             # We use urllib to make it standard library only
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key={api_key}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key={api_key}"
             
             headers = {"Content-Type": "application/json"}
             payload = {
