@@ -1,47 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjetas de Gramática Interactiva</title>
+    <title>Tarjetas de Gramática Japonesa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-sub: #64748b;
-            --accent: #6366f1;
-            --focus-color: #e11d48;
-            --border: rgba(0, 0, 0, 0.08);
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --bg-color: #0b0f19;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-amber: #f59e0b;
+            --accent-amber-glow: rgba(245, 158, 11, 0.35);
+            --accent-indigo: #6366f1;
+            --glass-blur: blur(16px);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 40px 20px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            min-height: 100vh;
-            background-color: var(--bg-color);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
+            overflow-x: hidden;
+            position: relative;
         }
 
-        .container-wrapper {
+        /* Ambient glows */
+        .blur-bg-1 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: -100px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, rgba(245, 158, 11, 0) 70%);
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        .blur-bg-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            bottom: 50px;
+            left: -150px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, rgba(99, 102, 241, 0) 70%);
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        /* Nav Header */
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(11, 15, 25, 0.6);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Container */
+        .workspace {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        /* Search & Filters */
+        .filters-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            backdrop-filter: var(--glass-blur);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .search-bar-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 12px 16px 12px 42px;
+            font-family: inherit;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--accent-amber);
+            box-shadow: 0 0 12px var(--accent-amber-glow);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+
+        .pos-filters {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1200px;
+            gap: 8px;
+        }
+
+        .filter-tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-tag:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+
+        .filter-tag.active {
+            background: var(--accent-amber);
+            color: #0b0f19;
+            border-color: var(--accent-amber);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+            font-weight: 700;
+        }
+
+        .matching-stats {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1rem;
+        }
+
+        /* 3D Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .card-container {
-            width: 550px;
-            height: 320px;
-            perspective: 1000px;
+            height: 380px;
+            perspective: 1500px;
             cursor: pointer;
         }
 
@@ -51,8 +222,7 @@
             height: 100%;
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
-            box-shadow: var(--shadow);
-            border-radius: 20px;
+            border-radius: 28px;
         }
 
         .card-container.is-flipped .card-inner {
@@ -64,136 +234,285 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            border-radius: 20px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
+            border-radius: 28px;
+            background: linear-gradient(185deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--card-border);
             display: flex;
             box-sizing: border-box;
             overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            backdrop-filter: var(--glass-blur);
         }
 
-        /* Frontal */
+        .card-face::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* Front Face */
         .card-front {
             justify-content: center;
             align-items: center;
+            padding: 2.5rem;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .kanji-display {
-            font-size: 4.5rem;
-            font-family: "Yu Mincho", "MS Mincho", serif;
+            font-size: 3.5rem;
+            font-family: 'Outfit', "Yu Mincho", "MS Mincho", serif;
+            font-weight: 700;
             line-height: 1.2;
             text-align: center;
-            padding: 0 40px;
-            overflow-wrap: break-word;
+            background: linear-gradient(135deg, #ffffff 60%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             word-break: break-word;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         .focus {
-            color: var(--focus-color);
-            font-weight: 900;
+            color: var(--accent-amber);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fbbf24 30%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: underline;
             text-underline-offset: 8px;
+            text-decoration-color: rgba(245, 158, 11, 0.4);
         }
 
-        /* Trasera */
+        /* Back Face */
         .card-back {
             transform: rotateY(180deg);
             display: grid;
-            grid-template-columns: 1.2fr 1.8fr;
-            gap: 25px;
-            align-items: center;
-            text-align: left;
-            padding: 30px;
+            grid-template-columns: 1.1fr 1.9fr;
+            gap: 20px;
+            align-items: stretch;
+            padding: 1.8rem;
         }
 
-        .badge-n5 {
+        .badge-level {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: var(--text-main);
-            color: var(--card-bg);
-            padding: 4px 10px;
+            top: 15px;
+            right: 15px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--accent-amber);
+            padding: 3px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
         }
 
         .left-col {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            border-right: 1px solid var(--border);
-            padding-right: 20px;
-            height: 100%;
+            border-right: 1px solid rgba(255, 255, 255, 0.06);
+            padding-right: 15px;
+            text-align: center;
         }
 
         .right-col {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 12px;
+            overflow-y: auto;
+            padding-right: 4px;
         }
 
-        .badge-grammar {
-            background-color: var(--accent);
-            color: white;
-            padding: 3px 8px;
+        /* Scrollbar styles for card right column */
+        .right-col::-webkit-scrollbar {
+            width: 4px;
+        }
+        .right-col::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 4px;
-            font-size: 0.65rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 4px;
-        }
-
-        .furigana-box {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .romaji-title {
-            font-size: 0.85rem;
-            color: var(--accent);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .romaji-translation {
-            font-size: 0.8rem;
-            color: var(--text-sub);
-            margin-top: 4px;
-            text-align: center;
         }
 
         .illustration {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
         }
 
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--text-main);
+        .furigana-box {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #ffffff;
+            margin-top: 8px;
+        }
+
+        .romaji-title {
+            font-size: 0.8rem;
+            color: var(--accent-amber);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        .romaji-translation {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+
+        /* Rule and Explanation */
+        .formation-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+        }
+        .formation-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            font-weight: 700;
             margin-bottom: 2px;
+        }
+        .formation-rule {
+            color: #ffffff;
+            font-weight: 600;
         }
 
         .explanation-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+
+        /* Examples list */
+        .examples-header {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-amber);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 3px;
+            margin-top: 5px;
+        }
+
+        .examples-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .example-item {
+            background: rgba(255, 255, 255, 0.01);
+            border-left: 2px solid var(--accent-amber);
+            padding: 6px 30px 6px 10px;
+            position: relative;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-jp {
             font-size: 0.95rem;
-            line-height: 1.4;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .example-jp ruby rt {
+            font-size: 0.5em;
+            color: var(--accent-indigo);
+        }
+
+        .example-romaji {
+            font-size: 0.75rem;
+            color: var(--accent-amber);
+            margin-top: 1px;
+        }
+
+        .example-es {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Speakers */
+        .speak-btn {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .speak-btn:hover {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--accent-amber);
+            border-color: var(--accent-amber);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .speak-btn-title {
+            position: static;
+            transform: none;
+            width: 32px;
+            height: 32px;
+            margin-top: 8px;
+        }
+        .speak-btn-title:hover {
+            transform: scale(1.1);
+        }
+
+        .badge-pos {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
         }
 
         .label-side {
             position: absolute;
-            bottom: 10px;
+            bottom: 12px;
             left: 20px;
             font-size: 0.65rem;
             text-transform: uppercase;
-            color: var(--text-sub);
+            color: rgba(255, 255, 255, 0.2);
             letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .hint-flip {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 5px 12px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            margin-top: 15px;
         }
 
         ruby {
@@ -203,23 +522,127 @@
 
         ruby rt {
             font-size: 0.45em;
-            color: var(--accent);
+            color: var(--accent-indigo);
             letter-spacing: 0.05em;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-container {
+                height: 480px;
+            }
+            .card-back {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+                gap: 15px;
+            }
+            .left-col {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding-right: 0;
+                padding-bottom: 15px;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .speak-btn-title {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="container-wrapper" id="cards-wrapper">
-        <!-- Cards will be injected here -->
+    <div class="blur-bg-1"></div>
+    <div class="blur-bg-2"></div>
+
+    <header>
+        <a href="../index.html" class="logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Learning Hub</span>
+        </a>
+        <a href="../index.html" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Volver al Hub
+        </a>
+    </header>
+
+    <div class="workspace">
+        <!-- Search and Filters Panel -->
+        <div class="filters-panel">
+            <div class="search-bar-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" class="search-bar" placeholder="Buscar por estructura, significado, explicación..." oninput="handleSearch()">
+            </div>
+            
+            <div class="pos-filters" id="tags-filters-container">
+                <span class="filter-tag active" onclick="filterTag('all')">Todos</span>
+                <!-- Tags will be dynamically loaded -->
+            </div>
+
+            <div class="matching-stats" id="matching-stats">
+                Cargando tarjetas de gramática...
+            </div>
+        </div>
+
+        <!-- Cards Grid wrapper -->
+        <div class="cards-grid" id="cards-grid-wrapper">
+            <!-- Dynamically loaded cards -->
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state hidden" id="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No se encontraron estructuras</h3>
+            <p>Intenta ajustar el texto de búsqueda o el tag seleccionado.</p>
+        </div>
     </div>
 
+    <!-- Data source -->
     <script src="data.js"></script>
+
     <script>
+        let filteredGrammar = [];
+        let selectedTag = 'all';
+        let searchQuery = '';
+        let synth = window.speechSynthesis;
+        let activeVoice = null;
+
+        // Initialize Speech voice
+        function initVoice() {
+            if (!synth) return;
+            const voices = synth.getVoices();
+            // Try to find a native Japanese voice (ja-JP)
+            activeVoice = voices.find(v => v.lang.toLowerCase().includes('ja-jp')) ||
+                          voices.find(v => v.lang.toLowerCase().includes('ja'));
+        }
+        
+        if (synth && synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = initVoice;
+        }
+
+        // Highlight the grammatical pattern core in the title
         function highlightPattern(furiganaTitle, pattern) {
             if (!furiganaTitle || !pattern) return '';
-            let display = furiganaTitle.replace(/\[.*?\]/g, ''); // Quitamos furigana para el display frontal
-            let corePattern = pattern.replace(/〜/g, '').trim(); // Extraemos la gramática pura
+            let display = furiganaTitle.replace(/\[.*?\]/g, ''); // strip furigana for front title display
+            let corePattern = pattern.replace(/〜/g, '').trim(); 
             
             if (corePattern && display.includes(corePattern)) {
                 return display.replace(corePattern, `<span class="focus">${corePattern}</span>`);
@@ -227,6 +650,7 @@
             return `<span class="focus">${display}</span>`;
         }
 
+        // Parse furigana format: Kanji[furigana] -> HTML ruby
         function parseFurigana(text) {
             if (!text) return '';
             const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
@@ -235,69 +659,202 @@
             let html = '';
             while ((match = regex.exec(text)) !== null) {
                 const before = text.substring(lastIndex, match.index);
-                if (before) html += `<span class="okurigana">${before}</span>`;
+                if (before) html += `<span>${before}</span>`;
                 html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
                 lastIndex = regex.lastIndex;
             }
             const after = text.substring(lastIndex);
-            if (after) html += `<span class="okurigana">${after}</span>`;
+            if (after) html += `<span>${after}</span>`;
             return html;
         }
 
-        function renderCards() {
-            const wrapper = document.getElementById('cards-wrapper');
-            let html = '';
+        // Initialize filters and UI
+        function initApp() {
+            initVoice();
+            
+            // Collect all unique tags
+            const tagsSet = new Set();
+            grammarData.forEach(card => {
+                if (card.tags) {
+                    card.tags.forEach(t => tagsSet.add(t.trim()));
+                }
+                if (card.level) {
+                    tagsSet.add(card.level.trim());
+                }
+            });
 
-            grammarData.forEach((data, index) => {
+            const tagsContainer = document.getElementById('tags-filters-container');
+            tagsSet.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'filter-tag';
+                span.textContent = tag;
+                span.setAttribute('data-tag', tag);
+                span.onclick = () => filterTag(tag);
+                tagsContainer.appendChild(span);
+            });
+
+            applyFilters();
+        }
+
+        // Tag Selector
+        function filterTag(tag) {
+            selectedTag = tag;
+            
+            const tags = document.querySelectorAll('.filter-tag');
+            tags.forEach(t => {
+                if (t.getAttribute('data-tag') === tag || (tag === 'all' && t.textContent === 'Todos')) {
+                    t.classList.add('active');
+                } else {
+                    t.classList.remove('active');
+                }
+            });
+
+            applyFilters();
+        }
+
+        // Search trigger
+        function handleSearch() {
+            searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            applyFilters();
+        }
+
+        // Filter Logic
+        function applyFilters() {
+            filteredGrammar = grammarData.filter(card => {
+                const matchesTag = (selectedTag === 'all' || 
+                    card.level === selectedTag || 
+                    (card.tags && card.tags.includes(selectedTag))
+                );
+
+                const matchesSearch = (!searchQuery ||
+                    card.pattern.toLowerCase().includes(searchQuery) ||
+                    card.meaning.toLowerCase().includes(searchQuery) ||
+                    (card.explanation && card.explanation.toLowerCase().includes(searchQuery)) ||
+                    (card.romajiTitle && card.romajiTitle.toLowerCase().includes(searchQuery))
+                );
+
+                return matchesTag && matchesSearch;
+            });
+
+            document.getElementById('matching-stats').textContent = 
+                `Se encontraron ${filteredGrammar.length} de ${grammarData.length} estructuras de gramática`;
+
+            const emptyState = document.getElementById('empty-state');
+            const gridWrapper = document.getElementById('cards-grid-wrapper');
+
+            if (filteredGrammar.length === 0) {
+                emptyState.classList.remove('hidden');
+                gridWrapper.innerHTML = '';
+            } else {
+                emptyState.classList.add('hidden');
+                renderCardsGrid();
+            }
+        }
+
+        // Render Cards Grid
+        function renderCardsGrid() {
+            const container = document.getElementById('cards-grid-wrapper');
+            container.innerHTML = '';
+
+            filteredGrammar.forEach((data, index) => {
                 const frontDisplay = highlightPattern(data.furiganaTitle, data.pattern);
                 const furiganaHtml = parseFurigana(data.furiganaTitle);
                 const badgeTag = (data.tags && data.tags.length > 0) ? data.tags[0] : 'Gramática';
 
-                html += `
-                <div class="card-container" onclick="this.classList.toggle('is-flipped')">
+                // Build examples list HTML
+                let examplesHtml = '';
+                if (data.examples && data.examples.length > 0) {
+                    examplesHtml += `<div class="examples-header">Ejemplos de uso</div><div class="examples-list">`;
+                    data.examples.forEach((ex, exIdx) => {
+                        const exFuriganaHtml = parseFurigana(ex.furigana || ex.jp);
+                        examplesHtml += `
+                            <div class="example-item">
+                                <div class="example-jp">${exFuriganaHtml}</div>
+                                <div class="example-romaji">${ex.romaji || ''}</div>
+                                <div class="example-es">"${ex.es || ''}"</div>
+                                <button class="speak-btn" onclick="event.stopPropagation(); speakText('${ex.jp.replace(/'/g, "\\'")}')" title="Pronunciar ejemplo">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
+                            </div>
+                        `;
+                    });
+                    examplesHtml += `</div>`;
+                }
+
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'card-container';
+                cardDiv.onclick = () => cardDiv.classList.toggle('is-flipped');
+                
+                cardDiv.innerHTML = `
                     <div class="card-inner">
                         <!-- Frontal -->
                         <div class="card-face card-front">
                             <span class="label-side">Anverso</span>
+                            <div class="badge-level">${data.level}</div>
                             <div class="kanji-display">${frontDisplay}</div>
+                            <div style="display:flex; gap:8px; margin-top:10px;">
+                                <span class="badge-pos">${badgeTag}</span>
+                            </div>
+                            <div class="hint-flip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                                Click para girar
+                            </div>
                         </div>
 
                         <!-- Trasera -->
-                        <div class="card-face card-back">
+                        <div class="card-face card-back" onclick="event.stopPropagation()">
                             <span class="label-side">Reverso</span>
-                            <div class="badge-n5">${data.level}</div>
+                            <div class="badge-level">${data.level}</div>
                             
                             <div class="left-col">
                                 <div class="illustration">${data.illustration || '📝'}</div>
-                                <div class="furigana-box">
-                                    ${furiganaHtml}
+                                <div>
+                                    <div class="furigana-box">
+                                        ${furiganaHtml}
+                                    </div>
+                                    <div class="romaji-title">${data.romajiTitle || ''}</div>
+                                    <div class="romaji-translation">${data.meaning || ''}</div>
                                 </div>
-                                <div class="romaji-title">${data.romajiTitle || ''}</div>
-                                <div class="romaji-translation">${data.meaning || ''}</div>
+                                <button class="speak-btn speak-btn-title" onclick="speakText('${data.furiganaTitle.replace(/\[.*?\]/g, "").replace(/'/g, "\\'")}')" title="Pronunciar patrón">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
                             </div>
 
                             <div class="right-col">
-                                <div>
-                                    <span class="badge-grammar">${badgeTag}</span>
-                                    <div class="card-title">${data.pattern}</div>
+                                <div class="formation-box">
+                                    <div class="formation-label">Estructura</div>
+                                    <div class="formation-rule">${data.formation || data.pattern}</div>
                                 </div>
                                 
-                                <div class="phrase-container">
-                                    <div class="explanation-text">
-                                        ${data.explanation || ''}
-                                    </div>
+                                <div class="explanation-text">
+                                    ${data.explanation || ''}
                                 </div>
+                                
+                                ${examplesHtml}
                             </div>
                         </div>
                     </div>
-                </div>
                 `;
-            });
 
-            wrapper.innerHTML = html;
+                container.appendChild(cardDiv);
+            });
         }
 
-        renderCards();
+        // Web Speech Synthesis Audio Trigger
+        function speakText(text) {
+            if (!synth || !text) return;
+            synth.cancel(); // kill active speech
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            if (activeVoice) utterance.voice = activeVoice;
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.85; // Natural speed for learners
+
+            synth.speak(utterance);
+        }
+
+        // Run application on load
+        window.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>

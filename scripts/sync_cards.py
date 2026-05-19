@@ -5,7 +5,7 @@ import json
 # This script generates the data.js file for the interactive Kanji cards.
 # It uses kanjis-80.csv as the primary source and cross-references summary.csv for images.
 
-def generate_cards_data(kanji_path="kanjis-80.csv", summary_path="summary.csv", output_path="cards/data.js"):
+def generate_cards_data(kanji_path="data/kanjis-80.csv", summary_path="data/summary.csv", output_path="cards/data.js"):
     if not os.path.exists(kanji_path):
         print(f"Error: {kanji_path} not found.")
         return

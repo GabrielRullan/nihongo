@@ -46,7 +46,7 @@ def search_illustkun(target_word):
         potential_links = soup.select('article a')
         links = [a.get('href') for a in potential_links if a.get('href')]
         
-        # Return top 3 unique links
+        # Return unique links
         seen = set()
         unique_links = []
         for l in links:
@@ -75,10 +75,10 @@ def download_image(img_url, filename, save_dir="images"):
     except:
         return None
 
-def process_workflow(input_path, summary_path="summary.csv"):
-    print(f"Processing all verbs. Downloading top 3 options for each from illustkun...")
+def process_workflow(input_path, summary_path="data/summary.csv"):
+    print(f"Processing all Kanji from {input_path}. Defaulting to first image found.")
     
-    # 1. Load existing choices to preserve them
+    # 1. Load existing choices
     existing_choices = {}
     if os.path.exists(summary_path):
         try:
@@ -93,10 +93,9 @@ def process_workflow(input_path, summary_path="summary.csv"):
     # 2. Get list of words to process
     data_to_process = []
     with open(input_path, mode='r', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        next(reader, None) # Skip header
+        reader = csv.DictReader(f)
         for row in reader:
-            if row: data_to_process.append(row[0].strip())
+            data_to_process.append(row["Kanji"].strip())
 
     final_results = []
     downloaded_img_urls = set()
@@ -104,7 +103,10 @@ def process_workflow(input_path, summary_path="summary.csv"):
     for word in data_to_process:
         print(f"\n--- {word} ---", flush=True)
         links = search_illustkun(word)
-        entry = {"Original Word": word, "Chosen": existing_choices.get(word, "")}
+        
+        # Default Chosen to 1 if not already set
+        chosen_val = existing_choices.get(word, "1")
+        entry = {"Original Word": word, "Chosen": chosen_val}
         
         saved_count = 0
         link_index = 0
@@ -116,8 +118,6 @@ def process_workflow(input_path, summary_path="summary.csv"):
             title, img_url = get_post_details(url)
             
             if not img_url or img_url in downloaded_img_urls:
-                if img_url in downloaded_img_urls:
-                    print(f"  [-] Skipping duplicate image: {title}", flush=True)
                 continue
                 
             downloaded_img_urls.add(img_url)
@@ -132,7 +132,7 @@ def process_workflow(input_path, summary_path="summary.csv"):
             
             if os.path.exists(check_path):
                 entry[f"Option {i+1} Path"] = check_path
-                print(f"  [{i+1}] Skipping (already exists): {title}", flush=True)
+                print(f"  [{i+1}] Already exists: {title}", flush=True)
             else:
                 path = download_image(img_url, filename)
                 entry[f"Option {i+1} Path"] = path if path else "Failed"
@@ -140,17 +140,14 @@ def process_workflow(input_path, summary_path="summary.csv"):
                 
             saved_count += 1
             
-        # Fill remaining options with N/A if less than 3 were found
+        # Fill remaining options
         for i in range(saved_count, 3):
             entry[f"Option {i+1} Title"] = "N/A"
             entry[f"Option {i+1} URL"] = "N/A"
             entry[f"Option {i+1} Path"] = "N/A"
-            print(f"  [{i+1}] No result found", flush=True)
                 
         final_results.append(entry)
-        # Small delay to be polite
-        print(f"--- Finished {word} ---", flush=True)
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     # 3. Save summary
     fieldnames = ["Original Word", "Chosen",
@@ -166,5 +163,4 @@ def process_workflow(input_path, summary_path="summary.csv"):
     print(f"\nWork complete. Summary updated: {summary_path}", flush=True)
 
 if __name__ == "__main__":
-    process_workflow("verbos.csv")
-
+    process_workflow("data/kanjis-80.csv")

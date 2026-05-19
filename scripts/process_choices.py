@@ -7,7 +7,7 @@ import sys
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding='utf-8')
 
-def copy_chosen_images(summary_path="summary.csv", target_dir="images-chosen"):
+def copy_chosen_images(summary_path="data/summary.csv", target_dir="images-chosen"):
     """Copies images marked in the 'Chosen' column to the target directory."""
     if not os.path.exists(summary_path):
         print(f"Error: {summary_path} not found.")

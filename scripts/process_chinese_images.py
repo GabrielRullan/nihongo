@@ -8,9 +8,9 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding='utf-8')
 
 def process():
-    summary_path = "chinese_summary.csv"
+    summary_path = "data/chinese_summary.csv"
     target_dir = "images-chosen-chinese"
-    data_path = "data.js"
+    data_path = "cards-chinese/data.js"
     
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
@@ -28,7 +28,7 @@ def process():
                     ext = os.path.splitext(option_path)[1]
                     dest_path = os.path.join(target_dir, f"{word}{ext}")
                     shutil.copy2(option_path, dest_path)
-                    image_choices[word] = dest_path.replace("\\", "/")
+                    image_choices[word] = "../" + dest_path.replace("\\", "/")
                     print(f"Copied {word} (Option {chosen})")
 
     # 2. Update data.js

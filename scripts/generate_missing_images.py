@@ -16,11 +16,10 @@ except ImportError:
     print("Please install it by running: pip install google-genai")
     sys.exit(1)
 
-# File paths relative to this script
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE_PATH = os.path.join(SCRIPT_DIR, "data.js")
-IMAGES_DIR = os.path.join(SCRIPT_DIR, "images-chosen-chinese")
-PENDING_CSV_PATH = os.path.join(SCRIPT_DIR, "pending.csv")
+# File paths relative to the project root
+DATA_FILE_PATH = "cards-chinese/data.js"
+IMAGES_DIR = "images-chosen-chinese"
+PENDING_CSV_PATH = "data/chinese_pending.csv"
 
 # 1. Curated list of prompt concepts for all remaining HSK 1 cards
 # This ensures every image perfectly fits the Illustkun cute flat pastel vector style!
@@ -136,10 +135,10 @@ def update_data_js(char):
     for block in blocks:
         if f'character: "{char}",' in block or f'character: \'{char}\',' in block:
             if "image:" in block:
-                block = re.sub(r'image:\s*""', f'image: "images-chosen-chinese/{char}.png"', block)
-                block = re.sub(r"image:\s*''", f'image: "images-chosen-chinese/{char}.png"', block)
+                block = re.sub(r'image:\s*""', f'image: "../images-chosen-chinese/{char}.png"', block)
+                block = re.sub(r"image:\s*''", f'image: "../images-chosen-chinese/{char}.png"', block)
             else:
-                block = block.replace(f'character: "{char}",', f'character: "{char}",\n        image: "images-chosen-chinese/{char}.png",')
+                block = block.replace(f'character: "{char}",', f'character: "{char}",\n        image: "../images-chosen-chinese/{char}.png",')
             updated = True
         updated_blocks.append(block)
         
@@ -171,7 +170,7 @@ def regenerate_pending_csv():
                 is_missing = True
             else:
                 # Failsafe: check if the image file physically exists in the images directory
-                full_image_path = os.path.join(SCRIPT_DIR, image_val)
+                full_image_path = image_val.replace("../", "")
                 if not os.path.exists(full_image_path):
                     is_missing = True
                 
@@ -195,7 +194,7 @@ def regenerate_pending_csv():
             pending_cards.append({
                 "Character": char, "Pinyin": pinyin, "Meaning": meaning, "Type": card_type, "Level": level,
                 "Phrase Chinese": phrase_cn, "Phrase Pinyin": phrase_pinyin, "Phrase Spanish": phrase_es,
-                "Suggested Image Path": f"images-chosen-chinese/{char}.png"
+                "Suggested Image Path": f"../images-chosen-chinese/{char}.png"
             })
             
     headers = ["Character", "Pinyin", "Meaning", "Type", "Level", "Phrase Chinese", "Phrase Pinyin", "Phrase Spanish", "Suggested Image Path"]

@@ -106,10 +106,10 @@ def download_image(img_url, filename, save_dir="images"):
     except:
         return None
 
-def process_workflow(summary_path="chinese_summary.csv"):
-    print("Reading data.js to extract characters...")
+def process_workflow(summary_path="data/chinese_summary.csv"):
+    print("Reading cards-chinese/data.js to extract characters...")
     try:
-        with open("data.js", "r", encoding="utf-8") as f:
+        with open("cards-chinese/data.js", "r", encoding="utf-8") as f:
             content = f.read()
     except Exception as e:
         print("Error reading data.js:", e)

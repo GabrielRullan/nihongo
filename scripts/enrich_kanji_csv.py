@@ -87,7 +87,7 @@ data = [
 
 header = ["Kanji", "Tipo", "Requiere Hiragana", "Hiragana Extra", "Anki Furigana", "Meaning", "Romaji", "PhraseJp", "PhraseRomaji", "PhraseEs"]
 
-with open("kanjis-80.csv", "w", encoding="utf-8", newline="") as f:
+with open("data/kanjis-80.csv", "w", encoding="utf-8", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(header)
     writer.writerows(data)
