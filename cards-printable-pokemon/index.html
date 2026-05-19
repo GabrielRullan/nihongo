@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Chinese Card Printer & Calibrator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Palette for interactive tool */
+            --bg-interactive: #0b0f19;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-poke: #f59e0b;
+            --accent-glow: rgba(245, 158, 11, 0.35);
+            --glass-blur: blur(16px);
+
+            /* Calibration offsets (updated in real-time) */
+            --front-offset-x: 0mm;
+            --front-offset-y: 0mm;
+            --back-offset-x: 0mm;
+            --back-offset-y: 0mm;
+
+            /* Base card dimensions (Portrait) */
+            --card-width: 65mm;
+            --card-height: 95mm;
+            --kanji-font-size: 4rem;
+            --meaning-font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-interactive);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Abstract ambient glow */
+        .blur-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, rgba(245, 158, 11, 0) 70%);
+            z-index: -1;
+            filter: blur(50px);
+            pointer-events: none;
+        }
+
+        header {
+            padding: 1.2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(11, 15, 25, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dashboard Workspace */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        /* Control Panel sidebar */
+        .sidebar {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            backdrop-filter: var(--glass-blur);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .panel-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1.2rem;
+        }
+
+        .panel-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-poke);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        select:focus, input[type="text"]:focus {
+            border-color: var(--accent-poke);
+        }
+
+        .slider-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .slider-val {
+            font-family: monospace;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-poke);
+            background: rgba(255, 255, 255, 0.1);
+            height: 6px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .checkbox-label input {
+            accent-color: var(--accent-poke);
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-print-main {
+            background: var(--accent-poke);
+            color: #0b0f19;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-print-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            background: #fbbf24;
+        }
+
+        /* Card Selector List */
+        .card-selector-box {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px;
+        }
+
+        .card-selector-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .card-selector-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        /* Print Canvas Simulator */
+        .canvas-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .simulator-notice {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Virtual sheet display */
+        .print-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15mm;
+            padding: 5mm 0;
+            width: 100%;
+        }
+
+        .print-page {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            background: #ffffff;
+            color: #1e293b;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            page-break-after: always;
+            page-break-inside: avoid;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            border: 1px solid #334155;
+        }
+
+        /* Sheet Labels for preview */
+        .page-sheet-label {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Page Layout Styles - Standard (3 per page) */
+        .size-standard .print-page {
+            grid-template-columns: repeat(1, var(--card-width));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 2mm;
+        }
+        .size-standard.mode-folding .print-page {
+            grid-template-columns: repeat(1, calc(var(--card-width) * 2));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 2mm;
+        }
+
+        /* Page Layout Styles - Grid 2x4 (8 per page) */
+        .size-grid2x4 {
+            --card-width: 65mm;
+            --card-height: 90mm;
+        }
+        .size-grid2x4 .print-page {
+            width: 297mm;
+            height: 210mm;
+            grid-template-columns: repeat(4, var(--card-width));
+            grid-template-rows: repeat(2, var(--card-height));
+            gap: 2mm;
+        }
+        .size-grid2x4.mode-folding .print-page {
+            width: 297mm;
+            height: 210mm;
+            grid-template-columns: repeat(4, var(--card-width));
+            grid-template-rows: repeat(1, calc(var(--card-height) * 2));
+            gap: 2mm;
+        }
+        .size-grid2x4.mode-folding .print-unit {
+            display: flex;
+            flex-direction: column;
+            width: var(--card-width);
+            height: calc(var(--card-height) * 2);
+        }
+        .size-grid2x4.mode-folding .print-unit .card-front {
+            transform: rotate(180deg);
+        }
+
+        /* Duplex Alignment Calibrator transform rules */
+        .print-page.fronts-page .print-unit {
+            transform: translate(var(--front-offset-x), var(--front-offset-y));
+        }
+
+        .print-page.backs-page .print-unit {
+            transform: translate(var(--back-offset-x), var(--back-offset-y));
+        }
+
+        /* Print Units and Card Faces */
+        .print-unit {
+            background: #ffffff;
+            position: relative;
+            box-sizing: border-box;
+            border: 0.5pt solid #a1a1aa;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .mode-folding .print-unit { width: calc(var(--card-width) * 2); }
+        .mode-duplex .print-unit { display: block; width: var(--card-width); }
+
+        .fold-line {
+            position: absolute;
+            left: var(--card-width);
+            top: 0;
+            bottom: 0;
+            width: 0;
+            border-left: 1px dashed #64748b;
+            z-index: 10;
+        }
+
+        .fold-line-horizontal {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: var(--card-height);
+            height: 0;
+            border-top: 1px dashed #64748b;
+            z-index: 10;
+        }
+
+        .card-face {
+            width: var(--card-width);
+            height: var(--card-height);
+            background-color: #ffffff;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            padding: 8px;
+        }
+
+        .card-front {
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+        }
+
+        .card-back {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Content Styling inside printable cards */
+        .kanji-display {
+            font-size: var(--kanji-font-size);
+            font-family: 'Outfit', "Yu Mincho", "MS Mincho", serif;
+            font-weight: 800;
+            line-height: 1.1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e293b;
+        }
+
+        .card-header-print {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 8px;
+            color: #64748b;
+            border-bottom: 0.5px solid #e2e8f0;
+            padding-bottom: 4px;
+        }
+
+        .pokemon-num-print {
+            font-family: monospace;
+            font-weight: 700;
+            background: #f1f5f9;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        .type-badge-print {
+            font-weight: 700;
+            font-size: 7px;
+            text-transform: uppercase;
+        }
+
+        .pinyin-header-print {
+            font-size: 11px;
+            color: var(--accent-poke);
+            font-weight: 700;
+            margin-top: 2px;
+            text-align: center;
+        }
+        
+        .illustration-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-height: 0;
+            width: 100%;
+            padding: 4px 0;
+        }
+
+        .illustration-img {
+            height: 100%;
+            max-height: 48px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+        }
+
+        .size-standard .illustration-img {
+            max-height: 58px;
+        }
+
+        .meaning-text { 
+            font-size: 12px; 
+            font-weight: 800; 
+            margin: 2px 0; 
+            text-align: center; 
+            text-transform: uppercase; 
+            color: #1e293b;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .size-standard .meaning-text {
+            font-size: 14px;
+        }
+        
+        /* Hanzi character table breakdown on print cards */
+        .char-breakdown-print { 
+            width: 100%; 
+            border-top: 0.5pt solid #e2e8f0; 
+            padding-top: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .char-row-print {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 7.5px;
+            line-height: 1.1;
+        }
+
+        .size-standard .char-row-print {
+            font-size: 8.5px;
+            gap: 6px;
+        }
+
+        .char-hanzi-print {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 9px;
+            width: 12px;
+            text-align: center;
+        }
+
+        .size-standard .char-hanzi-print {
+            font-size: 10px;
+            width: 14px;
+        }
+
+        .char-pinyin-print {
+            font-style: italic;
+            color: var(--accent-poke);
+            font-weight: 600;
+            width: 32px;
+        }
+
+        .char-def-print {
+            color: #475569;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .size-grid2x4 .card-back { padding: 6px; }
+
+        /* Placeholders rendering empty space so grid alignments don't shift */
+        .placeholder-unit {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Print Media Styles (Overrides everything interactive) */
+        @media print {
+            html, body { 
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #ffffff !important; 
+                color: #000000 !important;
+            }
+            header, .sidebar, .simulator-notice, .page-sheet-label {
+                display: none !important;
+            }
+            .dashboard-container {
+                display: block !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .canvas-area {
+                display: block !important;
+            }
+            .print-container {
+                padding: 0 !important;
+                gap: 0 !important;
+            }
+            .print-page {
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                page-break-after: always !important;
+            }
+        }
+    </style>
+</head>
+<body class="mode-duplex size-standard">
+    <div id="app">
+        <div class="blur-bg"></div>
+
+        <!-- Header -->
+        <header>
+            <a href="../index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-poke)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Learning Hub</span>
+            </a>
+            <a href="../index.html" class="back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver al Hub
+            </a>
+        </header>
+
+        <div class="dashboard-container">
+            <!-- Sidebar controls -->
+            <div class="sidebar">
+                <div class="panel-section">
+                    <div class="section-title">Diseño de Impresión</div>
+                    
+                    <div class="slider-row">
+                        <label>Formato</label>
+                        <select v-model="layoutMode">
+                            <option value="3_portrait_duplex">3 por página (A4 Vertical) - Duplex</option>
+                            <option value="3_portrait_folding">3 por página (A4 Vertical) - Plegable</option>
+                            <option value="8_landscape_duplex">8 por página (A4 Horizontal) - Duplex</option>
+                            <option value="8_landscape_folding">8 por página (A4 Horizontal) - Plegable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Calibración Duplex (Offsets)</div>
+                    <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:8px;">Ajusta milímetros para calibrar la alineación delantera/trasera de tu impresora.</p>
+                    
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Frente Horizontal Shift</span>
+                            <span class="slider-val">{{ frontOffsetX }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="frontOffsetX">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Frente Vertical Shift</span>
+                            <span class="slider-val">{{ frontOffsetY }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="frontOffsetY">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Reverso Horizontal Shift</span>
+                            <span class="slider-val">{{ backOffsetX }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="backOffsetX">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Reverso Vertical Shift</span>
+                            <span class="slider-val">{{ backOffsetY }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="backOffsetY">
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Filtros de Elementos</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showIllustrations"> Mostrar Ilustraciones
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showBreakdown"> Mostrar Desglose de Hanzi
+                    </label>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Selección de Tarjetas ({{ selectedCards.length }} / {{ cards.length }})</div>
+                    <div style="display:flex; gap:8px; margin-bottom:8px;">
+                        <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="selectAllCards">Todos</button>
+                        <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="deselectAllCards">Ninguno</button>
+                    </div>
+                    <div class="card-selector-box">
+                        <div v-for="c in cards" :key="c.id" class="card-selector-item">
+                            <input type="checkbox" :value="c.id" v-model="selectedCards">
+                            <span style="font-weight:bold; font-family: monospace; color: var(--accent-poke);">{{ c.ndex }}</span>
+                            <span style="font-weight:bold;">{{ c.simplified }}</span>
+                            <span style="color:var(--text-secondary); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">- {{ c.english }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-print-main" @click="triggerPrint">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Imprimir Decks
+                </button>
+            </div>
+
+            <!-- Print Canvas -->
+            <div class="canvas-area">
+                <div class="simulator-notice">
+                    <span style="font-size:1.2rem;">💡</span>
+                    <span><strong>Modo Vista Previa A4:</strong> Los bordes y sombras son solo un simulador web. Al presionar "Imprimir Decks", la página se preparará para tu impresora. Asegúrate de configurar la orientación y márgenes en "Ninguno" en el diálogo del navegador.</span>
+                </div>
+
+                <div class="print-container" :class="layoutClass">
+                    <template v-for="(page, pageIdx) in compiledPages" :key="pageIdx">
+                        <div class="print-page" :class="[page.type === 'fronts' ? 'fronts-page' : 'backs-page']">
+                            <span class="page-sheet-label">Página {{ pageIdx + 1 }} - {{ page.type === 'fronts' ? 'FRENTES (Anverso)' : 'REVERSOS (Dorso)' }} [{{ page.layout }}]</span>
+                            
+                            <!-- Card Units inside the page -->
+                            <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
+                                <!-- FRONT FACE -->
+                                <div class="card-face card-front" v-if="page.type === 'fronts' || layoutMode.includes('folding')">
+                                    <span class="kanji-display" :style="getFrontCharacterStyle(card.simplified)">{{ card.simplified }}</span>
+                                </div>
+
+                                <!-- BACK FACE -->
+                                <div class="card-face card-back" v-if="page.type === 'backs' || layoutMode.includes('folding')">
+                                    <div class="card-header-print">
+                                        <span class="pokemon-num-print">{{ card.ndex }}</span>
+                                        <span class="type-badge-print">{{ card.type }}</span>
+                                    </div>
+                                    
+                                    <div class="pinyin-header-print">{{ card.pinyin }}</div>
+                                    
+                                    <div class="illustration-box">
+                                        <template v-if="showIllustrations && card.image">
+                                            <img :src="card.image" class="illustration-img" alt="artwork">
+                                        </template>
+                                        <div v-else style="height:10px;"></div>
+                                        
+                                        <div class="meaning-text">{{ card.english }}</div>
+                                    </div>
+
+                                    <!-- Character breakdown -->
+                                    <div class="char-breakdown-print" v-if="showBreakdown && card.characters">
+                                        <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
+                                            <span class="char-hanzi-print">{{ ch.char }}</span>
+                                            <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
+                                            <span class="char-def-print">{{ ch.definition }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Horizontal/vertical fold line indicators in folding layouts -->
+                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue 3 and Pokémon Data -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../cards-pokemon/data.js"></script>
+
+    <script>
+        const { createApp, ref, computed, watch, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                const cards = ref(pokemonData || []);
+                const layoutMode = ref('3_portrait_duplex');
+                const selectedCards = ref(cards.value.map(c => c.id)); // Select all by default
+
+                // Calibration offsets in mm
+                const frontOffsetX = ref(0);
+                const frontOffsetY = ref(0);
+                const backOffsetX = ref(0);
+                const backOffsetY = ref(0);
+
+                // Option filters
+                const showIllustrations = ref(true);
+                const showBreakdown = ref(true);
+
+                // Sync offsets to CSS variables
+                const updateCSSEffects = () => {
+                    document.documentElement.style.setProperty('--front-offset-x', `${frontOffsetX.value}mm`);
+                    document.documentElement.style.setProperty('--front-offset-y', `${frontOffsetY.value}mm`);
+                    document.documentElement.style.setProperty('--back-offset-x', `${backOffsetX.value}mm`);
+                    document.documentElement.style.setProperty('--back-offset-y', `${backOffsetY.value}mm`);
+                };
+
+                watch([frontOffsetX, frontOffsetY, backOffsetX, backOffsetY], updateCSSEffects);
+
+                // Determine CSS classes for layout structure
+                const layoutClass = computed(() => {
+                    let classes = [];
+                    if (layoutMode.value.includes('folding')) {
+                        classes.push('mode-folding');
+                    } else {
+                        classes.push('mode-duplex');
+                    }
+
+                    if (layoutMode.value.includes('landscape')) {
+                        classes.push('size-grid2x4');
+                    } else {
+                        classes.push('size-standard');
+                    }
+                    return classes.join(' ');
+                });
+
+                // Select card helpers
+                const selectAllCards = () => {
+                    selectedCards.value = cards.value.map(c => c.id);
+                };
+                const deselectAllCards = () => {
+                    selectedCards.value = [];
+                };
+
+                // Vertical text alignment helper for multi-character Chinese words
+                const getFrontCharacterStyle = (char) => {
+                    if (!char) return {};
+                    if (char.length > 1) {
+                        return {
+                            writingMode: 'vertical-rl',
+                            textOrientation: 'upright'
+                        };
+                    }
+                    return {};
+                };
+
+                // Compile layout pages reactively based on layout settings and selected cards
+                const compiledPages = computed(() => {
+                    const deck = cards.value.filter(c => selectedCards.value.includes(c.id));
+                    if (deck.length === 0) return [];
+
+                    const pages = [];
+                    const isLandscape = layoutMode.value.includes('landscape');
+                    const isFolding = layoutMode.value.includes('folding');
+
+                    let cardsPerPage = 3;
+                    if (isLandscape) {
+                        cardsPerPage = isFolding ? 4 : 8;
+                    }
+
+                    // Process deck in chunks representing each physical sheet
+                    for (let i = 0; i < deck.length; i += cardsPerPage) {
+                        const chunk = deck.slice(i, i + cardsPerPage);
+                        
+                        // Pad the chunk with placeholders so the grid structure is constant
+                        const paddedChunk = [...chunk];
+                        while (paddedChunk.length < cardsPerPage) {
+                            paddedChunk.push({ isPlaceholder: true });
+                        }
+
+                        if (isFolding) {
+                            // FOLDING LAYOUT
+                            pages.push({
+                                type: 'fronts',
+                                layout: 'Folding',
+                                units: paddedChunk
+                            });
+                        } else {
+                            // DUPLEX LAYOUT (Separate Front Page and Back Page)
+                            pages.push({
+                                type: 'fronts',
+                                layout: 'Duplex Fronts',
+                                units: paddedChunk
+                            });
+
+                            // Mirror columns for back page to print correctly
+                            let backChunk = [...paddedChunk];
+                            if (isLandscape && paddedChunk.length === 8) {
+                                backChunk = [
+                                    paddedChunk[3], paddedChunk[2], paddedChunk[1], paddedChunk[0],
+                                    paddedChunk[7], paddedChunk[6], paddedChunk[5], paddedChunk[4]
+                                ];
+                            }
+                            
+                            pages.push({
+                                type: 'backs',
+                                layout: 'Duplex Backs',
+                                units: backChunk
+                            });
+                        }
+                    }
+                    return pages;
+                });
+
+                // Update page rules in head so print dimensions fit A4 landscape/portrait perfectly
+                watch(layoutMode, (newMode) => {
+                    let styleTag = document.getElementById('dynamic-page-style');
+                    if (!styleTag) {
+                        styleTag = document.createElement('style');
+                        styleTag.id = 'dynamic-page-style';
+                        document.head.appendChild(styleTag);
+                    }
+                    if (newMode.includes('landscape')) {
+                        styleTag.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
+                    } else {
+                        styleTag.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
+                    }
+                }, { immediate: true });
+
+                const triggerPrint = () => {
+                    window.print();
+                };
+
+                onMounted(() => {
+                    updateCSSEffects();
+                });
+
+                return {
+                    cards,
+                    layoutMode,
+                    selectedCards,
+                    frontOffsetX,
+                    frontOffsetY,
+                    backOffsetX,
+                    backOffsetY,
+                    showIllustrations,
+                    showBreakdown,
+                    layoutClass,
+                    compiledPages,
+                    selectAllCards,
+                    deselectAllCards,
+                    getFrontCharacterStyle,
+                    triggerPrint
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
