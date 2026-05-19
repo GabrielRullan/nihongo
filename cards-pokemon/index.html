@@ -265,13 +265,14 @@
             height: 100%;
             backface-visibility: hidden;
             border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+            /* Solid opaque background to prevent transparency bleeding */
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             backdrop-filter: var(--glass-blur);
         }
 
@@ -310,12 +311,14 @@
             text-transform: uppercase;
         }
 
-        /* Front Face Layout: Huge Vertical Text */
+        /* Front Face Layout: Artwork and English Name */
         .front-main {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             flex: 1;
+            gap: 16px;
         }
 
         .hanzi-vertical {
@@ -644,7 +647,7 @@
             <div class="card-carousel-container" v-if="viewMode === 'carousel' && filteredCards.length > 0">
                 <div class="flashcard-wrapper" @click="isFlipped = !isFlipped">
                     <div class="flashcard" :class="{ 'is-flipped': isFlipped }">
-                        <!-- FRONT SIDE -->
+                        <!-- FRONT SIDE: Pokémon image with English name below -->
                         <div class="card-face card-front">
                             <div class="color-glow" :style="getThemeGlowStyle(currentCard.colorTheme)"></div>
                             <div class="card-header">
@@ -652,26 +655,33 @@
                                 <span class="pokemon-type-badge">{{ currentCard.type }}</span>
                             </div>
                             <div class="front-main">
-                                <span class="hanzi-vertical">{{ currentCard.simplified }}</span>
+                                <div class="pokemon-img-box">
+                                    <img :src="currentCard.image" class="pokemon-img" alt="Artwork">
+                                </div>
+                                <h2 class="english-display">{{ currentCard.english }}</h2>
                             </div>
                             <div class="front-footer">
-                                Presiona para voltear la tarjeta
+                                Presiona para ver nombre en chino y desglose
                             </div>
                         </div>
 
-                        <!-- BACK SIDE -->
+                        <!-- BACK SIDE: Chinese name with explanations -->
                         <div class="card-face card-back">
                             <div class="color-glow" :style="getThemeGlowStyle(currentCard.colorTheme)"></div>
                             <div class="card-header">
                                 <span class="pokemon-id">{{ currentCard.ndex }}</span>
                                 <span class="pokemon-type-badge">{{ currentCard.type }}</span>
                             </div>
-                            <div class="back-main">
-                                <div class="pokemon-img-box">
-                                    <img :src="currentCard.image" class="pokemon-img" alt="Artwork">
+                            <div class="back-main" style="justify-content: space-around; width: 100%;">
+                                <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%;">
+                                    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%;">
+                                        <span class="chinese-name-display" style="font-size: 3rem; font-weight: 800; color: #ffffff; font-family: 'Outfit', sans-serif;">{{ currentCard.simplified }}</span>
+                                        <button class="circle-btn tts-btn" @click.stop="speakName" title="Pronunciar" style="width: 36px; height: 36px; box-shadow: none;">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                        </button>
+                                    </div>
+                                    <div class="pinyin-display" style="font-size: 1.3rem;">{{ currentCard.pinyin }}</div>
                                 </div>
-                                <h2 class="english-display">{{ currentCard.english }}</h2>
-                                <div class="pinyin-display">{{ currentCard.pinyin }}</div>
                                 
                                 <!-- Individual Character breakdown -->
                                 <div class="breakdown-box">

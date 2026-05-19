@@ -426,9 +426,8 @@
         }
 
         .card-front {
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            padding: 0 !important;
         }
 
         .card-back {
@@ -446,6 +445,20 @@
             align-items: center;
             justify-content: center;
             color: #1e293b;
+        }
+
+        .chinese-title-print {
+            font-size: 20px;
+            font-family: 'Outfit', "Yu Mincho", "MS Mincho", serif;
+            font-weight: 800;
+            color: #1e293b;
+            text-align: center;
+            margin: 4px 0;
+        }
+
+        .size-standard .chinese-title-print {
+            font-size: 26px;
+            margin: 6px 0;
         }
 
         .card-header-print {
@@ -727,31 +740,36 @@
                             
                             <!-- Card Units inside the page -->
                             <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
-                                <!-- FRONT FACE -->
+                                <!-- FRONT FACE: Image and English name below -->
                                 <div class="card-face card-front" v-if="page.type === 'fronts' || layoutMode.includes('folding')">
-                                    <span class="kanji-display" :style="getFrontCharacterStyle(card.simplified)">{{ card.simplified }}</span>
-                                </div>
-
-                                <!-- BACK FACE -->
-                                <div class="card-face card-back" v-if="page.type === 'backs' || layoutMode.includes('folding')">
                                     <div class="card-header-print">
                                         <span class="pokemon-num-print">{{ card.ndex }}</span>
                                         <span class="type-badge-print">{{ card.type }}</span>
                                     </div>
-                                    
-                                    <div class="pinyin-header-print">{{ card.pinyin }}</div>
                                     
                                     <div class="illustration-box">
                                         <template v-if="showIllustrations && card.image">
                                             <img :src="card.image" class="illustration-img" alt="artwork">
                                         </template>
                                         <div v-else style="height:10px;"></div>
-                                        
-                                        <div class="meaning-text">{{ card.english }}</div>
+                                    </div>
+                                    
+                                    <div class="meaning-text">{{ card.english }}</div>
+                                </div>
+
+                                <!-- BACK FACE: Chinese name with explanations -->
+                                <div class="card-face card-back" v-if="page.type === 'backs' || layoutMode.includes('folding')">
+                                    <div class="card-header-print" style="justify-content: flex-end;">
+                                        <span class="pokemon-num-print">{{ card.ndex }}</span>
+                                    </div>
+                                    
+                                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; width: 100%;">
+                                        <div class="chinese-title-print">{{ card.simplified }}</div>
+                                        <div class="pinyin-header-print" style="margin-top: 1px; font-size: 10px;">{{ card.pinyin }}</div>
                                     </div>
 
                                     <!-- Character breakdown -->
-                                    <div class="char-breakdown-print" v-if="showBreakdown && card.characters">
+                                    <div class="char-breakdown-print" v-if="showBreakdown && card.characters" style="width: 100%;">
                                         <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
                                             <span class="char-hanzi-print">{{ ch.char }}</span>
                                             <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
