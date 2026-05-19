@@ -191,6 +191,9 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
 
     def handle_generate_image(self):
         try:
+            # Reload env dynamically on every request to pick up user edits to .env
+            load_env()
+
             content_length = int(self.headers['Content-Length'])
             post_data = self.rfile.read(content_length)
             params = json.loads(post_data.decode('utf-8'))
