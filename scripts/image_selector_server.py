@@ -115,6 +115,12 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
                             "url": url
                         })
 
+                # Check if custom image exists
+                custom_img_filename = f"{kanji}.png"
+                custom_img_path = os.path.join(IMAGES_CHOSEN_DIR, custom_img_filename)
+                custom_exists = os.path.exists(custom_img_path)
+                custom_image = f"{IMAGES_CHOSEN_DIR}/{custom_img_filename}".replace("\\", "/") if custom_exists else None
+
                 merged_cards.append({
                     "kanji": kanji,
                     "meaning": card.get("meaning", ""),
@@ -124,7 +130,8 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
                     "phraseEs": card.get("phraseEs", ""),
                     "image": card.get("image", "").replace("\\", "/"),
                     "options": options,
-                    "chosen_val": summary.get("Chosen", "1")
+                    "chosen_val": summary.get("Chosen", "1"),
+                    "custom_image": custom_image
                 })
 
             self.send_json_response(200, merged_cards)
@@ -138,15 +145,49 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
             params = json.loads(post_data.decode('utf-8'))
 
             kanji = params.get("kanji")
-            option_idx = params.get("option") # 1, 2, or 3
+            option_idx = params.get("option") # 1, 2, 3 or "custom"
 
             if not kanji or not option_idx:
                 self.send_json_response(400, {"error": "Missing kanji or option parameter"})
                 return
 
-            # 1. Read summary.csv to get the option path
+            # 1. Read summary.csv
             if not os.path.exists(SUMMARY_CSV_PATH):
                 self.send_json_response(500, {"error": "summary.csv not found"})
+                return
+
+            # If selecting custom AI image option
+            if str(option_idx) == "custom":
+                chosen_filename = f"{kanji}.png"
+                chosen_dest = os.path.join(IMAGES_CHOSEN_DIR, chosen_filename)
+                if not os.path.exists(chosen_dest):
+                    self.send_json_response(400, {"error": f"Custom image '{chosen_dest}' does not exist on disk"})
+                    return
+
+                # Update Chosen column to "custom" in summary.csv
+                rows = []
+                with open(SUMMARY_CSV_PATH, "r", encoding="utf-8") as f:
+                    reader = csv.DictReader(f)
+                    fieldnames = reader.fieldnames
+                    for row in reader:
+                        if row["Original Word"] == kanji:
+                            row["Chosen"] = "custom"
+                        rows.append(row)
+
+                with open(SUMMARY_CSV_PATH, "w", encoding="utf-8", newline="") as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(rows)
+
+                # Update data.js
+                new_image_js_path = f"../{IMAGES_CHOSEN_DIR}/{chosen_filename}"
+                self.update_data_js_image(kanji, new_image_js_path)
+
+                self.send_json_response(200, {
+                    "success": True, 
+                    "image_path": new_image_js_path,
+                    "chosen_val": "custom"
+                })
                 return
 
             rows = []

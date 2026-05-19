@@ -841,6 +841,24 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <!-- Custom AI Generated Option Card -->
+                            <div v-if="activeKanji.custom_image" class="choice-card" :class="{active: activeKanji.chosen_val === 'custom'}">
+                                <div class="choice-img-box">
+                                    <img :src="imgPrefix + activeKanji.custom_image + '?t=' + refreshTimestamp" alt="AI Option image">
+                                    <div class="image-box-label" style="background-color: var(--accent-color); color: var(--bg-primary); font-weight: 700;">Imagen IA</div>
+                                </div>
+                                <div class="choice-info">
+                                    <div class="choice-title" style="color: var(--accent-color); font-weight: 600;">Ilustración generada por IA</div>
+                                    <div style="font-size: 0.7rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 0.2rem;">
+                                        Personalizada con Imagen 4
+                                    </div>
+                                    <button class="select-btn" @click="selectOption('custom')">
+                                        <span v-if="activeKanji.chosen_val === 'custom'">Activa ✓</span>
+                                        <span v-else>Elegir Imagen IA</span>
+                                    </button>
+                                </div>
+                            </div>
                             
                             <!-- If no options are available -->
                             <div v-if="!activeKanji.options || activeKanji.options.length === 0" style="grid-column: span 3; background-color: var(--bg-secondary); border: 1px dashed var(--border-color); padding: 3rem; text-align: center; border-radius: 10px; color: var(--text-muted);">
