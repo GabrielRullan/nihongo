@@ -341,12 +341,20 @@
         }
 
         /* Page Layout Styles - Grid 2x4 (8 per page) */
+        .size-grid2x4 {
+            --card-width: 65mm;
+            --card-height: 90mm;
+        }
         .size-grid2x4 .print-page {
+            width: 297mm;
+            height: 210mm;
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(2, var(--card-height));
             gap: 2mm;
         }
         .size-grid2x4.mode-folding .print-page {
+            width: 297mm;
+            height: 210mm;
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(1, calc(var(--card-height) * 2));
             gap: 2mm;
@@ -375,7 +383,7 @@
             background: #ffffff;
             position: relative;
             box-sizing: border-box;
-            border: 0.1pt solid #dddddd;
+            border: 0.5pt solid #a1a1aa;
             overflow: hidden;
             display: flex;
         }
@@ -389,7 +397,7 @@
             top: 0;
             bottom: 0;
             width: 0;
-            border-left: 1px dashed #94a3b8;
+            border-left: 1px dashed #64748b;
             z-index: 10;
         }
 
@@ -399,7 +407,7 @@
             right: 0;
             top: var(--card-height);
             height: 0;
-            border-top: 1px dashed #94a3b8;
+            border-top: 1px dashed #64748b;
             z-index: 10;
         }
 
