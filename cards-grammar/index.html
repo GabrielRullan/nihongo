@@ -235,13 +235,12 @@
             height: 100%;
             backface-visibility: hidden;
             border-radius: 28px;
-            background: linear-gradient(185deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+            background: linear-gradient(185deg, #1e293b 0%, #0f172a 100%);
             border: 1px solid var(--card-border);
             display: flex;
             box-sizing: border-box;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-            backdrop-filter: var(--glass-blur);
         }
 
         .card-face::after {
@@ -290,6 +289,7 @@
         /* Back Face */
         .card-back {
             transform: rotateY(180deg);
+            background: linear-gradient(185deg, #0f172a 0%, #1e293b 100%);
             display: grid;
             grid-template-columns: 1.1fr 1.9fr;
             gap: 20px;
@@ -769,9 +769,11 @@
                     synth.cancel();
 
                     const utterance = new SpeechSynthesisUtterance(text);
-                    if (activeVoice.value) utterance.voice = activeVoice.value;
                     utterance.lang = 'ja-JP';
                     utterance.rate = 0.85;
+                    if (synth.paused) {
+                        synth.resume();
+                    }
                     synth.speak(utterance);
                 };
 
