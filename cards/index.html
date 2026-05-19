@@ -816,7 +816,7 @@
 
         createApp({
             setup() {
-                const cards = ref(window.cardsData || []);
+                const cards = ref(cardsData || []);
                 const searchQuery = ref('');
                 const selectedPOS = ref('all');
                 const viewMode = ref('carousel');

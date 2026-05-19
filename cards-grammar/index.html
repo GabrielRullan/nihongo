@@ -680,7 +680,7 @@
         createApp({
             setup() {
                 // Initialize the grammar list with an isFlipped field
-                const rawData = (window.grammarData || []).map(item => ({
+                const rawData = (grammarData || []).map(item => ({
                     ...item,
                     isFlipped: false
                 }));

@@ -732,7 +732,7 @@
 
         createApp({
             setup() {
-                const cards = ref(window.cardsData || []);
+                const cards = ref(cardsData || []);
                 const layoutMode = ref('3_portrait_duplex');
                 const selectedCards = ref(cards.value.map(c => c.character)); // Select all by default
 
