@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanji Card Printer Pro</title>
+    <title>Chinese HSK 1 Card Printer & Calibrator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #ffffff;
-            --card-bg: #ffffff;
-            --text-dark: #1e293b;
-            --text-grey: #64748b;
-            --text-romaji-phrase: #475569;
-            --accent-indigo: #6366f1;
-            --border-color: #e2e8f0;
-            --badge-bg: #4f46e5;
+            /* Palette for interactive tool */
+            --bg-interactive: #0b0f19;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-pink: #ec4899;
+            --accent-pink-glow: rgba(236, 72, 153, 0.35);
+            --glass-blur: blur(16px);
 
-            /* Colores de etiquetas (Tipos de palabra) */
+            /* Calibration offsets (updated in real-time) */
+            --front-offset-x: 0mm;
+            --front-offset-y: 0mm;
+            --back-offset-x: 0mm;
+            --back-offset-y: 0mm;
+
+            /* Base card dimensions (Portrait) */
+            --card-width: 65mm;
+            --card-height: 95mm;
+            --kanji-font-size: 7.5rem;
+            --meaning-font-size: 22px;
+
+            /* Word type tag colors */
             --tag-pron-bg: #f1f5f9;
             --tag-pron-text: #64748b;
             --tag-sust-bg: #cbd5e1;
@@ -31,124 +48,355 @@
             --tag-exp-text: #be185d;
             --tag-default-bg: #f8fafc;
             --tag-default-text: #64748b;
-
-            /* Standard Portrait Dimensions */
-            --card-width: 65mm;
-            --card-height: 95mm;
         }
 
-
-
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f1f5f9;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: var(--text-dark);
         }
 
-        /* UI Controls */
-        .no-print {
-            padding: 20px;
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
+        body {
+            background-color: var(--bg-interactive);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
-        .controls { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .control-group { display: flex; flex-direction: column; gap: 5px; }
-        label { font-size: 11px; font-weight: 700; color: var(--text-grey); text-transform: uppercase; }
-        select, button { padding: 8px 14px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; font-size: 13px; cursor: pointer; }
-        .btn-primary { background-color: var(--accent-indigo); color: white; border: none; font-weight: 600; padding: 10px 25px; }
+        /* Abstract ambient glow */
+        .blur-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.04) 0%, rgba(236, 72, 153, 0) 70%);
+            z-index: -1;
+            filter: blur(50px);
+            pointer-events: none;
+        }
 
-        /* Print Container and Pages */
+        header {
+            padding: 1.2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            background: rgba(11, 15, 25, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dashboard Workspace */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        /* Control Panel sidebar */
+        .sidebar {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            backdrop-filter: var(--glass-blur);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .panel-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1.2rem;
+        }
+
+        .panel-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-pink);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 10px 14px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        select:focus, input[type="text"]:focus {
+            border-color: var(--accent-pink);
+        }
+
+        .slider-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .slider-val {
+            font-family: monospace;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-pink);
+            background: rgba(255, 255, 255, 0.1);
+            height: 6px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .checkbox-label input {
+            accent-color: var(--accent-pink);
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-print-main {
+            background: var(--accent-pink);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-print-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+        }
+
+        /* Card Selector List */
+        .card-selector-box {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 6px;
+        }
+
+        .card-selector-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .card-selector-item:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        /* Print Canvas Simulator */
+        .canvas-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .simulator-notice {
+            background: rgba(236, 72, 153, 0.08);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Virtual sheet display */
         .print-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10mm;
-            padding: 10mm 0;
+            gap: 15mm;
+            padding: 5mm 0;
+            width: 100%;
         }
 
         .print-page {
             width: 210mm;
             height: 297mm;
             box-sizing: border-box;
-            background: white;
+            background: #ffffff;
+            color: #1e293b;
             display: grid;
             justify-content: center;
             align-content: center;
             page-break-after: always;
             page-break-inside: avoid;
             margin: 0 auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            border: 1px solid #334155;
         }
 
-        /* Portrait Standard Grid (3 per page) */
-        body.size-standard .print-page {
+        /* Sheet Labels for preview */
+        .page-sheet-label {
+            position: absolute;
+            top: -24px;
+            left: 0;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Page Layout Styles - Standard (3 per page) */
+        .size-standard .print-page {
             grid-template-columns: repeat(1, var(--card-width));
             grid-template-rows: repeat(3, var(--card-height));
             gap: 2mm;
         }
-        body.size-standard.mode-folding .print-page {
+        .size-standard.mode-folding .print-page {
             grid-template-columns: repeat(1, calc(var(--card-width) * 2));
             grid-template-rows: repeat(3, var(--card-height));
             gap: 2mm;
         }
 
-        /* Landscape Grid 2x4 (8 per page) */
-        body.size-grid2x4 {
-            --card-width: 65mm;
-            --card-height: 90mm;
-        }
-        body.size-grid2x4 .print-page {
-            width: 297mm;
-            height: 210mm;
+        /* Page Layout Styles - Grid 2x4 (8 per page) */
+        .size-grid2x4 .print-page {
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(2, var(--card-height));
             gap: 2mm;
         }
-
-        body.size-grid2x4.mode-folding .print-page {
+        .size-grid2x4.mode-folding .print-page {
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(1, calc(var(--card-height) * 2));
             gap: 2mm;
         }
-
-        body.size-grid2x4.mode-folding .print-unit {
+        .size-grid2x4.mode-folding .print-unit {
             display: flex;
             flex-direction: column;
             width: var(--card-width);
             height: calc(var(--card-height) * 2);
         }
-
-        body.size-grid2x4.mode-folding .print-unit .card-front {
+        .size-grid2x4.mode-folding .print-unit .card-front {
             transform: rotate(180deg);
         }
 
-        .fold-line-horizontal {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: var(--card-height);
-            height: 0;
-            border-top: 1px dashed #cbd5e1;
-            z-index: 10;
+        /* Duplex Alignment Calibrator transform rules */
+        .print-page.fronts-page .print-unit {
+            transform: translate(var(--front-offset-x), var(--front-offset-y));
+        }
+
+        .print-page.backs-page .print-unit {
+            transform: translate(var(--back-offset-x), var(--back-offset-y));
         }
 
         /* Print Units and Card Faces */
         .print-unit {
-            background: white;
+            background: #ffffff;
             position: relative;
             box-sizing: border-box;
-            border: 0.1pt solid #ddd;
+            border: 0.1pt solid #dddddd;
+            overflow: hidden;
+            display: flex;
         }
 
-        .mode-folding .print-unit { display: flex; width: calc(var(--card-width) * 2); }
+        .mode-folding .print-unit { width: calc(var(--card-width) * 2); }
         .mode-duplex .print-unit { display: block; width: var(--card-width); }
 
         .fold-line {
@@ -157,14 +405,25 @@
             top: 0;
             bottom: 0;
             width: 0;
-            border-left: 1px dashed #cbd5e1;
+            border-left: 1px dashed #94a3b8;
+            z-index: 10;
+        }
+
+        .fold-line-horizontal {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: var(--card-height);
+            height: 0;
+            border-top: 1px dashed #94a3b8;
             z-index: 10;
         }
 
         .card-face {
             width: var(--card-width);
             height: var(--card-height);
-            background-color: var(--card-bg);
+            background-color: #ffffff;
+            color: #1e293b;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -184,21 +443,23 @@
             align-items: center;
         }
 
-        /* Content Styling */
+        /* Content Styling inside printable cards */
         .kanji-display {
-            font-size: var(--kanji-font-size, 7.5rem);
-            font-family: "Yu Mincho", "MS Mincho", serif;
+            font-size: var(--kanji-font-size);
+            font-family: 'Outfit', "Yu Mincho", "MS Mincho", serif;
+            font-weight: 700;
             line-height: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #1e293b;
         }
 
         .header { width: 100%; display: flex; justify-content: space-between; align-items: flex-start; }
-        .badge-n5 { background-color: var(--badge-bg); color: white; padding: 1px 4px; border-radius: 3px; font-size: 8px; font-weight: bold; }
-        .anki-furigana-display ruby { font-size: 24px; }
-        body.size-grid2x4 .anki-furigana-display ruby { font-size: 20px; }
-        .romaji-header { font-size: 13px; color: var(--accent-indigo); font-weight: 800; text-transform: uppercase; margin-top: 2px; }
+        .badge-n5 { background-color: var(--accent-pink); color: white; padding: 1px 4px; border-radius: 3px; font-size: 8px; font-weight: bold; }
+        .anki-furigana-display ruby { font-size: 24px; font-weight: bold; }
+        .size-grid2x4 .anki-furigana-display ruby { font-size: 20px; }
+        .romaji-header { font-size: 13px; color: var(--accent-pink); font-weight: 800; text-transform: uppercase; margin-top: 2px; }
         
         .illustration-box {
             display: flex;
@@ -210,8 +471,16 @@
             padding: 5px 0;
         }
 
-        .meaning-text { font-size: var(--meaning-font-size, 22px); font-weight: 900; margin: 4px 0; text-align: center; text-transform: uppercase; }
-        
+        .meaning-text { 
+            font-size: var(--meaning-font-size); 
+            font-weight: 900; 
+            margin: 4px 0; 
+            text-align: center; 
+            text-transform: uppercase; 
+            color: #1e293b;
+        }
+
+        /* POS styles */
         .tag-container {
             display: flex;
             gap: 6px;
@@ -220,7 +489,7 @@
         }
 
         .type-tag {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             padding: 2px 8px;
             border-radius: 4px;
@@ -234,296 +503,414 @@
         .tag-verbo { background-color: var(--tag-ver-bg); color: var(--tag-ver-text); }
         .tag-expresion { background-color: var(--tag-exp-bg); color: var(--tag-exp-text); }
         .tag-default { background-color: var(--tag-default-bg); color: var(--tag-default-text); }
-
+        
         .phrase-section { 
             width: 100%; 
             text-align: center; 
-            border-top: 0.5pt solid #eee; 
+            border-top: 0.5pt solid #e2e8f0; 
             padding-top: 6px;
         }
-        .phrase-jp { font-size: 12px; color: var(--text-grey); margin-bottom: 1px; }
-        .phrase-romaji { font-size: 10px; font-weight: 700; }
-        .phrase-es { font-size: 9px; font-style: italic; color: var(--text-grey); margin: 0; }
+        .phrase-jp { font-size: 12px; color: #475569; margin-bottom: 1px; }
+        .phrase-romaji { font-size: 10px; font-weight: 700; color: #1e293b; }
+        .phrase-es { font-size: 9px; font-style: italic; color: #64748b; margin: 0; }
 
-        body.size-grid2x4 .card-back { padding: 8px; }
+        .size-grid2x4 .card-back { padding: 8px; }
 
+        /* Placeholders rendering empty space so grid alignments don't shift */
+        .placeholder-unit {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Print Media Styles (Overrides everything interactive) */
         @media print {
-            body { background-color: white; }
-            .no-print { display: none; }
-            .print-container { padding: 0; gap: 0; }
+            body { 
+                background: #ffffff !important; 
+                color: #000000 !important;
+            }
+            header, .sidebar, .simulator-notice, .page-sheet-label {
+                display: none !important;
+            }
+            .dashboard-container {
+                display: block !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .canvas-area {
+                display: block !important;
+            }
+            .print-container {
+                padding: 0 !important;
+                gap: 0 !important;
+            }
             .print-page {
-                box-shadow: none;
-                margin: 0;
-                page-break-after: always;
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                page-break-after: always !important;
             }
         }
     </style>
 </head>
-
 <body class="mode-duplex size-standard">
+    <div id="app">
+        <div class="blur-bg"></div>
 
-    <div class="no-print">
-        <h1 style="margin:0;">🖨️ Kanji Printer Pro</h1>
-        
-        <div class="controls">
-            <div class="control-group">
-                <label>Formato de Impresión</label>
-                <select id="layout-select" onchange="render()">
-                    <option value="3_portrait_duplex">3 por página sin plegar</option>
-                    <option value="3_portrait_folding">3 por página plegando</option>
-                    <option value="8_landscape_duplex">8 por página horizontal sin plegar</option>
-                    <option value="8_landscape_folding">8 por página plegando</option>
-                </select>
+        <header>
+            <a href="../index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Learning Hub</span>
+            </a>
+            <a href="../index.html" class="back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver al Hub
+            </a>
+        </header>
+
+        <div class="dashboard-container">
+            <!-- Sidebar controls -->
+            <div class="sidebar">
+                <div class="panel-section">
+                    <div class="section-title">Diseño de Impresión</div>
+                    
+                    <div class="slider-row">
+                        <label>Formato</label>
+                        <select v-model="layoutMode">
+                            <option value="3_portrait_duplex">3 por página (A4 Vertical) - Duplex</option>
+                            <option value="3_portrait_folding">3 por página (A4 Vertical) - Plegable</option>
+                            <option value="8_landscape_duplex">8 por página (A4 Horizontal) - Duplex</option>
+                            <option value="8_landscape_folding">8 por página (A4 Horizontal) - Plegable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Calibración Duplex (Offsets)</div>
+                    <p style="font-size:0.75rem; color:var(--text-secondary); margin-bottom:8px;">Ajusta milímetros para calibrar la alineación delantera/trasera de tu impresora.</p>
+                    
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Frente Horizontal Shift</span>
+                            <span class="slider-val">{{ frontOffsetX }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="frontOffsetX">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Frente Vertical Shift</span>
+                            <span class="slider-val">{{ frontOffsetY }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="frontOffsetY">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Reverso Horizontal Shift</span>
+                            <span class="slider-val">{{ backOffsetX }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="backOffsetX">
+                    </div>
+
+                    <div class="slider-row">
+                        <div class="slider-header">
+                            <span>Reverso Vertical Shift</span>
+                            <span class="slider-val">{{ backOffsetY }}mm</span>
+                        </div>
+                        <input type="range" min="-10" max="10" step="0.5" v-model="backOffsetY">
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Filtros de Elementos</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showIllustrations"> Mostrar Ilustraciones / Radiales
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showPhrases"> Mostrar Frases Ejemplo
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showBadge"> Mostrar Nivel HSK
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showTags"> Mostrar Tipo de Palabra
+                    </label>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Selección de Tarjetas ({{ selectedCards.length }} / {{ cards.length }})</div>
+                    <div style="display:flex; gap:8px; margin-bottom:8px;">
+                        <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="selectAllCards">Todos</button>
+                        <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="deselectAllCards">Ninguno</button>
+                    </div>
+                    <div class="card-selector-box">
+                        <div v-for="c in cards" :key="c.character" class="card-selector-item">
+                            <input type="checkbox" :value="c.character" v-model="selectedCards">
+                            <span style="font-weight:bold;">{{ c.character }}</span>
+                            <span style="color:var(--text-secondary); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">- {{ c.meaning }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-print-main" @click="triggerPrint">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Imprimir Decks
+                </button>
             </div>
 
-            <div class="control-group">
-                <label>Tamaño Kanji (Frente)</label>
-                <select id="kanji-size-select" onchange="updateCustomSizes()">
-                    <!-- Populated dynamically -->
-                </select>
-            </div>
+            <!-- Print Canvas -->
+            <div class="canvas-area">
+                <div class="simulator-notice">
+                    <span style="font-size:1.2rem;">💡</span>
+                    <span><strong>Modo Vista Previa A4:</strong> Los bordes y sombras son solo un simulador web. Al presionar "Imprimir Decks", la página se preparará para tu impresora. Asegúrate de configurar la orientación y márgenes en "Ninguno" en el diálogo del navegador.</span>
+                </div>
 
-            <div class="control-group">
-                <label>Tamaño Traducción (Reverso)</label>
-                <select id="translation-size-select" onchange="updateCustomSizes()">
-                    <!-- Populated dynamically -->
-                </select>
-            </div>
-            
-            <div class="control-group">
-                <label>Acciones</label>
-                <button class="btn-primary" onclick="window.print()">🖨️ Imprimir</button>
+                <div class="print-container" :class="layoutClass">
+                    <template v-for="(page, pageIdx) in compiledPages" :key="pageIdx">
+                        <div class="print-page" :class="[page.type === 'fronts' ? 'fronts-page' : 'backs-page']">
+                            <span class="page-sheet-label">Página {{ pageIdx + 1 }} - {{ page.type === 'fronts' ? 'FRENTES (Anverso)' : 'REVERSOS (Dorso)' }} [{{ page.layout }}]</span>
+                            
+                            <!-- Card Units inside the page -->
+                            <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
+                                <!-- Horizontal/vertical fold line indicators in folding layouts -->
+                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
+                                
+                                <!-- FRONT FACE -->
+                                <div class="card-face card-front" v-if="page.type === 'fronts' || layoutMode.includes('folding')">
+                                    <span class="kanji-display" :style="getFrontCharacterStyle(card.character)">{{ card.character }}</span>
+                                </div>
+
+                                <!-- BACK FACE -->
+                                <div class="card-face card-back" v-if="page.type === 'backs' || layoutMode.includes('folding')">
+                                    <div class="header">
+                                        <div style="width:20px"></div>
+                                        <div style="text-align:center; flex:1;">
+                                            <div class="anki-furigana-display"><ruby>{{ card.pinyin }}</ruby></div>
+                                            <div class="romaji-header"></div>
+                                        </div>
+                                        <div class="badge-n5" v-if="showBadge && card.level">{{ card.level }}</div>
+                                        <div v-else style="width: 30px;"></div>
+                                    </div>
+                                    
+                                    <div class="illustration-box">
+                                        <template v-if="showIllustrations">
+                                            <img v-if="card.image && !card.image.endsWith('undefined')" :src="card.image" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">
+                                            <div v-else style="font-size: 24px; font-weight: bold; color: #64748b;">{{ card.radical || '?' }}</div>
+                                        </template>
+                                        <div v-else style="height:20px;"></div>
+                                        
+                                        <div class="meaning-text">{{ card.meaning }}</div>
+                                        
+                                        <div class="tag-container" v-if="showTags && card.type">
+                                            <span class="type-tag" :class="getTypeTagClass(card.type)">{{ card.type }}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="phrase-section" v-if="showPhrases && card.phraseCn">
+                                        <div class="phrase-jp">{{ card.phraseCn }}</div>
+                                        <div class="phrase-romaji">{{ card.phrasePinyin }}</div>
+                                        <p class="phrase-es" v-if="card.phraseEs">"{{ card.phraseEs }}"</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="print-container" id="cards-container">
-        <!-- Pages will be dynamically injected here -->
-    </div>
-
+    <!-- Vue 3 and data -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../cards-chinese/data.js"></script>
 
     <script>
-        function parseFurigana(text) {
-            if (!text) return '';
-            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
-            let match;
-            let lastIndex = 0;
-            let html = '';
-            while ((match = regex.exec(text)) !== null) {
-                const before = text.substring(lastIndex, match.index);
-                if (before) html += `<span class="okurigana">${before}</span>`;
-                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
-                lastIndex = regex.lastIndex;
-            }
-            const after = text.substring(lastIndex);
-            if (after) html += `<span class="okurigana">${after}</span>`;
-            return html;
-        }
+        const { createApp, ref, computed, watch, onMounted } = Vue;
 
-        function getCardFrontHTML(data) {
-            const isMultiple = data.character.length > 1;
-            const extraStyle = isMultiple ? ' style="writing-mode: vertical-rl; text-orientation: upright;"' : '';
-            return `<div class="card-face card-front"><span class="kanji-display"${extraStyle}>${data.character}</span></div>`;
-        }
+        createApp({
+            setup() {
+                const cards = ref(window.cardsData || []);
+                const layoutMode = ref('3_portrait_duplex');
+                const selectedCards = ref(cards.value.map(c => c.character)); // Select all by default
 
-        function getTypeTagClass(type) {
-            if (!type) return 'tag-default';
-            const t = type.toLowerCase();
-            if (t.includes('pronombre')) return 'tag-pronombre';
-            if (t.includes('sustantivo') || t.includes('nombre')) return 'tag-sustantivo';
-            if (t.includes('adjetivo')) return 'tag-adjetivo';
-            if (t.includes('adverbio')) return 'tag-adverbio';
-            if (t.includes('verbo')) return 'tag-verbo';
-            if (t.includes('expresi')) return 'tag-expresion';
-            return 'tag-default';
-        }
+                // Calibration offsets in mm
+                const frontOffsetX = ref(0);
+                const frontOffsetY = ref(0);
+                const backOffsetX = ref(0);
+                const backOffsetY = ref(0);
 
-        function getCardBackHTML(data) {
-            let illustrationHtml = data.image 
-                ? `<img src="${data.image}" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">`
-                : `<div style="font-size: 24px; font-weight: bold; color: var(--text-grey);">${data.radical || '?'}</div>`;
-            
-            return `
-                <div class="card-face card-back">
-                    <div class="header">
-                        <div style="width:20px"></div>
-                        <div style="text-align:center; flex:1;">
-                            <div class="anki-furigana-display"><ruby>${data.pinyin}</ruby></div>
-                            <div class="romaji-header"></div>
-                        </div>
-                        ${data.level ? `<div class="badge-n5">${data.level}</div>` : `<div style="width: 30px;"></div>`}
-                    </div>
-                    <div class="illustration-box">
-                        ${illustrationHtml}
-                        <div class="meaning-text">${data.meaning || ''}</div>
-                        ${data.type ? `<div class="tag-container"><span class="type-tag ${getTypeTagClass(data.type)}">${data.type}</span></div>` : ''}
-                    </div>
-                    <div class="phrase-section" style="${data.phraseCn ? '' : 'display:none;'}">
-                        <div class="phrase-jp">${data.phraseCn}</div>
-                        <div class="phrase-romaji">${data.phrasePinyin}</div>
-                        <p class="phrase-es">"${data.phraseEs}"</p>
-                    </div>
-                </div>`;
-        }
+                // Option filters
+                const showIllustrations = ref(true);
+                const showPhrases = ref(true);
+                const showBadge = ref(true);
+                const showTags = ref(true);
 
-        const SIZES_CONFIG = {
-            standard: {
-                kanji: ['5.5rem', '6.5rem', '7.5rem', '8.5rem', '9.5rem'],
-                translation: ['14px', '18px', '22px', '26px', '30px'],
-                defaultKanji: '7.5rem',
-                defaultTranslation: '22px'
-            },
-            grid2x4: {
-                kanji: ['4.8rem', '5.8rem', '6.8rem', '7.8rem', '8.8rem'],
-                translation: ['14px', '18px', '22px', '26px', '30px'],
-                defaultKanji: '6.8rem',
-                defaultTranslation: '22px'
-            }
-        };
+                // Sync offsets to CSS variables
+                const updateCSSEffects = () => {
+                    document.documentElement.style.setProperty('--front-offset-x', `${frontOffsetX.value}mm`);
+                    document.documentElement.style.setProperty('--front-offset-y', `${frontOffsetY.value}mm`);
+                    document.documentElement.style.setProperty('--back-offset-x', `${backOffsetX.value}mm`);
+                    document.documentElement.style.setProperty('--back-offset-y', `${backOffsetY.value}mm`);
+                };
 
-        function updateCustomSizes() {
-            const kanjiSize = document.getElementById('kanji-size-select').value;
-            const translationSize = document.getElementById('translation-size-select').value;
+                watch([frontOffsetX, frontOffsetY, backOffsetX, backOffsetY], updateCSSEffects);
 
-            document.documentElement.style.setProperty('--kanji-font-size', kanjiSize);
-            document.documentElement.style.setProperty('--meaning-font-size', translationSize);
-        }
-
-        function render() {
-            const selectedLayout = document.getElementById('layout-select').value;
-            const container = document.getElementById('cards-container');
-            container.innerHTML = '';
-
-            let mode = 'duplex';
-            let size = 'standard';
-            let cardsPerPage = 3;
-
-            if (selectedLayout === '3_portrait_folding') {
-                mode = 'folding';
-                size = 'standard';
-                cardsPerPage = 3;
-            } else if (selectedLayout === '8_landscape_duplex') {
-                mode = 'duplex';
-                size = 'grid2x4';
-                cardsPerPage = 8;
-            } else if (selectedLayout === '8_landscape_folding') {
-                mode = 'folding';
-                size = 'grid2x4';
-                cardsPerPage = 4;
-            }
-
-            document.body.className = `mode-${mode} size-${size}`;
-
-            // Populate Size Selectors Dynamically with precise values suited for the active layout size
-            const config = SIZES_CONFIG[size];
-            const kanjiSelect = document.getElementById('kanji-size-select');
-            const transSelect = document.getElementById('translation-size-select');
-            
-            const prevKanji = kanjiSelect.value;
-            const prevTrans = transSelect.value;
-
-            kanjiSelect.innerHTML = '';
-            config.kanji.forEach(val => {
-                const opt = document.createElement('option');
-                opt.value = val;
-                opt.textContent = val;
-                if (val === config.defaultKanji) opt.selected = true;
-                kanjiSelect.appendChild(opt);
-            });
-            if (config.kanji.includes(prevKanji)) {
-                kanjiSelect.value = prevKanji;
-            }
-
-            transSelect.innerHTML = '';
-            config.translation.forEach(val => {
-                const opt = document.createElement('option');
-                opt.value = val;
-                opt.textContent = val;
-                if (val === config.defaultTranslation) opt.selected = true;
-                transSelect.appendChild(opt);
-            });
-            if (config.translation.includes(prevTrans)) {
-                transSelect.value = prevTrans;
-            }
-
-            // Force global page orientation rule dynamically so browser applies it to ALL pages
-            let dynamicStyle = document.getElementById('dynamic-page-style');
-            if (!dynamicStyle) {
-                dynamicStyle = document.createElement('style');
-                dynamicStyle.id = 'dynamic-page-style';
-                document.head.appendChild(dynamicStyle);
-            }
-
-            if (selectedLayout === '8_landscape_duplex' || selectedLayout === '8_landscape_folding') {
-                dynamicStyle.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
-            } else {
-                dynamicStyle.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
-            }
-
-            if (mode === 'folding') {
-                for (let i = 0; i < cardsData.length; i += cardsPerPage) {
-                    const chunk = cardsData.slice(i, i + cardsPerPage);
-                    const page = document.createElement('div');
-                    page.className = 'print-page';
-                    
-                    chunk.forEach(data => {
-                        const unit = document.createElement('div');
-                        unit.className = 'print-unit';
-                        if (size === 'grid2x4') {
-                            unit.innerHTML = `<div class="fold-line-horizontal"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
-                        } else {
-                            unit.innerHTML = `<div class="fold-line"></div>${getCardFrontHTML(data)}${getCardBackHTML(data)}`;
-                        }
-                        page.appendChild(unit);
-                    });
-                    container.appendChild(page);
-                }
-            } else {
-                // DUPLEX MODE
-                for (let i = 0; i < cardsData.length; i += cardsPerPage) {
-                    const chunk = cardsData.slice(i, i + cardsPerPage);
-                    
-                    // FRONTS Page
-                    const frontPage = document.createElement('div');
-                    frontPage.className = 'print-page';
-                    chunk.forEach(data => {
-                        const unit = document.createElement('div');
-                        unit.className = 'print-unit';
-                        unit.innerHTML = getCardFrontHTML(data);
-                        frontPage.appendChild(unit);
-                    });
-                    container.appendChild(frontPage);
-
-                    // BACKS Page (Mirrored to align perfectly on double-sided printing)
-                    const backPage = document.createElement('div');
-                    backPage.className = 'print-page';
-                    
-                    let mirroredChunk = [...chunk];
-                    if (size === 'grid2x4' && chunk.length === 8) {
-                        // Mirror 2x4 grid columns to align correctly when printed duplex
-                        mirroredChunk = [
-                            chunk[3], chunk[2], chunk[1], chunk[0],
-                            chunk[7], chunk[6], chunk[5], chunk[4]
-                        ].filter(Boolean);
+                // Determine CSS classes for layout structure
+                const layoutClass = computed(() => {
+                    let classes = [];
+                    if (layoutMode.value.includes('folding')) {
+                        classes.push('mode-folding');
+                    } else {
+                        classes.push('mode-duplex');
                     }
-                    
-                    mirroredChunk.forEach(data => {
-                        const unit = document.createElement('div');
-                        unit.className = 'print-unit';
-                        unit.innerHTML = getCardBackHTML(data);
-                        backPage.appendChild(unit);
-                    });
-                    container.appendChild(backPage);
-                }
+
+                    if (layoutMode.value.includes('landscape')) {
+                        classes.push('size-grid2x4');
+                    } else {
+                        classes.push('size-standard');
+                    }
+                    return classes.join(' ');
+                });
+
+                // Select card helpers
+                const selectAllCards = () => {
+                    selectedCards.value = cards.value.map(c => c.character);
+                };
+                const deselectAllCards = () => {
+                    selectedCards.value = [];
+                };
+
+                // Vertical text alignment helper for multi-character Chinese words
+                const getFrontCharacterStyle = (char) => {
+                    if (!char) return {};
+                    if (char.length > 1) {
+                        return {
+                            writingMode: 'vertical-rl',
+                            textOrientation: 'upright'
+                        };
+                    }
+                    return {};
+                };
+
+                // Helper for Chinese parts of speech styling
+                const getTypeTagClass = (type) => {
+                    if (!type) return 'tag-default';
+                    const t = type.toLowerCase();
+                    if (t.includes('pronombre')) return 'tag-pronombre';
+                    if (t.includes('sustantivo') || t.includes('nombre')) return 'tag-sustantivo';
+                    if (t.includes('adjetivo')) return 'tag-adjetivo';
+                    if (t.includes('adverbio')) return 'tag-adverbio';
+                    if (t.includes('verbo')) return 'tag-verbo';
+                    if (t.includes('expresi')) return 'tag-expresion';
+                    return 'tag-default';
+                };
+
+                // Compile layout pages reactively based on layout settings and selected cards
+                const compiledPages = computed(() => {
+                    const deck = cards.value.filter(c => selectedCards.value.includes(c.character));
+                    if (deck.length === 0) return [];
+
+                    const pages = [];
+                    const isLandscape = layoutMode.value.includes('landscape');
+                    const isFolding = layoutMode.value.includes('folding');
+
+                    let cardsPerPage = 3;
+                    if (isLandscape) {
+                        cardsPerPage = isFolding ? 4 : 8;
+                    }
+
+                    // Process deck in chunks representing each physical sheet
+                    for (let i = 0; i < deck.length; i += cardsPerPage) {
+                        const chunk = deck.slice(i, i + cardsPerPage);
+                        
+                        // Pad the chunk with placeholders so the grid structure is constant
+                        const paddedChunk = [...chunk];
+                        while (paddedChunk.length < cardsPerPage) {
+                            paddedChunk.push({ isPlaceholder: true });
+                        }
+
+                        if (isFolding) {
+                            // FOLDING LAYOUT
+                            pages.push({
+                                type: 'fronts',
+                                layout: 'Folding',
+                                units: paddedChunk
+                            });
+                        } else {
+                            // DUPLEX LAYOUT (Separate Front Page and Back Page)
+                            pages.push({
+                                type: 'fronts',
+                                layout: 'Duplex Fronts',
+                                units: paddedChunk
+                            });
+
+                            // Mirror columns for back page to print correctly
+                            let backChunk = [...paddedChunk];
+                            if (isLandscape && paddedChunk.length === 8) {
+                                backChunk = [
+                                    paddedChunk[3], paddedChunk[2], paddedChunk[1], paddedChunk[0],
+                                    paddedChunk[7], paddedChunk[6], paddedChunk[5], paddedChunk[4]
+                                ];
+                            }
+                            
+                            pages.push({
+                                type: 'backs',
+                                layout: 'Duplex Backs',
+                                units: backChunk
+                            });
+                        }
+                    }
+                    return pages;
+                });
+
+                // Update page rules in head so print dimensions fit A4 landscape/portrait perfectly
+                watch(layoutMode, (newMode) => {
+                    let styleTag = document.getElementById('dynamic-page-style');
+                    if (!styleTag) {
+                        styleTag = document.createElement('style');
+                        styleTag.id = 'dynamic-page-style';
+                        document.head.appendChild(styleTag);
+                    }
+                    if (newMode.includes('landscape')) {
+                        styleTag.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
+                    } else {
+                        styleTag.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
+                    }
+                }, { immediate: true });
+
+                const triggerPrint = () => {
+                    window.print();
+                };
+
+                onMounted(() => {
+                    updateCSSEffects();
+                });
+
+                return {
+                    cards,
+                    layoutMode,
+                    selectedCards,
+                    frontOffsetX,
+                    frontOffsetY,
+                    backOffsetX,
+                    backOffsetY,
+                    showIllustrations,
+                    showPhrases,
+                    showBadge,
+                    showTags,
+                    layoutClass,
+                    compiledPages,
+                    selectAllCards,
+                    deselectAllCards,
+                    getFrontCharacterStyle,
+                    getTypeTagClass,
+                    triggerPrint
+                };
             }
-
-            // Sync custom sizes after rendering
-            updateCustomSizes();
-        }
-
-        render();
+        }).mount('#app');
     </script>
 </body>
-
 </html>

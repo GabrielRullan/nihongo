@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Kanji - 80 kanjis</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-grey: #64748b;
+            --text-romaji-phrase: #475569;
+            --accent-indigo: #6366f1;
+            --border-color: #f1f5f9;
+            --badge-bg: #4f46e5;
+
+            /* Colores de etiquetas */
+            --tag-nom-bg: #cbd5e1;
+            --tag-nom-text: #334155;
+            --tag-ver-bg: #fed7aa;
+            --tag-ver-text: #7c2d12;
+            --tag-adj-bg: #dcfce7;
+            --tag-adj-text: #14532d;
+            --tag-grey-bg: #e2e8f0;
+            --tag-grey-text: #64748b;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+        }
+
+        .card-container {
+            width: 375px;
+            height: 525px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            border-radius: 24px;
+        }
+
+        .card-container.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 24px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .card-front {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .kanji-display {
+            font-size: 15rem;
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            color: var(--text-dark);
+            user-select: none;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            padding: 32px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .badge-n5 {
+            background-color: var(--badge-bg);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .header-content {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        ruby {
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            color: var(--text-dark);
+            ruby-position: over;
+        }
+
+        .romaji-header {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--accent-indigo);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 8px 0 0 0;
+        }
+
+        .illustration-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 10px 0;
+            min-height: 0;
+            /* Allow shrinking */
+        }
+
+        .icon-svg {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .meaning-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        /* Contenedor de etiquetas para permitir separación */
+        .tag-container {
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .type-tag {
+            font-size: 14px;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 6px;
+            text-transform: lowercase;
+        }
+
+        .tag-nom {
+            background-color: var(--tag-nom-bg);
+            color: var(--tag-nom-text);
+        }
+
+        .tag-ver {
+            background-color: var(--tag-ver-bg);
+            color: var(--tag-ver-text);
+        }
+
+        .tag-adj {
+            background-color: var(--tag-adj-bg);
+            color: var(--tag-adj-text);
+        }
+
+        .tag-g2 {
+            background-color: var(--tag-grey-bg);
+            color: var(--tag-grey-text);
+        }
+
+        .phrase-section {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .phrase-jp {
+            font-size: 21px;
+            color: var(--text-grey);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .phrase-romaji {
+            font-size: 18px;
+            color: var(--text-romaji-phrase);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .phrase-es {
+            font-size: 17px;
+            color: var(--text-grey);
+            font-style: italic;
+            margin: 0;
+        }
+
+        .anki-furigana-display {
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        .anki-furigana-display ruby {
+            font-size: 55px;
+        }
+
+        .anki-furigana-display rt {
+            font-size: 21px;
+            color: var(--text-grey);
+            letter-spacing: 0.1em;
+        }
+
+        .okurigana {
+            font-size: 0.8em;
+            color: var(--text-dark);
+            vertical-align: baseline;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container-wrapper" id="cards-container">
+        <!-- Cards will be injected here by JavaScript -->
+    </div>
+
+    <!-- Load the generated data -->
+    <script src="data.js"></script>
+
+    <script>
+        // If data.js fails to load or is empty, provide a fallback
+        if (typeof cardsData === 'undefined') {
+            window.cardsData = [
+                {
+                    kanji: "猫",
+                    anki_furigana: "猫[ねこ]",
+                    romaji: "NEKO",
+                    level: "N5",
+                    meaning: "GATO",
+                    type: "nom.",
+                    phraseJp: "猫が好きです。",
+                    phraseRomaji: "neko ga suki desu.",
+                    phraseEs: "Me gustan los gatos.",
+                    icon: `<svg class="icon-svg" width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c.67 0 1.35.09 2 .26V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v3.76c.65.99 1 2.15 1 3.24 0 3.31-2.69 6-6 6s-6-2.69-6-6c0-1.09.35-2.25 1-3.24V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.26c.65-.17 1.33-.26 2-.26zM15 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2zm-6 0a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2H9z" /></svg>`
+                }
+            ];
+        }
+
+
+        function parseFurigana(text) {
+            if (!text) return '';
+            // Regex to find Kanji[Furigana]
+            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
+            let match;
+            let lastIndex = 0;
+            let html = '';
+
+            while ((match = regex.exec(text)) !== null) {
+                // Add text before match (Okurigana or non-kanji)
+                const before = text.substring(lastIndex, match.index);
+                if (before) {
+                    html += `<span class="okurigana">${before}</span>`;
+                }
+                // Add ruby for match
+                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
+                lastIndex = regex.lastIndex;
+            }
+            // Add remaining text (Okurigana)
+            const after = text.substring(lastIndex);
+            if (after) {
+                html += `<span class="okurigana">${after}</span>`;
+            }
+            return html;
+        }
+
+        function createCard(data) {
+            const card = document.createElement('div');
+            card.className = 'card-container';
+
+            // Generate tags HTML
+            let typeKey = data.type ? data.type.replace('/', '').replace('.', '').trim() : 'nom';
+            let tagsHtml = `<span class="type-tag tag-${typeKey}">${data.type || 'nom.'}</span>`;
+
+            if (data.tags) {
+                data.tags.forEach(t => {
+                    tagsHtml += `<span class="type-tag tag-g2">${t}</span>`;
+                });
+            }
+
+            // Decide between SVG icon or Image
+            let illustrationHtml = '';
+            if (data.image) {
+                illustrationHtml = `<img src="${data.image}" alt="${data.meaning}" style="height: 150px; max-width: 150px; object-fit: contain; margin-bottom: 10px; border-radius: 12px;">`;
+            } else {
+                illustrationHtml = data.icon || '<div style="height: 180px; display: flex; align-items: center; justify-content: center; font-size: 6rem; color: #cbd5e1; margin-bottom: 12px;">?</div>';
+            }
+
+            const furiganaHtml = parseFurigana(data.anki_furigana);
+
+            card.innerHTML = `
+                <div class="card-inner">
+                    <div class="card-face card-front">
+                        <span class="kanji-display">${data.kanji}</span>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="header">
+                            <div style="width: 40px;"></div>
+                            <div class="header-content">
+                                <div class="anki-furigana-display">${furiganaHtml}</div>
+                                <p class="romaji-header">${data.romaji || ''}</p>
+                            </div>
+                            <div class="badge-n5">${data.level}</div>
+                        </div>
+                        <div class="illustration-box">
+                            ${illustrationHtml}
+                            <p class="meaning-text">${data.meaning || ''}</p>
+                            <div class="tag-container">
+                                ${tagsHtml}
+                            </div>
+                        </div>
+                        <div class="phrase-section" style="${data.phraseJp ? '' : 'display:none;'}">
+                            <div class="phrase-jp">${data.phraseJp}</div>
+                            <div class="phrase-romaji">${data.phraseRomaji}</div>
+                            <p class="phrase-es">"${data.phraseEs}"</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            card.addEventListener('click', () => {
+                card.classList.toggle('is-flipped');
+            });
+
+            return card;
+        }
+
+        const container = document.getElementById('cards-container');
+        cardsData.forEach(data => {
+            container.appendChild(createCard(data));
+        });
+    </script>
+</body>
+
+</html>

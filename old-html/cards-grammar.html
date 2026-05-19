@@ -329,6 +329,7 @@
             padding-right: 4px;
         }
 
+        /* Scrollbar styles for card right column */
         .right-col::-webkit-scrollbar {
             width: 4px;
         }
@@ -422,6 +423,11 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: #ffffff;
+        }
+
+        .example-jp ruby rt {
+            font-size: 0.5em;
+            color: var(--accent-indigo);
         }
 
         .example-romaji {
@@ -564,50 +570,230 @@
     </style>
 </head>
 <body>
-    <div id="app">
-        <div class="blur-bg-1"></div>
-        <div class="blur-bg-2"></div>
+    <div class="blur-bg-1"></div>
+    <div class="blur-bg-2"></div>
 
-        <header>
-            <a href="../index.html" class="logo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                <span>Learning Hub</span>
-            </a>
-            <a href="../index.html" class="back-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                Volver al Hub
-            </a>
-        </header>
+    <header>
+        <a href="../index.html" class="logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Learning Hub</span>
+        </a>
+        <a href="../index.html" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Volver al Hub
+        </a>
+    </header>
 
-        <div class="workspace">
-            <!-- Search and Filters Panel -->
-            <div class="filters-panel">
-                <div class="search-bar-wrapper">
-                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <input type="text" v-model="searchQuery" class="search-bar" placeholder="Buscar por estructura, significado, explicación...">
-                </div>
-                
-                <div class="pos-filters">
-                    <span class="filter-tag" :class="{ active: selectedTag === 'all' }" @click="selectedTag = 'all'">Todos</span>
-                    <span v-for="tag in uniqueTags" :key="tag" class="filter-tag" :class="{ active: selectedTag === tag }" @click="selectedTag = tag">{{ tag }}</span>
-                </div>
-
-                <div class="matching-stats">
-                    Se encontraron {{ filteredGrammar.length }} de {{ grammar.length }} estructuras de gramática
-                </div>
+    <div class="workspace">
+        <!-- Search and Filters Panel -->
+        <div class="filters-panel">
+            <div class="search-bar-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" class="search-bar" placeholder="Buscar por estructura, significado, explicación..." oninput="handleSearch()">
+            </div>
+            
+            <div class="pos-filters" id="tags-filters-container">
+                <span class="filter-tag active" onclick="filterTag('all')">Todos</span>
+                <!-- Tags will be dynamically loaded -->
             </div>
 
-            <!-- Cards Grid wrapper -->
-            <div v-if="filteredGrammar.length > 0" class="cards-grid">
-                <div v-for="(card, index) in filteredGrammar" :key="card.pattern" class="card-container" :class="{ 'is-flipped': card.isFlipped }" @click="card.isFlipped = !card.isFlipped">
+            <div class="matching-stats" id="matching-stats">
+                Cargando tarjetas de gramática...
+            </div>
+        </div>
+
+        <!-- Cards Grid wrapper -->
+        <div class="cards-grid" id="cards-grid-wrapper">
+            <!-- Dynamically loaded cards -->
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state hidden" id="empty-state">
+            <div class="empty-icon">🔍</div>
+            <h3>No se encontraron estructuras</h3>
+            <p>Intenta ajustar el texto de búsqueda o el tag seleccionado.</p>
+        </div>
+    </div>
+
+    <!-- Data source -->
+    <script src="data.js"></script>
+
+    <script>
+        let filteredGrammar = [];
+        let selectedTag = 'all';
+        let searchQuery = '';
+        let synth = window.speechSynthesis;
+        let activeVoice = null;
+
+        // Initialize Speech voice
+        function initVoice() {
+            if (!synth) return;
+            const voices = synth.getVoices();
+            // Try to find a native Japanese voice (ja-JP)
+            activeVoice = voices.find(v => v.lang.toLowerCase().includes('ja-jp')) ||
+                          voices.find(v => v.lang.toLowerCase().includes('ja'));
+        }
+        
+        if (synth && synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = initVoice;
+        }
+
+        // Highlight the grammatical pattern core in the title
+        function highlightPattern(furiganaTitle, pattern) {
+            if (!furiganaTitle || !pattern) return '';
+            let display = furiganaTitle.replace(/\[.*?\]/g, ''); // strip furigana for front title display
+            let corePattern = pattern.replace(/〜/g, '').trim(); 
+            
+            if (corePattern && display.includes(corePattern)) {
+                return display.replace(corePattern, `<span class="focus">${corePattern}</span>`);
+            }
+            return `<span class="focus">${display}</span>`;
+        }
+
+        // Parse furigana format: Kanji[furigana] -> HTML ruby
+        function parseFurigana(text) {
+            if (!text) return '';
+            const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
+            let match;
+            let lastIndex = 0;
+            let html = '';
+            while ((match = regex.exec(text)) !== null) {
+                const before = text.substring(lastIndex, match.index);
+                if (before) html += `<span>${before}</span>`;
+                html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
+                lastIndex = regex.lastIndex;
+            }
+            const after = text.substring(lastIndex);
+            if (after) html += `<span>${after}</span>`;
+            return html;
+        }
+
+        // Initialize filters and UI
+        function initApp() {
+            initVoice();
+            
+            // Collect all unique tags
+            const tagsSet = new Set();
+            grammarData.forEach(card => {
+                if (card.tags) {
+                    card.tags.forEach(t => tagsSet.add(t.trim()));
+                }
+                if (card.level) {
+                    tagsSet.add(card.level.trim());
+                }
+            });
+
+            const tagsContainer = document.getElementById('tags-filters-container');
+            tagsSet.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'filter-tag';
+                span.textContent = tag;
+                span.setAttribute('data-tag', tag);
+                span.onclick = () => filterTag(tag);
+                tagsContainer.appendChild(span);
+            });
+
+            applyFilters();
+        }
+
+        // Tag Selector
+        function filterTag(tag) {
+            selectedTag = tag;
+            
+            const tags = document.querySelectorAll('.filter-tag');
+            tags.forEach(t => {
+                if (t.getAttribute('data-tag') === tag || (tag === 'all' && t.textContent === 'Todos')) {
+                    t.classList.add('active');
+                } else {
+                    t.classList.remove('active');
+                }
+            });
+
+            applyFilters();
+        }
+
+        // Search trigger
+        function handleSearch() {
+            searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            applyFilters();
+        }
+
+        // Filter Logic
+        function applyFilters() {
+            filteredGrammar = grammarData.filter(card => {
+                const matchesTag = (selectedTag === 'all' || 
+                    card.level === selectedTag || 
+                    (card.tags && card.tags.includes(selectedTag))
+                );
+
+                const matchesSearch = (!searchQuery ||
+                    card.pattern.toLowerCase().includes(searchQuery) ||
+                    card.meaning.toLowerCase().includes(searchQuery) ||
+                    (card.explanation && card.explanation.toLowerCase().includes(searchQuery)) ||
+                    (card.romajiTitle && card.romajiTitle.toLowerCase().includes(searchQuery))
+                );
+
+                return matchesTag && matchesSearch;
+            });
+
+            document.getElementById('matching-stats').textContent = 
+                `Se encontraron ${filteredGrammar.length} de ${grammarData.length} estructuras de gramática`;
+
+            const emptyState = document.getElementById('empty-state');
+            const gridWrapper = document.getElementById('cards-grid-wrapper');
+
+            if (filteredGrammar.length === 0) {
+                emptyState.classList.remove('hidden');
+                gridWrapper.innerHTML = '';
+            } else {
+                emptyState.classList.add('hidden');
+                renderCardsGrid();
+            }
+        }
+
+        // Render Cards Grid
+        function renderCardsGrid() {
+            const container = document.getElementById('cards-grid-wrapper');
+            container.innerHTML = '';
+
+            filteredGrammar.forEach((data, index) => {
+                const frontDisplay = highlightPattern(data.furiganaTitle, data.pattern);
+                const furiganaHtml = parseFurigana(data.furiganaTitle);
+                const badgeTag = (data.tags && data.tags.length > 0) ? data.tags[0] : 'Gramática';
+
+                // Build examples list HTML
+                let examplesHtml = '';
+                if (data.examples && data.examples.length > 0) {
+                    examplesHtml += `<div class="examples-header">Ejemplos de uso</div><div class="examples-list">`;
+                    data.examples.forEach((ex, exIdx) => {
+                        const exFuriganaHtml = parseFurigana(ex.furigana || ex.jp);
+                        examplesHtml += `
+                            <div class="example-item">
+                                <div class="example-jp">${exFuriganaHtml}</div>
+                                <div class="example-romaji">${ex.romaji || ''}</div>
+                                <div class="example-es">"${ex.es || ''}"</div>
+                                <button class="speak-btn" onclick="event.stopPropagation(); speakText('${ex.jp.replace(/'/g, "\\'")}')" title="Pronunciar ejemplo">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
+                            </div>
+                        `;
+                    });
+                    examplesHtml += `</div>`;
+                }
+
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'card-container';
+                cardDiv.onclick = () => cardDiv.classList.toggle('is-flipped');
+                
+                cardDiv.innerHTML = `
                     <div class="card-inner">
                         <!-- Frontal -->
                         <div class="card-face card-front">
                             <span class="label-side">Anverso</span>
-                            <div class="badge-level">{{ card.level }}</div>
-                            <div class="kanji-display" v-html="highlightPattern(card.furiganaTitle, card.pattern)"></div>
+                            <div class="badge-level">${data.level}</div>
+                            <div class="kanji-display">${frontDisplay}</div>
                             <div style="display:flex; gap:8px; margin-top:10px;">
-                                <span class="badge-pos">{{ card.tags && card.tags.length > 0 ? card.tags[0] : 'Gramática' }}</span>
+                                <span class="badge-pos">${badgeTag}</span>
                             </div>
                             <div class="hint-flip">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
@@ -616,18 +802,20 @@
                         </div>
 
                         <!-- Trasera -->
-                        <div class="card-face card-back" @click.stop>
+                        <div class="card-face card-back" onclick="event.stopPropagation()">
                             <span class="label-side">Reverso</span>
-                            <div class="badge-level">{{ card.level }}</div>
+                            <div class="badge-level">${data.level}</div>
                             
                             <div class="left-col">
-                                <div class="illustration">{{ card.illustration || '📝' }}</div>
+                                <div class="illustration">${data.illustration || '📝'}</div>
                                 <div>
-                                    <div class="furigana-box" v-html="parseFurigana(card.furiganaTitle)"></div>
-                                    <div class="romaji-title">{{ card.romajiTitle || '' }}</div>
-                                    <div class="romaji-translation">{{ card.meaning || '' }}</div>
+                                    <div class="furigana-box">
+                                        ${furiganaHtml}
+                                    </div>
+                                    <div class="romaji-title">${data.romajiTitle || ''}</div>
+                                    <div class="romaji-translation">${data.meaning || ''}</div>
                                 </div>
-                                <button class="speak-btn speak-btn-title" @click="speakText(stripFurigana(card.furiganaTitle))" title="Pronunciar patrón">
+                                <button class="speak-btn speak-btn-title" onclick="speakText('${data.furiganaTitle.replace(/\[.*?\]/g, "").replace(/'/g, "\\'")}')" title="Pronunciar patrón">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                                 </button>
                             </div>
@@ -635,166 +823,38 @@
                             <div class="right-col">
                                 <div class="formation-box">
                                     <div class="formation-label">Estructura</div>
-                                    <div class="formation-rule">{{ card.formation || card.pattern }}</div>
+                                    <div class="formation-rule">${data.formation || data.pattern}</div>
                                 </div>
                                 
                                 <div class="explanation-text">
-                                    {{ card.explanation || '' }}
+                                    ${data.explanation || ''}
                                 </div>
                                 
-                                <div v-if="card.examples && card.examples.length > 0">
-                                    <div class="examples-header">Ejemplos de uso</div>
-                                    <div class="examples-list">
-                                        <div v-for="ex in card.examples" :key="ex.jp" class="example-item">
-                                            <div class="example-jp" v-html="parseFurigana(ex.furigana || ex.jp)"></div>
-                                            <div class="example-romaji">{{ ex.romaji || '' }}</div>
-                                            <div class="example-es">"{{ ex.es || '' }}"</div>
-                                            <button class="speak-btn" @click="speakText(ex.jp)" title="Pronunciar ejemplo">
-                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                                ${examplesHtml}
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                `;
 
-            <!-- Empty state -->
-            <div v-else class="empty-state">
-                <div class="empty-icon">🔍</div>
-                <h3>No se encontraron estructuras</h3>
-                <p>Intenta ajustar el texto de búsqueda o el tag seleccionado.</p>
-            </div>
-        </div>
-    </div>
+                container.appendChild(cardDiv);
+            });
+        }
 
-    <!-- Vue 3 and Data Load -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="data.js"></script>
+        // Web Speech Synthesis Audio Trigger
+        function speakText(text) {
+            if (!synth || !text) return;
+            synth.cancel(); // kill active speech
 
-    <script>
-        const { createApp, ref, computed, onMounted } = Vue;
+            const utterance = new SpeechSynthesisUtterance(text);
+            if (activeVoice) utterance.voice = activeVoice;
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.85; // Natural speed for learners
 
-        createApp({
-            setup() {
-                // Initialize the grammar list with an isFlipped field
-                const rawData = (window.grammarData || []).map(item => ({
-                    ...item,
-                    isFlipped: false
-                }));
-                const grammar = ref(rawData);
-                const searchQuery = ref('');
-                const selectedTag = ref('all');
-                const synth = window.speechSynthesis;
-                const activeVoice = ref(null);
+            synth.speak(utterance);
+        }
 
-                // Collect unique tags
-                const uniqueTags = computed(() => {
-                    const set = new Set();
-                    grammar.value.forEach(card => {
-                        if (card.tags) {
-                            card.tags.forEach(t => set.add(t.trim()));
-                        }
-                        if (card.level) {
-                            set.add(card.level.trim());
-                        }
-                    });
-                    return Array.from(set);
-                });
-
-                // Filter logic
-                const filteredGrammar = computed(() => {
-                    return grammar.value.filter(card => {
-                        const matchesTag = selectedTag.value === 'all' || 
-                            card.level === selectedTag.value || 
-                            (card.tags && card.tags.includes(selectedTag.value));
-
-                        const query = searchQuery.value.toLowerCase().trim();
-                        const matchesSearch = !query ||
-                            card.pattern.toLowerCase().includes(query) ||
-                            card.meaning.toLowerCase().includes(query) ||
-                            (card.explanation && card.explanation.toLowerCase().includes(query)) ||
-                            (card.romajiTitle && card.romajiTitle.toLowerCase().includes(query));
-
-                        return matchesTag && matchesSearch;
-                    });
-                });
-
-                // Highlight grammar patterns
-                const highlightPattern = (furiganaTitle, pattern) => {
-                    if (!furiganaTitle || !pattern) return '';
-                    let display = furiganaTitle.replace(/\[.*?\]/g, '');
-                    let corePattern = pattern.replace(/〜/g, '').trim(); 
-                    
-                    if (corePattern && display.includes(corePattern)) {
-                        return display.replace(corePattern, `<span class="focus">${corePattern}</span>`);
-                    }
-                    return `<span class="focus">${display}</span>`;
-                };
-
-                // Parse Furigana Kanji[Furigana] -> ruby tags
-                const parseFurigana = (text) => {
-                    if (!text) return '';
-                    const regex = /([^\u3040-\u309F\u30A0-\u30FF\u0000-\u007F]+)\[([^\]]+)\]/g;
-                    let match;
-                    let lastIndex = 0;
-                    let html = '';
-                    while ((match = regex.exec(text)) !== null) {
-                        const before = text.substring(lastIndex, match.index);
-                        if (before) html += `<span>${before}</span>`;
-                        html += `<ruby>${match[1]}<rt>${match[2]}</rt></ruby>`;
-                        lastIndex = regex.lastIndex;
-                    }
-                    const after = text.substring(lastIndex);
-                    if (after) html += `<span>${after}</span>`;
-                    return html;
-                };
-
-                const stripFurigana = (text) => {
-                    return text ? text.replace(/\[.*?\]/g, '') : '';
-                };
-
-                // Speech voices initialization
-                const initVoice = () => {
-                    if (!synth) return;
-                    const voices = synth.getVoices();
-                    activeVoice.value = voices.find(v => v.lang.toLowerCase().includes('ja-jp')) ||
-                                       voices.find(v => v.lang.toLowerCase().includes('ja'));
-                };
-
-                const speakText = (text) => {
-                    if (!synth || !text) return;
-                    synth.cancel();
-
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    if (activeVoice.value) utterance.voice = activeVoice.value;
-                    utterance.lang = 'ja-JP';
-                    utterance.rate = 0.85;
-                    synth.speak(utterance);
-                };
-
-                onMounted(() => {
-                    initVoice();
-                    if (synth && synth.onvoiceschanged !== undefined) {
-                        synth.onvoiceschanged = initVoice;
-                    }
-                });
-
-                return {
-                    grammar,
-                    searchQuery,
-                    selectedTag,
-                    uniqueTags,
-                    filteredGrammar,
-                    highlightPattern,
-                    parseFurigana,
-                    stripFurigana,
-                    speakText
-                };
-            }
-        }).mount('#app');
+        // Run application on load
+        window.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>

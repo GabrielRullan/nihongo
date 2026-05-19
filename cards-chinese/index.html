@@ -378,10 +378,6 @@
             transition: transform 0.3s;
         }
 
-        .card:hover .card-image {
-            transform: scale(1.05);
-        }
-
         .meaning-title {
             font-family: 'Outfit', sans-serif;
             font-size: 1.6rem;
@@ -613,6 +609,15 @@
             font-weight: 600;
         }
 
+        .badge-pos {
+            font-size: 0.7rem;
+            margin-top: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
         .hidden {
             display: none !important;
         }
@@ -649,438 +654,325 @@
     </style>
 </head>
 <body>
-    <div class="blur-bg-1"></div>
-    <div class="blur-bg-2"></div>
+    <div id="app">
+        <div class="blur-bg-1"></div>
+        <div class="blur-bg-2"></div>
 
-    <header>
-        <a href="../index.html" class="logo">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            <span>Learning Hub</span>
-        </a>
-        <a href="../index.html" class="back-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            Volver al Hub
-        </a>
-    </header>
+        <header>
+            <a href="../index.html" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="2.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Learning Hub</span>
+            </a>
+            <a href="../index.html" class="back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver al Hub
+            </a>
+        </header>
 
-    <div class="workspace">
-        <!-- Search and Filters Panel -->
-        <div class="filters-panel">
-            <div class="search-bar-wrapper">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" id="search-input" class="search-bar" placeholder="Buscar por caracter, pinyin o traducción..." oninput="handleSearch()">
-            </div>
-            
-            <div class="pos-filters" id="pos-filters-container">
-                <span class="filter-tag active" onclick="filterPOS('all')">Todos</span>
-                <!-- Filled dynamically -->
-            </div>
-
-            <div class="stats-view-toggle">
-                <span id="matching-stats">Cargando tarjetas...</span>
-                <div style="display: flex; gap: 8px;">
-                    <button class="view-btn active" id="view-carousel-btn" onclick="setViewMode('carousel')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-                        Individual
-                    </button>
-                    <button class="view-btn" id="view-grid-btn" onclick="setViewMode('grid')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                        Cuadrícula
-                    </button>
+        <div class="workspace">
+            <!-- Search and Filters Panel -->
+            <div class="filters-panel">
+                <div class="search-bar-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" v-model="searchQuery" class="search-bar" placeholder="Buscar por caracter, pinyin o traducción...">
                 </div>
-            </div>
-        </div>
-
-        <!-- Carousel / Single Card Mode -->
-        <div class="card-carousel-container" id="carousel-view">
-            <div class="flashcard-wrapper" onclick="flipCard()">
-                <div class="flashcard" id="main-card">
-                    <!-- Front -->
-                    <div class="card-side card-front">
-                        <div class="card-badge" id="card-front-level">HSK 1</div>
-                        <div class="character-large" id="card-front-char">我</div>
-                        <div class="hint-flip">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
-                            Click para girar
-                        </div>
-                    </div>
-                    <!-- Back -->
-                    <div class="card-side card-back" onclick="event.stopPropagation()">
-                        <div class="back-header">
-                            <div class="pinyin-title" id="card-back-py">wǒ</div>
-                            <div class="radical-strokes" id="card-back-meta">
-                                <span id="card-radical">Radical: </span>
-                                <span id="card-strokes">Trazos: </span>
-                            </div>
-                        </div>
-                        
-                        <div class="illustration-container">
-                            <div id="illustration-img-box">
-                                <img src="" class="card-image" id="card-back-img" alt="Ilustración">
-                            </div>
-                            <div class="meaning-title" id="card-back-mean">Yo</div>
-                            <div class="word-type-badge" id="card-back-type">Pronombre</div>
-                            <button class="speak-btn speak-btn-large" onclick="speakChar()" title="Pronunciar caracter">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                            </button>
-                        </div>
-
-                        <div class="example-phrase-box">
-                            <button class="speak-btn" onclick="speakPhrase()" title="Pronunciar oración">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                            </button>
-                            <div class="phrase-cn" id="card-phrase-cn">我是学生。</div>
-                            <div class="phrase-py" id="card-phrase-py">Wǒ shì xuésheng.</div>
-                            <div class="phrase-es" id="card-phrase-es">"Yo soy estudiante."</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carousel Nav Controls -->
-            <div class="carousel-controls">
-                <button class="control-btn" onclick="prevCard()" id="prev-btn" title="Anterior">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </button>
-                <button class="control-btn btn-action-text" onclick="flipCard()">
-                    Girar Tarjeta
-                </button>
-                <button class="control-btn" onclick="nextCard()" id="next-btn" title="Siguiente">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-            </div>
-
-            <div style="display: flex; gap: 20px; align-items: center; margin-top: 0.5rem;">
-                <button class="view-btn" onclick="shuffleCards()" title="Mezclar mazo">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
-                    Mezclar
-                </button>
                 
-                <div class="auto-play-wrapper">
-                    <span>Auto-pronunciar</span>
-                    <label class="switch">
-                        <input type="checkbox" id="auto-play-toggle" checked>
-                        <span class="slider"></span>
-                    </label>
+                <div class="pos-filters">
+                    <span class="filter-tag" :class="{ active: selectedPOS === 'all' }" @click="selectedPOS = 'all'">Todos</span>
+                    <span v-for="pos in uniquePOS" :key="pos" class="filter-tag" :class="{ active: selectedPOS === pos }" @click="selectedPOS = pos">{{ pos }}</span>
+                </div>
+
+                <div class="stats-view-toggle">
+                    <span>Se encontraron {{ filteredCards.length }} de {{ cards.length }} tarjetas</span>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="view-btn" :class="{ active: viewMode === 'carousel' }" @click="viewMode = 'carousel'">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                            Individual
+                        </button>
+                        <button class="view-btn" :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            Cuadrícula
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Grid View Mode -->
-        <div class="cards-grid-container hidden" id="grid-view">
-            <!-- Grid cards injected dynamically -->
-        </div>
+            <!-- Carousel View -->
+            <div v-if="viewMode === 'carousel' && filteredCards.length > 0" class="card-carousel-container">
+                <div class="flashcard-wrapper" @click="isFlipped = !isFlipped">
+                    <div class="flashcard" :class="{ flipped: isFlipped }">
+                        <!-- Front -->
+                        <div class="card-side card-front">
+                            <div class="card-badge">{{ currentCard.level || 'HSK 1' }}</div>
+                            <div class="character-large" :style="fontSizeStyle">{{ currentCard.character }}</div>
+                            <div class="hint-flip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                                Click para girar
+                            </div>
+                        </div>
+                        <!-- Back -->
+                        <div class="card-side card-back" @click.stop>
+                            <div class="back-header">
+                                <div class="pinyin-title">{{ currentCard.pinyin }}</div>
+                                <div class="radical-strokes">
+                                    <span v-if="currentCard.radical">Radical: {{ currentCard.radical }}</span>
+                                    <span v-if="currentCard.strokeCount">Trazos: {{ currentCard.strokeCount }}</span>
+                                </div>
+                            </div>
+                            
+                            <div class="illustration-container">
+                                <div v-if="currentCard.image && !currentCard.image.endsWith('undefined')">
+                                    <img :src="currentCard.image" class="card-image" alt="Ilustración">
+                                </div>
+                                <div class="meaning-title">{{ currentCard.meaning }}</div>
+                                <div class="word-type-badge">{{ currentCard.type || 'Palabra' }}</div>
+                                <button class="speak-btn speak-btn-large" @click="speakChar" title="Pronunciar caracter">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
+                            </div>
 
-        <!-- Empty state -->
-        <div class="empty-state hidden" id="empty-state">
-            <div class="empty-icon">🔍</div>
-            <h3>No se encontraron tarjetas</h3>
-            <p>Intenta ajustar el texto de búsqueda o el filtro seleccionado.</p>
+                            <div v-if="currentCard.phraseCn" class="example-phrase-box">
+                                <button class="speak-btn" @click="speakPhrase" title="Pronunciar oración">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><path d="M12 12c0-3.5-3-6-6-6v12c3 0 6-2.5 6-6z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
+                                <div class="phrase-cn">{{ currentCard.phraseCn }}</div>
+                                <div class="phrase-py">{{ currentCard.phrasePinyin }}</div>
+                                <div class="phrase-es" v-if="currentCard.phraseEs">"{{ currentCard.phraseEs }}"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation controls -->
+                <div class="carousel-controls">
+                    <button class="control-btn" :disabled="currentIndex === 0" @click="prevCard" title="Anterior">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="control-btn btn-action-text" @click="isFlipped = !isFlipped">
+                        Girar Tarjeta
+                    </button>
+                    <button class="control-btn" :disabled="currentIndex === filteredCards.length - 1" @click="nextCard" title="Siguiente">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+
+                <div style="display: flex; gap: 20px; align-items: center; margin-top: 0.5rem;">
+                    <button class="view-btn" @click="shuffleCards" title="Mezclar mazo">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                        Mezclar
+                    </button>
+                    
+                    <div class="auto-play-wrapper">
+                        <span>Auto-pronunciar</span>
+                        <label class="switch">
+                            <input type="checkbox" v-model="autoPlay">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid View Mode -->
+            <div v-else-if="viewMode === 'grid' && filteredCards.length > 0" class="cards-grid-container">
+                <div v-for="(card, idx) in filteredCards" :key="card.character" class="grid-card" @click="selectCardFromGrid(idx)">
+                    <div class="grid-char">{{ card.character }}</div>
+                    <div class="grid-py">{{ card.pinyin }}</div>
+                    <div class="grid-mean">{{ card.meaning }}</div>
+                    <div class="badge-pos">{{ card.type || 'Palabra' }}</div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div v-else class="empty-state">
+                <div class="empty-icon">🔍</div>
+                <h3>No se encontraron tarjetas</h3>
+                <p>Intenta ajustar el texto de búsqueda o el filtro seleccionado.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Data loading -->
+    <!-- Vue 3 and Data Loading -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="data.js"></script>
     
-    <!-- App Logic -->
     <script>
-        let filteredCards = [];
-        let currentIndex = 0;
-        let selectedPOS = 'all';
-        let searchQuery = '';
-        let viewMode = 'carousel';
-        let synth = window.speechSynthesis;
-        let activeVoice = null;
+        const { createApp, ref, computed, watch, onMounted, onUnmounted } = Vue;
 
-        // Initialize TTS voice
-        function initVoice() {
-            if (!synth) return;
-            const voices = synth.getVoices();
-            // Try to find a Chinese voice (zh-CN or zh-HK)
-            activeVoice = voices.find(v => v.lang.toLowerCase().includes('zh-cn')) ||
-                          voices.find(v => v.lang.toLowerCase().includes('zh-'));
-        }
-        
-        if (synth && synth.onvoiceschanged !== undefined) {
-            synth.onvoiceschanged = initVoice;
-        }
+        createApp({
+            setup() {
+                const cards = ref(window.cardsData || []);
+                const searchQuery = ref('');
+                const selectedPOS = ref('all');
+                const viewMode = ref('carousel');
+                const currentIndex = ref(0);
+                const isFlipped = ref(false);
+                const autoPlay = ref(true);
 
-        // Initialize App
-        function initApp() {
-            initVoice();
-            // Build POS filter list dynamically
-            const posSet = new Set();
-            cardsData.forEach(card => {
-                if (card.type) posSet.add(card.type.trim());
-            });
+                const synth = window.speechSynthesis;
+                const activeVoice = ref(null);
 
-            const filterContainer = document.getElementById('pos-filters-container');
-            posSet.forEach(pos => {
-                const tag = document.createElement('span');
-                tag.className = 'filter-tag';
-                tag.textContent = pos;
-                tag.setAttribute('data-pos', pos);
-                tag.onclick = () => filterPOS(pos);
-                filterContainer.appendChild(tag);
-            });
+                // Collect unique parts of speech
+                const uniquePOS = computed(() => {
+                    const set = new Set();
+                    cards.value.forEach(card => {
+                        if (card.type) {
+                            set.add(card.type.trim());
+                        }
+                    });
+                    return Array.from(set);
+                });
 
-            applyFilters();
-        }
+                // Filter logic
+                const filteredCards = computed(() => {
+                    return cards.value.filter(card => {
+                        const matchesPOS = selectedPOS.value === 'all' || card.type === selectedPOS.value;
+                        const query = searchQuery.value.toLowerCase().trim();
+                        const matchesSearch = !query || 
+                            card.character.includes(query) || 
+                            card.pinyin.toLowerCase().includes(query) || 
+                            card.meaning.toLowerCase().includes(query);
+                        
+                        return matchesPOS && matchesSearch;
+                    });
+                });
 
-        // Handle Filter Trigger
-        function filterPOS(pos) {
-            selectedPOS = pos;
-            
-            // Update active state in DOM
-            const tags = document.querySelectorAll('.filter-tag');
-            tags.forEach(tag => {
-                if (tag.getAttribute('data-pos') === pos || (pos === 'all' && tag.textContent === 'Todos')) {
-                    tag.classList.add('active');
-                } else {
-                    tag.classList.remove('active');
-                }
-            });
+                const currentCard = computed(() => {
+                    return filteredCards.value[currentIndex.value] || {};
+                });
 
-            applyFilters();
-        }
+                // Dynamically adjust font-size based on text length
+                const fontSizeStyle = computed(() => {
+                    const char = currentCard.value.character || '';
+                    if (char.length > 2) {
+                        return { fontSize: '4.8rem' };
+                    } else if (char.length === 2) {
+                        return { fontSize: '6.2rem' };
+                    } else {
+                        return { fontSize: '7.5rem' };
+                    }
+                });
 
-        // Handle Search Inputs
-        function handleSearch() {
-            searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
-            applyFilters();
-        }
-
-        // Apply Search & Tag filters
-        function applyFilters() {
-            filteredCards = cardsData.filter(card => {
-                // 1. Tag filter
-                const matchesPOS = (selectedPOS === 'all' || card.type === selectedPOS);
-                
-                // 2. Search query filter
-                const matchesSearch = (!searchQuery || 
-                    card.character.includes(searchQuery) ||
-                    card.pinyin.toLowerCase().includes(searchQuery) ||
-                    card.meaning.toLowerCase().includes(searchQuery)
-                );
-                
-                return matchesPOS && matchesSearch;
-            });
-
-            currentIndex = 0;
-            
-            // Update Stats Display
-            document.getElementById('matching-stats').textContent = 
-                `Se encontraron ${filteredCards.length} de ${cardsData.length} tarjetas`;
-
-            // Reset UI View states
-            const emptyState = document.getElementById('empty-state');
-            const carouselView = document.getElementById('carousel-view');
-            const gridView = document.getElementById('grid-view');
-
-            if (filteredCards.length === 0) {
-                emptyState.classList.remove('hidden');
-                carouselView.classList.add('hidden');
-                gridView.classList.add('hidden');
-            } else {
-                emptyState.classList.add('hidden');
-                if (viewMode === 'carousel') {
-                    carouselView.classList.remove('hidden');
-                    gridView.classList.add('hidden');
-                    renderCard();
-                } else {
-                    carouselView.classList.add('hidden');
-                    gridView.classList.remove('hidden');
-                    renderGrid();
-                }
-            }
-        }
-
-        // Set layout mode
-        function setViewMode(mode) {
-            viewMode = mode;
-            document.getElementById('view-carousel-btn').classList.toggle('active', mode === 'carousel');
-            document.getElementById('view-grid-btn').classList.toggle('active', mode === 'grid');
-            
-            applyFilters();
-        }
-
-        // 3D Flip Action
-        function flipCard() {
-            const card = document.getElementById('main-card');
-            card.classList.toggle('flipped');
-        }
-
-        // Render Current Card
-        function renderCard() {
-            if (filteredCards.length === 0) return;
-            const data = filteredCards[currentIndex];
-            
-            // Ensure card is back to front side when rendering a new card
-            document.getElementById('main-card').classList.remove('flipped');
-            
-            // Front elements
-            document.getElementById('card-front-char').textContent = data.character;
-            document.getElementById('card-front-level').textContent = data.level || 'HSK 1';
-            
-            // Adjust card character sizing dynamically based on length
-            const charEl = document.getElementById('card-front-char');
-            if (data.character.length > 2) {
-                charEl.style.fontSize = '4.8rem';
-            } else if (data.character.length === 2) {
-                charEl.style.fontSize = '6.2rem';
-            } else {
-                charEl.style.fontSize = '7.5rem';
-            }
-
-            // Back elements
-            document.getElementById('card-back-py').textContent = data.pinyin;
-            document.getElementById('card-back-mean').textContent = data.meaning;
-            document.getElementById('card-back-type').textContent = data.type || 'Palabra';
-            
-            // Metadata
-            const radicalEl = document.getElementById('card-radical');
-            const strokesEl = document.getElementById('card-strokes');
-            
-            if (data.radical) {
-                radicalEl.textContent = `Radical: ${data.radical}`;
-                radicalEl.style.display = 'block';
-            } else {
-                radicalEl.style.display = 'none';
-            }
-
-            if (data.strokeCount) {
-                strokesEl.textContent = `Trazos: ${data.strokeCount}`;
-                strokesEl.style.display = 'block';
-            } else {
-                strokesEl.style.display = 'none';
-            }
-            
-            // Image handling
-            const imgEl = document.getElementById('card-back-img');
-            const imgBox = document.getElementById('illustration-img-box');
-            if (data.image && !data.image.endsWith('undefined') && !data.image.endsWith('.png') == false) {
-                imgEl.src = data.image;
-                imgBox.style.display = 'block';
-            } else {
-                imgBox.style.display = 'none';
-            }
-            
-            // Phrases
-            document.getElementById('card-phrase-cn').textContent = data.phraseCn || '';
-            document.getElementById('card-phrase-py').textContent = data.phrasePinyin || '';
-            document.getElementById('card-phrase-es').textContent = data.phraseEs ? `"${data.phraseEs}"` : '';
-
-            // Update Navigation Button States
-            document.getElementById('prev-btn').disabled = (currentIndex === 0);
-            document.getElementById('next-btn').disabled = (currentIndex === filteredCards.length - 1);
-            
-            // Color backgrounds
-            const cardFront = document.querySelector('.card-front');
-            const cardBack = document.querySelector('.card-back');
-            
-            // Reset theme classes
-            cardFront.style.borderImage = '';
-            
-            // Auto play voice if checkbox checked
-            if (document.getElementById('auto-play-toggle').checked) {
-                setTimeout(speakChar, 400);
-            }
-        }
-
-        // Render Cards Grid View
-        function renderGrid() {
-            const container = document.getElementById('grid-view');
-            container.innerHTML = '';
-            
-            filteredCards.forEach((card, idx) => {
-                const cardDiv = document.createElement('div');
-                cardDiv.className = 'grid-card';
-                cardDiv.onclick = () => {
-                    currentIndex = idx;
-                    setViewMode('carousel');
+                // Initialize TTS Voice
+                const initVoice = () => {
+                    if (!synth) return;
+                    const voices = synth.getVoices();
+                    activeVoice.value = voices.find(v => v.lang.toLowerCase().includes('zh-cn')) ||
+                                       voices.find(v => v.lang.toLowerCase().includes('zh-'));
                 };
-                
-                cardDiv.innerHTML = `
-                    <div class="grid-char">${card.character}</div>
-                    <div class="grid-py">${card.pinyin}</div>
-                    <div class="grid-mean">${card.meaning}</div>
-                    <div class="badge" style="font-size:0.7rem; margin-top:5px;">${card.type || 'Palabra'}</div>
-                `;
-                
-                container.appendChild(cardDiv);
-            });
-        }
 
-        // Carousel navigation
-        function nextCard() {
-            if (currentIndex < filteredCards.length - 1) {
-                currentIndex++;
-                renderCard();
+                const speakChar = () => {
+                    if (!synth || !currentCard.value.character) return;
+                    synth.cancel();
+                    
+                    const utterance = new SpeechSynthesisUtterance(currentCard.value.character);
+                    if (activeVoice.value) utterance.voice = activeVoice.value;
+                    utterance.lang = 'zh-CN';
+                    utterance.rate = 0.8;
+                    synth.speak(utterance);
+                };
+
+                const speakPhrase = () => {
+                    if (!synth || !currentCard.value.phraseCn) return;
+                    synth.cancel();
+                    
+                    const utterance = new SpeechSynthesisUtterance(currentCard.value.phraseCn);
+                    if (activeVoice.value) utterance.voice = activeVoice.value;
+                    utterance.lang = 'zh-CN';
+                    utterance.rate = 0.85;
+                    synth.speak(utterance);
+                };
+
+                // Navigation
+                const nextCard = () => {
+                    if (currentIndex.value < filteredCards.value.length - 1) {
+                        currentIndex.value++;
+                        isFlipped.value = false;
+                    }
+                };
+
+                const prevCard = () => {
+                    if (currentIndex.value > 0) {
+                        currentIndex.value--;
+                        isFlipped.value = false;
+                    }
+                };
+
+                const selectCardFromGrid = (idx) => {
+                    currentIndex.value = idx;
+                    isFlipped.value = false;
+                    viewMode.value = 'carousel';
+                };
+
+                const shuffleCards = () => {
+                    const arr = [...filteredCards.value];
+                    for (let i = arr.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [arr[i], arr[j]] = [arr[j], arr[i]];
+                    }
+                    const rest = cards.value.filter(c => !filteredCards.value.includes(c));
+                    cards.value = [...arr, ...rest];
+                    currentIndex.value = 0;
+                    isFlipped.value = false;
+                };
+
+                // Watchers
+                watch(currentIndex, () => {
+                    if (autoPlay.value) {
+                        setTimeout(speakChar, 400);
+                    }
+                });
+
+                watch([searchQuery, selectedPOS], () => {
+                    currentIndex.value = 0;
+                    isFlipped.value = false;
+                });
+
+                // Key navigation
+                const handleKeyDown = (e) => {
+                    if (viewMode.value !== 'carousel' || filteredCards.value.length === 0) return;
+                    if (e.key === 'ArrowLeft') {
+                        prevCard();
+                    } else if (e.key === 'ArrowRight') {
+                        nextCard();
+                    } else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        isFlipped.value = !isFlipped.value;
+                    }
+                };
+
+                onMounted(() => {
+                    initVoice();
+                    if (synth && synth.onvoiceschanged !== undefined) {
+                        synth.onvoiceschanged = initVoice;
+                    }
+                    window.addEventListener('keydown', handleKeyDown);
+                });
+
+                onUnmounted(() => {
+                    window.removeEventListener('keydown', handleKeyDown);
+                });
+
+                return {
+                    cards,
+                    searchQuery,
+                    selectedPOS,
+                    viewMode,
+                    currentIndex,
+                    isFlipped,
+                    autoPlay,
+                    uniquePOS,
+                    filteredCards,
+                    currentCard,
+                    fontSizeStyle,
+                    speakChar,
+                    speakPhrase,
+                    nextCard,
+                    prevCard,
+                    selectCardFromGrid,
+                    shuffleCards
+                };
             }
-        }
-
-        function prevCard() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                renderCard();
-            }
-        }
-
-        // Shuffle deck
-        function shuffleCards() {
-            for (let i = filteredCards.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [filteredCards[i], filteredCards[j]] = [filteredCards[j], filteredCards[i]];
-            }
-            currentIndex = 0;
-            renderCard();
-        }
-
-        // Speech Synthesis Methods
-        function speakChar() {
-            if (!synth || filteredCards.length === 0) return;
-            synth.cancel(); // Stop playing previous audio
-            
-            const card = filteredCards[currentIndex];
-            const utterance = new SpeechSynthesisUtterance(card.character);
-            if (activeVoice) utterance.voice = activeVoice;
-            utterance.lang = 'zh-CN';
-            utterance.rate = 0.8; // slightly slower for learners
-            
-            synth.speak(utterance);
-        }
-
-        function speakPhrase() {
-            if (!synth || filteredCards.length === 0) return;
-            synth.cancel();
-            
-            const card = filteredCards[currentIndex];
-            if (!card.phraseCn) return;
-            
-            const utterance = new SpeechSynthesisUtterance(card.phraseCn);
-            if (activeVoice) utterance.voice = activeVoice;
-            utterance.lang = 'zh-CN';
-            utterance.rate = 0.85;
-            
-            synth.speak(utterance);
-        }
-
-        // Listen for keyboard navigation
-        document.addEventListener('keydown', e => {
-            if (viewMode !== 'carousel' || filteredCards.length === 0) return;
-            
-            if (e.key === 'ArrowLeft') {
-                prevCard();
-            } else if (e.key === 'ArrowRight') {
-                nextCard();
-            } else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-                e.preventDefault();
-                flipCard();
-            }
-        });
-
-        // Initialize application on load
-        window.addEventListener('DOMContentLoaded', initApp);
+        }).mount('#app');
     </script>
 </body>
 </html>
