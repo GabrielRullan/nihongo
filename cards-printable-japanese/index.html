@@ -491,7 +491,9 @@
 
         /* Print Media Styles (Overrides everything interactive) */
         @media print {
-            body { 
+            html, body { 
+                margin: 0 !important;
+                padding: 0 !important;
                 background: #ffffff !important; 
                 color: #000000 !important;
             }
@@ -638,9 +640,6 @@
                             
                             <!-- Card Units inside the page -->
                             <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
-                                <!-- Horizontal/vertical fold line indicators in folding layouts -->
-                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
-                                
                                 <!-- FRONT FACE -->
                                 <div class="card-face card-front" v-if="page.type === 'fronts' || layoutMode.includes('folding')">
                                     <span class="kanji-display">{{ card.kanji }}</span>
@@ -671,6 +670,8 @@
                                     </div>
                                 </div>
 
+                                <!-- Horizontal/vertical fold line indicators in folding layouts (placed at end for z-index stack safety) -->
+                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
                             </div>
                         </div>
                     </template>
