@@ -212,15 +212,20 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
 
             # Prepare Call to Google GenAI API for Imagen 3
             # We use urllib to make it standard library only
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:generateImages?key={api_key}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key={api_key}"
             
             headers = {"Content-Type": "application/json"}
             payload = {
-                "prompt": prompt,
-                "numberOfImages": 1,
-                "outputMimeType": "image/png",
-                "aspectRatio": "1:1",
-                "personGeneration": "ALLOW_ADULT"
+                "instances": [
+                    {
+                        "prompt": prompt
+                    }
+                ],
+                "parameters": {
+                    "sampleCount": 1,
+                    "aspectRatio": "1:1",
+                    "personGeneration": "allow_adult"
+                }
             }
 
             req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers, method='POST')
@@ -229,14 +234,14 @@ class ImageSelectorHandler(http.server.SimpleHTTPRequestHandler):
             with urllib.request.urlopen(req, timeout=45) as response:
                 resp_data = json.loads(response.read().decode('utf-8'))
 
-            generated_images = resp_data.get("generatedImages", [])
-            if not generated_images:
-                self.send_json_response(500, {"error": "No image returned by Google GenAI API."})
+            predictions = resp_data.get("predictions", [])
+            if not predictions:
+                self.send_json_response(500, {"error": f"No predictions returned by Gemini API. Response was: {resp_data}"})
                 return
 
-            img_base64 = generated_images[0].get("image", {}).get("imageBytes")
+            img_base64 = predictions[0].get("bytesBase64Encoded")
             if not img_base64:
-                self.send_json_response(500, {"error": "Empty image bytes from API."})
+                self.send_json_response(500, {"error": "Empty bytesBase64Encoded from Gemini API."})
                 return
 
             # Save the generated image
