@@ -784,7 +784,7 @@
                 });
 
                 // Whenever filters change, reset back to first index
-                watch([searchQuery, activeType, viewMode], () => {
+                watch([searchQuery, activeType], () => {
                     currentIndex.value = 0;
                     isFlipped.value = false;
                 });
