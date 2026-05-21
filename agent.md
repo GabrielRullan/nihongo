@@ -33,3 +33,27 @@ Al interactuar con el proyecto, asegúrate de respetar la jerarquía establecida
   - Las imágenes en `data.js` deben estar formateadas como rutas relativas desde las páginas HTML (e.g., `../images-chosen-chinese/我.png`), ya que las carpetas de las aplicaciones web están al mismo nivel que las carpetas de imágenes.
 - **Optimización de Buscadores**:
   - Las barras de búsqueda deben filtrar en tiempo real por carácter principal, transcripción fonética (pinyin/romaji) o significado en español de forma insensible a mayúsculas.
+
+---
+
+## 🖨️ Estándares del Sistema de PDF e Impresión
+
+Al realizar cambios en `saveAsPDF` o en las hojas de estilo de impresión, sigue estas directrices para evitar regresiones:
+
+1.  **Límite de Altura de Canvas (html2canvas)**:
+    - Nunca utilices la exportación directa en un solo lienzo (`html2pdf().from(element).save()`) para barajas completas. Si la baraja supera las ~20 páginas, el tamaño del lienzo de html2canvas superará el límite máximo del navegador (65,535px) y la generación fallará silenciosamente o colgará el navegador.
+    - Utiliza siempre renderizado secuencial asíncrono página por página mediante un worker de html2pdf, agregando páginas dinámicamente:
+      ```javascript
+      let worker = html2pdf().set(opt).from(pages[0]).toPdf();
+      for (let i = 1; i < pages.length; i++) {
+          worker = worker.get('pdf').then(function (pdf) {
+              pdf.addPage();
+          }).from(pages[i]).toContainer().toCanvas().toPdf();
+      }
+      await worker.save();
+      ```
+2.  **Seguridad y CORS (`file://` vs `http://`)**:
+    - Bajo `file://`, el navegador bloquea la exportación de imágenes locales debido a la taint/CORS boundary del canvas.
+    - Utiliza el hook `onclone` en las opciones de `html2canvas` para detectar si el protocolo actual es `file:` e ignorar/ocultar las imágenes (`img.setAttribute('data-html2canvas-ignore', 'true')` e `img.style.display = 'none'`). Esto permite que el PDF se genere perfectamente a nivel local, dejando el espacio en blanco para que la exportación continúe.
+3.  **Calibración en mm**:
+    - Los calibradores duplex agregan márgenes horizontales y verticales variables en anversos y reversos. Las variables CSS `--front-offset-x`, `--front-offset-y`, etc., deben estar vinculadas a los deslizadores de Vue y mapearse a propiedades del elemento raíz (`document.documentElement.style.setProperty`).

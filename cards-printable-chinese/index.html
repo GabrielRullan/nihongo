@@ -29,7 +29,7 @@
 
             /* Base card dimensions (Portrait) */
             --card-width: 65mm;
-            --card-height: 95mm;
+            --card-height: 90mm;
             --kanji-font-size: 7.5rem;
             --meaning-font-size: 22px;
 
@@ -260,6 +260,67 @@
             box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
         }
 
+        .btn-pdf-main {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .btn-pdf-main:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-pink);
+        }
+        .btn-pdf-main:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* PDF Export Overrides */
+        body.exporting-pdf {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+        body.exporting-pdf header,
+        body.exporting-pdf .sidebar,
+        body.exporting-pdf .simulator-notice,
+        body.exporting-pdf .page-sheet-label,
+        body.exporting-pdf .blur-bg {
+            display: none !important;
+        }
+        body.exporting-pdf .dashboard-container {
+            display: block !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        body.exporting-pdf .canvas-area {
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        body.exporting-pdf .print-container {
+            display: block !important;
+            padding: 0 !important;
+            gap: 0 !important;
+        }
+        body.exporting-pdf .print-page {
+            box-shadow: none !important;
+            border: none !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+        }
+
         /* Card Selector List */
         .card-selector-box {
             max-height: 200px;
@@ -345,43 +406,43 @@
         }
 
         /* Page Layout Styles - Standard (3 per page) */
-        .size-standard .print-page {
+        .print-container.size-standard .print-page {
             grid-template-columns: repeat(1, var(--card-width));
             grid-template-rows: repeat(3, var(--card-height));
             gap: 2mm;
         }
-        .size-standard.mode-folding .print-page {
+        .print-container.size-standard.mode-folding .print-page {
             grid-template-columns: repeat(1, calc(var(--card-width) * 2));
             grid-template-rows: repeat(3, var(--card-height));
             gap: 2mm;
         }
 
         /* Page Layout Styles - Grid 2x4 (8 per page) */
-        .size-grid2x4 {
+        .print-container.size-grid2x4 {
             --card-width: 65mm;
             --card-height: 90mm;
         }
-        .size-grid2x4 .print-page {
+        .print-container.size-grid2x4 .print-page {
             width: 297mm;
             height: 210mm;
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(2, var(--card-height));
             gap: 2mm;
         }
-        .size-grid2x4.mode-folding .print-page {
+        .print-container.size-grid2x4.mode-folding .print-page {
             width: 297mm;
             height: 210mm;
             grid-template-columns: repeat(4, var(--card-width));
             grid-template-rows: repeat(1, calc(var(--card-height) * 2));
             gap: 2mm;
         }
-        .size-grid2x4.mode-folding .print-unit {
+        .print-container.size-grid2x4.mode-folding .print-unit {
             display: flex;
             flex-direction: column;
             width: var(--card-width);
             height: calc(var(--card-height) * 2);
         }
-        .size-grid2x4.mode-folding .print-unit .card-front {
+        .print-container.size-grid2x4.mode-folding .print-unit .card-front {
             transform: rotate(180deg);
         }
 
@@ -399,13 +460,13 @@
             background: #ffffff;
             position: relative;
             box-sizing: border-box;
-            border: 0.5pt solid #a1a1aa;
+            border: 1px solid #000000;
             overflow: hidden;
             display: flex;
         }
 
-        .mode-folding .print-unit { width: calc(var(--card-width) * 2); }
-        .mode-duplex .print-unit { display: block; width: var(--card-width); }
+        .print-container.mode-folding .print-unit { width: calc(var(--card-width) * 2); }
+        .print-container.mode-duplex .print-unit { display: block; width: var(--card-width); }
 
         .fold-line {
             position: absolute;
@@ -413,7 +474,7 @@
             top: 0;
             bottom: 0;
             width: 0;
-            border-left: 1px dashed #64748b;
+            border-left: 1px dashed #000000;
             z-index: 10;
         }
 
@@ -423,7 +484,7 @@
             right: 0;
             top: var(--card-height);
             height: 0;
-            border-top: 1px dashed #64748b;
+            border-top: 1px dashed #000000;
             z-index: 10;
         }
 
@@ -537,8 +598,11 @@
                 padding: 0 !important;
                 background: #ffffff !important; 
                 color: #000000 !important;
+                display: block !important;
+                min-height: auto !important;
+                height: auto !important;
             }
-            header, .sidebar, .simulator-notice, .page-sheet-label {
+            header, .sidebar, .simulator-notice, .page-sheet-label, .blur-bg {
                 display: none !important;
             }
             .dashboard-container {
@@ -549,8 +613,11 @@
             }
             .canvas-area {
                 display: block !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             .print-container {
+                display: block !important;
                 padding: 0 !important;
                 gap: 0 !important;
             }
@@ -561,10 +628,13 @@
                 border-radius: 0 !important;
                 page-break-after: always !important;
             }
+            .print-page:last-child {
+                page-break-after: avoid !important;
+            }
         }
     </style>
 </head>
-<body class="mode-duplex size-standard">
+<body>
     <div id="app">
         <div class="blur-bg"></div>
 
@@ -592,6 +662,14 @@
                             <option value="3_portrait_folding">3 por página (A4 Vertical) - Plegable</option>
                             <option value="8_landscape_duplex">8 por página (A4 Horizontal) - Duplex</option>
                             <option value="8_landscape_folding">8 por página (A4 Horizontal) - Plegable</option>
+                        </select>
+                    </div>
+
+                    <div class="slider-row" v-if="!layoutMode.includes('folding')">
+                        <label>Orden de Páginas</label>
+                        <select v-model="pageOrder">
+                            <option value="interleaved">Intercalado (Anverso, Reverso, ...) - Duplex</option>
+                            <option value="grouped">Agrupado (Anversos primero, Reversos después)</option>
                         </select>
                     </div>
                 </div>
@@ -668,6 +746,12 @@
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
                     Imprimir Decks
                 </button>
+
+                <button class="btn-pdf-main" @click="saveAsPDF" :disabled="isGeneratingPDF">
+                    <svg v-if="!isGeneratingPDF" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span v-if="isGeneratingPDF">Generando PDF...</span>
+                    <span v-else>Guardar como PDF</span>
+                </button>
             </div>
 
             <!-- Print Canvas -->
@@ -703,7 +787,7 @@
                                     
                                     <div class="illustration-box">
                                         <template v-if="showIllustrations">
-                                            <img v-if="card.image && !card.image.endsWith('undefined')" :src="card.image" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">
+                                            <img v-if="card.image && !card.image.endsWith('undefined')" :src="card.image" onerror="this.style.display='none'; this.setAttribute('data-html2canvas-ignore', 'true');" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">
                                             <div v-else style="font-size: 24px; font-weight: bold; color: #64748b;">{{ card.radical || '?' }}</div>
                                         </template>
                                         <div v-else style="height:20px;"></div>
@@ -732,7 +816,8 @@
         </div>
     </div>
 
-    <!-- Vue 3 and data -->
+    <!-- PDF Generation and Vue 3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../cards-chinese/data.js"></script>
 
@@ -743,7 +828,9 @@
             setup() {
                 const cards = ref(cardsData || []);
                 const layoutMode = ref('3_portrait_duplex');
+                const pageOrder = ref('interleaved');
                 const selectedCards = ref(cards.value.map(c => c.character)); // Select all by default
+                const isGeneratingPDF = ref(false);
 
                 // Calibration offsets in mm
                 const frontOffsetX = ref(0);
@@ -831,6 +918,9 @@
                         cardsPerPage = isFolding ? 4 : 8;
                     }
 
+                    const frontsPages = [];
+                    const backsPages = [];
+
                     // Process deck in chunks representing each physical sheet
                     for (let i = 0; i < deck.length; i += cardsPerPage) {
                         const chunk = deck.slice(i, i + cardsPerPage);
@@ -850,11 +940,11 @@
                             });
                         } else {
                             // DUPLEX LAYOUT (Separate Front Page and Back Page)
-                            pages.push({
+                            const frontsPage = {
                                 type: 'fronts',
                                 layout: 'Duplex Fronts',
                                 units: paddedChunk
-                            });
+                            };
 
                             // Mirror columns for back page to print correctly
                             let backChunk = [...paddedChunk];
@@ -865,12 +955,24 @@
                                 ];
                             }
                             
-                            pages.push({
+                            const backsPage = {
                                 type: 'backs',
                                 layout: 'Duplex Backs',
                                 units: backChunk
-                            });
+                            };
+
+                            if (pageOrder.value === 'grouped') {
+                                frontsPages.push(frontsPage);
+                                backsPages.push(backsPage);
+                            } else {
+                                pages.push(frontsPage);
+                                pages.push(backsPage);
+                            }
                         }
+                    }
+
+                    if (!isFolding && pageOrder.value === 'grouped') {
+                        return [...frontsPages, ...backsPages];
                     }
                     return pages;
                 });
@@ -884,14 +986,70 @@
                         document.head.appendChild(styleTag);
                     }
                     if (newMode.includes('landscape')) {
-                        styleTag.innerHTML = '@page { size: A4 landscape !important; margin: 0 !important; }';
+                        styleTag.innerHTML = '@page { size: A4 landscape; margin: 0; }';
                     } else {
-                        styleTag.innerHTML = '@page { size: A4 portrait !important; margin: 0 !important; }';
+                        styleTag.innerHTML = '@page { size: A4 portrait; margin: 0; }';
                     }
                 }, { immediate: true });
 
                 const triggerPrint = () => {
                     window.print();
+                };
+
+                const saveAsPDF = async () => {
+                    if (isGeneratingPDF.value) return;
+                    isGeneratingPDF.value = true;
+                    
+                    // Add PDF class override
+                    document.body.classList.add('exporting-pdf');
+                    
+                    const pages = document.querySelectorAll('.print-container .print-page');
+                    const isLandscape = layoutMode.value.includes('landscape');
+                    
+                    const opt = {
+                        margin: 0,
+                        filename: `chinese-cards-${layoutMode.value}.pdf`,
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { 
+                            scale: 2, 
+                            useCORS: true,
+                            logging: true,
+                            onclone: function(clonedDoc) {
+                                if (window.location.protocol === 'file:') {
+                                    const images = clonedDoc.querySelectorAll('img');
+                                    images.forEach(img => {
+                                        img.setAttribute('data-html2canvas-ignore', 'true');
+                                        img.style.display = 'none';
+                                    });
+                                }
+                            }
+                        },
+                        jsPDF: { 
+                            unit: 'mm', 
+                            format: 'a4', 
+                            orientation: isLandscape ? 'landscape' : 'portrait' 
+                        }
+                    };
+                    
+                    try {
+                        if (pages.length === 0) {
+                            throw new Error("No hay páginas para exportar.");
+                        }
+                        
+                        let worker = html2pdf().set(opt).from(pages[0]).toPdf();
+                        for (let i = 1; i < pages.length; i++) {
+                            worker = worker.get('pdf').then(function (pdf) {
+                                pdf.addPage();
+                            }).from(pages[i]).toContainer().toCanvas().toPdf();
+                        }
+                        await worker.save();
+                    } catch (err) {
+                        console.error("Error generating PDF:", err);
+                        alert("Error al generar el PDF. Revisa la consola.");
+                    } finally {
+                        document.body.classList.remove('exporting-pdf');
+                        isGeneratingPDF.value = false;
+                    }
                 };
 
                 onMounted(() => {
@@ -916,7 +1074,10 @@
                     deselectAllCards,
                     getFrontCharacterStyle,
                     getTypeTagClass,
-                    triggerPrint
+                    triggerPrint,
+                    saveAsPDF,
+                    isGeneratingPDF,
+                    pageOrder
                 };
             }
         }).mount('#app');
