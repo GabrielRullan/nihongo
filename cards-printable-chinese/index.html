@@ -786,11 +786,12 @@
                                     </div>
                                     
                                     <div class="illustration-box">
-                                        <template v-if="showIllustrations">
-                                            <img v-if="card.image && !card.image.endsWith('undefined')" :src="card.image" onerror="this.style.display='none'; this.setAttribute('data-html2canvas-ignore', 'true');" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">
-                                            <div v-else style="font-size: 24px; font-weight: bold; color: #64748b;">{{ card.radical || '?' }}</div>
-                                        </template>
-                                        <div v-else style="height:20px;"></div>
+                                         <template v-if="showIllustrations">
+                                             <div v-if="card.colorHex" :style="{ backgroundColor: card.colorHex, width: '45px', height: '45px', borderRadius: '8px', margin: '0 auto 8px auto', border: '1px solid rgba(0,0,0,0.15)', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }"></div>
+                                             <img v-else-if="card.image && !card.image.endsWith('undefined')" :src="card.image" onerror="this.style.display='none'; this.setAttribute('data-html2canvas-ignore', 'true');" style="height: 100%; max-height: 70px; max-width: 100%; object-fit: contain;">
+                                             <div v-else style="font-size: 24px; font-weight: bold; color: #64748b;">{{ card.radical || '?' }}</div>
+                                         </template>
+                                         <div v-else style="height:20px;"></div>
                                         
                                         <div class="meaning-text">{{ card.meaning }}</div>
                                         

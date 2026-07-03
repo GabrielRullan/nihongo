@@ -720,7 +720,10 @@
                             </div>
                             
                             <div class="illustration-container">
-                                <div v-if="currentCard.image && !currentCard.image.endsWith('undefined')">
+                                <div v-if="currentCard.colorHex" class="color-square-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: 120px;">
+                                    <div class="color-square" :style="{ backgroundColor: currentCard.colorHex, width: '90px', height: '90px', borderRadius: '16px', boxShadow: '0 8px 16px rgba(0,0,0,0.3)', border: '2px solid rgba(255,255,255,0.2)' }"></div>
+                                </div>
+                                <div v-else-if="currentCard.image && !currentCard.image.endsWith('undefined')">
                                     <img :src="currentCard.image" class="card-image" alt="Ilustración">
                                 </div>
                                 <div class="meaning-title">{{ currentCard.meaning }}</div>
