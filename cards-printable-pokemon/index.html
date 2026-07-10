@@ -440,6 +440,10 @@
             transform: translate(var(--back-offset-x), var(--back-offset-y));
         }
 
+        .print-page.single-page .print-unit {
+            transform: translate(var(--front-offset-x), var(--front-offset-y));
+        }
+
         /* Print Units and Card Faces */
         .print-unit {
             background: #ffffff;
@@ -452,6 +456,7 @@
 
         .print-container.mode-folding .print-unit { width: calc(var(--card-width) * 2); }
         .print-container.mode-duplex .print-unit { display: block; width: var(--card-width); }
+        .print-container.mode-single .print-unit { display: block; width: var(--card-width); }
 
         .fold-line {
             position: absolute;
@@ -494,6 +499,72 @@
         .card-back {
             justify-content: space-between;
             align-items: center;
+        }
+
+        .card-single {
+            justify-content: flex-start;
+            align-items: center;
+            padding: 8px;
+        }
+
+        .illustration-box-single {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 100%;
+            margin-bottom: 2px;
+            margin-top: 2px;
+        }
+        .size-standard .illustration-box-single {
+            height: 58px;
+        }
+
+        .illustration-img-single {
+            height: 100%;
+            max-height: 48px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+        }
+        .size-standard .illustration-img-single {
+            max-height: 58px;
+        }
+
+        .names-section-single {
+            text-align: center;
+            width: 100%;
+        }
+
+        .chinese-title-print-single {
+            font-size: 18px;
+            font-family: 'Outfit', "Yu Mincho", "MS Mincho", serif;
+            font-weight: 800;
+            color: #1e293b;
+            line-height: 1.1;
+        }
+        .size-standard .chinese-title-print-single {
+            font-size: 22px;
+        }
+
+        .pinyin-header-print-single {
+            font-size: 10px;
+            color: var(--accent-poke);
+            font-weight: 700;
+            margin-top: 1px;
+            line-height: 1;
+        }
+
+        .english-name-print-single {
+            font-size: 10px;
+            font-weight: 700;
+            color: #475569;
+            text-transform: uppercase;
+            margin-top: 2px;
+            line-height: 1;
+        }
+        .size-standard .english-name-print-single {
+            font-size: 11px;
         }
 
         /* Content Styling inside printable cards */
@@ -721,12 +792,14 @@
                         <select v-model="layoutMode">
                             <option value="3_portrait_duplex">3 por página (A4 Vertical) - Duplex</option>
                             <option value="3_portrait_folding">3 por página (A4 Vertical) - Plegable</option>
+                            <option value="3_portrait_single">3 por página (A4 Vertical) - Solo Frente (Todo en uno)</option>
                             <option value="8_landscape_duplex">8 por página (A4 Horizontal) - Duplex</option>
                             <option value="8_landscape_folding">8 por página (A4 Horizontal) - Plegable</option>
+                            <option value="8_landscape_single">8 por página (A4 Horizontal) - Solo Frente (Todo en uno)</option>
                         </select>
                     </div>
 
-                    <div class="slider-row" v-if="!layoutMode.includes('folding')">
+                    <div class="slider-row" v-if="!layoutMode.includes('folding') && !layoutMode.includes('single')">
                         <label>Orden de Páginas</label>
                         <select v-model="pageOrder">
                             <option value="interleaved">Intercalado (Anverso, Reverso, ...) - Duplex</option>
@@ -755,7 +828,7 @@
                         <input type="range" min="-10" max="10" step="0.5" v-model="frontOffsetY">
                     </div>
 
-                    <div class="slider-row">
+                    <div class="slider-row" v-if="!layoutMode.includes('single')">
                         <div class="slider-header">
                             <span>Reverso Horizontal Shift</span>
                             <span class="slider-val">{{ backOffsetX }}mm</span>
@@ -763,7 +836,7 @@
                         <input type="range" min="-10" max="10" step="0.5" v-model="backOffsetX">
                     </div>
 
-                    <div class="slider-row">
+                    <div class="slider-row" v-if="!layoutMode.includes('single')">
                         <div class="slider-header">
                             <span>Reverso Vertical Shift</span>
                             <span class="slider-val">{{ backOffsetY }}mm</span>
@@ -819,8 +892,8 @@
 
                 <div class="print-container" :class="layoutClass">
                     <template v-for="(page, pageIdx) in compiledPages" :key="pageIdx">
-                        <div class="print-page" :class="[page.type === 'fronts' ? 'fronts-page' : 'backs-page']">
-                            <span class="page-sheet-label">Página {{ pageIdx + 1 }} - {{ page.type === 'fronts' ? 'FRENTES (Anverso)' : 'REVERSOS (Dorso)' }} [{{ page.layout }}]</span>
+                        <div class="print-page" :class="[page.type === 'single' ? 'single-page' : page.type === 'fronts' ? 'fronts-page' : 'backs-page']">
+                            <span class="page-sheet-label">Página {{ pageIdx + 1 }} - {{ page.type === 'single' ? 'SOLO FRENTE (Todo en uno)' : page.type === 'fronts' ? 'FRENTES (Anverso)' : 'REVERSOS (Dorso)' }} [{{ page.layout }}]</span>
                             
                             <!-- Card Units inside the page -->
                             <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
@@ -854,6 +927,36 @@
 
                                     <!-- Character breakdown -->
                                     <div class="char-breakdown-print" v-if="showBreakdown && card.characters" style="width: 100%;">
+                                        <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
+                                            <span class="char-hanzi-print">{{ ch.char }}</span>
+                                            <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
+                                            <span class="char-def-print">{{ ch.definition }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SINGLE SIDE FACE: All information combined -->
+                                <div class="card-face card-single" v-if="page.type === 'single'">
+                                    <div class="card-header-print">
+                                        <span class="pokemon-num-print">{{ card.ndex }}</span>
+                                        <span class="type-badge-print">{{ card.type }}</span>
+                                    </div>
+                                    
+                                    <div class="illustration-box-single">
+                                        <template v-if="showIllustrations && card.image">
+                                            <img :src="card.image" onerror="this.style.display='none'; this.setAttribute('data-html2canvas-ignore', 'true');" class="illustration-img-single" alt="artwork">
+                                        </template>
+                                        <div v-else style="height:5px;"></div>
+                                    </div>
+                                    
+                                    <div class="names-section-single">
+                                        <div class="chinese-title-print-single">{{ card.simplified }}</div>
+                                        <div class="pinyin-header-print-single">{{ card.pinyin }}</div>
+                                        <div class="english-name-print-single">{{ card.english }}</div>
+                                    </div>
+
+                                    <!-- Character breakdown -->
+                                    <div class="char-breakdown-print" v-if="showBreakdown && card.characters" style="width: 100%; border-top: 0.5px solid #e2e8f0; padding-top: 4px; margin-top: 4px;">
                                         <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
                                             <span class="char-hanzi-print">{{ ch.char }}</span>
                                             <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
@@ -913,6 +1016,8 @@
                     let classes = [];
                     if (layoutMode.value.includes('folding')) {
                         classes.push('mode-folding');
+                    } else if (layoutMode.value.includes('single')) {
+                        classes.push('mode-single');
                     } else {
                         classes.push('mode-duplex');
                     }
@@ -937,10 +1042,16 @@
                 const getFrontCharacterStyle = (char) => {
                     if (!char) return {};
                     if (char.length > 1) {
-                        return {
+                        const style = {
                             writingMode: 'vertical-rl',
                             textOrientation: 'upright'
                         };
+                        if (char.length === 4) {
+                            style.fontSize = '3.4rem';
+                        } else if (char.length >= 5) {
+                            style.fontSize = '2.8rem';
+                        }
+                        return style;
                     }
                     return {};
                 };
@@ -953,10 +1064,14 @@
                     const pages = [];
                     const isLandscape = layoutMode.value.includes('landscape');
                     const isFolding = layoutMode.value.includes('folding');
+                    const isSingle = layoutMode.value.includes('single');
 
                     let cardsPerPage = 3;
                     if (isLandscape) {
                         cardsPerPage = isFolding ? 4 : 8;
+                    }
+                    if (isSingle && isLandscape) {
+                        cardsPerPage = 8;
                     }
 
                     const frontsPages = [];
@@ -977,6 +1092,13 @@
                             pages.push({
                                 type: 'fronts',
                                 layout: 'Folding',
+                                units: paddedChunk
+                            });
+                        } else if (isSingle) {
+                            // SINGLE-SIDED LAYOUT
+                            pages.push({
+                                type: 'single',
+                                layout: 'Single Sided',
                                 units: paddedChunk
                             });
                         } else {
@@ -1012,7 +1134,7 @@
                         }
                     }
 
-                    if (!isFolding && pageOrder.value === 'grouped') {
+                    if (!isFolding && !isSingle && pageOrder.value === 'grouped') {
                         return [...frontsPages, ...backsPages];
                     }
                     return pages;

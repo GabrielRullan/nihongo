@@ -884,10 +884,18 @@
                 const getFrontCharacterStyle = (char) => {
                     if (!char) return {};
                     if (char.length > 1) {
-                        return {
+                        const style = {
                             writingMode: 'vertical-rl',
                             textOrientation: 'upright'
                         };
+                        if (char.length === 2) {
+                            style.fontSize = '5.8rem';
+                        } else if (char.length === 3) {
+                            style.fontSize = '4.2rem';
+                        } else if (char.length >= 4) {
+                            style.fontSize = '3.2rem';
+                        }
+                        return style;
                     }
                     return {};
                 };
