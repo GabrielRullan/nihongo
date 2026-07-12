@@ -57,3 +57,14 @@ Al realizar cambios en `saveAsPDF` o en las hojas de estilo de impresión, sigue
     - Utiliza el hook `onclone` en las opciones de `html2canvas` para detectar si el protocolo actual es `file:` e ignorar/ocultar las imágenes (`img.setAttribute('data-html2canvas-ignore', 'true')` e `img.style.display = 'none'`). Esto permite que el PDF se genere perfectamente a nivel local, dejando el espacio en blanco para que la exportación continúe.
 3.  **Calibración en mm**:
     - Los calibradores duplex agregan márgenes horizontales y verticales variables en anversos y reversos. Las variables CSS `--front-offset-x`, `--front-offset-y`, etc., deben estar vinculadas a los deslizadores de Vue y mapearse a propiedades del elemento raíz (`document.documentElement.style.setProperty`).
+4.  **Optimización de Rendimiento en Decks Grandes (Pokémon)**:
+    - Para barajas grandes (como los 1025 Pokémon de las Gens 1-9), nunca preselecciones ni renderices todas las tarjetas de golpe en la vista previa del imprimible. Preselecciona únicamente la **Generación 1** (151 tarjetas) al cargar.
+    - Filtra la lista de selección manual en la barra lateral para mostrar únicamente los Pokémon que pertenecen a las generaciones seleccionadas por el usuario, evitando sobrecargar el DOM de Chrome.
+5.  **Código de Colores de Impresión**:
+    - Las tarjetas imprimibles deben estar codificadas por color usando el tipo primario de cada Pokémon (mediante `getCardStyle`, `getHeaderStyle` y `getBadgeStyle` vinculados a sus tipos).
+    - Para ahorrar tinta del usuario al imprimir físicamente, mantén el fondo de las tarjetas en color blanco e implementa la codificación por colores en el borde exterior (`.print-unit`) y en el banner de cabecera (`.card-header-print`) usando un tono pastel suave.
+6.  **Depuración de Definiciones de Diccionario (Hanzi)**:
+    - Las definiciones de caracteres en chino de las tarjetas educativas deben ser concisas e individuales.
+    - Limita las definiciones extensas del diccionario CEDICT seleccionando únicamente la primera acepción principal.
+    - Filtra y elimina todos los contadores del formato `CL:...` o aclaraciones gramaticales de clasificadores, así como cualquier carácter chino dentro de las definiciones.
+    - Caracteres como "子" (zi) y "了" (le) deben simplificarse directamente al valor neutro `(suffix)` para evitar traducciones confusas o literales.

@@ -594,14 +594,15 @@
         }
 
         .card-header-print {
-            width: 100%;
+            width: calc(100% + 16px);
+            margin: -8px -8px 8px -8px;
+            padding: 5px 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 8px;
             color: #64748b;
-            border-bottom: 0.5px solid #e2e8f0;
-            padding-bottom: 4px;
+            border-bottom: 1.5px solid #e2e8f0;
         }
 
         .pokemon-num-print {
@@ -846,23 +847,23 @@
                 </div>
 
                 <div class="panel-section">
-                    <div class="section-title">Filtros de Elementos</div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" v-model="showIllustrations"> Mostrar Ilustraciones
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" v-model="showBreakdown"> Mostrar Desglose de Hanzi
-                    </label>
+                    <div class="section-title">Filtrar por Generación</div>
+                    <p style="font-size:0.72rem; color:var(--text-secondary); margin-bottom:8px;">Selecciona qué generaciones incluir en el buscador y preselección.</p>
+                    <div class="generation-filters-checkboxes" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                        <label v-for="gen in uniqueGens" :key="gen" class="checkbox-label" style="font-size: 0.8rem; display: flex; align-items: center; gap: 4px; user-select: none; cursor: pointer;">
+                            <input type="checkbox" :value="gen" v-model="selectedGens" @change="handleGenFilterChange"> {{ gen }}
+                        </label>
+                    </div>
                 </div>
 
                 <div class="panel-section">
-                    <div class="section-title">Selección de Tarjetas ({{ selectedCards.length }} / {{ cards.length }})</div>
+                    <div class="section-title">Selección de Tarjetas ({{ selectedCards.length }} / {{ filteredSelectorCards.length }})</div>
                     <div style="display:flex; gap:8px; margin-bottom:8px;">
                         <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="selectAllCards">Todos</button>
                         <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="deselectAllCards">Ninguno</button>
                     </div>
                     <div class="card-selector-box">
-                        <div v-for="c in cards" :key="c.id" class="card-selector-item">
+                        <div v-for="c in filteredSelectorCards" :key="c.id" class="card-selector-item">
                             <input type="checkbox" :value="c.id" v-model="selectedCards">
                             <span style="font-weight:bold; font-family: monospace; color: var(--accent-poke);">{{ c.ndex }}</span>
                             <span style="font-weight:bold;">{{ c.simplified }}</span>
@@ -896,12 +897,12 @@
                             <span class="page-sheet-label">Página {{ pageIdx + 1 }} - {{ page.type === 'single' ? 'SOLO FRENTE (Todo en uno)' : page.type === 'fronts' ? 'FRENTES (Anverso)' : 'REVERSOS (Dorso)' }} [{{ page.layout }}]</span>
                             
                             <!-- Card Units inside the page -->
-                            <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }">
+                            <div v-for="(card, cardIdx) in page.units" :key="cardIdx" class="print-unit" :class="{ 'placeholder-unit': card.isPlaceholder }" :style="getCardStyle(card.type)">
                                 <!-- FRONT FACE: Image and English name below -->
                                 <div class="card-face card-front" v-if="page.type === 'fronts' || layoutMode.includes('folding')">
-                                    <div class="card-header-print">
+                                    <div class="card-header-print" :style="getHeaderStyle(card.type)">
                                         <span class="pokemon-num-print">{{ card.ndex }}</span>
-                                        <span class="type-badge-print">{{ card.type }}</span>
+                                        <span class="type-badge-print" :style="getBadgeStyle(card.type)">{{ card.type }}</span>
                                     </div>
                                     
                                     <div class="illustration-box">
@@ -916,7 +917,7 @@
 
                                 <!-- BACK FACE: Chinese name with explanations -->
                                 <div class="card-face card-back" v-if="page.type === 'backs' || layoutMode.includes('folding')">
-                                    <div class="card-header-print" style="justify-content: flex-end;">
+                                    <div class="card-header-print" :style="getHeaderStyle(card.type)" style="justify-content: flex-end;">
                                         <span class="pokemon-num-print">{{ card.ndex }}</span>
                                     </div>
                                     
@@ -937,9 +938,9 @@
 
                                 <!-- SINGLE SIDE FACE: All information combined -->
                                 <div class="card-face card-single" v-if="page.type === 'single'">
-                                    <div class="card-header-print">
+                                    <div class="card-header-print" :style="getHeaderStyle(card.type)">
                                         <span class="pokemon-num-print">{{ card.ndex }}</span>
-                                        <span class="type-badge-print">{{ card.type }}</span>
+                                        <span class="type-badge-print" :style="getBadgeStyle(card.type)">{{ card.type }}</span>
                                     </div>
                                     
                                     <div class="illustration-box-single">
@@ -988,8 +989,34 @@
                 const cards = ref(pokemonData || []);
                 const layoutMode = ref('3_portrait_duplex');
                 const pageOrder = ref('interleaved');
-                const selectedCards = ref(cards.value.map(c => c.id)); // Select all by default
+                const selectedGens = ref(['Gén 1']);
+                const selectedCards = ref([]);
                 const isGeneratingPDF = ref(false);
+
+                // Extract all unique generations
+                const uniqueGens = computed(() => {
+                    const gens = new Set();
+                    cards.value.forEach(c => {
+                        if (c.level) gens.add(c.level);
+                    });
+                    return Array.from(gens).sort((a, b) => {
+                        const numA = parseInt(a.replace(/\D/g, '')) || 0;
+                        const numB = parseInt(b.replace(/\D/g, '')) || 0;
+                        return numA - numB;
+                    });
+                });
+
+                // Filtered cards list for the selection sidebar
+                const filteredSelectorCards = computed(() => {
+                    return cards.value.filter(c => selectedGens.value.includes(c.level));
+                });
+
+                // Handle generation filter toggle to select/deselect cards in batch
+                const handleGenFilterChange = () => {
+                    selectedCards.value = cards.value
+                        .filter(c => selectedGens.value.includes(c.level))
+                        .map(c => c.id);
+                };
 
                 // Calibration offsets in mm
                 const frontOffsetX = ref(0);
@@ -1032,7 +1059,7 @@
 
                 // Select card helpers
                 const selectAllCards = () => {
-                    selectedCards.value = cards.value.map(c => c.id);
+                    selectedCards.value = filteredSelectorCards.value.map(c => c.id);
                 };
                 const deselectAllCards = () => {
                     selectedCards.value = [];
@@ -1215,14 +1242,85 @@
                     }
                 };
 
+                // Color coding for types
+                const typeColorMap = {
+                    "planta": { primary: "#10b981", light: "#ecfdf5", text: "#047857" },
+                    "fuego": { primary: "#f97316", light: "#fff7ed", text: "#c2410c" },
+                    "agua": { primary: "#3b82f6", light: "#eff6ff", text: "#1d4ed8" },
+                    "bicho": { primary: "#84cc16", light: "#f7fee7", text: "#4d7c0f" },
+                    "normal": { primary: "#9ca3af", light: "#f9fafb", text: "#4b5563" },
+                    "veneno": { primary: "#a855f7", light: "#faf5ff", text: "#7e22ce" },
+                    "eléctrico": { primary: "#eab308", light: "#fef9c3", text: "#a16207" },
+                    "electrico": { primary: "#eab308", light: "#fef9c3", text: "#a16207" },
+                    "tierra": { primary: "#ca8a04", light: "#fef9c3", text: "#a16207" },
+                    "hada": { primary: "#ec4899", light: "#fdf2f8", text: "#be185d" },
+                    "lucha": { primary: "#dc2626", light: "#fef2f2", text: "#b91c1c" },
+                    "psíquico": { primary: "#db2777", light: "#fdf2f8", text: "#be185d" },
+                    "psiquico": { primary: "#db2777", light: "#fdf2f8", text: "#be185d" },
+                    "roca": { primary: "#78716c", light: "#f5f5f4", text: "#57534e" },
+                    "fantasma": { primary: "#6366f1", light: "#eef2ff", text: "#4338ca" },
+                    "dragón": { primary: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
+                    "dragon": { primary: "#4f46e5", light: "#eef2ff", text: "#3730a3" },
+                    "siniestro": { primary: "#1f2937", light: "#f3f4f6", text: "#111827" },
+                    "acero": { primary: "#6b7280", light: "#f9fafb", text: "#374151" },
+                    "hielo": { primary: "#06b6d4", light: "#ecfeff", text: "#0369a1" },
+                    "volador": { primary: "#38bdf8", light: "#f0f9ff", text: "#0369a1" }
+                };
+
+                const getPrimaryType = (typeStr) => {
+                    if (!typeStr) return "normal";
+                    const parts = typeStr.split("/");
+                    return parts[0].trim().toLowerCase();
+                };
+
+                const getTypeColors = (typeStr) => {
+                    if (!typeStr) return { primary: "#cbd5e1", light: "#f8fafc", text: "#475569" };
+                    const primary = getPrimaryType(typeStr);
+                    return typeColorMap[primary] || { primary: "#cbd5e1", light: "#f8fafc", text: "#475569" };
+                };
+
+                const getCardStyle = (typeStr) => {
+                    const colors = getTypeColors(typeStr);
+                    return {
+                        borderColor: colors.primary
+                    };
+                };
+
+                const getHeaderStyle = (typeStr) => {
+                    const colors = getTypeColors(typeStr);
+                    return {
+                        backgroundColor: colors.light,
+                        borderBottomColor: colors.primary
+                    };
+                };
+
+                const getBadgeStyle = (typeStr) => {
+                    const colors = getTypeColors(typeStr);
+                    return {
+                        backgroundColor: colors.primary,
+                        color: "#ffffff",
+                        padding: "1px 5px",
+                        borderRadius: "3px",
+                        fontSize: "6.5px"
+                    };
+                };
+
                 onMounted(() => {
                     updateCSSEffects();
+                    handleGenFilterChange(); // Populate selectedCards with Gen 1 on load
                 });
 
                 return {
                     cards,
                     layoutMode,
                     selectedCards,
+                    selectedGens,
+                    uniqueGens,
+                    filteredSelectorCards,
+                    handleGenFilterChange,
+                    getCardStyle,
+                    getHeaderStyle,
+                    getBadgeStyle,
                     frontOffsetX,
                     frontOffsetY,
                     backOffsetX,

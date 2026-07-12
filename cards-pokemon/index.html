@@ -628,6 +628,11 @@
                     <span v-for="type in uniqueTypes" :key="type" class="filter-tag" :class="{ active: activeType === type }" @click="activeType = type">{{ type }}</span>
                 </div>
 
+                <div class="type-filters" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 0.8rem; margin-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="filter-tag" :class="{ active: activeGen === null }" @click="activeGen = null">Todas las Gens</span>
+                    <span v-for="gen in uniqueGens" :key="gen" class="filter-tag" :class="{ active: activeGen === gen }" @click="activeGen = gen">{{ gen }}</span>
+                </div>
+
                 <div class="stats-view-toggle">
                     <span>Encontrados: <strong>{{ filteredCards.length }}</strong> Pokémon</span>
                     <div style="display: flex; gap: 8px;">
@@ -649,7 +654,7 @@
                         <div class="card-face card-front">
                             <div class="color-glow" :style="getThemeGlowStyle(currentCard.colorTheme)"></div>
                             <div class="card-header">
-                                <span class="pokemon-id">{{ currentCard.ndex }}</span>
+                                <span class="pokemon-id">{{ currentCard.ndex }} <span style="font-size: 0.75rem; color: var(--text-secondary); margin-left: 4px;">{{ currentCard.level }}</span></span>
                                 <span class="pokemon-type-badge">{{ currentCard.type }}</span>
                             </div>
                             <div class="front-main">
@@ -667,7 +672,7 @@
                         <div class="card-face card-back">
                             <div class="color-glow" :style="getThemeGlowStyle(currentCard.colorTheme)"></div>
                             <div class="card-header">
-                                <span class="pokemon-id">{{ currentCard.ndex }}</span>
+                                <span class="pokemon-id">{{ currentCard.ndex }} <span style="font-size: 0.75rem; color: var(--text-secondary); margin-left: 4px;">{{ currentCard.level }}</span></span>
                                 <span class="pokemon-type-badge">{{ currentCard.type }}</span>
                             </div>
                             <div class="back-main" style="justify-content: space-around; width: 100%;">
@@ -750,6 +755,7 @@
                 const cards = ref(pokemonData || []);
                 const searchQuery = ref('');
                 const activeType = ref(null);
+                const activeGen = ref('Gén 1');
                 const viewMode = ref('carousel');
                 
                 const currentIndex = ref(0);
@@ -766,7 +772,20 @@
                     return Array.from(types).sort();
                 });
 
-                // Filter cards based on search and type tag
+                // Extract all unique generations for filter tags
+                const uniqueGens = computed(() => {
+                    const gens = new Set();
+                    cards.value.forEach(c => {
+                        if (c.level) gens.add(c.level);
+                    });
+                    return Array.from(gens).sort((a, b) => {
+                        const numA = parseInt(a.replace(/\D/g, '')) || 0;
+                        const numB = parseInt(b.replace(/\D/g, '')) || 0;
+                        return numA - numB;
+                    });
+                });
+
+                // Filter cards based on search, type tag, and generation tag
                 const filteredCards = computed(() => {
                     return cards.value.filter(c => {
                         const matchesSearch = c.english.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
@@ -779,12 +798,17 @@
                             matchesType = c.type && c.type.includes(activeType.value);
                         }
 
-                        return matchesSearch && matchesType;
+                        let matchesGen = true;
+                        if (activeGen.value) {
+                            matchesGen = c.level === activeGen.value;
+                        }
+
+                        return matchesSearch && matchesType && matchesGen;
                     });
                 });
 
                 // Whenever filters change, reset back to first index
-                watch([searchQuery, activeType], () => {
+                watch([searchQuery, activeType, activeGen], () => {
                     currentIndex.value = 0;
                     isFlipped.value = false;
                 });
@@ -915,7 +939,9 @@
                     cards,
                     searchQuery,
                     activeType,
+                    activeGen,
                     uniqueTypes,
+                    uniqueGens,
                     filteredCards,
                     viewMode,
                     currentIndex,

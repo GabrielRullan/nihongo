@@ -8,10 +8,10 @@ Este repositorio contiene un ecosistema de aplicaciones web interactivas e impri
 *   **[Tarjetas de Kanji Japonés N5](https://gabrielrullan.github.io/nihongo/cards/index.html)**: Baraja interactiva de 80 Kanjis con efecto de giro 3D e ilustraciones.
 *   **[Tarjetas de Chino HSK 1](https://gabrielrullan.github.io/nihongo/cards-chinese/index.html)**: 150 caracteres con soporte de voz (TTS), búsqueda por pinyin/significado, categorías de palabras, radicales y trazos.
 *   **[Tarjetas de Gramática Japonesa](https://gabrielrullan.github.io/nihongo/cards-grammar/index.html)**: Estructuras N5/N4 con desglose de patrones, ejemplos y pronunciación nativa (TTS).
-*   **[Tarjetas de Pokémon en Chino](https://gabrielrullan.github.io/nihongo/cards-pokemon/index.html)**: 151 Pokémon con nombres en chino simplificado, pinyin y desglose de Hanzi.
+*   **[Tarjetas de Pokémon en Chino](https://gabrielrullan.github.io/nihongo/cards-pokemon/index.html)**: 1025 Pokémon (Gens 1-9) con nombres en chino simplificado, pinyin y desglose educativo de Hanzi depurado.
 *   **[Impresora de Kanjis Japoneses](https://gabrielrullan.github.io/nihongo/cards-printable-japanese/index.html)**: Diseñador de plantillas PDF A4 (duplex/folding) para las tarjetas físicas de Kanji.
 *   **[Impresora de Chino HSK 1](https://gabrielrullan.github.io/nihongo/cards-printable-chinese/index.html)**: Diseñador de tarjetas físicas de chino con tamaño ajustable.
-*   **[Impresora de Pokémon en Chino](https://gabrielrullan.github.io/nihongo/cards-printable-pokemon/index.html)**: Diseñador de tarjetas de Pokémon en chino en formato A4 para impresión física.
+*   **[Impresora de Pokémon en Chino](https://gabrielrullan.github.io/nihongo/cards-printable-pokemon/index.html)**: Diseñador de tarjetas de Pokémon en formato A4 para impresión física. Soporta filtrado multigeneración, optimización de velocidad de carga y código de colores por tipo.
 
 ---
 
