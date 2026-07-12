@@ -10,22 +10,26 @@ const pokemonData = [
       {
         "char": "妙",
         "pinyin": "miao4",
-        "definition": "clever"
+        "definition": "clever",
+        "definitionEs": "ingenioso"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       },
       {
         "char": "种",
         "pinyin": "zhong3",
-        "definition": "seed"
+        "definition": "seed",
+        "definitionEs": "semilla"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ],
     "type": "Planta / Veneno",
@@ -43,17 +47,20 @@ const pokemonData = [
       {
         "char": "妙",
         "pinyin": "miao4",
-        "definition": "clever"
+        "definition": "clever",
+        "definitionEs": "ingenioso"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ],
     "type": "Planta / Veneno",
@@ -71,17 +78,20 @@ const pokemonData = [
       {
         "char": "妙",
         "pinyin": "miao4",
-        "definition": "clever"
+        "definition": "clever",
+        "definitionEs": "ingenioso"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ],
     "type": "Planta / Veneno",
@@ -99,17 +109,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Fuego",
@@ -127,17 +140,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "恐",
         "pinyin": "kong3",
-        "definition": "afraid"
+        "definition": "afraid",
+        "definitionEs": "asustado"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Fuego",
@@ -155,17 +171,20 @@ const pokemonData = [
       {
         "char": "喷",
         "pinyin": "pen1",
-        "definition": "to puff"
+        "definition": "to spray",
+        "definitionEs": "rociar"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Fuego / Volador",
@@ -183,17 +202,20 @@ const pokemonData = [
       {
         "char": "杰",
         "pinyin": "jie2",
-        "definition": "hero"
+        "definition": "hero",
+        "definitionEs": "héroe"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ],
     "type": "Agua",
@@ -211,17 +233,20 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "咪",
         "pinyin": "mi1",
-        "definition": "sound for calling a cat"
+        "definition": "meow",
+        "definitionEs": "miau"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ],
     "type": "Agua",
@@ -239,17 +264,20 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "箭",
         "pinyin": "jian4",
-        "definition": "arrow"
+        "definition": "arrow",
+        "definitionEs": "flecha"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ],
     "type": "Agua",
@@ -266,18 +294,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "绿",
-        "pinyin": "lu:4",
-        "definition": "green"
+        "pinyin": "lv4",
+        "definition": "green",
+        "definitionEs": "verde"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ],
     "type": "Bicho",
@@ -295,17 +326,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "蛹",
         "pinyin": "yong3",
-        "definition": "chrysalis"
+        "definition": "pupa",
+        "definitionEs": "pupa"
       }
     ],
     "type": "Bicho",
@@ -323,17 +357,20 @@ const pokemonData = [
       {
         "char": "巴",
         "pinyin": "ba1",
-        "definition": "to long for"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       }
     ],
     "type": "Bicho / Volador",
@@ -351,17 +388,20 @@ const pokemonData = [
       {
         "char": "独",
         "pinyin": "du2",
-        "definition": "alone"
+        "definition": "lone",
+        "definitionEs": "solo"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ],
     "type": "Bicho / Veneno",
@@ -379,17 +419,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "蛹",
         "pinyin": "yong3",
-        "definition": "chrysalis"
+        "definition": "pupa",
+        "definitionEs": "pupa"
       }
     ],
     "type": "Bicho / Veneno",
@@ -407,17 +450,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "针",
         "pinyin": "zhen1",
-        "definition": "needle"
+        "definition": "needle",
+        "definitionEs": "aguja"
       },
       {
         "char": "蜂",
         "pinyin": "feng1",
-        "definition": "bee"
+        "definition": "bee",
+        "definitionEs": "abeja"
       }
     ],
     "type": "Bicho / Veneno",
@@ -435,12 +481,14 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       }
     ],
     "type": "Normal / Volador",
@@ -458,17 +506,20 @@ const pokemonData = [
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ],
     "type": "Normal / Volador",
@@ -486,17 +537,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ],
     "type": "Normal / Volador",
@@ -514,17 +568,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       }
     ],
     "type": "Normal",
@@ -542,12 +599,14 @@ const pokemonData = [
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       }
     ],
     "type": "Normal",
@@ -565,12 +624,14 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ],
     "type": "Normal / Volador",
@@ -588,17 +649,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ],
     "type": "Normal / Volador",
@@ -616,17 +680,20 @@ const pokemonData = [
       {
         "char": "阿",
         "pinyin": "a1",
-        "definition": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity"
+        "definition": "(prefix)",
+        "definitionEs": "(prefijo)"
       },
       {
         "char": "柏",
         "pinyin": "bai3",
-        "definition": "cedar"
+        "definition": "cypress",
+        "definitionEs": "ciprés"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ],
     "type": "Veneno",
@@ -644,17 +711,20 @@ const pokemonData = [
       {
         "char": "阿",
         "pinyin": "a1",
-        "definition": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity"
+        "definition": "(prefix)",
+        "definitionEs": "(prefijo)"
       },
       {
         "char": "柏",
         "pinyin": "bai3",
-        "definition": "cedar"
+        "definition": "cypress",
+        "definitionEs": "ciprés"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Veneno",
@@ -672,17 +742,20 @@ const pokemonData = [
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "丘",
         "pinyin": "qiu1",
-        "definition": "mound"
+        "definition": "hill",
+        "definitionEs": "colina"
       }
     ],
     "type": "Eléctrico",
@@ -700,12 +773,14 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "丘",
         "pinyin": "qiu1",
-        "definition": "mound"
+        "definition": "hill",
+        "definitionEs": "colina"
       }
     ],
     "type": "Eléctrico",
@@ -723,17 +798,20 @@ const pokemonData = [
       {
         "char": "穿",
         "pinyin": "chuan1",
-        "definition": "to wear"
+        "definition": "to wear",
+        "definitionEs": "vestir"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ],
     "type": "Tierra",
@@ -751,17 +829,20 @@ const pokemonData = [
       {
         "char": "穿",
         "pinyin": "chuan1",
-        "definition": "to wear"
+        "definition": "to wear",
+        "definitionEs": "vestir"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ],
     "type": "Tierra",
@@ -779,17 +860,20 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "兰",
         "pinyin": "lan2",
-        "definition": "orchid (蘭花|兰花 Cymbidium goeringii)"
+        "definition": "orchid",
+        "definitionEs": "orquídea"
       }
     ],
     "type": "Veneno",
@@ -807,17 +891,20 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "娜",
         "pinyin": "na4",
-        "definition": "(phonetic na)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Veneno",
@@ -835,17 +922,20 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "后",
         "pinyin": "hou4",
-        "definition": "empress"
+        "definition": "queen",
+        "definitionEs": "reina"
       }
     ],
     "type": "Veneno / Tierra",
@@ -863,17 +953,20 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "朗",
         "pinyin": "lang3",
-        "definition": "clear"
+        "definition": "clear",
+        "definitionEs": "claro"
       }
     ],
     "type": "Veneno",
@@ -891,22 +984,26 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "诺",
         "pinyin": "nuo4",
-        "definition": "to consent"
+        "definition": "promise",
+        "definitionEs": "promesa"
       }
     ],
     "type": "Veneno",
@@ -924,17 +1021,20 @@ const pokemonData = [
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ],
     "type": "Veneno / Tierra",
@@ -952,12 +1052,14 @@ const pokemonData = [
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       }
     ],
     "type": "Hada",
@@ -975,17 +1077,20 @@ const pokemonData = [
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "西",
         "pinyin": "xi1",
-        "definition": "west"
+        "definition": "west",
+        "definitionEs": "oeste"
       }
     ],
     "type": "Hada",
@@ -1003,12 +1108,14 @@ const pokemonData = [
       {
         "char": "六",
         "pinyin": "liu4",
-        "definition": "six"
+        "definition": "six",
+        "definitionEs": "seis"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       }
     ],
     "type": "Fuego",
@@ -1026,12 +1133,14 @@ const pokemonData = [
       {
         "char": "九",
         "pinyin": "jiu3",
-        "definition": "nine"
+        "definition": "nine",
+        "definitionEs": "nueve"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       }
     ],
     "type": "Fuego",
@@ -1048,13 +1157,15 @@ const pokemonData = [
     "characters": [
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "丁",
         "pinyin": "ding1",
-        "definition": "fourth in order"
+        "definition": "small",
+        "definitionEs": "pequeño"
       }
     ],
     "type": "Normal / Hada",
@@ -1071,18 +1182,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "丁",
         "pinyin": "ding1",
-        "definition": "fourth in order"
+        "definition": "small",
+        "definitionEs": "pequeño"
       }
     ],
     "type": "Normal / Hada",
@@ -1100,17 +1214,20 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ],
     "type": "Veneno / Volador",
@@ -1128,17 +1245,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ],
     "type": "Veneno / Volador",
@@ -1156,17 +1276,20 @@ const pokemonData = [
       {
         "char": "走",
         "pinyin": "zou3",
-        "definition": "to walk"
+        "definition": "to walk",
+        "definitionEs": "caminar"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ],
     "type": "Planta / Veneno",
@@ -1184,17 +1307,20 @@ const pokemonData = [
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ],
     "type": "Planta / Veneno",
@@ -1212,17 +1338,20 @@ const pokemonData = [
       {
         "char": "霸",
         "pinyin": "ba4",
-        "definition": "hegemon"
+        "definition": "tyrant",
+        "definitionEs": "tirano"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ],
     "type": "Planta / Veneno",
@@ -1240,17 +1369,20 @@ const pokemonData = [
       {
         "char": "派",
         "pinyin": "pai4",
-        "definition": "clique"
+        "definition": "faction",
+        "definitionEs": "facción"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Bicho / Planta",
@@ -1268,22 +1400,26 @@ const pokemonData = [
       {
         "char": "派",
         "pinyin": "pai4",
-        "definition": "clique"
+        "definition": "faction",
+        "definitionEs": "facción"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "特",
         "pinyin": "te4",
-        "definition": "special"
+        "definition": "special",
+        "definitionEs": "especial"
       }
     ],
     "type": "Bicho / Planta",
@@ -1301,12 +1437,14 @@ const pokemonData = [
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ],
     "type": "Bicho / Veneno",
@@ -1324,17 +1462,20 @@ const pokemonData = [
       {
         "char": "摩",
         "pinyin": "mo2",
-        "definition": "to rub"
+        "definition": "to rub",
+        "definitionEs": "frotar"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ],
     "type": "Bicho / Veneno",
@@ -1351,13 +1492,15 @@ const pokemonData = [
     "characters": [
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ],
     "type": "Tierra",
@@ -1375,17 +1518,20 @@ const pokemonData = [
       {
         "char": "三",
         "pinyin": "san1",
-        "definition": "three"
+        "definition": "three",
+        "definitionEs": "tres"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ],
     "type": "Tierra",
@@ -1403,12 +1549,14 @@ const pokemonData = [
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ],
     "type": "Normal",
@@ -1426,17 +1574,20 @@ const pokemonData = [
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "老",
         "pinyin": "lao3",
-        "definition": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity"
+        "definition": "old",
+        "definitionEs": "viejo"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       }
     ],
     "type": "Normal",
@@ -1454,17 +1605,20 @@ const pokemonData = [
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ],
     "type": "Agua",
@@ -1482,17 +1636,20 @@ const pokemonData = [
       {
         "char": "哥",
         "pinyin": "ge1",
-        "definition": "elder brother"
+        "definition": "brother",
+        "definitionEs": "hermano"
       },
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ],
     "type": "Agua",
@@ -1510,12 +1667,14 @@ const pokemonData = [
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Lucha",
@@ -1533,17 +1692,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ],
     "type": "Lucha",
@@ -1561,17 +1723,20 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "蒂",
         "pinyin": "di4",
-        "definition": "stem (of fruit)"
+        "definition": "stem",
+        "definitionEs": "tallo"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ],
     "type": "Fuego",
@@ -1589,17 +1754,20 @@ const pokemonData = [
       {
         "char": "风",
         "pinyin": "feng1",
-        "definition": "wind"
+        "definition": "wind",
+        "definitionEs": "viento"
       },
       {
         "char": "速",
         "pinyin": "su4",
-        "definition": "fast"
+        "definition": "fast",
+        "definitionEs": "rápido"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ],
     "type": "Fuego",
@@ -1617,22 +1785,26 @@ const pokemonData = [
       {
         "char": "蚊",
         "pinyin": "wen2",
-        "definition": "mosquito"
+        "definition": "mosquito",
+        "definitionEs": "mosquito"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "蝌",
         "pinyin": "ke1",
-        "definition": "tadpole"
+        "definition": "tadpole",
+        "definitionEs": "renacuajo"
       },
       {
         "char": "蚪",
         "pinyin": "dou3",
-        "definition": "tadpole"
+        "definition": "tadpole",
+        "definitionEs": "renacuajo"
       }
     ],
     "type": "Agua",
@@ -1650,17 +1822,20 @@ const pokemonData = [
       {
         "char": "蚊",
         "pinyin": "wen2",
-        "definition": "mosquito"
+        "definition": "mosquito",
+        "definitionEs": "mosquito"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "君",
         "pinyin": "jun1",
-        "definition": "monarch"
+        "definition": "lord",
+        "definitionEs": "señor"
       }
     ],
     "type": "Agua",
@@ -1678,22 +1853,26 @@ const pokemonData = [
       {
         "char": "蚊",
         "pinyin": "wen2",
-        "definition": "mosquito"
+        "definition": "mosquito",
+        "definitionEs": "mosquito"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "泳",
         "pinyin": "yong3",
-        "definition": "swimming"
+        "definition": "to swim",
+        "definitionEs": "nadar"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       }
     ],
     "type": "Agua / Lucha",
@@ -1711,12 +1890,14 @@ const pokemonData = [
       {
         "char": "凯",
         "pinyin": "kai3",
-        "definition": "triumphant"
+        "definition": "triumphant",
+        "definitionEs": "triunfante"
       },
       {
         "char": "西",
         "pinyin": "xi1",
-        "definition": "west"
+        "definition": "west",
+        "definitionEs": "oeste"
       }
     ],
     "type": "Psíquico",
@@ -1734,17 +1915,20 @@ const pokemonData = [
       {
         "char": "勇",
         "pinyin": "yong3",
-        "definition": "brave"
+        "definition": "brave",
+        "definitionEs": "valiente"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ],
     "type": "Psíquico",
@@ -1762,12 +1946,14 @@ const pokemonData = [
       {
         "char": "胡",
         "pinyin": "hu2",
-        "definition": "non-Han people, esp. from central Asia"
+        "definition": "beard",
+        "definitionEs": "barba"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       }
     ],
     "type": "Psíquico",
@@ -1785,12 +1971,14 @@ const pokemonData = [
       {
         "char": "腕",
         "pinyin": "wan4",
-        "definition": "wrist"
+        "definition": "wrist",
+        "definitionEs": "muñeca"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       }
     ],
     "type": "Lucha",
@@ -1808,12 +1996,14 @@ const pokemonData = [
       {
         "char": "豪",
         "pinyin": "hao2",
-        "definition": "grand"
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       }
     ],
     "type": "Lucha",
@@ -1831,12 +2021,14 @@ const pokemonData = [
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       }
     ],
     "type": "Lucha",
@@ -1853,18 +2045,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "喇",
-        "pinyin": "la1",
-        "definition": "(onom.) sound of wind, rain etc"
+        "pinyin": "la3",
+        "definition": "trumpet",
+        "definitionEs": "trompeta"
       },
       {
         "char": "叭",
         "pinyin": "ba1",
-        "definition": "denote a sound or sharp noise (gunfire etc)"
+        "definition": "(onomatopoeia)",
+        "definitionEs": "(onomatopeya)"
       },
       {
         "char": "芽",
         "pinyin": "ya2",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "brote"
       }
     ],
     "type": "Planta / Veneno",
@@ -1882,17 +2077,20 @@ const pokemonData = [
       {
         "char": "口",
         "pinyin": "kou3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ],
     "type": "Planta / Veneno",
@@ -1910,17 +2108,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "食",
         "pinyin": "shi2",
-        "definition": "to eat"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ],
     "type": "Planta / Veneno",
@@ -1938,22 +2139,26 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "瑙",
         "pinyin": "nao3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "母",
         "pinyin": "mu3",
-        "definition": "mother"
+        "definition": "mother",
+        "definitionEs": "madre"
       }
     ],
     "type": "Agua / Veneno",
@@ -1971,22 +2176,26 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "母",
         "pinyin": "mu3",
-        "definition": "mother"
+        "definition": "mother",
+        "definitionEs": "madre"
       }
     ],
     "type": "Agua / Veneno",
@@ -2004,17 +2213,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "拳",
         "pinyin": "quan2",
-        "definition": "fist"
+        "definition": "fist",
+        "definitionEs": "puño"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       }
     ],
     "type": "Roca / Tierra",
@@ -2031,18 +2243,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       }
     ],
     "type": "Roca / Tierra",
@@ -2059,18 +2274,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       }
     ],
     "type": "Roca / Tierra",
@@ -2088,17 +2306,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ],
     "type": "Fuego",
@@ -2116,17 +2337,20 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ],
     "type": "Fuego",
@@ -2144,17 +2368,20 @@ const pokemonData = [
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Agua / Psíquico",
@@ -2172,17 +2399,20 @@ const pokemonData = [
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Agua / Psíquico",
@@ -2200,17 +2430,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "磁",
         "pinyin": "ci2",
-        "definition": "magnetic"
+        "definition": "magnetic",
+        "definitionEs": "magnético"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Eléctrico / Acero",
@@ -2228,27 +2461,32 @@ const pokemonData = [
       {
         "char": "三",
         "pinyin": "san1",
-        "definition": "three"
+        "definition": "three",
+        "definitionEs": "tres"
       },
       {
         "char": "合",
-        "pinyin": "ge3",
-        "definition": "100 ml"
+        "pinyin": "he2",
+        "definition": "to join",
+        "definitionEs": "unir"
       },
       {
         "char": "一",
         "pinyin": "yi1",
-        "definition": "one"
+        "definition": "one",
+        "definitionEs": "uno"
       },
       {
         "char": "磁",
         "pinyin": "ci2",
-        "definition": "magnetic"
+        "definition": "magnetic",
+        "definitionEs": "magnético"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Eléctrico / Acero",
@@ -2266,17 +2504,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "葱",
         "pinyin": "cong1",
-        "definition": "scallion"
+        "definition": "scallion",
+        "definitionEs": "cebolleta"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ],
     "type": "Normal / Volador",
@@ -2294,12 +2535,14 @@ const pokemonData = [
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       },
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       }
     ],
     "type": "Normal / Volador",
@@ -2317,17 +2560,20 @@ const pokemonData = [
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       },
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       }
     ],
     "type": "Normal / Volador",
@@ -2345,17 +2591,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ],
     "type": "Agua",
@@ -2373,17 +2622,20 @@ const pokemonData = [
       {
         "char": "白",
         "pinyin": "bai2",
-        "definition": "white"
+        "definition": "white",
+        "definitionEs": "blanco"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ],
     "type": "Agua / Hielo",
@@ -2401,12 +2653,14 @@ const pokemonData = [
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       }
     ],
     "type": "Veneno",
@@ -2424,17 +2678,20 @@ const pokemonData = [
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       }
     ],
     "type": "Veneno",
@@ -2452,17 +2709,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "舌",
         "pinyin": "she2",
-        "definition": "tongue"
+        "definition": "tongue",
+        "definitionEs": "lengua"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       }
     ],
     "type": "Agua",
@@ -2479,18 +2739,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       }
     ],
     "type": "Agua / Hielo",
@@ -2508,12 +2771,14 @@ const pokemonData = [
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Fantasma / Veneno",
@@ -2531,17 +2796,20 @@ const pokemonData = [
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "通",
         "pinyin": "tong1",
-        "definition": "to go through"
+        "definition": "through",
+        "definitionEs": "a través"
       }
     ],
     "type": "Fantasma / Veneno",
@@ -2559,12 +2827,14 @@ const pokemonData = [
       {
         "char": "耿",
         "pinyin": "geng3",
-        "definition": "bright"
+        "definition": "bright",
+        "definitionEs": "brillante"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       }
     ],
     "type": "Fantasma / Veneno",
@@ -2582,17 +2852,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ],
     "type": "Roca / Tierra",
@@ -2610,17 +2883,20 @@ const pokemonData = [
       {
         "char": "催",
         "pinyin": "cui1",
-        "definition": "to urge"
+        "definition": "to urge",
+        "definitionEs": "instar"
       },
       {
         "char": "眠",
         "pinyin": "mian2",
-        "definition": "to sleep"
+        "definition": "to sleep",
+        "definitionEs": "dormir"
       },
       {
         "char": "貘",
         "pinyin": "mo4",
-        "definition": "tapir"
+        "definition": "tapir",
+        "definitionEs": "tapir"
       }
     ],
     "type": "Psíquico",
@@ -2638,22 +2914,26 @@ const pokemonData = [
       {
         "char": "引",
         "pinyin": "yin3",
-        "definition": "to draw (e.g. a bow)"
+        "definition": "to attract",
+        "definitionEs": "atraer"
       },
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "貘",
         "pinyin": "mo4",
-        "definition": "tapir"
+        "definition": "tapir",
+        "definitionEs": "tapir"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ],
     "type": "Psíquico",
@@ -2671,17 +2951,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "钳",
         "pinyin": "qian2",
-        "definition": "pincers"
+        "definition": "pincers",
+        "definitionEs": "tenazas"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ],
     "type": "Agua",
@@ -2699,17 +2982,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "钳",
         "pinyin": "qian2",
-        "definition": "pincers"
+        "definition": "pincers",
+        "definitionEs": "tenazas"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ],
     "type": "Agua",
@@ -2727,22 +3013,26 @@ const pokemonData = [
       {
         "char": "霹",
         "pinyin": "pi1",
-        "definition": "clap of thunder"
+        "definition": "thunderbolt",
+        "definitionEs": "rayo"
       },
       {
         "char": "雳",
         "pinyin": "li4",
-        "definition": "clap of thunder"
+        "definition": "thunderbolt",
+        "definitionEs": "rayo"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ],
     "type": "Eléctrico",
@@ -2760,22 +3050,26 @@ const pokemonData = [
       {
         "char": "顽",
         "pinyin": "wan2",
-        "definition": "mischievous"
+        "definition": "mischievous",
+        "definitionEs": "travieso"
       },
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "弹",
         "pinyin": "dan4",
-        "definition": "crossball"
+        "definition": "bullet",
+        "definitionEs": "bala"
       }
     ],
     "type": "Eléctrico",
@@ -2793,12 +3087,14 @@ const pokemonData = [
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       }
     ],
     "type": "Planta / Psíquico",
@@ -2816,17 +3112,20 @@ const pokemonData = [
       {
         "char": "椰",
         "pinyin": "ye1",
-        "definition": "coconut palm"
+        "definition": "coconut",
+        "definitionEs": "coco"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       },
       {
         "char": "树",
         "pinyin": "shu4",
-        "definition": "tree"
+        "definition": "tree",
+        "definitionEs": "árbol"
       }
     ],
     "type": "Planta / Psíquico",
@@ -2844,22 +3143,26 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ],
     "type": "Tierra",
@@ -2876,23 +3179,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "嘎",
-        "pinyin": "ga2",
-        "definition": "cackling sound"
+        "pinyin": "ga1",
+        "definition": "cackle",
+        "definitionEs": "cacareo"
       },
       {
         "char": "啦",
-        "pinyin": "la1",
-        "definition": "(onom.) sound of singing, cheering etc"
+        "pinyin": "la",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "嘎",
-        "pinyin": "ga2",
-        "definition": "cackling sound"
+        "pinyin": "ga1",
+        "definition": "cackle",
+        "definitionEs": "cacareo"
       },
       {
         "char": "啦",
-        "pinyin": "la1",
-        "definition": "(onom.) sound of singing, cheering etc"
+        "pinyin": "la",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       }
     ],
     "type": "Tierra",
@@ -2910,17 +3217,20 @@ const pokemonData = [
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "腿",
         "pinyin": "tui3",
-        "definition": "leg"
+        "definition": "leg",
+        "definitionEs": "pierna"
       },
       {
         "char": "郎",
         "pinyin": "lang2",
-        "definition": "(arch.) minister"
+        "definition": "minister",
+        "definitionEs": "ministro"
       }
     ],
     "type": "Lucha",
@@ -2938,17 +3248,20 @@ const pokemonData = [
       {
         "char": "快",
         "pinyin": "kuai4",
-        "definition": "rapid"
+        "definition": "fast",
+        "definitionEs": "rápido"
       },
       {
         "char": "拳",
         "pinyin": "quan2",
-        "definition": "fist"
+        "definition": "fist",
+        "definitionEs": "puño"
       },
       {
         "char": "郎",
         "pinyin": "lang2",
-        "definition": "(arch.) minister"
+        "definition": "minister",
+        "definitionEs": "ministro"
       }
     ],
     "type": "Lucha",
@@ -2966,17 +3279,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "舌",
         "pinyin": "she2",
-        "definition": "tongue"
+        "definition": "tongue",
+        "definitionEs": "lengua"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       }
     ],
     "type": "Normal",
@@ -2994,17 +3310,20 @@ const pokemonData = [
       {
         "char": "瓦",
         "pinyin": "wa3",
-        "definition": "roof tile"
+        "definition": "tile",
+        "definitionEs": "teja"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "弹",
         "pinyin": "dan4",
-        "definition": "crossball"
+        "definition": "bullet",
+        "definitionEs": "bala"
       }
     ],
     "type": "Veneno",
@@ -3022,22 +3341,26 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "弹",
         "pinyin": "dan4",
-        "definition": "crossball"
+        "definition": "bullet",
+        "definitionEs": "bala"
       },
       {
         "char": "瓦",
         "pinyin": "wa3",
-        "definition": "roof tile"
+        "definition": "tile",
+        "definitionEs": "teja"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Veneno",
@@ -3055,22 +3378,26 @@ const pokemonData = [
       {
         "char": "独",
         "pinyin": "du2",
-        "definition": "alone"
+        "definition": "lone",
+        "definitionEs": "solo"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "犀",
         "pinyin": "xi1",
-        "definition": "rhinoceros"
+        "definition": "rhinoceros",
+        "definitionEs": "rinoceronte"
       },
       {
         "char": "牛",
         "pinyin": "niu2",
-        "definition": "ox"
+        "definition": "ox",
+        "definitionEs": "buey"
       }
     ],
     "type": "Tierra / Roca",
@@ -3088,22 +3415,26 @@ const pokemonData = [
       {
         "char": "钻",
         "pinyin": "zuan1",
-        "definition": "to drill"
+        "definition": "to drill",
+        "definitionEs": "taladrar"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "犀",
         "pinyin": "xi1",
-        "definition": "rhinoceros"
+        "definition": "rhinoceros",
+        "definitionEs": "rinoceronte"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Tierra / Roca",
@@ -3121,17 +3452,20 @@ const pokemonData = [
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       }
     ],
     "type": "Normal",
@@ -3149,17 +3483,20 @@ const pokemonData = [
       {
         "char": "蔓",
         "pinyin": "man2",
-        "definition": "turnip"
+        "definition": "vine",
+        "definitionEs": "vid"
       },
       {
         "char": "藤",
         "pinyin": "teng2",
-        "definition": "rattan"
+        "definition": "rattan",
+        "definitionEs": "ratán"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Planta",
@@ -3177,12 +3514,14 @@ const pokemonData = [
       {
         "char": "袋",
         "pinyin": "dai4",
-        "definition": "pouch"
+        "definition": "pouch",
+        "definitionEs": "bolsa"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Normal",
@@ -3200,17 +3539,20 @@ const pokemonData = [
       {
         "char": "墨",
         "pinyin": "mo4",
-        "definition": "ink stick"
+        "definition": "ink",
+        "definitionEs": "tinta"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ],
     "type": "Agua",
@@ -3228,17 +3570,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Agua",
@@ -3256,17 +3601,20 @@ const pokemonData = [
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "金",
         "pinyin": "jin1",
-        "definition": "gold"
+        "definition": "gold",
+        "definitionEs": "oro"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ],
     "type": "Agua",
@@ -3284,17 +3632,20 @@ const pokemonData = [
       {
         "char": "金",
         "pinyin": "jin1",
-        "definition": "gold"
+        "definition": "gold",
+        "definitionEs": "oro"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ],
     "type": "Agua",
@@ -3312,17 +3663,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       }
     ],
     "type": "Agua",
@@ -3340,22 +3694,26 @@ const pokemonData = [
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       }
     ],
     "type": "Agua / Psíquico",
@@ -3373,22 +3731,26 @@ const pokemonData = [
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "墙",
         "pinyin": "qiang2",
-        "definition": "wall"
+        "definition": "wall",
+        "definitionEs": "pared"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       }
     ],
     "type": "Psíquico / Hada",
@@ -3406,22 +3768,26 @@ const pokemonData = [
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "螳",
         "pinyin": "tang2",
-        "definition": "praying mantis"
+        "definition": "mantis",
+        "definitionEs": "mantis"
       },
       {
         "char": "螂",
         "pinyin": "lang2",
-        "definition": "dragonfly"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ],
     "type": "Bicho / Volador",
@@ -3439,17 +3805,20 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "唇",
         "pinyin": "chun2",
-        "definition": "lip"
+        "definition": "lip",
+        "definitionEs": "labio"
       },
       {
         "char": "姐",
         "pinyin": "jie3",
-        "definition": "older sister"
+        "definition": "older sister",
+        "definitionEs": "hermana mayor"
       }
     ],
     "type": "Hielo / Psíquico",
@@ -3467,17 +3836,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "击",
         "pinyin": "ji1",
-        "definition": "to hit"
+        "definition": "to hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Eléctrico",
@@ -3495,22 +3867,26 @@ const pokemonData = [
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Fuego",
@@ -3528,17 +3904,20 @@ const pokemonData = [
       {
         "char": "凯",
         "pinyin": "kai3",
-        "definition": "triumphant"
+        "definition": "triumphant",
+        "definitionEs": "triunfante"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Bicho",
@@ -3556,17 +3935,20 @@ const pokemonData = [
       {
         "char": "肯",
         "pinyin": "ken3",
-        "definition": "to agree"
+        "definition": "to agree",
+        "definitionEs": "acordar"
       },
       {
         "char": "泰",
         "pinyin": "tai4",
-        "definition": "safe"
+        "definition": "safe",
+        "definitionEs": "seguro"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       }
     ],
     "type": "Normal",
@@ -3584,17 +3966,20 @@ const pokemonData = [
       {
         "char": "鲤",
         "pinyin": "li3",
-        "definition": "carp"
+        "definition": "carp",
+        "definitionEs": "carpa"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ],
     "type": "Agua",
@@ -3612,17 +3997,20 @@ const pokemonData = [
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "鲤",
         "pinyin": "li3",
-        "definition": "carp"
+        "definition": "carp",
+        "definitionEs": "carpa"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Agua / Volador",
@@ -3640,22 +4028,26 @@ const pokemonData = [
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "普",
         "pinyin": "pu3",
-        "definition": "general"
+        "definition": "general",
+        "definitionEs": "general"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ],
     "type": "Agua / Hielo",
@@ -3673,17 +4065,20 @@ const pokemonData = [
       {
         "char": "百",
         "pinyin": "bai3",
-        "definition": "hundred"
+        "definition": "hundred",
+        "definitionEs": "cien"
       },
       {
         "char": "变",
         "pinyin": "bian4",
-        "definition": "to change"
+        "definition": "to change",
+        "definitionEs": "cambiar"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ],
     "type": "Normal",
@@ -3701,12 +4096,14 @@ const pokemonData = [
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ],
     "type": "Normal",
@@ -3724,17 +4121,20 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ],
     "type": "Agua",
@@ -3752,17 +4152,20 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ],
     "type": "Eléctrico",
@@ -3780,17 +4183,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ],
     "type": "Fuego",
@@ -3808,17 +4214,20 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "边",
         "pinyin": "bian1",
-        "definition": "side"
+        "definition": "side",
+        "definitionEs": "lado"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Normal",
@@ -3836,17 +4245,20 @@ const pokemonData = [
       {
         "char": "菊",
         "pinyin": "ju2",
-        "definition": "chrysanthemum"
+        "definition": "chrysanthemum",
+        "definitionEs": "crisantemo"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Roca / Agua",
@@ -3864,27 +4276,32 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "菊",
         "pinyin": "ju2",
-        "definition": "chrysanthemum"
+        "definition": "chrysanthemum",
+        "definitionEs": "crisantemo"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Roca / Agua",
@@ -3902,17 +4319,20 @@ const pokemonData = [
       {
         "char": "化",
         "pinyin": "hua4",
-        "definition": "to make into"
+        "definition": "to transform",
+        "definitionEs": "transformar"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "盔",
         "pinyin": "kui1",
-        "definition": "helmet"
+        "definition": "helmet",
+        "definitionEs": "casco"
       }
     ],
     "type": "Roca / Agua",
@@ -3930,17 +4350,20 @@ const pokemonData = [
       {
         "char": "镰",
         "pinyin": "lian2",
-        "definition": "scythe"
+        "definition": "scythe",
+        "definitionEs": "guadaña"
       },
       {
         "char": "刀",
         "pinyin": "dao1",
-        "definition": "knife"
+        "definition": "knife",
+        "definitionEs": "cuchillo"
       },
       {
         "char": "盔",
         "pinyin": "kui1",
-        "definition": "helmet"
+        "definition": "helmet",
+        "definitionEs": "casco"
       }
     ],
     "type": "Roca / Agua",
@@ -3958,22 +4381,26 @@ const pokemonData = [
       {
         "char": "化",
         "pinyin": "hua4",
-        "definition": "to make into"
+        "definition": "to transform",
+        "definitionEs": "transformar"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "翼",
         "pinyin": "yi4",
-        "definition": "wing"
+        "definition": "wing",
+        "definitionEs": "ala"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Roca / Volador",
@@ -3991,17 +4418,20 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ],
     "type": "Normal",
@@ -4019,17 +4449,20 @@ const pokemonData = [
       {
         "char": "急",
         "pinyin": "ji2",
-        "definition": "urgent"
+        "definition": "urgent",
+        "definitionEs": "urgente"
       },
       {
         "char": "冻",
         "pinyin": "dong4",
-        "definition": "to freeze"
+        "definition": "to freeze",
+        "definitionEs": "congelar"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ],
     "type": "Hielo / Volador",
@@ -4047,17 +4480,20 @@ const pokemonData = [
       {
         "char": "闪",
         "pinyin": "shan3",
-        "definition": "to dodge"
+        "definition": "to flash",
+        "definitionEs": "destellar"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ],
     "type": "Eléctrico / Volador",
@@ -4075,17 +4511,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ],
     "type": "Fuego / Volador",
@@ -4103,17 +4542,20 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "你",
         "pinyin": "ni3",
-        "definition": "you (informal, as opposed to courteous 您[nin2])"
+        "definition": "you",
+        "definitionEs": "tú"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Dragón",
@@ -4131,17 +4573,20 @@ const pokemonData = [
       {
         "char": "哈",
         "pinyin": "ha1",
-        "definition": "(interj.) ha!"
+        "definition": "ha!",
+        "definitionEs": "¡ja!"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Dragón",
@@ -4159,12 +4604,14 @@ const pokemonData = [
       {
         "char": "快",
         "pinyin": "kuai4",
-        "definition": "rapid"
+        "definition": "fast",
+        "definitionEs": "rápido"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ],
     "type": "Dragón / Volador",
@@ -4182,12 +4629,14 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       }
     ],
     "type": "Psíquico",
@@ -4205,12 +4654,14 @@ const pokemonData = [
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "幻",
         "pinyin": "huan4",
-        "definition": "fantasy"
+        "definition": "fantasy",
+        "definitionEs": "fantasía"
       }
     ],
     "type": "Psíquico",
@@ -4231,17 +4682,20 @@ const pokemonData = [
       {
         "char": "菊",
         "pinyin": "ju2",
-        "definition": "chrysanthemum"
+        "definition": "chrysanthemum",
+        "definitionEs": "crisantemo"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       }
     ]
   },
@@ -4259,17 +4713,20 @@ const pokemonData = [
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "桂",
         "pinyin": "gui4",
-        "definition": "cassia"
+        "definition": "cassia",
+        "definitionEs": "casia"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       }
     ]
   },
@@ -4287,17 +4744,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "竺",
-        "pinyin": "du3",
-        "definition": "variant of 篤|笃[du3]"
+        "pinyin": "zhu2",
+        "definition": "India",
+        "definitionEs": "India"
       },
       {
         "char": "葵",
         "pinyin": "kui2",
-        "definition": "used in the names of various herbaceous plants"
+        "definition": "mallow",
+        "definitionEs": "malva"
       }
     ]
   },
@@ -4315,17 +4775,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -4343,17 +4806,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -4371,17 +4837,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -4399,17 +4868,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "锯",
         "pinyin": "ju4",
-        "definition": "to saw"
+        "definition": "to saw",
+        "definitionEs": "serrar"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -4427,12 +4899,14 @@ const pokemonData = [
       {
         "char": "蓝",
         "pinyin": "lan2",
-        "definition": "blue"
+        "definition": "blue",
+        "definitionEs": "azul"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -4450,17 +4924,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -4478,12 +4955,14 @@ const pokemonData = [
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "立",
         "pinyin": "li4",
-        "definition": "to stand"
+        "definition": "to stand",
+        "definitionEs": "levantar"
       }
     ]
   },
@@ -4501,17 +4980,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "立",
         "pinyin": "li4",
-        "definition": "to stand"
+        "definition": "to stand",
+        "definitionEs": "levantar"
       }
     ]
   },
@@ -4529,12 +5011,14 @@ const pokemonData = [
       {
         "char": "咕",
         "pinyin": "gu1",
-        "definition": "(onom.) for the sound of a bird, an empty stomach etc"
+        "definition": "gurgle",
+        "definitionEs": "gorgoteo"
       },
       {
         "char": "咕",
         "pinyin": "gu1",
-        "definition": "(onom.) for the sound of a bird, an empty stomach etc"
+        "definition": "gurgle",
+        "definitionEs": "gorgoteo"
       }
     ]
   },
@@ -4552,22 +5036,26 @@ const pokemonData = [
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       }
     ]
   },
@@ -4585,17 +5073,20 @@ const pokemonData = [
       {
         "char": "芭",
         "pinyin": "ba1",
-        "definition": "used in transliteration"
+        "definition": "banana",
+        "definitionEs": "plátano"
       },
       {
         "char": "瓢",
         "pinyin": "piao2",
-        "definition": "dipper"
+        "definition": "dipper",
+        "definitionEs": "cucharón"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -4613,17 +5104,20 @@ const pokemonData = [
       {
         "char": "安",
         "pinyin": "an1",
-        "definition": "(bound form) calm"
+        "definition": "calm",
+        "definitionEs": "tranquilo"
       },
       {
         "char": "瓢",
         "pinyin": "piao2",
-        "definition": "dipper"
+        "definition": "dipper",
+        "definitionEs": "cucharón"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -4641,17 +5135,20 @@ const pokemonData = [
       {
         "char": "圆",
         "pinyin": "yuan2",
-        "definition": "circle"
+        "definition": "round",
+        "definitionEs": "redondo"
       },
       {
         "char": "丝",
         "pinyin": "si1",
-        "definition": "silk"
+        "definition": "silk",
+        "definitionEs": "seda"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       }
     ]
   },
@@ -4669,22 +5166,26 @@ const pokemonData = [
       {
         "char": "阿",
         "pinyin": "a1",
-        "definition": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity"
+        "definition": "(prefix)",
+        "definitionEs": "(prefijo)"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -4702,17 +5203,20 @@ const pokemonData = [
       {
         "char": "叉",
         "pinyin": "cha4",
-        "definition": "used in 劈叉[pi3 cha4]"
+        "definition": "cross",
+        "definitionEs": "cruz"
       },
       {
         "char": "字",
         "pinyin": "zi4",
-        "definition": "letter"
+        "definition": "character",
+        "definitionEs": "carácter"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ]
   },
@@ -4730,17 +5234,20 @@ const pokemonData = [
       {
         "char": "灯",
         "pinyin": "deng1",
-        "definition": "lamp"
+        "definition": "lamp",
+        "definitionEs": "lámpara"
       },
       {
         "char": "笼",
         "pinyin": "long3",
-        "definition": "to envelop"
+        "definition": "to envelop",
+        "definitionEs": "envolver"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -4758,17 +5265,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "灯",
         "pinyin": "deng1",
-        "definition": "lamp"
+        "definition": "lamp",
+        "definitionEs": "lámpara"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -4786,12 +5296,14 @@ const pokemonData = [
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "丘",
         "pinyin": "qiu1",
-        "definition": "mound"
+        "definition": "hill",
+        "definitionEs": "colina"
       }
     ]
   },
@@ -4809,17 +5321,20 @@ const pokemonData = [
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -4837,17 +5352,20 @@ const pokemonData = [
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "丁",
         "pinyin": "ding1",
-        "definition": "fourth in order"
+        "definition": "small",
+        "definitionEs": "pequeño"
       }
     ]
   },
@@ -4865,17 +5383,20 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       }
     ]
   },
@@ -4893,22 +5414,26 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       }
     ]
   },
@@ -4926,17 +5451,20 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "然",
         "pinyin": "ran2",
-        "definition": "correct"
+        "definition": "naturally",
+        "definitionEs": "naturalmente"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ]
   },
@@ -4954,17 +5482,20 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "然",
         "pinyin": "ran2",
-        "definition": "correct"
+        "definition": "naturally",
+        "definitionEs": "naturalmente"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -4982,17 +5513,20 @@ const pokemonData = [
       {
         "char": "咩",
         "pinyin": "mie1",
-        "definition": "old variant of 咩[mie1]"
+        "definition": "bleat",
+        "definitionEs": "balido"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -5010,17 +5544,20 @@ const pokemonData = [
       {
         "char": "茸",
         "pinyin": "rong2",
-        "definition": "(bound form) (of newly sprouted grass) soft and fine"
+        "definition": "fuzz",
+        "definitionEs": "pelusa"
       },
       {
         "char": "茸",
         "pinyin": "rong2",
-        "definition": "(bound form) (of newly sprouted grass) soft and fine"
+        "definition": "fuzz",
+        "definitionEs": "pelusa"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -5038,12 +5575,14 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -5061,17 +5600,20 @@ const pokemonData = [
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "丽",
         "pinyin": "li4",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -5089,17 +5631,20 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "露",
         "pinyin": "lu4",
-        "definition": "dew"
+        "definition": "dew",
+        "definitionEs": "rocío"
       }
     ]
   },
@@ -5117,22 +5662,26 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "露",
         "pinyin": "lu4",
-        "definition": "dew"
+        "definition": "dew",
+        "definitionEs": "rocío"
       },
       {
         "char": "丽",
         "pinyin": "li4",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       }
     ]
   },
@@ -5150,17 +5699,20 @@ const pokemonData = [
       {
         "char": "树",
         "pinyin": "shu4",
-        "definition": "tree"
+        "definition": "tree",
+        "definitionEs": "árbol"
       },
       {
         "char": "才",
         "pinyin": "cai2",
-        "definition": "(variant of 才[cai2]) just now"
+        "definition": "talent",
+        "definitionEs": "talento"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -5178,22 +5730,26 @@ const pokemonData = [
       {
         "char": "蚊",
         "pinyin": "wen2",
-        "definition": "mosquito"
+        "definition": "mosquito",
+        "definitionEs": "mosquito"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       },
       {
         "char": "皇",
         "pinyin": "huang2",
-        "definition": "emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       }
     ]
   },
@@ -5211,17 +5767,20 @@ const pokemonData = [
       {
         "char": "毽",
         "pinyin": "jian4",
-        "definition": "shuttlecock"
+        "definition": "shuttlecock",
+        "definitionEs": "volante"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ]
   },
@@ -5239,17 +5798,20 @@ const pokemonData = [
       {
         "char": "毽",
         "pinyin": "jian4",
-        "definition": "shuttlecock"
+        "definition": "shuttlecock",
+        "definitionEs": "volante"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -5267,17 +5829,20 @@ const pokemonData = [
       {
         "char": "毽",
         "pinyin": "jian4",
-        "definition": "shuttlecock"
+        "definition": "shuttlecock",
+        "definitionEs": "volante"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "棉",
         "pinyin": "mian2",
-        "definition": "generic term for cotton or kapok"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       }
     ]
   },
@@ -5295,22 +5860,26 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "手",
         "pinyin": "shou3",
-        "definition": "hand"
+        "definition": "hand",
+        "definitionEs": "mano"
       }
     ]
   },
@@ -5328,22 +5897,26 @@ const pokemonData = [
       {
         "char": "向",
         "pinyin": "xiang4",
-        "definition": "direction"
+        "definition": "direction",
+        "definitionEs": "dirección"
       },
       {
         "char": "日",
         "pinyin": "ri4",
-        "definition": "(bound form) sun"
+        "definition": "sun",
+        "definitionEs": "sol"
       },
       {
         "char": "种",
         "pinyin": "zhong3",
-        "definition": "seed"
+        "definition": "seed",
+        "definitionEs": "semilla"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -5361,22 +5934,26 @@ const pokemonData = [
       {
         "char": "向",
         "pinyin": "xiang4",
-        "definition": "direction"
+        "definition": "direction",
+        "definitionEs": "dirección"
       },
       {
         "char": "日",
         "pinyin": "ri4",
-        "definition": "(bound form) sun"
+        "definition": "sun",
+        "definitionEs": "sol"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -5394,17 +5971,20 @@ const pokemonData = [
       {
         "char": "蜻",
         "pinyin": "qing1",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       },
       {
         "char": "蜻",
         "pinyin": "qing1",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       },
       {
         "char": "蜓",
         "pinyin": "ting2",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       }
     ]
   },
@@ -5421,13 +6001,15 @@ const pokemonData = [
     "characters": [
       {
         "char": "乌",
-        "pinyin": "wu4",
-        "definition": "used in 烏拉|乌拉[wu4 la5]"
+        "pinyin": "wu1",
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       }
     ]
   },
@@ -5445,12 +6027,14 @@ const pokemonData = [
       {
         "char": "沼",
         "pinyin": "zhao3",
-        "definition": "pond"
+        "definition": "marsh",
+        "definitionEs": "pantano"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -5468,22 +6052,26 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "阳",
         "pinyin": "yang2",
-        "definition": "positive (electric.)"
+        "definition": "sun",
+        "definitionEs": "sol"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -5501,22 +6089,26 @@ const pokemonData = [
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "亮",
         "pinyin": "liang4",
-        "definition": "bright"
+        "definition": "bright",
+        "definitionEs": "brillante"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -5534,17 +6126,20 @@ const pokemonData = [
       {
         "char": "黑",
         "pinyin": "hei1",
-        "definition": "black"
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "暗",
         "pinyin": "an4",
-        "definition": "(literary) to close (a door)"
+        "definition": "dark",
+        "definitionEs": "oscuro"
       },
       {
         "char": "鸦",
         "pinyin": "ya1",
-        "definition": "variant of 鴉|鸦[ya1]"
+        "definition": "crow",
+        "definitionEs": "cuervo"
       }
     ]
   },
@@ -5562,17 +6157,20 @@ const pokemonData = [
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -5590,12 +6188,14 @@ const pokemonData = [
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       }
     ]
   },
@@ -5613,22 +6213,26 @@ const pokemonData = [
       {
         "char": "未",
         "pinyin": "wei4",
-        "definition": "not yet"
+        "definition": "not yet",
+        "definitionEs": "aún no"
       },
       {
         "char": "知",
         "pinyin": "zhi1",
-        "definition": "to know"
+        "definition": "know",
+        "definitionEs": "saber"
       },
       {
         "char": "图",
         "pinyin": "tu2",
-        "definition": "diagram"
+        "definition": "diagram",
+        "definitionEs": "diagrama"
       },
       {
         "char": "腾",
         "pinyin": "teng2",
-        "definition": "(bound form) to gallop"
+        "definition": "gallop",
+        "definitionEs": "galope"
       }
     ]
   },
@@ -5646,17 +6250,20 @@ const pokemonData = [
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       },
       {
         "char": "然",
         "pinyin": "ran2",
-        "definition": "correct"
+        "definition": "naturally",
+        "definitionEs": "naturalmente"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       }
     ]
   },
@@ -5674,17 +6281,20 @@ const pokemonData = [
       {
         "char": "麒",
         "pinyin": "qi2",
-        "definition": "used in 麒麟[qi2 lin2]"
+        "definition": "qilin (part of)",
+        "definitionEs": "qilin (parte de)"
       },
       {
         "char": "麟",
         "pinyin": "lin2",
-        "definition": "see 麒麟[qi2 lin2]"
+        "definition": "qilin (part of)",
+        "definitionEs": "qilin (parte de)"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -5702,17 +6312,20 @@ const pokemonData = [
       {
         "char": "榛",
         "pinyin": "zhen1",
-        "definition": "(bound form) hazelnut tree (Corylus heterophylla)"
+        "definition": "hazel",
+        "definitionEs": "avellano"
       },
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -5729,23 +6342,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "佛",
-        "pinyin": "fu2",
-        "definition": "(female) head ornament"
+        "pinyin": "fo2",
+        "definition": "Buddha",
+        "definitionEs": "Buda"
       },
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "托",
         "pinyin": "tuo1",
-        "definition": "to trust"
+        "definition": "support",
+        "definitionEs": "apoyar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -5763,22 +6380,26 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "弟",
-        "pinyin": "ti4",
-        "definition": "variant of 悌[ti4]"
+        "pinyin": "di4",
+        "definition": "younger brother",
+        "definitionEs": "hermano menor"
       },
       {
         "char": "弟",
-        "pinyin": "ti4",
-        "definition": "variant of 悌[ti4]"
+        "pinyin": "di4",
+        "definition": "younger brother",
+        "definitionEs": "hermano menor"
       }
     ]
   },
@@ -5796,12 +6417,14 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "蝎",
         "pinyin": "xie1",
-        "definition": "(bound form) scorpion"
+        "definition": "scorpion",
+        "definitionEs": "escorpión"
       }
     ]
   },
@@ -5819,17 +6442,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "钢",
         "pinyin": "gang1",
-        "definition": "steel"
+        "definition": "steel",
+        "definitionEs": "acero"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -5847,12 +6473,14 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       }
     ]
   },
@@ -5870,17 +6498,20 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "皇",
         "pinyin": "huang2",
-        "definition": "emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       }
     ]
   },
@@ -5898,17 +6529,20 @@ const pokemonData = [
       {
         "char": "千",
         "pinyin": "qian1",
-        "definition": "used in 鞦韆|秋千[qiu1 qian1]"
+        "definition": "thousand",
+        "definitionEs": "mil"
       },
       {
         "char": "针",
         "pinyin": "zhen1",
-        "definition": "needle"
+        "definition": "needle",
+        "definitionEs": "aguja"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -5926,22 +6560,26 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "钳",
         "pinyin": "qian2",
-        "definition": "pincers"
+        "definition": "pincers",
+        "definitionEs": "tenazas"
       },
       {
         "char": "螳",
         "pinyin": "tang2",
-        "definition": "praying mantis"
+        "definition": "mantis",
+        "definitionEs": "mantis"
       },
       {
         "char": "螂",
         "pinyin": "lang2",
-        "definition": "dragonfly"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -5959,12 +6597,14 @@ const pokemonData = [
       {
         "char": "壶",
         "pinyin": "hu2",
-        "definition": "pot"
+        "definition": "pot",
+        "definitionEs": "olla"
       },
       {
         "char": "壶",
         "pinyin": "hu2",
-        "definition": "pot"
+        "definition": "pot",
+        "definitionEs": "olla"
       }
     ]
   },
@@ -5982,27 +6622,32 @@ const pokemonData = [
       {
         "char": "赫",
         "pinyin": "he4",
-        "definition": "awe-inspiring"
+        "definition": "awe",
+        "definitionEs": "asombro"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -6020,12 +6665,14 @@ const pokemonData = [
       {
         "char": "狃",
         "pinyin": "niu3",
-        "definition": "accustomed to"
+        "definition": "accustomed",
+        "definitionEs": "acostumbrado"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -6043,17 +6690,20 @@ const pokemonData = [
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -6071,17 +6721,20 @@ const pokemonData = [
       {
         "char": "圈",
         "pinyin": "quan1",
-        "definition": "circle"
+        "definition": "circle",
+        "definitionEs": "círculo"
       },
       {
         "char": "圈",
         "pinyin": "quan1",
-        "definition": "circle"
+        "definition": "circle",
+        "definitionEs": "círculo"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -6099,17 +6752,20 @@ const pokemonData = [
       {
         "char": "熔",
         "pinyin": "rong2",
-        "definition": "to smelt"
+        "definition": "smelt",
+        "definitionEs": "fundir"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -6127,22 +6783,26 @@ const pokemonData = [
       {
         "char": "熔",
         "pinyin": "rong2",
-        "definition": "to smelt"
+        "definition": "smelt",
+        "definitionEs": "fundir"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "蜗",
         "pinyin": "wo1",
-        "definition": "snail"
+        "definition": "snail",
+        "definitionEs": "caracol"
       },
       {
         "char": "牛",
         "pinyin": "niu2",
-        "definition": "ox"
+        "definition": "ox",
+        "definitionEs": "buey"
       }
     ]
   },
@@ -6160,17 +6820,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -6188,17 +6851,20 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -6216,22 +6882,26 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "阳",
         "pinyin": "yang2",
-        "definition": "positive (electric.)"
+        "definition": "sun",
+        "definitionEs": "sol"
       },
       {
         "char": "珊",
         "pinyin": "shan1",
-        "definition": "coral"
+        "definition": "coral",
+        "definitionEs": "coral"
       },
       {
         "char": "瑚",
         "pinyin": "hu2",
-        "definition": "used in 珊瑚[shan1 hu2]"
+        "definition": "coral (part of)",
+        "definitionEs": "coral (parte de)"
       }
     ]
   },
@@ -6249,17 +6919,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "炮",
         "pinyin": "pao4",
-        "definition": "variant of 炮[pao4]"
+        "definition": "cannon",
+        "definitionEs": "cañón"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -6277,17 +6950,20 @@ const pokemonData = [
       {
         "char": "章",
         "pinyin": "zhang1",
-        "definition": "chapter"
+        "definition": "chapter",
+        "definitionEs": "capítulo"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "桶",
         "pinyin": "tong3",
-        "definition": "bucket"
+        "definition": "bucket",
+        "definitionEs": "cubo"
       }
     ]
   },
@@ -6305,17 +6981,20 @@ const pokemonData = [
       {
         "char": "信",
         "pinyin": "xin4",
-        "definition": "letter"
+        "definition": "letter",
+        "definitionEs": "carta"
       },
       {
         "char": "使",
         "pinyin": "shi3",
-        "definition": "to make"
+        "definition": "make",
+        "definitionEs": "hacer"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -6333,22 +7012,26 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "翅",
         "pinyin": "chi4",
-        "definition": "(bound form) wing (of a bird or insect)"
+        "definition": "wing",
+        "definitionEs": "ala"
       },
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -6366,17 +7049,20 @@ const pokemonData = [
       {
         "char": "盔",
         "pinyin": "kui1",
-        "definition": "helmet"
+        "definition": "helmet",
+        "definitionEs": "casco"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -6394,17 +7080,20 @@ const pokemonData = [
       {
         "char": "戴",
         "pinyin": "dai4",
-        "definition": "to put on or wear (glasses, hat, gloves etc)"
+        "definition": "wear",
+        "definitionEs": "llevar"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       }
     ]
   },
@@ -6422,17 +7111,20 @@ const pokemonData = [
       {
         "char": "黑",
         "pinyin": "hei1",
-        "definition": "black"
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "加",
         "pinyin": "jia1",
-        "definition": "to add"
+        "definition": "add",
+        "definitionEs": "añadir"
       }
     ]
   },
@@ -6449,18 +7141,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -6478,17 +7173,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "象",
         "pinyin": "xiang4",
-        "definition": "elephant"
+        "definition": "elephant",
+        "definitionEs": "elefante"
       }
     ]
   },
@@ -6506,12 +7204,14 @@ const pokemonData = [
       {
         "char": "顿",
         "pinyin": "dun4",
-        "definition": "to stop"
+        "definition": "stop",
+        "definitionEs": "parar"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       }
     ]
   },
@@ -6529,22 +7229,26 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "边",
         "pinyin": "bian1",
-        "definition": "side"
+        "definition": "side",
+        "definitionEs": "lado"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       },
       {
         "char": "型",
         "pinyin": "xing2",
-        "definition": "mold"
+        "definition": "type",
+        "definitionEs": "tipo"
       }
     ]
   },
@@ -6562,17 +7266,20 @@ const pokemonData = [
       {
         "char": "惊",
         "pinyin": "jing1",
-        "definition": "to startle"
+        "definition": "startle",
+        "definitionEs": "asustar"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "鹿",
         "pinyin": "lu4",
-        "definition": "deer"
+        "definition": "deer",
+        "definitionEs": "ciervo"
       }
     ]
   },
@@ -6590,17 +7297,20 @@ const pokemonData = [
       {
         "char": "图",
         "pinyin": "tu2",
-        "definition": "diagram"
+        "definition": "diagram",
+        "definitionEs": "diagrama"
       },
       {
         "char": "图",
         "pinyin": "tu2",
-        "definition": "diagram"
+        "definition": "diagram",
+        "definitionEs": "diagrama"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -6618,22 +7328,26 @@ const pokemonData = [
       {
         "char": "无",
         "pinyin": "wu2",
-        "definition": "not to have"
+        "definition": "without",
+        "definitionEs": "sin"
       },
       {
         "char": "畏",
         "pinyin": "wei4",
-        "definition": "to fear"
+        "definition": "fear",
+        "definitionEs": "miedo"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -6651,17 +7365,20 @@ const pokemonData = [
       {
         "char": "战",
         "pinyin": "zhan4",
-        "definition": "to fight"
+        "definition": "fight",
+        "definitionEs": "luchar"
       },
       {
         "char": "舞",
         "pinyin": "wu3",
-        "definition": "to dance"
+        "definition": "dance",
+        "definitionEs": "bailar"
       },
       {
         "char": "郎",
         "pinyin": "lang2",
-        "definition": "(arch.) minister"
+        "definition": "minister",
+        "definitionEs": "ministro"
       }
     ]
   },
@@ -6679,17 +7396,20 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "唇",
         "pinyin": "chun2",
-        "definition": "lip"
+        "definition": "lip",
+        "definitionEs": "labio"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -6707,17 +7427,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "击",
         "pinyin": "ji1",
-        "definition": "to hit"
+        "definition": "to hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -6735,22 +7458,26 @@ const pokemonData = [
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -6768,17 +7495,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "奶",
         "pinyin": "nai3",
-        "definition": "mother"
+        "definition": "milk",
+        "definitionEs": "leche"
       },
       {
         "char": "罐",
         "pinyin": "guan4",
-        "definition": "variant of 罐[guan4]"
+        "definition": "jar",
+        "definitionEs": "tarro"
       }
     ]
   },
@@ -6796,17 +7526,20 @@ const pokemonData = [
       {
         "char": "幸",
         "pinyin": "xing4",
-        "definition": "fortunate"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "福",
         "pinyin": "fu2",
-        "definition": "good fortune"
+        "definition": "fortune",
+        "definitionEs": "fortuna"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       }
     ]
   },
@@ -6824,12 +7557,14 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "公",
         "pinyin": "gong1",
-        "definition": "public"
+        "definition": "public",
+        "definitionEs": "público"
       }
     ]
   },
@@ -6847,12 +7582,14 @@ const pokemonData = [
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       }
     ]
   },
@@ -6870,12 +7607,14 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "君",
         "pinyin": "jun1",
-        "definition": "monarch"
+        "definition": "lord",
+        "definitionEs": "señor"
       }
     ]
   },
@@ -6893,22 +7632,26 @@ const pokemonData = [
       {
         "char": "幼",
         "pinyin": "you4",
-        "definition": "young"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -6925,23 +7668,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -6959,22 +7706,26 @@ const pokemonData = [
       {
         "char": "班",
         "pinyin": "ban1",
-        "definition": "team"
+        "definition": "class",
+        "definitionEs": "clase"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -6992,17 +7743,20 @@ const pokemonData = [
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -7020,12 +7774,14 @@ const pokemonData = [
       {
         "char": "凤",
         "pinyin": "feng4",
-        "definition": "phoenix"
+        "definition": "phoenix",
+        "definitionEs": "fénix"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -7043,17 +7799,20 @@ const pokemonData = [
       {
         "char": "时",
         "pinyin": "shi2",
-        "definition": "o'clock"
+        "definition": "time",
+        "definitionEs": "tiempo"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       }
     ]
   },
@@ -7071,17 +7830,20 @@ const pokemonData = [
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "守",
         "pinyin": "shou3",
-        "definition": "to guard"
+        "definition": "guard",
+        "definitionEs": "guardar"
       },
       {
         "char": "宫",
         "pinyin": "gong1",
-        "definition": "palace"
+        "definition": "palace",
+        "definitionEs": "palacio"
       }
     ]
   },
@@ -7099,22 +7861,26 @@ const pokemonData = [
       {
         "char": "森",
         "pinyin": "sen1",
-        "definition": "(bound form) densely wooded"
+        "definition": "dense woods",
+        "definitionEs": "bosque denso"
       },
       {
         "char": "林",
         "pinyin": "lin2",
-        "definition": "(bound form) woods"
+        "definition": "forest",
+        "definitionEs": "bosque"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       },
       {
         "char": "蜴",
         "pinyin": "yi4",
-        "definition": "used in 蜥蜴[xi1 yi4]"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -7132,17 +7898,20 @@ const pokemonData = [
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       },
       {
         "char": "蜴",
         "pinyin": "yi4",
-        "definition": "used in 蜥蜴[xi1 yi4]"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -7160,17 +7929,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "稚",
         "pinyin": "zhi4",
-        "definition": "variant of 稚[zhi4]"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       }
     ]
   },
@@ -7188,17 +7960,20 @@ const pokemonData = [
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "壮",
         "pinyin": "zhuang4",
-        "definition": "to strengthen"
+        "definition": "strong",
+        "definitionEs": "fuerte"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       }
     ]
   },
@@ -7216,17 +7991,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       }
     ]
   },
@@ -7244,17 +8022,20 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "跃",
         "pinyin": "yue4",
-        "definition": "to jump"
+        "definition": "jump",
+        "definitionEs": "saltar"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -7272,17 +8053,20 @@ const pokemonData = [
       {
         "char": "沼",
         "pinyin": "zhao3",
-        "definition": "pond"
+        "definition": "marsh",
+        "definitionEs": "pantano"
       },
       {
         "char": "跃",
         "pinyin": "yue4",
-        "definition": "to jump"
+        "definition": "jump",
+        "definitionEs": "saltar"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -7300,17 +8084,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "沼",
         "pinyin": "zhao3",
-        "definition": "pond"
+        "definition": "marsh",
+        "definitionEs": "pantano"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -7328,17 +8115,20 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "狼",
         "pinyin": "lang2",
-        "definition": "wolf"
+        "definition": "wolf",
+        "definitionEs": "lobo"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -7356,17 +8146,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "狼",
         "pinyin": "lang2",
-        "definition": "wolf"
+        "definition": "wolf",
+        "definitionEs": "lobo"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -7384,17 +8177,20 @@ const pokemonData = [
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       },
       {
         "char": "纹",
         "pinyin": "wen2",
-        "definition": "line"
+        "definition": "pattern",
+        "definitionEs": "patrón"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -7412,17 +8208,20 @@ const pokemonData = [
       {
         "char": "直",
         "pinyin": "zhi2",
-        "definition": "straight"
+        "definition": "straight",
+        "definitionEs": "recto"
       },
       {
         "char": "冲",
         "pinyin": "chong4",
-        "definition": "powerful"
+        "definition": "powerful",
+        "definitionEs": "poderoso"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -7439,18 +8238,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -7468,17 +8270,20 @@ const pokemonData = [
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "茧",
         "pinyin": "jian3",
-        "definition": "variant of 繭|茧[jian3]"
+        "definition": "cocoon",
+        "definitionEs": "capullo"
       }
     ]
   },
@@ -7496,22 +8301,26 @@ const pokemonData = [
       {
         "char": "狩",
         "pinyin": "shou4",
-        "definition": "to hunt"
+        "definition": "hunt",
+        "definitionEs": "cazar"
       },
       {
         "char": "猎",
         "pinyin": "lie4",
-        "definition": "hunting"
+        "definition": "hunt",
+        "definitionEs": "caza"
       },
       {
         "char": "凤",
         "pinyin": "feng4",
-        "definition": "phoenix"
+        "definition": "phoenix",
+        "definitionEs": "fénix"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       }
     ]
   },
@@ -7529,17 +8338,20 @@ const pokemonData = [
       {
         "char": "盾",
         "pinyin": "dun4",
-        "definition": "(currency) Vietnamese dong"
+        "definition": "shield",
+        "definitionEs": "escudo"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "茧",
         "pinyin": "jian3",
-        "definition": "variant of 繭|茧[jian3]"
+        "definition": "cocoon",
+        "definitionEs": "capullo"
       }
     ]
   },
@@ -7557,17 +8369,20 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "粉",
         "pinyin": "fen3",
-        "definition": "powder"
+        "definition": "powder",
+        "definitionEs": "polvo"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -7585,22 +8400,26 @@ const pokemonData = [
       {
         "char": "莲",
         "pinyin": "lian2",
-        "definition": "lotus"
+        "definition": "lotus",
+        "definitionEs": "loto"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       },
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -7618,22 +8437,26 @@ const pokemonData = [
       {
         "char": "莲",
         "pinyin": "lian2",
-        "definition": "lotus"
+        "definition": "lotus",
+        "definitionEs": "loto"
       },
       {
         "char": "帽",
         "pinyin": "mao4",
-        "definition": "hat"
+        "definition": "hat",
+        "definitionEs": "sombrero"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -7651,22 +8474,26 @@ const pokemonData = [
       {
         "char": "乐",
         "pinyin": "yue4",
-        "definition": "music"
+        "definition": "music",
+        "definitionEs": "música"
       },
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "河",
         "pinyin": "he2",
-        "definition": "(bound form) the Yellow River"
+        "definition": "river",
+        "definitionEs": "río"
       },
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -7684,17 +8511,20 @@ const pokemonData = [
       {
         "char": "橡",
         "pinyin": "xiang4",
-        "definition": "oak"
+        "definition": "oak",
+        "definitionEs": "roble"
       },
       {
         "char": "实",
         "pinyin": "shi2",
-        "definition": "real"
+        "definition": "real",
+        "definitionEs": "real"
       },
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       }
     ]
   },
@@ -7712,17 +8542,20 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "鼻",
         "pinyin": "bi2",
-        "definition": "nose"
+        "definition": "nose",
+        "definitionEs": "nariz"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       }
     ]
   },
@@ -7740,22 +8573,26 @@ const pokemonData = [
       {
         "char": "狡",
         "pinyin": "jiao3",
-        "definition": "crafty"
+        "definition": "crafty",
+        "definitionEs": "astuto"
       },
       {
         "char": "猾",
         "pinyin": "hua2",
-        "definition": "sly"
+        "definition": "sly",
+        "definitionEs": "astuto"
       },
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -7773,17 +8610,20 @@ const pokemonData = [
       {
         "char": "傲",
         "pinyin": "ao4",
-        "definition": "proud"
+        "definition": "proud",
+        "definitionEs": "orgulloso"
       },
       {
         "char": "骨",
         "pinyin": "gu3",
-        "definition": "bone"
+        "definition": "bone",
+        "definitionEs": "hueso"
       },
       {
         "char": "燕",
         "pinyin": "yan4",
-        "definition": "variant of 燕[yan4]"
+        "definition": "swallow",
+        "definitionEs": "golondrina"
       }
     ]
   },
@@ -7801,17 +8641,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "燕",
         "pinyin": "yan4",
-        "definition": "variant of 燕[yan4]"
+        "definition": "swallow",
+        "definitionEs": "golondrina"
       }
     ]
   },
@@ -7829,17 +8672,20 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "翅",
         "pinyin": "chi4",
-        "definition": "(bound form) wing (of a bird or insect)"
+        "definition": "wing",
+        "definitionEs": "ala"
       },
       {
         "char": "鸥",
         "pinyin": "ou1",
-        "definition": "common gull"
+        "definition": "gull",
+        "definitionEs": "gaviota"
       }
     ]
   },
@@ -7857,17 +8703,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "鸥",
         "pinyin": "ou1",
-        "definition": "common gull"
+        "definition": "gull",
+        "definitionEs": "gaviota"
       }
     ]
   },
@@ -7885,22 +8734,26 @@ const pokemonData = [
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "丝",
         "pinyin": "si1",
-        "definition": "silk"
+        "definition": "silk",
+        "definitionEs": "seda"
       }
     ]
   },
@@ -7918,22 +8771,26 @@ const pokemonData = [
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "莉",
         "pinyin": "li4",
-        "definition": "used in the transliteration of female names"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "安",
         "pinyin": "an1",
-        "definition": "(bound form) calm"
+        "definition": "calm",
+        "definitionEs": "tranquilo"
       }
     ]
   },
@@ -7950,18 +8807,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "奈",
         "pinyin": "nai4",
-        "definition": "used for its phonetic value in writing foreign words"
+        "definition": "phonetic (part of)",
+        "definitionEs": "fonético (parte de)"
       },
       {
         "char": "朵",
         "pinyin": "duo3",
-        "definition": "variant of 朵[duo3]"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -7979,22 +8839,26 @@ const pokemonData = [
       {
         "char": "溜",
         "pinyin": "liu4",
-        "definition": "swift current"
+        "definition": "swift current",
+        "definitionEs": "corriente rápida"
       },
       {
         "char": "溜",
         "pinyin": "liu4",
-        "definition": "swift current"
+        "definition": "swift current",
+        "definitionEs": "corriente rápida"
       },
       {
         "char": "糖",
         "pinyin": "tang2",
-        "definition": "old variant of 糖[tang2]"
+        "definition": "sugar",
+        "definitionEs": "azúcar"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -8011,18 +8875,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "雨",
-        "pinyin": "yu4",
-        "definition": "(literary) to rain"
+        "pinyin": "yu3",
+        "definition": "rain",
+        "definitionEs": "lluvia"
       },
       {
         "char": "翅",
         "pinyin": "chi4",
-        "definition": "(bound form) wing (of a bird or insect)"
+        "definition": "wing",
+        "definitionEs": "ala"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -8040,17 +8907,20 @@ const pokemonData = [
       {
         "char": "蘑",
         "pinyin": "mo2",
-        "definition": "mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       },
       {
         "char": "蘑",
         "pinyin": "mo2",
-        "definition": "mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -8068,17 +8938,20 @@ const pokemonData = [
       {
         "char": "斗",
         "pinyin": "dou4",
-        "definition": "variant of 鬥|斗[dou4]"
+        "definition": "fight",
+        "definitionEs": "lucha"
       },
       {
         "char": "笠",
         "pinyin": "li4",
-        "definition": "bamboo rain hat"
+        "definition": "rain hat",
+        "definitionEs": "sombrero de lluvia"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -8096,17 +8969,20 @@ const pokemonData = [
       {
         "char": "懒",
         "pinyin": "lan3",
-        "definition": "lazy"
+        "definition": "lazy",
+        "definitionEs": "perezoso"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "獭",
         "pinyin": "ta3",
-        "definition": "otter"
+        "definition": "otter",
+        "definitionEs": "nutria"
       }
     ]
   },
@@ -8123,18 +8999,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "过",
-        "pinyin": "guo5",
-        "definition": "(experienced action marker)"
+        "pinyin": "guo",
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "动",
         "pinyin": "dong4",
-        "definition": "(of sth) to move"
+        "definition": "move",
+        "definitionEs": "mover"
       },
       {
         "char": "猿",
         "pinyin": "yuan2",
-        "definition": "variant of 猿[yuan2]"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -8152,17 +9031,20 @@ const pokemonData = [
       {
         "char": "请",
         "pinyin": "qing3",
-        "definition": "to ask"
+        "definition": "ask",
+        "definitionEs": "preguntar"
       },
       {
         "char": "假",
         "pinyin": "jia3",
-        "definition": "to borrow"
+        "definition": "borrow",
+        "definitionEs": "pedir prestado"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -8180,22 +9062,26 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "居",
         "pinyin": "ju1",
-        "definition": "to reside"
+        "definition": "reside",
+        "definitionEs": "residir"
       },
       {
         "char": "忍",
         "pinyin": "ren3",
-        "definition": "to bear"
+        "definition": "endure",
+        "definitionEs": "soportar"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       }
     ]
   },
@@ -8213,22 +9099,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "面",
         "pinyin": "mian4",
-        "definition": "flour"
+        "definition": "face",
+        "definitionEs": "cara"
       },
       {
         "char": "忍",
         "pinyin": "ren3",
-        "definition": "to bear"
+        "definition": "endure",
+        "definitionEs": "soportar"
       },
       {
         "char": "者",
         "pinyin": "zhe3",
-        "definition": "(after a verb or adjective) one who (is) ..."
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -8246,22 +9136,26 @@ const pokemonData = [
       {
         "char": "脱",
         "pinyin": "tuo1",
-        "definition": "to shed"
+        "definition": "shed",
+        "definitionEs": "mudar"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "忍",
         "pinyin": "ren3",
-        "definition": "to bear"
+        "definition": "endure",
+        "definitionEs": "soportar"
       },
       {
         "char": "者",
         "pinyin": "zhe3",
-        "definition": "(after a verb or adjective) one who (is) ..."
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -8279,17 +9173,20 @@ const pokemonData = [
       {
         "char": "咕",
         "pinyin": "gu1",
-        "definition": "(onom.) for the sound of a bird, an empty stomach etc"
+        "definition": "gurgle",
+        "definitionEs": "gorgoteo"
       },
       {
         "char": "妞",
         "pinyin": "niu1",
-        "definition": "girl"
+        "definition": "girl",
+        "definitionEs": "chica"
       },
       {
         "char": "妞",
         "pinyin": "niu1",
-        "definition": "girl"
+        "definition": "girl",
+        "definitionEs": "chica"
       }
     ]
   },
@@ -8307,17 +9204,20 @@ const pokemonData = [
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "弹",
         "pinyin": "dan4",
-        "definition": "crossball"
+        "definition": "bullet",
+        "definitionEs": "bala"
       }
     ]
   },
@@ -8335,17 +9235,20 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -8363,22 +9266,26 @@ const pokemonData = [
       {
         "char": "幕",
         "pinyin": "mu4",
-        "definition": "curtain"
+        "definition": "curtain",
+        "definitionEs": "telón"
       },
       {
         "char": "下",
         "pinyin": "xia4",
-        "definition": "down"
+        "definition": "down",
+        "definitionEs": "abajo"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       }
     ]
   },
@@ -8396,22 +9303,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "掌",
         "pinyin": "zhang3",
-        "definition": "palm of the hand"
+        "definition": "palm",
+        "definitionEs": "palma"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       }
     ]
   },
@@ -8429,17 +9340,20 @@ const pokemonData = [
       {
         "char": "露",
         "pinyin": "lu4",
-        "definition": "dew"
+        "definition": "dew",
+        "definitionEs": "rocío"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "丽",
         "pinyin": "li4",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       }
     ]
   },
@@ -8457,17 +9371,20 @@ const pokemonData = [
       {
         "char": "朝",
         "pinyin": "zhao1",
-        "definition": "morning"
+        "definition": "morning",
+        "definitionEs": "mañana"
       },
       {
         "char": "北",
         "pinyin": "bei3",
-        "definition": "north"
+        "definition": "north",
+        "definitionEs": "norte"
       },
       {
         "char": "鼻",
         "pinyin": "bi2",
-        "definition": "nose"
+        "definition": "nose",
+        "definitionEs": "nariz"
       }
     ]
   },
@@ -8485,17 +9402,20 @@ const pokemonData = [
       {
         "char": "向",
         "pinyin": "xiang4",
-        "definition": "direction"
+        "definition": "direction",
+        "definitionEs": "dirección"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -8513,17 +9433,20 @@ const pokemonData = [
       {
         "char": "优",
         "pinyin": "you1",
-        "definition": "excellent"
+        "definition": "excellent",
+        "definitionEs": "excelente"
       },
       {
         "char": "雅",
         "pinyin": "ya3",
-        "definition": "elegant"
+        "definition": "elegant",
+        "definitionEs": "elegante"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -8540,18 +9463,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "勾",
-        "pinyin": "gou4",
-        "definition": "used in 勾當|勾当[gou4 dang4]"
+        "pinyin": "gou1",
+        "definition": "hook",
+        "definitionEs": "gancho"
       },
       {
         "char": "魂",
         "pinyin": "hun2",
-        "definition": "soul"
+        "definition": "soul",
+        "definitionEs": "alma"
       },
       {
         "char": "眼",
         "pinyin": "yan3",
-        "definition": "a glance"
+        "definition": "eye",
+        "definitionEs": "ojo"
       }
     ]
   },
@@ -8569,17 +9495,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -8597,22 +9526,26 @@ const pokemonData = [
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -8630,17 +9563,20 @@ const pokemonData = [
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -8658,27 +9594,32 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       },
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -8696,17 +9637,20 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "那",
-        "pinyin": "nuo2",
-        "definition": "(archaic) many"
+        "pinyin": "na4",
+        "definition": "that",
+        "definitionEs": "ese"
       }
     ]
   },
@@ -8724,17 +9668,20 @@ const pokemonData = [
       {
         "char": "恰",
         "pinyin": "qia4",
-        "definition": "exactly"
+        "definition": "exactly",
+        "definitionEs": "exactamente"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -8752,17 +9699,20 @@ const pokemonData = [
       {
         "char": "落",
         "pinyin": "luo4",
-        "definition": "to fall or drop"
+        "definition": "to fall",
+        "definitionEs": "caer"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -8780,17 +9730,20 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -8808,22 +9761,26 @@ const pokemonData = [
       {
         "char": "正",
         "pinyin": "zheng4",
-        "definition": "straight"
+        "definition": "straight",
+        "definitionEs": "recto"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "拍",
         "pinyin": "pai1",
-        "definition": "to pat"
+        "definition": "to pat",
+        "definitionEs": "golpear"
       },
       {
         "char": "拍",
         "pinyin": "pai1",
-        "definition": "to pat"
+        "definition": "to pat",
+        "definitionEs": "golpear"
       }
     ]
   },
@@ -8841,22 +9798,26 @@ const pokemonData = [
       {
         "char": "负",
         "pinyin": "fu4",
-        "definition": "to bear"
+        "definition": "to bear",
+        "definitionEs": "soportar"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "拍",
         "pinyin": "pai1",
-        "definition": "to pat"
+        "definition": "to pat",
+        "definitionEs": "golpear"
       },
       {
         "char": "拍",
         "pinyin": "pai1",
-        "definition": "to pat"
+        "definition": "to pat",
+        "definitionEs": "golpear"
       }
     ]
   },
@@ -8874,17 +9835,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "萤",
         "pinyin": "ying2",
-        "definition": "firefly"
+        "definition": "firefly",
+        "definitionEs": "luciérnaga"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -8902,17 +9866,20 @@ const pokemonData = [
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "萤",
         "pinyin": "ying2",
-        "definition": "firefly"
+        "definition": "firefly",
+        "definitionEs": "luciérnaga"
       }
     ]
   },
@@ -8930,17 +9897,20 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "蔷",
         "pinyin": "qiang2",
-        "definition": "used in 薔薇|蔷薇[qiang2 wei1]"
+        "definition": "rose",
+        "definitionEs": "rosa"
       },
       {
         "char": "薇",
         "pinyin": "wei1",
-        "definition": "Osmunda regalis, a species of fern"
+        "definition": "fern",
+        "definitionEs": "helecho"
       }
     ]
   },
@@ -8958,17 +9928,20 @@ const pokemonData = [
       {
         "char": "溶",
         "pinyin": "rong2",
-        "definition": "to dissolve"
+        "definition": "to dissolve",
+        "definitionEs": "disolver"
       },
       {
         "char": "食",
         "pinyin": "shi2",
-        "definition": "to eat"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -8986,17 +9959,20 @@ const pokemonData = [
       {
         "char": "吞",
         "pinyin": "tun1",
-        "definition": "to swallow"
+        "definition": "to swallow",
+        "definitionEs": "tragar"
       },
       {
         "char": "食",
         "pinyin": "shi2",
-        "definition": "to eat"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -9014,17 +9990,20 @@ const pokemonData = [
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -9042,17 +10021,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "鲨",
         "pinyin": "sha1",
-        "definition": "shark"
+        "definition": "shark",
+        "definitionEs": "tiburón"
       }
     ]
   },
@@ -9070,17 +10052,20 @@ const pokemonData = [
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "鲸",
         "pinyin": "jing1",
-        "definition": "whale"
+        "definition": "whale",
+        "definitionEs": "ballena"
       }
     ]
   },
@@ -9098,17 +10083,20 @@ const pokemonData = [
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "鲸",
         "pinyin": "jing1",
-        "definition": "whale"
+        "definition": "whale",
+        "definitionEs": "ballena"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -9126,17 +10114,20 @@ const pokemonData = [
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "驼",
         "pinyin": "tuo2",
-        "definition": "variant of 駝|驼[tuo2]"
+        "definition": "camel",
+        "definitionEs": "camello"
       }
     ]
   },
@@ -9154,17 +10145,20 @@ const pokemonData = [
       {
         "char": "喷",
         "pinyin": "pen1",
-        "definition": "to puff"
+        "definition": "to spray",
+        "definitionEs": "rociar"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "驼",
         "pinyin": "tuo2",
-        "definition": "variant of 駝|驼[tuo2]"
+        "definition": "camel",
+        "definitionEs": "camello"
       }
     ]
   },
@@ -9182,17 +10176,20 @@ const pokemonData = [
       {
         "char": "煤",
         "pinyin": "mei2",
-        "definition": "coal"
+        "definition": "coal",
+        "definitionEs": "carbón"
       },
       {
         "char": "炭",
         "pinyin": "tan4",
-        "definition": "wood charcoal"
+        "definition": "charcoal",
+        "definitionEs": "carbón"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -9210,17 +10207,20 @@ const pokemonData = [
       {
         "char": "跳",
         "pinyin": "tiao4",
-        "definition": "to jump"
+        "definition": "to jump",
+        "definitionEs": "saltar"
       },
       {
         "char": "跳",
         "pinyin": "tiao4",
-        "definition": "to jump"
+        "definition": "to jump",
+        "definitionEs": "saltar"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -9238,17 +10238,20 @@ const pokemonData = [
       {
         "char": "噗",
         "pinyin": "pu1",
-        "definition": "(onom.) pop"
+        "definition": "pop",
+        "definitionEs": "puf"
       },
       {
         "char": "噗",
         "pinyin": "pu1",
-        "definition": "(onom.) pop"
+        "definition": "pop",
+        "definitionEs": "puf"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -9266,17 +10269,20 @@ const pokemonData = [
       {
         "char": "晃",
         "pinyin": "huang4",
-        "definition": "to sway"
+        "definition": "to sway",
+        "definitionEs": "balancearse"
       },
       {
         "char": "晃",
         "pinyin": "huang4",
-        "definition": "to sway"
+        "definition": "to sway",
+        "definitionEs": "balancearse"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       }
     ]
   },
@@ -9294,17 +10300,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "颚",
         "pinyin": "e4",
-        "definition": "jaw"
+        "definition": "jaw",
+        "definitionEs": "mandíbula"
       },
       {
         "char": "蚁",
         "pinyin": "yi3",
-        "definition": "ant"
+        "definition": "ant",
+        "definitionEs": "hormiga"
       }
     ]
   },
@@ -9322,27 +10331,32 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "幼",
         "pinyin": "you4",
-        "definition": "young"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -9359,23 +10373,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "漠",
         "pinyin": "mo4",
-        "definition": "desert"
+        "definition": "desert",
+        "definitionEs": "desierto"
       },
       {
         "char": "蜻",
         "pinyin": "qing1",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       },
       {
         "char": "蜓",
         "pinyin": "ting2",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       }
     ]
   },
@@ -9392,28 +10410,33 @@ const pokemonData = [
     "characters": [
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "掌",
         "pinyin": "zhang3",
-        "definition": "palm of the hand"
+        "definition": "palm",
+        "definitionEs": "palma"
       }
     ]
   },
@@ -9431,27 +10454,32 @@ const pokemonData = [
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "歌",
         "pinyin": "ge1",
-        "definition": "variant of 歌[ge1]"
+        "definition": "song",
+        "definitionEs": "canción"
       },
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "掌",
         "pinyin": "zhang3",
-        "definition": "palm of the hand"
+        "definition": "palm",
+        "definitionEs": "palma"
       }
     ]
   },
@@ -9469,17 +10497,20 @@ const pokemonData = [
       {
         "char": "青",
         "pinyin": "qing1",
-        "definition": "green"
+        "definition": "blue-green",
+        "definitionEs": "verde-azul"
       },
       {
         "char": "绵",
         "pinyin": "mian2",
-        "definition": "cotton"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -9497,22 +10528,26 @@ const pokemonData = [
       {
         "char": "七",
         "pinyin": "qi1",
-        "definition": "seven"
+        "definition": "seven",
+        "definitionEs": "siete"
       },
       {
         "char": "夕",
         "pinyin": "xi1",
-        "definition": "(bound form) sunset"
+        "definition": "dusk",
+        "definitionEs": "anochecer"
       },
       {
         "char": "青",
         "pinyin": "qing1",
-        "definition": "green"
+        "definition": "blue-green",
+        "definitionEs": "verde-azul"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -9530,17 +10565,20 @@ const pokemonData = [
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       },
       {
         "char": "斩",
         "pinyin": "zhan3",
-        "definition": "to behead (as form of capital punishment)"
+        "definition": "to chop",
+        "definitionEs": "cortar"
       }
     ]
   },
@@ -9558,17 +10596,20 @@ const pokemonData = [
       {
         "char": "饭",
         "pinyin": "fan4",
-        "definition": "cooked rice"
+        "definition": "rice",
+        "definitionEs": "arroz"
       },
       {
         "char": "匙",
-        "pinyin": "shi5",
-        "definition": "used in 鑰匙|钥匙[yao4 shi5]"
+        "pinyin": "chi2",
+        "definition": "spoon",
+        "definitionEs": "cuchara"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -9586,12 +10627,14 @@ const pokemonData = [
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       }
     ]
   },
@@ -9609,17 +10652,20 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "阳",
         "pinyin": "yang2",
-        "definition": "positive (electric.)"
+        "definition": "sun",
+        "definitionEs": "sol"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       }
     ]
   },
@@ -9637,17 +10683,20 @@ const pokemonData = [
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "鳅",
         "pinyin": "qiu1",
-        "definition": "loach (family Cobitidae)"
+        "definition": "loach",
+        "definitionEs": "locha"
       }
     ]
   },
@@ -9665,17 +10714,20 @@ const pokemonData = [
       {
         "char": "鲶",
         "pinyin": "nian2",
-        "definition": "sheatfish (Parasilurus asotus)"
+        "definition": "catfish",
+        "definitionEs": "siluro"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -9693,22 +10745,26 @@ const pokemonData = [
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "虾",
         "pinyin": "xia1",
-        "definition": "shrimp"
+        "definition": "shrimp",
+        "definitionEs": "camarón"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "兵",
         "pinyin": "bing1",
-        "definition": "soldiers"
+        "definition": "soldier",
+        "definitionEs": "soldado"
       }
     ]
   },
@@ -9726,22 +10782,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "螯",
         "pinyin": "ao2",
-        "definition": "chela"
+        "definition": "claw",
+        "definitionEs": "pinza"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "虾",
         "pinyin": "xia1",
-        "definition": "shrimp"
+        "definition": "shrimp",
+        "definitionEs": "camarón"
       }
     ]
   },
@@ -9759,17 +10819,20 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "秤",
         "pinyin": "cheng4",
-        "definition": "steelyard balance"
+        "definition": "steelyard",
+        "definitionEs": "romana"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       }
     ]
   },
@@ -9787,22 +10850,26 @@ const pokemonData = [
       {
         "char": "念",
         "pinyin": "nian4",
-        "definition": "to read"
+        "definition": "to read",
+        "definitionEs": "leer"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       }
     ]
   },
@@ -9820,22 +10887,26 @@ const pokemonData = [
       {
         "char": "触",
         "pinyin": "chu4",
-        "definition": "to touch"
+        "definition": "to touch",
+        "definitionEs": "tocar"
       },
       {
         "char": "手",
         "pinyin": "shou3",
-        "definition": "hand"
+        "definition": "hand",
+        "definitionEs": "mano"
       },
       {
         "char": "百",
         "pinyin": "bai3",
-        "definition": "hundred"
+        "definition": "hundred",
+        "definitionEs": "cien"
       },
       {
         "char": "合",
-        "pinyin": "ge3",
-        "definition": "100 ml"
+        "pinyin": "he2",
+        "definition": "to join",
+        "definitionEs": "unir"
       }
     ]
   },
@@ -9853,22 +10924,26 @@ const pokemonData = [
       {
         "char": "摇",
         "pinyin": "yao2",
-        "definition": "to shake"
+        "definition": "to shake",
+        "definitionEs": "sacudir"
       },
       {
         "char": "篮",
         "pinyin": "lan2",
-        "definition": "basket (receptacle)"
+        "definition": "basket",
+        "definitionEs": "cesta"
       },
       {
         "char": "百",
         "pinyin": "bai3",
-        "definition": "hundred"
+        "definition": "hundred",
+        "definitionEs": "cien"
       },
       {
         "char": "合",
-        "pinyin": "ge3",
-        "definition": "100 ml"
+        "pinyin": "he2",
+        "definition": "to join",
+        "definitionEs": "unir"
       }
     ]
   },
@@ -9886,22 +10961,26 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "羽",
         "pinyin": "yu3",
-        "definition": "feather"
+        "definition": "feather",
+        "definitionEs": "pluma"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -9919,22 +10998,26 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "盔",
         "pinyin": "kui1",
-        "definition": "helmet"
+        "definition": "helmet",
+        "definitionEs": "casco"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       }
     ]
   },
@@ -9952,17 +11035,20 @@ const pokemonData = [
       {
         "char": "丑",
         "pinyin": "chou3",
-        "definition": "shameful"
+        "definition": "ugly",
+        "definitionEs": "feo"
       },
       {
         "char": "丑",
         "pinyin": "chou3",
-        "definition": "shameful"
+        "definition": "ugly",
+        "definitionEs": "feo"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -9980,17 +11066,20 @@ const pokemonData = [
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -10008,22 +11097,26 @@ const pokemonData = [
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "浮",
         "pinyin": "fu2",
-        "definition": "to float"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "泡",
         "pinyin": "pao4",
-        "definition": "bubble"
+        "definition": "bubble",
+        "definitionEs": "burbuja"
       },
       {
         "char": "泡",
         "pinyin": "pao4",
-        "definition": "bubble"
+        "definition": "bubble",
+        "definitionEs": "burbuja"
       }
     ]
   },
@@ -10041,17 +11134,20 @@ const pokemonData = [
       {
         "char": "变",
         "pinyin": "bian4",
-        "definition": "to change"
+        "definition": "to change",
+        "definitionEs": "cambiar"
       },
       {
         "char": "隐",
-        "pinyin": "yin4",
-        "definition": "to lean upon"
+        "pinyin": "yin3",
+        "definition": "hidden",
+        "definitionEs": "oculto"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -10069,22 +11165,26 @@ const pokemonData = [
       {
         "char": "怨",
         "pinyin": "yuan4",
-        "definition": "to blame"
+        "definition": "to resent",
+        "definitionEs": "resentir"
       },
       {
         "char": "影",
         "pinyin": "ying3",
-        "definition": "picture"
+        "definition": "shadow",
+        "definitionEs": "sombra"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -10102,22 +11202,26 @@ const pokemonData = [
       {
         "char": "诅",
         "pinyin": "zu3",
-        "definition": "curse"
+        "definition": "curse",
+        "definitionEs": "maldición"
       },
       {
         "char": "咒",
         "pinyin": "zhou4",
-        "definition": "incantation"
+        "definition": "spell",
+        "definitionEs": "hechizo"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -10135,17 +11239,20 @@ const pokemonData = [
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "巡",
         "pinyin": "xun2",
-        "definition": "variant of 巡[xun2]"
+        "definition": "to patrol",
+        "definitionEs": "patrullar"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -10163,22 +11270,26 @@ const pokemonData = [
       {
         "char": "彷",
         "pinyin": "pang2",
-        "definition": "used in 彷徨[pang2 huang2] and 彷徉[pang2 yang2]"
+        "definition": "to wander",
+        "definitionEs": "vagar"
       },
       {
         "char": "徨",
         "pinyin": "huang2",
-        "definition": "used in 彷徨[pang2 huang2]"
+        "definition": "to wander",
+        "definitionEs": "vagar"
       },
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -10196,17 +11307,20 @@ const pokemonData = [
       {
         "char": "热",
         "pinyin": "re4",
-        "definition": "to warm up"
+        "definition": "hot",
+        "definitionEs": "caliente"
       },
       {
         "char": "带",
         "pinyin": "dai4",
-        "definition": "band"
+        "definition": "belt",
+        "definitionEs": "cinturón"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -10224,17 +11338,20 @@ const pokemonData = [
       {
         "char": "风",
         "pinyin": "feng1",
-        "definition": "wind"
+        "definition": "wind",
+        "definitionEs": "viento"
       },
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       },
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       }
     ]
   },
@@ -10252,22 +11369,26 @@ const pokemonData = [
       {
         "char": "阿",
         "pinyin": "a1",
-        "definition": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity"
+        "definition": "(prefix)",
+        "definitionEs": "(prefijo)"
       },
       {
         "char": "勃",
         "pinyin": "bo2",
-        "definition": "flourishing"
+        "definition": "vigorous",
+        "definitionEs": "vigoroso"
       },
       {
         "char": "梭",
         "pinyin": "suo1",
-        "definition": "(textiles) shuttle"
+        "definition": "shuttle",
+        "definitionEs": "lanzadera"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       }
     ]
   },
@@ -10285,17 +11406,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       },
       {
         "char": "然",
         "pinyin": "ran2",
-        "definition": "correct"
+        "definition": "naturally",
+        "definitionEs": "naturalmente"
       }
     ]
   },
@@ -10313,17 +11437,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -10341,17 +11468,20 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       },
       {
         "char": "护",
         "pinyin": "hu4",
-        "definition": "to protect"
+        "definition": "to protect",
+        "definitionEs": "proteger"
       }
     ]
   },
@@ -10369,17 +11499,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "豹",
         "pinyin": "bao4",
-        "definition": "leopard"
+        "definition": "leopard",
+        "definitionEs": "leopardo"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -10397,17 +11530,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -10425,22 +11561,26 @@ const pokemonData = [
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -10458,17 +11598,20 @@ const pokemonData = [
       {
         "char": "珍",
         "pinyin": "zhen1",
-        "definition": "variant of 珍[zhen1]"
+        "definition": "precious",
+        "definitionEs": "precioso"
       },
       {
         "char": "珠",
         "pinyin": "zhu1",
-        "definition": "bead"
+        "definition": "bead",
+        "definitionEs": "perla"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       }
     ]
   },
@@ -10486,17 +11629,20 @@ const pokemonData = [
       {
         "char": "猎",
         "pinyin": "lie4",
-        "definition": "hunting"
+        "definition": "hunt",
+        "definitionEs": "caza"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -10514,17 +11660,20 @@ const pokemonData = [
       {
         "char": "樱",
         "pinyin": "ying1",
-        "definition": "cherry"
+        "definition": "cherry",
+        "definitionEs": "cereza"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -10542,22 +11691,26 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "空",
-        "pinyin": "kong4",
-        "definition": "to empty"
+        "pinyin": "kong1",
+        "definition": "empty",
+        "definitionEs": "vacío"
       },
       {
         "char": "棘",
         "pinyin": "ji2",
-        "definition": "thorns"
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -10575,17 +11728,20 @@ const pokemonData = [
       {
         "char": "爱",
         "pinyin": "ai4",
-        "definition": "to love"
+        "definition": "to love",
+        "definitionEs": "amar"
       },
       {
         "char": "心",
         "pinyin": "xin1",
-        "definition": "heart"
+        "definition": "heart",
+        "definitionEs": "corazón"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -10603,17 +11759,20 @@ const pokemonData = [
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -10631,17 +11790,20 @@ const pokemonData = [
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -10659,17 +11821,20 @@ const pokemonData = [
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -10687,17 +11852,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "哑",
         "pinyin": "ya3",
-        "definition": "mute"
+        "definition": "mute",
+        "definitionEs": "mudo"
       },
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       }
     ]
   },
@@ -10715,17 +11883,20 @@ const pokemonData = [
       {
         "char": "金",
         "pinyin": "jin1",
-        "definition": "gold"
+        "definition": "gold",
+        "definitionEs": "oro"
       },
       {
         "char": "属",
-        "pinyin": "zhu3",
-        "definition": "to join together"
+        "pinyin": "shu3",
+        "definition": "to belong",
+        "definitionEs": "pertenecer"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -10743,17 +11914,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "金",
         "pinyin": "jin1",
-        "definition": "gold"
+        "definition": "gold",
+        "definitionEs": "oro"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -10771,22 +11945,26 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       }
     ]
   },
@@ -10804,22 +11982,26 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "艾",
-        "pinyin": "yi4",
-        "definition": "variant of 刈[yi4]"
+        "pinyin": "ai4",
+        "definition": "mugwort",
+        "definitionEs": "artemisa"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -10837,27 +12019,32 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       }
     ]
   },
@@ -10875,22 +12062,26 @@ const pokemonData = [
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -10908,22 +12099,26 @@ const pokemonData = [
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -10941,17 +12136,20 @@ const pokemonData = [
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       }
     ]
   },
@@ -10969,17 +12167,20 @@ const pokemonData = [
       {
         "char": "固",
         "pinyin": "gu4",
-        "definition": "hard"
+        "definition": "solid",
+        "definitionEs": "sólido"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       }
     ]
   },
@@ -10997,17 +12198,20 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "空",
-        "pinyin": "kong4",
-        "definition": "to empty"
+        "pinyin": "kong1",
+        "definition": "empty",
+        "definitionEs": "vacío"
       },
       {
         "char": "坐",
         "pinyin": "zuo4",
-        "definition": "to sit"
+        "definition": "to sit",
+        "definitionEs": "sentarse"
       }
     ]
   },
@@ -11025,17 +12229,20 @@ const pokemonData = [
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "祈",
         "pinyin": "qi2",
-        "definition": "to implore"
+        "definition": "to pray",
+        "definitionEs": "orar"
       }
     ]
   },
@@ -11053,27 +12260,32 @@ const pokemonData = [
       {
         "char": "代",
         "pinyin": "dai4",
-        "definition": "to be a substitute for"
+        "definition": "to substitute",
+        "definitionEs": "sustituir"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "希",
         "pinyin": "xi1",
-        "definition": "to hope"
+        "definition": "to hope",
+        "definitionEs": "esperar"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -11091,17 +12303,20 @@ const pokemonData = [
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       },
       {
         "char": "苗",
         "pinyin": "miao2",
-        "definition": "sprout"
+        "definition": "sprout",
+        "definitionEs": "brote"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -11119,17 +12334,20 @@ const pokemonData = [
       {
         "char": "树",
         "pinyin": "shu4",
-        "definition": "tree"
+        "definition": "tree",
+        "definitionEs": "árbol"
       },
       {
         "char": "林",
         "pinyin": "lin2",
-        "definition": "(bound form) woods"
+        "definition": "forest",
+        "definitionEs": "bosque"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -11147,17 +12365,20 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "台",
         "pinyin": "tai2",
-        "definition": "typhoon"
+        "definition": "platform",
+        "definitionEs": "plataforma"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -11175,22 +12396,26 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -11208,17 +12433,20 @@ const pokemonData = [
       {
         "char": "猛",
         "pinyin": "meng3",
-        "definition": "ferocious"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -11236,17 +12464,20 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -11264,17 +12495,20 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "加",
         "pinyin": "jia1",
-        "definition": "to add"
+        "definition": "add",
+        "definitionEs": "añadir"
       },
       {
         "char": "曼",
         "pinyin": "man4",
-        "definition": "handsome"
+        "definition": "elegant",
+        "definitionEs": "elegante"
       }
     ]
   },
@@ -11292,17 +12526,20 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "皇",
         "pinyin": "huang2",
-        "definition": "emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -11320,22 +12557,26 @@ const pokemonData = [
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "拿",
         "pinyin": "na2",
-        "definition": "to hold"
+        "definition": "to hold",
+        "definitionEs": "sostener"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       }
     ]
   },
@@ -11353,17 +12594,20 @@ const pokemonData = [
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -11381,17 +12625,20 @@ const pokemonData = [
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -11409,17 +12656,20 @@ const pokemonData = [
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       }
     ]
   },
@@ -11437,17 +12687,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "狸",
         "pinyin": "li2",
-        "definition": "variant of 狸[li2]"
+        "definition": "raccoon dog",
+        "definitionEs": "tanuki"
       }
     ]
   },
@@ -11465,17 +12718,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "狸",
         "pinyin": "li2",
-        "definition": "variant of 狸[li2]"
+        "definition": "raccoon dog",
+        "definitionEs": "tanuki"
       }
     ]
   },
@@ -11493,17 +12749,20 @@ const pokemonData = [
       {
         "char": "圆",
         "pinyin": "yuan2",
-        "definition": "circle"
+        "definition": "round",
+        "definitionEs": "redondo"
       },
       {
         "char": "法",
         "pinyin": "fa3",
-        "definition": "law"
+        "definition": "law",
+        "definitionEs": "ley"
       },
       {
         "char": "师",
         "pinyin": "shi1",
-        "definition": "teacher"
+        "definition": "teacher",
+        "definitionEs": "maestro"
       }
     ]
   },
@@ -11521,17 +12780,20 @@ const pokemonData = [
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "箱",
         "pinyin": "xiang1",
-        "definition": "box"
+        "definition": "box",
+        "definitionEs": "caja"
       },
       {
         "char": "蟀",
         "pinyin": "shuai4",
-        "definition": "used in 蟋蟀[xi1 shuai4]"
+        "definition": "cricket",
+        "definitionEs": "grillo"
       }
     ]
   },
@@ -11549,17 +12811,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -11577,17 +12842,20 @@ const pokemonData = [
       {
         "char": "勒",
         "pinyin": "lei1",
-        "definition": "to strap tightly"
+        "definition": "to strap",
+        "definitionEs": "ceñir"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -11605,17 +12873,20 @@ const pokemonData = [
       {
         "char": "伦",
         "pinyin": "lun2",
-        "definition": "human relationship"
+        "definition": "relationship",
+        "definitionEs": "relación"
       },
       {
         "char": "琴",
         "pinyin": "qin2",
-        "definition": "variant of 琴[qin2], guqin or zither"
+        "definition": "zither",
+        "definitionEs": "cítara"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -11633,17 +12904,20 @@ const pokemonData = [
       {
         "char": "含",
         "pinyin": "han2",
-        "definition": "to keep in the mouth"
+        "definition": "to contain",
+        "definitionEs": "contener"
       },
       {
         "char": "羞",
         "pinyin": "xiu1",
-        "definition": "shy"
+        "definition": "shy",
+        "definitionEs": "tímido"
       },
       {
         "char": "苞",
         "pinyin": "bao1",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "brote"
       }
     ]
   },
@@ -11661,22 +12935,26 @@ const pokemonData = [
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "丝",
         "pinyin": "si1",
-        "definition": "silk"
+        "definition": "silk",
+        "definitionEs": "seda"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "朵",
         "pinyin": "duo3",
-        "definition": "variant of 朵[duo3]"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -11694,17 +12972,20 @@ const pokemonData = [
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -11722,17 +13003,20 @@ const pokemonData = [
       {
         "char": "战",
         "pinyin": "zhan4",
-        "definition": "to fight"
+        "definition": "fight",
+        "definitionEs": "luchar"
       },
       {
         "char": "槌",
         "pinyin": "chui2",
-        "definition": "mallet"
+        "definition": "mallet",
+        "definitionEs": "mazo"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -11750,17 +13034,20 @@ const pokemonData = [
       {
         "char": "盾",
         "pinyin": "dun4",
-        "definition": "(currency) Vietnamese dong"
+        "definition": "shield",
+        "definitionEs": "escudo"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -11778,17 +13065,20 @@ const pokemonData = [
       {
         "char": "护",
         "pinyin": "hu4",
-        "definition": "to protect"
+        "definition": "to protect",
+        "definitionEs": "proteger"
       },
       {
         "char": "城",
         "pinyin": "cheng2",
-        "definition": "city walls"
+        "definition": "city",
+        "definitionEs": "ciudad"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -11806,17 +13096,20 @@ const pokemonData = [
       {
         "char": "结",
         "pinyin": "jie2",
-        "definition": "knot"
+        "definition": "knot",
+        "definitionEs": "nudo"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -11834,22 +13127,26 @@ const pokemonData = [
       {
         "char": "结",
         "pinyin": "jie2",
-        "definition": "knot"
+        "definition": "knot",
+        "definitionEs": "nudo"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       },
       {
         "char": "贵",
         "pinyin": "gui4",
-        "definition": "expensive"
+        "definition": "expensive",
+        "definitionEs": "caro"
       },
       {
         "char": "妇",
         "pinyin": "fu4",
-        "definition": "old variant of 婦|妇[fu4]"
+        "definition": "woman",
+        "definitionEs": "mujer"
       }
     ]
   },
@@ -11867,17 +13164,20 @@ const pokemonData = [
       {
         "char": "绅",
         "pinyin": "shen1",
-        "definition": "member of gentry"
+        "definition": "gentry",
+        "definitionEs": "hidalguía"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -11895,17 +13195,20 @@ const pokemonData = [
       {
         "char": "三",
         "pinyin": "san1",
-        "definition": "three"
+        "definition": "three",
+        "definitionEs": "tres"
       },
       {
         "char": "蜜",
         "pinyin": "mi4",
-        "definition": "honey"
+        "definition": "honey",
+        "definitionEs": "miel"
       },
       {
         "char": "蜂",
         "pinyin": "feng1",
-        "definition": "bee"
+        "definition": "bee",
+        "definitionEs": "abeja"
       }
     ]
   },
@@ -11923,17 +13226,20 @@ const pokemonData = [
       {
         "char": "蜂",
         "pinyin": "feng1",
-        "definition": "bee"
+        "definition": "bee",
+        "definitionEs": "abeja"
       },
       {
         "char": "女",
-        "pinyin": "ru3",
-        "definition": "old variant of 汝[ru3]"
+        "pinyin": "nv3",
+        "definition": "female",
+        "definitionEs": "mujer"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -11951,22 +13257,26 @@ const pokemonData = [
       {
         "char": "帕",
         "pinyin": "pa4",
-        "definition": "to wrap"
+        "definition": "to wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "兹",
         "pinyin": "zi1",
-        "definition": "(literary) this"
+        "definition": "this",
+        "definitionEs": "este"
       }
     ]
   },
@@ -11984,17 +13294,20 @@ const pokemonData = [
       {
         "char": "泳",
         "pinyin": "yong3",
-        "definition": "swimming"
+        "definition": "to swim",
+        "definitionEs": "nadar"
       },
       {
         "char": "圈",
         "pinyin": "quan1",
-        "definition": "circle"
+        "definition": "circle",
+        "definitionEs": "círculo"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       }
     ]
   },
@@ -12012,17 +13325,20 @@ const pokemonData = [
       {
         "char": "浮",
         "pinyin": "fu2",
-        "definition": "to float"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "潜",
         "pinyin": "qian2",
-        "definition": "hidden"
+        "definition": "hidden",
+        "definitionEs": "oculto"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       }
     ]
   },
@@ -12040,17 +13356,20 @@ const pokemonData = [
       {
         "char": "樱",
         "pinyin": "ying1",
-        "definition": "cherry"
+        "definition": "cherry",
+        "definitionEs": "cereza"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -12068,17 +13387,20 @@ const pokemonData = [
       {
         "char": "樱",
         "pinyin": "ying1",
-        "definition": "cherry"
+        "definition": "cherry",
+        "definitionEs": "cereza"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -12096,22 +13418,26 @@ const pokemonData = [
       {
         "char": "无",
         "pinyin": "wu2",
-        "definition": "not to have"
+        "definition": "without",
+        "definitionEs": "sin"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       }
     ]
   },
@@ -12129,17 +13455,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -12157,22 +13486,26 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "手",
         "pinyin": "shou3",
-        "definition": "hand"
+        "definition": "hand",
+        "definitionEs": "mano"
       }
     ]
   },
@@ -12190,17 +13523,20 @@ const pokemonData = [
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -12218,17 +13554,20 @@ const pokemonData = [
       {
         "char": "随",
         "pinyin": "sui2",
-        "definition": "to follow"
+        "definition": "to follow",
+        "definitionEs": "seguir"
       },
       {
         "char": "风",
         "pinyin": "feng1",
-        "definition": "wind"
+        "definition": "wind",
+        "definitionEs": "viento"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -12246,17 +13585,20 @@ const pokemonData = [
       {
         "char": "卷",
         "pinyin": "juan3",
-        "definition": "to roll up"
+        "definition": "to roll",
+        "definitionEs": "enrollar"
       },
       {
         "char": "卷",
         "pinyin": "juan3",
-        "definition": "to roll up"
+        "definition": "to roll",
+        "definitionEs": "enrollar"
       },
       {
         "char": "耳",
         "pinyin": "er3",
-        "definition": "ear"
+        "definition": "ear",
+        "definitionEs": "oreja"
       }
     ]
   },
@@ -12274,17 +13616,20 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "耳",
         "pinyin": "er3",
-        "definition": "ear"
+        "definition": "ear",
+        "definitionEs": "oreja"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       }
     ]
   },
@@ -12302,17 +13647,20 @@ const pokemonData = [
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       }
     ]
   },
@@ -12329,23 +13677,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "乌",
-        "pinyin": "wu4",
-        "definition": "used in 烏拉|乌拉[wu4 la5]"
+        "pinyin": "wu1",
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "鸦",
         "pinyin": "ya1",
-        "definition": "variant of 鴉|鸦[ya1]"
+        "definition": "crow",
+        "definitionEs": "cuervo"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       }
     ]
   },
@@ -12363,17 +13715,20 @@ const pokemonData = [
       {
         "char": "魅",
         "pinyin": "mei4",
-        "definition": "demon"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -12391,17 +13746,20 @@ const pokemonData = [
       {
         "char": "东",
         "pinyin": "dong1",
-        "definition": "east"
+        "definition": "east",
+        "definitionEs": "este"
       },
       {
         "char": "施",
         "pinyin": "shi1",
-        "definition": "(bound form) to put into effect (regulations etc)"
+        "definition": "to apply",
+        "definitionEs": "aplicar"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -12419,17 +13777,20 @@ const pokemonData = [
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       },
       {
         "char": "铛",
         "pinyin": "dang1",
-        "definition": "clank"
+        "definition": "clank",
+        "definitionEs": "tintineo"
       },
       {
         "char": "响",
         "pinyin": "xiang3",
-        "definition": "echo"
+        "definition": "sound",
+        "definitionEs": "sonido"
       }
     ]
   },
@@ -12447,17 +13808,20 @@ const pokemonData = [
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       },
       {
         "char": "噗",
         "pinyin": "pu1",
-        "definition": "(onom.) pop"
+        "definition": "pop",
+        "definitionEs": "puf"
       }
     ]
   },
@@ -12475,22 +13839,26 @@ const pokemonData = [
       {
         "char": "坦",
         "pinyin": "tan3",
-        "definition": "flat"
+        "definition": "flat",
+        "definitionEs": "plano"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "臭",
         "pinyin": "chou4",
-        "definition": "stench"
+        "definition": "stench",
+        "definitionEs": "hedor"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       }
     ]
   },
@@ -12508,17 +13876,20 @@ const pokemonData = [
       {
         "char": "铜",
         "pinyin": "tong2",
-        "definition": "copper (chemistry)"
+        "definition": "copper",
+        "definitionEs": "cobre"
       },
       {
         "char": "镜",
         "pinyin": "jing4",
-        "definition": "mirror"
+        "definition": "mirror",
+        "definitionEs": "espejo"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -12536,17 +13907,20 @@ const pokemonData = [
       {
         "char": "青",
         "pinyin": "qing1",
-        "definition": "green"
+        "definition": "blue-green",
+        "definitionEs": "verde-azul"
       },
       {
         "char": "铜",
         "pinyin": "tong2",
-        "definition": "copper (chemistry)"
+        "definition": "copper",
+        "definitionEs": "cobre"
       },
       {
         "char": "钟",
         "pinyin": "zhong1",
-        "definition": "amount of time"
+        "definition": "bell",
+        "definitionEs": "campana"
       }
     ]
   },
@@ -12564,17 +13938,20 @@ const pokemonData = [
       {
         "char": "盆",
         "pinyin": "pen2",
-        "definition": "basin"
+        "definition": "basin",
+        "definitionEs": "cuenco"
       },
       {
         "char": "才",
         "pinyin": "cai2",
-        "definition": "(variant of 才[cai2]) just now"
+        "definition": "talent",
+        "definitionEs": "talento"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -12592,17 +13969,20 @@ const pokemonData = [
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -12620,17 +14000,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "福",
         "pinyin": "fu2",
-        "definition": "good fortune"
+        "definition": "fortune",
+        "definitionEs": "fortuna"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       }
     ]
   },
@@ -12648,17 +14031,20 @@ const pokemonData = [
       {
         "char": "聒",
         "pinyin": "guo1",
-        "definition": "raucous"
+        "definition": "raucous",
+        "definitionEs": "ruidoso"
       },
       {
         "char": "噪",
         "pinyin": "zao4",
-        "definition": "variant of 噪[zao4]"
+        "definition": "noisy",
+        "definitionEs": "ruidoso"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -12676,17 +14062,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -12704,17 +14093,20 @@ const pokemonData = [
       {
         "char": "圆",
         "pinyin": "yuan2",
-        "definition": "circle"
+        "definition": "round",
+        "definitionEs": "redondo"
       },
       {
         "char": "陆",
         "pinyin": "lu4",
-        "definition": "(bound form) land (as opposed to the sea)"
+        "definition": "land",
+        "definitionEs": "tierra"
       },
       {
         "char": "鲨",
         "pinyin": "sha1",
-        "definition": "shark"
+        "definition": "shark",
+        "definitionEs": "tiburón"
       }
     ]
   },
@@ -12732,22 +14124,26 @@ const pokemonData = [
       {
         "char": "尖",
         "pinyin": "jian1",
-        "definition": "pointed"
+        "definition": "pointed",
+        "definitionEs": "puntiagudo"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "陆",
         "pinyin": "lu4",
-        "definition": "(bound form) land (as opposed to the sea)"
+        "definition": "land",
+        "definitionEs": "tierra"
       },
       {
         "char": "鲨",
         "pinyin": "sha1",
-        "definition": "shark"
+        "definition": "shark",
+        "definitionEs": "tiburón"
       }
     ]
   },
@@ -12765,22 +14161,26 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "咬",
         "pinyin": "yao3",
-        "definition": "variant of 咬[yao3]"
+        "definition": "to bite",
+        "definitionEs": "morder"
       },
       {
         "char": "陆",
         "pinyin": "lu4",
-        "definition": "(bound form) land (as opposed to the sea)"
+        "definition": "land",
+        "definitionEs": "tierra"
       },
       {
         "char": "鲨",
         "pinyin": "sha1",
-        "definition": "shark"
+        "definition": "shark",
+        "definitionEs": "tiburón"
       }
     ]
   },
@@ -12798,22 +14198,26 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -12831,17 +14235,20 @@ const pokemonData = [
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       }
     ]
   },
@@ -12859,22 +14266,26 @@ const pokemonData = [
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       }
     ]
   },
@@ -12891,18 +14302,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "河",
         "pinyin": "he2",
-        "definition": "(bound form) the Yellow River"
+        "definition": "river",
+        "definitionEs": "río"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -12920,17 +14334,20 @@ const pokemonData = [
       {
         "char": "河",
         "pinyin": "he2",
-        "definition": "(bound form) the Yellow River"
+        "definition": "river",
+        "definitionEs": "río"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -12948,17 +14365,20 @@ const pokemonData = [
       {
         "char": "钳",
         "pinyin": "qian2",
-        "definition": "pincers"
+        "definition": "pincers",
+        "definitionEs": "tenazas"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "蝎",
         "pinyin": "xie1",
-        "definition": "(bound form) scorpion"
+        "definition": "scorpion",
+        "definitionEs": "escorpión"
       }
     ]
   },
@@ -12976,17 +14396,20 @@ const pokemonData = [
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "蝎",
         "pinyin": "xie1",
-        "definition": "(bound form) scorpion"
+        "definition": "scorpion",
+        "definitionEs": "escorpión"
       }
     ]
   },
@@ -13004,17 +14427,20 @@ const pokemonData = [
       {
         "char": "不",
         "pinyin": "bu4",
-        "definition": "no"
+        "definition": "no",
+        "definitionEs": "no"
       },
       {
         "char": "良",
         "pinyin": "liang2",
-        "definition": "good"
+        "definition": "good",
+        "definitionEs": "bueno"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -13032,17 +14458,20 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "骷",
         "pinyin": "ku1",
-        "definition": "used in 骷髏|骷髅[ku1 lou2]"
+        "definition": "skull",
+        "definitionEs": "cráneo"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -13060,17 +14489,20 @@ const pokemonData = [
       {
         "char": "尖",
         "pinyin": "jian1",
-        "definition": "pointed"
+        "definition": "pointed",
+        "definitionEs": "puntiagudo"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "笼",
         "pinyin": "long3",
-        "definition": "to envelop"
+        "definition": "to envelop",
+        "definitionEs": "envolver"
       }
     ]
   },
@@ -13088,17 +14520,20 @@ const pokemonData = [
       {
         "char": "荧",
         "pinyin": "ying2",
-        "definition": "a glimmer"
+        "definition": "glimmer",
+        "definitionEs": "destello"
       },
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -13116,17 +14551,20 @@ const pokemonData = [
       {
         "char": "霓",
         "pinyin": "ni2",
-        "definition": "secondary rainbow"
+        "definition": "secondary rainbow",
+        "definitionEs": "arcoíris secundario"
       },
       {
         "char": "虹",
         "pinyin": "hong2",
-        "definition": "rainbow"
+        "definition": "rainbow",
+        "definitionEs": "arcoíris"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -13144,22 +14582,26 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -13177,17 +14619,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "笠",
         "pinyin": "li4",
-        "definition": "bamboo rain hat"
+        "definition": "rain hat",
+        "definitionEs": "sombrero de lluvia"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -13205,17 +14650,20 @@ const pokemonData = [
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -13233,17 +14681,20 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "狃",
         "pinyin": "niu3",
-        "definition": "accustomed to"
+        "definition": "accustomed",
+        "definitionEs": "acostumbrado"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -13261,22 +14712,26 @@ const pokemonData = [
       {
         "char": "自",
         "pinyin": "zi4",
-        "definition": "(bound form) self"
+        "definition": "self",
+        "definitionEs": "sí mismo"
       },
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "磁",
         "pinyin": "ci2",
-        "definition": "magnetic"
+        "definition": "magnetic",
+        "definitionEs": "magnético"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -13294,17 +14749,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "舌",
         "pinyin": "she2",
-        "definition": "tongue"
+        "definition": "tongue",
+        "definitionEs": "lengua"
       },
       {
         "char": "舔",
         "pinyin": "tian3",
-        "definition": "to lick"
+        "definition": "to lick",
+        "definitionEs": "lamer"
       }
     ]
   },
@@ -13322,22 +14780,26 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "狂",
         "pinyin": "kuang2",
-        "definition": "mad"
+        "definition": "mad",
+        "definitionEs": "loco"
       },
       {
         "char": "犀",
         "pinyin": "xi1",
-        "definition": "rhinoceros"
+        "definition": "rhinoceros",
+        "definitionEs": "rinoceronte"
       }
     ]
   },
@@ -13355,17 +14817,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "蔓",
         "pinyin": "man2",
-        "definition": "turnip"
+        "definition": "vine",
+        "definitionEs": "vid"
       },
       {
         "char": "藤",
         "pinyin": "teng2",
-        "definition": "rattan"
+        "definition": "rattan",
+        "definitionEs": "ratán"
       }
     ]
   },
@@ -13383,22 +14848,26 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "击",
         "pinyin": "ji1",
-        "definition": "to hit"
+        "definition": "to hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -13416,22 +14885,26 @@ const pokemonData = [
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -13449,22 +14922,26 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -13482,22 +14959,26 @@ const pokemonData = [
       {
         "char": "远",
         "pinyin": "yuan4",
-        "definition": "to distance oneself from (classical)"
+        "definition": "far",
+        "definitionEs": "lejos"
       },
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "蜓",
         "pinyin": "ting2",
-        "definition": "see 蜻蜓[qing1 ting2]"
+        "definition": "dragonfly",
+        "definitionEs": "libélula"
       }
     ]
   },
@@ -13515,17 +14996,20 @@ const pokemonData = [
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -13543,17 +15027,20 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -13571,17 +15058,20 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "蝎",
         "pinyin": "xie1",
-        "definition": "(bound form) scorpion"
+        "definition": "scorpion",
+        "definitionEs": "escorpión"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -13599,17 +15089,20 @@ const pokemonData = [
       {
         "char": "象",
         "pinyin": "xiang4",
-        "definition": "elephant"
+        "definition": "elephant",
+        "definitionEs": "elefante"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -13627,27 +15120,32 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "边",
         "pinyin": "bian1",
-        "definition": "side"
+        "definition": "side",
+        "definitionEs": "lado"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       },
       {
         "char": "乙",
-        "pinyin": "zhe2",
-        "definition": "turning stroke (in Chinese characters), aka 折[zhe2]"
+        "pinyin": "yi3",
+        "definition": "second",
+        "definitionEs": "segundo"
       },
       {
         "char": "型",
         "pinyin": "xing2",
-        "definition": "mold"
+        "definition": "type",
+        "definitionEs": "tipo"
       }
     ]
   },
@@ -13664,23 +15162,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "艾",
-        "pinyin": "yi4",
-        "definition": "variant of 刈[yi4]"
+        "pinyin": "ai4",
+        "definition": "mugwort",
+        "definitionEs": "artemisa"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "朵",
         "pinyin": "duo3",
-        "definition": "variant of 朵[duo3]"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -13698,22 +15200,26 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "朝",
         "pinyin": "zhao1",
-        "definition": "morning"
+        "definition": "morning",
+        "definitionEs": "mañana"
       },
       {
         "char": "北",
         "pinyin": "bei3",
-        "definition": "north"
+        "definition": "north",
+        "definitionEs": "norte"
       },
       {
         "char": "鼻",
         "pinyin": "bi2",
-        "definition": "nose"
+        "definition": "nose",
+        "definitionEs": "nariz"
       }
     ]
   },
@@ -13731,22 +15237,26 @@ const pokemonData = [
       {
         "char": "黑",
         "pinyin": "hei1",
-        "definition": "black"
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -13764,17 +15274,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       },
       {
         "char": "女",
-        "pinyin": "ru3",
-        "definition": "old variant of 汝[ru3]"
+        "pinyin": "nv3",
+        "definition": "female",
+        "definitionEs": "mujer"
       }
     ]
   },
@@ -13792,17 +15305,20 @@ const pokemonData = [
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "托",
         "pinyin": "tuo1",
-        "definition": "to trust"
+        "definition": "support",
+        "definitionEs": "apoyar"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -13820,17 +15336,20 @@ const pokemonData = [
       {
         "char": "由",
         "pinyin": "you2",
-        "definition": "to follow"
+        "definition": "from",
+        "definitionEs": "desde"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "希",
         "pinyin": "xi1",
-        "definition": "to hope"
+        "definition": "to hope",
+        "definitionEs": "esperar"
       }
     ]
   },
@@ -13847,23 +15366,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "艾",
-        "pinyin": "yi4",
-        "definition": "variant of 刈[yi4]"
+        "pinyin": "ai4",
+        "definition": "mugwort",
+        "definitionEs": "artemisa"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       }
     ]
   },
@@ -13881,22 +15404,26 @@ const pokemonData = [
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "诺",
         "pinyin": "nuo4",
-        "definition": "to consent"
+        "definition": "promise",
+        "definitionEs": "promesa"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -13914,22 +15441,26 @@ const pokemonData = [
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "卢",
         "pinyin": "lu2",
-        "definition": "(old) rice vessel"
+        "definition": "rice vessel",
+        "definitionEs": "vasija de arroz"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       }
     ]
   },
@@ -13947,22 +15478,26 @@ const pokemonData = [
       {
         "char": "帕",
         "pinyin": "pa4",
-        "definition": "to wrap"
+        "definition": "to wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -13980,22 +15515,26 @@ const pokemonData = [
       {
         "char": "席",
         "pinyin": "xi2",
-        "definition": "woven mat (variant of 席[xi2])"
+        "definition": "mat",
+        "definitionEs": "estera"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "蓝",
         "pinyin": "lan2",
-        "definition": "blue"
+        "definition": "blue",
+        "definitionEs": "azul"
       },
       {
         "char": "恩",
         "pinyin": "en1",
-        "definition": "favor"
+        "definition": "favor",
+        "definitionEs": "favor"
       }
     ]
   },
@@ -14013,27 +15552,32 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -14051,22 +15595,26 @@ const pokemonData = [
       {
         "char": "骑",
         "pinyin": "qi2",
-        "definition": "to sit astride"
+        "definition": "to ride",
+        "definitionEs": "montar"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "帝",
         "pinyin": "di4",
-        "definition": "(bound form) emperor"
+        "definition": "emperor",
+        "definitionEs": "emperador"
       },
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       }
     ]
   },
@@ -14084,27 +15632,32 @@ const pokemonData = [
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "色",
-        "pinyin": "shai3",
-        "definition": "(coll.) color"
+        "pinyin": "se4",
+        "definition": "color",
+        "definitionEs": "color"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -14122,17 +15675,20 @@ const pokemonData = [
       {
         "char": "霏",
         "pinyin": "fei1",
-        "definition": "fall of snow"
+        "definition": "fall of snow",
+        "definitionEs": "nevada"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       }
     ]
   },
@@ -14150,17 +15706,20 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       },
       {
         "char": "霏",
         "pinyin": "fei1",
-        "definition": "fall of snow"
+        "definition": "fall of snow",
+        "definitionEs": "nevada"
       }
     ]
   },
@@ -14178,22 +15737,26 @@ const pokemonData = [
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "莱",
         "pinyin": "lai2",
-        "definition": "name of weed plant (fat hen, goosefoot, pigweed etc)"
+        "definition": "weed",
+        "definitionEs": "maleza"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       }
     ]
   },
@@ -14211,12 +15774,14 @@ const pokemonData = [
       {
         "char": "谢",
         "pinyin": "xie4",
-        "definition": "to thank"
+        "definition": "to thank",
+        "definitionEs": "agradecer"
       },
       {
         "char": "米",
         "pinyin": "mi3",
-        "definition": "uncooked rice"
+        "definition": "rice",
+        "definitionEs": "arroz"
       }
     ]
   },
@@ -14234,22 +15799,26 @@ const pokemonData = [
       {
         "char": "阿",
         "pinyin": "a1",
-        "definition": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity"
+        "definition": "(prefix)",
+        "definitionEs": "(prefijo)"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "宙",
         "pinyin": "zhou4",
-        "definition": "eternity"
+        "definition": "eternity",
+        "definitionEs": "eternidad"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -14267,22 +15836,26 @@ const pokemonData = [
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "提",
         "pinyin": "ti2",
-        "definition": "to carry (hanging down from the hand)"
+        "definition": "to carry",
+        "definitionEs": "llevar"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -14300,17 +15873,20 @@ const pokemonData = [
       {
         "char": "藤",
         "pinyin": "teng2",
-        "definition": "rattan"
+        "definition": "rattan",
+        "definitionEs": "ratán"
       },
       {
         "char": "藤",
         "pinyin": "teng2",
-        "definition": "rattan"
+        "definition": "rattan",
+        "definitionEs": "ratán"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -14328,17 +15904,20 @@ const pokemonData = [
       {
         "char": "青",
         "pinyin": "qing1",
-        "definition": "green"
+        "definition": "blue-green",
+        "definitionEs": "verde-azul"
       },
       {
         "char": "藤",
         "pinyin": "teng2",
-        "definition": "rattan"
+        "definition": "rattan",
+        "definitionEs": "ratán"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -14356,17 +15935,20 @@ const pokemonData = [
       {
         "char": "君",
         "pinyin": "jun1",
-        "definition": "monarch"
+        "definition": "lord",
+        "definitionEs": "señor"
       },
       {
         "char": "主",
         "pinyin": "zhu3",
-        "definition": "owner"
+        "definition": "owner",
+        "definitionEs": "dueño"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -14384,17 +15966,20 @@ const pokemonData = [
       {
         "char": "暖",
         "pinyin": "nuan3",
-        "definition": "variant of 暖[nuan3], warm"
+        "definition": "warm",
+        "definitionEs": "cálido"
       },
       {
         "char": "暖",
         "pinyin": "nuan3",
-        "definition": "variant of 暖[nuan3], warm"
+        "definition": "warm",
+        "definitionEs": "cálido"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -14412,17 +15997,20 @@ const pokemonData = [
       {
         "char": "炒",
         "pinyin": "chao3",
-        "definition": "to sauté"
+        "definition": "to stir-fry",
+        "definitionEs": "saltear"
       },
       {
         "char": "炒",
         "pinyin": "chao3",
-        "definition": "to sauté"
+        "definition": "to stir-fry",
+        "definitionEs": "saltear"
       },
       {
         "char": "猪",
         "pinyin": "zhu1",
-        "definition": "hog"
+        "definition": "pig",
+        "definitionEs": "cerdo"
       }
     ]
   },
@@ -14440,17 +16028,20 @@ const pokemonData = [
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "武",
         "pinyin": "wu3",
-        "definition": "martial"
+        "definition": "martial",
+        "definitionEs": "marcial"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -14468,17 +16059,20 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "獭",
         "pinyin": "ta3",
-        "definition": "otter"
+        "definition": "otter",
+        "definitionEs": "nutria"
       }
     ]
   },
@@ -14496,17 +16090,20 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "刃",
         "pinyin": "ren4",
-        "definition": "edge of blade"
+        "definition": "edge",
+        "definitionEs": "filo"
       },
       {
         "char": "丸",
         "pinyin": "wan2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "bola"
       }
     ]
   },
@@ -14524,17 +16121,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       }
     ]
   },
@@ -14552,17 +16152,20 @@ const pokemonData = [
       {
         "char": "探",
         "pinyin": "tan4",
-        "definition": "to explore"
+        "definition": "explore",
+        "definitionEs": "explorar"
       },
       {
         "char": "探",
         "pinyin": "tan4",
-        "definition": "to explore"
+        "definition": "explore",
+        "definitionEs": "explorar"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -14580,17 +16183,20 @@ const pokemonData = [
       {
         "char": "步",
         "pinyin": "bu4",
-        "definition": "a step"
+        "definition": "step",
+        "definitionEs": "paso"
       },
       {
         "char": "哨",
         "pinyin": "shao4",
-        "definition": "a whistle"
+        "definition": "whistle",
+        "definitionEs": "silbato"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -14608,17 +16214,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "约",
         "pinyin": "yue1",
-        "definition": "to make an appointment"
+        "definition": "appoint",
+        "definitionEs": "concertar"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       }
     ]
   },
@@ -14636,17 +16245,20 @@ const pokemonData = [
       {
         "char": "哈",
         "pinyin": "ha1",
-        "definition": "(interj.) ha!"
+        "definition": "ha!",
+        "definitionEs": "¡ja!"
       },
       {
         "char": "约",
         "pinyin": "yue1",
-        "definition": "to make an appointment"
+        "definition": "appoint",
+        "definitionEs": "concertar"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       }
     ]
   },
@@ -14664,17 +16276,20 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -14692,17 +16307,20 @@ const pokemonData = [
       {
         "char": "扒",
         "pinyin": "pa2",
-        "definition": "to rake up"
+        "definition": "rake",
+        "definitionEs": "rastrillar"
       },
       {
         "char": "手",
         "pinyin": "shou3",
-        "definition": "hand"
+        "definition": "hand",
+        "definitionEs": "mano"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -14720,12 +16338,14 @@ const pokemonData = [
       {
         "char": "酷",
         "pinyin": "ku4",
-        "definition": "ruthless"
+        "definition": "ruthless",
+        "definitionEs": "despiadado"
       },
       {
         "char": "豹",
         "pinyin": "bao4",
-        "definition": "leopard"
+        "definition": "leopard",
+        "definitionEs": "leopardo"
       }
     ]
   },
@@ -14743,17 +16363,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "椰",
         "pinyin": "ye1",
-        "definition": "coconut palm"
+        "definition": "coconut",
+        "definitionEs": "coco"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -14771,17 +16394,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "椰",
         "pinyin": "ye1",
-        "definition": "coconut palm"
+        "definition": "coconut",
+        "definitionEs": "coco"
       },
       {
         "char": "猿",
         "pinyin": "yuan2",
-        "definition": "variant of 猿[yuan2]"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -14799,17 +16425,20 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -14827,17 +16456,20 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "猿",
         "pinyin": "yuan2",
-        "definition": "variant of 猿[yuan2]"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -14855,17 +16487,20 @@ const pokemonData = [
       {
         "char": "冷",
         "pinyin": "leng3",
-        "definition": "cold"
+        "definition": "cold",
+        "definitionEs": "frío"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -14883,17 +16518,20 @@ const pokemonData = [
       {
         "char": "冷",
         "pinyin": "leng3",
-        "definition": "cold"
+        "definition": "cold",
+        "definitionEs": "frío"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "猿",
         "pinyin": "yuan2",
-        "definition": "variant of 猿[yuan2]"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -14911,17 +16549,20 @@ const pokemonData = [
       {
         "char": "食",
         "pinyin": "shi2",
-        "definition": "to eat"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       }
     ]
   },
@@ -14939,17 +16580,20 @@ const pokemonData = [
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "梦",
         "pinyin": "meng4",
-        "definition": "dream"
+        "definition": "dream",
+        "definitionEs": "sueño"
       },
       {
         "char": "蚀",
         "pinyin": "shi2",
-        "definition": "to nibble away at sth"
+        "definition": "erode",
+        "definitionEs": "erosionar"
       }
     ]
   },
@@ -14967,17 +16611,20 @@ const pokemonData = [
       {
         "char": "豆",
         "pinyin": "dou4",
-        "definition": "legume"
+        "definition": "legume",
+        "definitionEs": "legumbre"
       },
       {
         "char": "豆",
         "pinyin": "dou4",
-        "definition": "legume"
+        "definition": "legume",
+        "definitionEs": "legumbre"
       },
       {
         "char": "鸽",
         "pinyin": "ge1",
-        "definition": "pigeon"
+        "definition": "pigeon",
+        "definitionEs": "paloma"
       }
     ]
   },
@@ -14995,17 +16642,20 @@ const pokemonData = [
       {
         "char": "咕",
         "pinyin": "gu1",
-        "definition": "(onom.) for the sound of a bird, an empty stomach etc"
+        "definition": "gurgle",
+        "definitionEs": "gorgoteo"
       },
       {
         "char": "咕",
         "pinyin": "gu1",
-        "definition": "(onom.) for the sound of a bird, an empty stomach etc"
+        "definition": "gurgle",
+        "definitionEs": "gorgoteo"
       },
       {
         "char": "鸽",
         "pinyin": "ge1",
-        "definition": "pigeon"
+        "definition": "pigeon",
+        "definitionEs": "paloma"
       }
     ]
   },
@@ -15023,22 +16673,26 @@ const pokemonData = [
       {
         "char": "高",
         "pinyin": "gao1",
-        "definition": "high"
+        "definition": "high",
+        "definitionEs": "alto"
       },
       {
         "char": "傲",
         "pinyin": "ao4",
-        "definition": "proud"
+        "definition": "proud",
+        "definitionEs": "orgulloso"
       },
       {
         "char": "雉",
         "pinyin": "zhi4",
-        "definition": "ringed pheasant"
+        "definition": "pheasant",
+        "definitionEs": "faisán"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       }
     ]
   },
@@ -15056,17 +16710,20 @@ const pokemonData = [
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -15084,22 +16741,26 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -15116,18 +16777,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "丸",
         "pinyin": "wan2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "bola"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -15144,18 +16808,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "幔",
         "pinyin": "man4",
-        "definition": "curtain"
+        "definition": "curtain",
+        "definitionEs": "cortina"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       }
     ]
   },
@@ -15173,17 +16840,20 @@ const pokemonData = [
       {
         "char": "庞",
         "pinyin": "pang2",
-        "definition": "(bound form) huge"
+        "definition": "huge",
+        "definitionEs": "enorme"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -15201,22 +16871,26 @@ const pokemonData = [
       {
         "char": "滚",
         "pinyin": "gun3",
-        "definition": "to boil"
+        "definition": "boil",
+        "definitionEs": "hervir"
       },
       {
         "char": "滚",
         "pinyin": "gun3",
-        "definition": "to boil"
+        "definition": "boil",
+        "definitionEs": "hervir"
       },
       {
         "char": "蝙",
         "pinyin": "bian1",
-        "definition": "used in 蝙蝠[bian1 fu2]"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ]
   },
@@ -15234,17 +16908,20 @@ const pokemonData = [
       {
         "char": "心",
         "pinyin": "xin1",
-        "definition": "heart"
+        "definition": "heart",
+        "definitionEs": "corazón"
       },
       {
         "char": "蝙",
         "pinyin": "bian1",
-        "definition": "used in 蝙蝠[bian1 fu2]"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ]
   },
@@ -15262,22 +16939,26 @@ const pokemonData = [
       {
         "char": "螺",
         "pinyin": "luo2",
-        "definition": "spiral shell"
+        "definition": "spiral",
+        "definitionEs": "espiral"
       },
       {
         "char": "钉",
         "pinyin": "ding4",
-        "definition": "to join things together by fixing them in place at one or more points"
+        "definition": "nail",
+        "definitionEs": "clavar"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -15295,22 +16976,26 @@ const pokemonData = [
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -15328,27 +17013,32 @@ const pokemonData = [
       {
         "char": "差",
         "pinyin": "ci1",
-        "definition": "used in 參差|参差[cen1 ci1]"
+        "definition": "uneven",
+        "definitionEs": "desigual"
       },
       {
         "char": "不",
         "pinyin": "bu4",
-        "definition": "no"
+        "definition": "no",
+        "definitionEs": "no"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -15366,22 +17056,26 @@ const pokemonData = [
       {
         "char": "搬",
         "pinyin": "ban1",
-        "definition": "to move (i.e. relocate oneself)"
+        "definition": "move",
+        "definitionEs": "mover"
       },
       {
         "char": "运",
         "pinyin": "yun4",
-        "definition": "to move"
+        "definition": "move",
+        "definitionEs": "mover"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "匠",
         "pinyin": "jiang4",
-        "definition": "craftsman"
+        "definition": "craftsman",
+        "definitionEs": "artesano"
       }
     ]
   },
@@ -15399,22 +17093,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "骨",
         "pinyin": "gu3",
-        "definition": "bone"
+        "definition": "bone",
+        "definitionEs": "hueso"
       },
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -15432,22 +17130,26 @@ const pokemonData = [
       {
         "char": "修",
         "pinyin": "xiu1",
-        "definition": "variant of 修[xiu1]"
+        "definition": "repair",
+        "definitionEs": "reparar"
       },
       {
         "char": "建",
         "pinyin": "jian4",
-        "definition": "to establish"
+        "definition": "build",
+        "definitionEs": "construir"
       },
       {
         "char": "老",
         "pinyin": "lao3",
-        "definition": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity"
+        "definition": "old",
+        "definitionEs": "viejo"
       },
       {
         "char": "匠",
         "pinyin": "jiang4",
-        "definition": "craftsman"
+        "definition": "craftsman",
+        "definitionEs": "artesano"
       }
     ]
   },
@@ -15465,17 +17167,20 @@ const pokemonData = [
       {
         "char": "圆",
         "pinyin": "yuan2",
-        "definition": "circle"
+        "definition": "round",
+        "definitionEs": "redondo"
       },
       {
         "char": "蝌",
         "pinyin": "ke1",
-        "definition": "tadpole"
+        "definition": "tadpole",
+        "definitionEs": "renacuajo"
       },
       {
         "char": "蚪",
         "pinyin": "dou3",
-        "definition": "tadpole"
+        "definition": "tadpole",
+        "definitionEs": "renacuajo"
       }
     ]
   },
@@ -15493,17 +17198,20 @@ const pokemonData = [
       {
         "char": "蓝",
         "pinyin": "lan2",
-        "definition": "blue"
+        "definition": "blue",
+        "definitionEs": "azul"
       },
       {
         "char": "蟾",
         "pinyin": "chan2",
-        "definition": "toad (\"chán\" represents the sound of its croaking)"
+        "definition": "toad",
+        "definitionEs": "sapo"
       },
       {
         "char": "蜍",
         "pinyin": "chu2",
-        "definition": "Bufo vulgaris"
+        "definition": "toad",
+        "definitionEs": "sapo"
       }
     ]
   },
@@ -15521,17 +17229,20 @@ const pokemonData = [
       {
         "char": "蟾",
         "pinyin": "chan2",
-        "definition": "toad (\"chán\" represents the sound of its croaking)"
+        "definition": "toad",
+        "definitionEs": "sapo"
       },
       {
         "char": "蜍",
         "pinyin": "chu2",
-        "definition": "Bufo vulgaris"
+        "definition": "toad",
+        "definitionEs": "sapo"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -15549,17 +17260,20 @@ const pokemonData = [
       {
         "char": "投",
         "pinyin": "tou2",
-        "definition": "to throw (sth in a specific direction: ball, javelin, grenade etc)"
+        "definition": "throw",
+        "definitionEs": "lanzar"
       },
       {
         "char": "摔",
         "pinyin": "shuai1",
-        "definition": "to throw down"
+        "definition": "fall",
+        "definitionEs": "caer"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       }
     ]
   },
@@ -15577,17 +17291,20 @@ const pokemonData = [
       {
         "char": "打",
         "pinyin": "da3",
-        "definition": "to hit"
+        "definition": "hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "击",
         "pinyin": "ji1",
-        "definition": "to hit"
+        "definition": "to hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       }
     ]
   },
@@ -15605,17 +17322,20 @@ const pokemonData = [
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "包",
         "pinyin": "bao1",
-        "definition": "to cover"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       }
     ]
   },
@@ -15633,17 +17353,20 @@ const pokemonData = [
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "包",
         "pinyin": "bao1",
-        "definition": "to cover"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "茧",
         "pinyin": "jian3",
-        "definition": "variant of 繭|茧[jian3]"
+        "definition": "cocoon",
+        "definitionEs": "capullo"
       }
     ]
   },
@@ -15661,17 +17384,20 @@ const pokemonData = [
       {
         "char": "保",
         "pinyin": "bao3",
-        "definition": "to defend"
+        "definition": "protect",
+        "definitionEs": "proteger"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -15689,22 +17415,26 @@ const pokemonData = [
       {
         "char": "百",
         "pinyin": "bai3",
-        "definition": "hundred"
+        "definition": "hundred",
+        "definitionEs": "cien"
       },
       {
         "char": "足",
         "pinyin": "zu2",
-        "definition": "(bound form) foot"
+        "definition": "foot",
+        "definitionEs": "pie"
       },
       {
         "char": "蜈",
         "pinyin": "wu2",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       },
       {
         "char": "蚣",
         "pinyin": "gong1",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       }
     ]
   },
@@ -15722,17 +17452,20 @@ const pokemonData = [
       {
         "char": "车",
         "pinyin": "ju1",
-        "definition": "war chariot (archaic)"
+        "definition": "chariot",
+        "definitionEs": "carro"
       },
       {
         "char": "轮",
         "pinyin": "lun2",
-        "definition": "wheel"
+        "definition": "wheel",
+        "definitionEs": "rueda"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -15750,17 +17483,20 @@ const pokemonData = [
       {
         "char": "蜈",
         "pinyin": "wu2",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       },
       {
         "char": "蚣",
         "pinyin": "gong1",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -15778,17 +17514,20 @@ const pokemonData = [
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "棉",
         "pinyin": "mian2",
-        "definition": "generic term for cotton or kapok"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -15806,17 +17545,20 @@ const pokemonData = [
       {
         "char": "风",
         "pinyin": "feng1",
-        "definition": "wind"
+        "definition": "wind",
+        "definitionEs": "viento"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       },
       {
         "char": "精",
         "pinyin": "jing1",
-        "definition": "essence"
+        "definition": "essence",
+        "definitionEs": "esencia"
       }
     ]
   },
@@ -15834,27 +17576,32 @@ const pokemonData = [
       {
         "char": "百",
         "pinyin": "bai3",
-        "definition": "hundred"
+        "definition": "hundred",
+        "definitionEs": "cien"
       },
       {
         "char": "合",
-        "pinyin": "ge3",
-        "definition": "100 ml"
+        "pinyin": "he2",
+        "definition": "to join",
+        "definitionEs": "unir"
       },
       {
         "char": "根",
         "pinyin": "gen1",
-        "definition": "root"
+        "definition": "root",
+        "definitionEs": "raíz"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -15872,22 +17619,26 @@ const pokemonData = [
       {
         "char": "裙",
         "pinyin": "qun2",
-        "definition": "old variant of 裙[qun2]"
+        "definition": "skirt",
+        "definitionEs": "falda"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "姐",
         "pinyin": "jie3",
-        "definition": "older sister"
+        "definition": "older sister",
+        "definitionEs": "hermana mayor"
       }
     ]
   },
@@ -15905,22 +17656,26 @@ const pokemonData = [
       {
         "char": "野",
         "pinyin": "ye3",
-        "definition": "field"
+        "definition": "field",
+        "definitionEs": "campo"
       },
       {
         "char": "蛮",
         "pinyin": "man2",
-        "definition": "barbarian"
+        "definition": "barbarian",
+        "definitionEs": "bárbaro"
       },
       {
         "char": "鲈",
         "pinyin": "lu2",
-        "definition": "common perch"
+        "definition": "perch",
+        "definitionEs": "perca"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -15938,17 +17693,20 @@ const pokemonData = [
       {
         "char": "黑",
         "pinyin": "hei1",
-        "definition": "black"
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "眼",
         "pinyin": "yan3",
-        "definition": "a glance"
+        "definition": "eye",
+        "definitionEs": "ojo"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -15966,17 +17724,20 @@ const pokemonData = [
       {
         "char": "混",
         "pinyin": "hun4",
-        "definition": "to mix"
+        "definition": "mix",
+        "definitionEs": "mezclar"
       },
       {
         "char": "混",
         "pinyin": "hun4",
-        "definition": "to mix"
+        "definition": "mix",
+        "definitionEs": "mezclar"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -15994,17 +17755,20 @@ const pokemonData = [
       {
         "char": "流",
         "pinyin": "liu2",
-        "definition": "to flow"
+        "definition": "flow",
+        "definitionEs": "fluir"
       },
       {
         "char": "氓",
         "pinyin": "meng2",
-        "definition": "(literary) common people"
+        "definition": "people",
+        "definitionEs": "gente"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -16022,27 +17786,32 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "红",
         "pinyin": "hong2",
-        "definition": "red"
+        "definition": "red",
+        "definitionEs": "rojo"
       },
       {
         "char": "不",
         "pinyin": "bu4",
-        "definition": "no"
+        "definition": "no",
+        "definitionEs": "no"
       },
       {
         "char": "倒",
         "pinyin": "dao4",
-        "definition": "to invert"
+        "definition": "invert",
+        "definitionEs": "invertir"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       }
     ]
   },
@@ -16060,22 +17829,26 @@ const pokemonData = [
       {
         "char": "达",
         "pinyin": "da2",
-        "definition": "to attain"
+        "definition": "to reach",
+        "definitionEs": "alcanzar"
       },
       {
         "char": "摩",
         "pinyin": "mo2",
-        "definition": "to rub"
+        "definition": "to rub",
+        "definitionEs": "frotar"
       },
       {
         "char": "狒",
         "pinyin": "fei4",
-        "definition": "hamadryad baboon"
+        "definition": "baboon",
+        "definitionEs": "babuino"
       },
       {
         "char": "狒",
         "pinyin": "fei4",
-        "definition": "hamadryad baboon"
+        "definition": "baboon",
+        "definitionEs": "babuino"
       }
     ]
   },
@@ -16092,28 +17865,33 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       },
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "掌",
         "pinyin": "zhang3",
-        "definition": "palm of the hand"
+        "definition": "palm",
+        "definitionEs": "palma"
       }
     ]
   },
@@ -16130,18 +17908,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "居",
         "pinyin": "ju1",
-        "definition": "to reside"
+        "definition": "reside",
+        "definitionEs": "residir"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ]
   },
@@ -16159,22 +17940,26 @@ const pokemonData = [
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "殿",
         "pinyin": "dian4",
-        "definition": "palace hall"
+        "definition": "palace",
+        "definitionEs": "palacio"
       },
       {
         "char": "居",
         "pinyin": "ju1",
-        "definition": "to reside"
+        "definition": "reside",
+        "definitionEs": "residir"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ]
   },
@@ -16192,22 +17977,26 @@ const pokemonData = [
       {
         "char": "滑",
         "pinyin": "hua2",
-        "definition": "to slip"
+        "definition": "slip",
+        "definitionEs": "resbalar"
       },
       {
         "char": "滑",
         "pinyin": "hua2",
-        "definition": "to slip"
+        "definition": "slip",
+        "definitionEs": "resbalar"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -16225,22 +18014,26 @@ const pokemonData = [
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "巾",
         "pinyin": "jin1",
-        "definition": "towel"
+        "definition": "towel",
+        "definitionEs": "toalla"
       },
       {
         "char": "混",
         "pinyin": "hun4",
-        "definition": "to mix"
+        "definition": "mix",
+        "definitionEs": "mezclar"
       },
       {
         "char": "混",
         "pinyin": "hun4",
-        "definition": "to mix"
+        "definition": "mix",
+        "definitionEs": "mezclar"
       }
     ]
   },
@@ -16258,17 +18051,20 @@ const pokemonData = [
       {
         "char": "象",
         "pinyin": "xiang4",
-        "definition": "elephant"
+        "definition": "elephant",
+        "definitionEs": "elefante"
       },
       {
         "char": "征",
         "pinyin": "zheng1",
-        "definition": "to invite"
+        "definition": "expedition",
+        "definitionEs": "expedición"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -16286,22 +18082,26 @@ const pokemonData = [
       {
         "char": "哭",
         "pinyin": "ku1",
-        "definition": "to cry"
+        "definition": "cry",
+        "definitionEs": "llorar"
       },
       {
         "char": "哭",
         "pinyin": "ku1",
-        "definition": "to cry"
+        "definition": "cry",
+        "definitionEs": "llorar"
       },
       {
         "char": "面",
         "pinyin": "mian4",
-        "definition": "flour"
+        "definition": "face",
+        "definitionEs": "cara"
       },
       {
         "char": "具",
         "pinyin": "ju4",
-        "definition": "tool"
+        "definition": "tool",
+        "definitionEs": "herramienta"
       }
     ]
   },
@@ -16319,17 +18119,20 @@ const pokemonData = [
       {
         "char": "迭",
         "pinyin": "die2",
-        "definition": "alternately"
+        "definition": "alternate",
+        "definitionEs": "alternar"
       },
       {
         "char": "失",
         "pinyin": "shi1",
-        "definition": "to lose"
+        "definition": "lose",
+        "definitionEs": "perder"
       },
       {
         "char": "棺",
         "pinyin": "guan1",
-        "definition": "coffin"
+        "definition": "coffin",
+        "definitionEs": "ataúd"
       }
     ]
   },
@@ -16347,22 +18150,26 @@ const pokemonData = [
       {
         "char": "原",
         "pinyin": "yuan2",
-        "definition": "former"
+        "definition": "original",
+        "definitionEs": "original"
       },
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -16380,22 +18187,26 @@ const pokemonData = [
       {
         "char": "肋",
         "pinyin": "lei4",
-        "definition": "(bound form) rib"
+        "definition": "rib",
+        "definitionEs": "costilla"
       },
       {
         "char": "骨",
         "pinyin": "gu3",
-        "definition": "bone"
+        "definition": "bone",
+        "definitionEs": "hueso"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -16413,22 +18224,26 @@ const pokemonData = [
       {
         "char": "始",
         "pinyin": "shi3",
-        "definition": "to begin"
+        "definition": "begin",
+        "definitionEs": "empezar"
       },
       {
         "char": "祖",
         "pinyin": "zu3",
-        "definition": "ancestor"
+        "definition": "ancestor",
+        "definitionEs": "ancestro"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -16446,22 +18261,26 @@ const pokemonData = [
       {
         "char": "始",
         "pinyin": "shi3",
-        "definition": "to begin"
+        "definition": "begin",
+        "definitionEs": "empezar"
       },
       {
         "char": "祖",
         "pinyin": "zu3",
-        "definition": "ancestor"
+        "definition": "ancestor",
+        "definitionEs": "ancestro"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -16479,17 +18298,20 @@ const pokemonData = [
       {
         "char": "破",
         "pinyin": "po4",
-        "definition": "broken"
+        "definition": "broken",
+        "definitionEs": "roto"
       },
       {
         "char": "破",
         "pinyin": "po4",
-        "definition": "broken"
+        "definition": "broken",
+        "definitionEs": "roto"
       },
       {
         "char": "袋",
         "pinyin": "dai4",
-        "definition": "pouch"
+        "definition": "pouch",
+        "definitionEs": "bolsa"
       }
     ]
   },
@@ -16507,17 +18329,20 @@ const pokemonData = [
       {
         "char": "灰",
         "pinyin": "hui1",
-        "definition": "ash"
+        "definition": "ash",
+        "definitionEs": "ceniza"
       },
       {
         "char": "尘",
         "pinyin": "chen2",
-        "definition": "dust"
+        "definition": "dust",
+        "definitionEs": "polvo"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       }
     ]
   },
@@ -16535,17 +18360,20 @@ const pokemonData = [
       {
         "char": "索",
         "pinyin": "suo3",
-        "definition": "to search"
+        "definition": "search",
+        "definitionEs": "buscar"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -16563,22 +18391,26 @@ const pokemonData = [
       {
         "char": "索",
         "pinyin": "suo3",
-        "definition": "to search"
+        "definition": "search",
+        "definitionEs": "buscar"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       }
     ]
   },
@@ -16596,22 +18428,26 @@ const pokemonData = [
       {
         "char": "泡",
         "pinyin": "pao4",
-        "definition": "bubble"
+        "definition": "bubble",
+        "definitionEs": "burbuja"
       },
       {
         "char": "沫",
         "pinyin": "mo4",
-        "definition": "foam"
+        "definition": "foam",
+        "definitionEs": "espuma"
       },
       {
         "char": "栗",
         "pinyin": "li4",
-        "definition": "chestnut"
+        "definition": "chestnut",
+        "definitionEs": "castaña"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -16629,22 +18465,26 @@ const pokemonData = [
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "诺",
         "pinyin": "nuo4",
-        "definition": "to consent"
+        "definition": "promise",
+        "definitionEs": "promesa"
       },
       {
         "char": "栗",
         "pinyin": "li4",
-        "definition": "chestnut"
+        "definition": "chestnut",
+        "definitionEs": "castaña"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -16662,22 +18502,26 @@ const pokemonData = [
       {
         "char": "哥",
         "pinyin": "ge1",
-        "definition": "elder brother"
+        "definition": "brother",
+        "definitionEs": "hermano"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -16695,22 +18539,26 @@ const pokemonData = [
       {
         "char": "哥",
         "pinyin": "ge1",
-        "definition": "elder brother"
+        "definition": "brother",
+        "definitionEs": "hermano"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -16728,22 +18576,26 @@ const pokemonData = [
       {
         "char": "哥",
         "pinyin": "ge1",
-        "definition": "elder brother"
+        "definition": "brother",
+        "definitionEs": "hermano"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "姐",
         "pinyin": "jie3",
-        "definition": "older sister"
+        "definition": "older sister",
+        "definitionEs": "hermana mayor"
       }
     ]
   },
@@ -16761,27 +18613,32 @@ const pokemonData = [
       {
         "char": "单",
         "pinyin": "dan1",
-        "definition": "bill"
+        "definition": "single",
+        "definitionEs": "único"
       },
       {
         "char": "卵",
         "pinyin": "luan3",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       },
       {
         "char": "细",
         "pinyin": "xi4",
-        "definition": "thin or slender"
+        "definition": "thin",
+        "definitionEs": "delgado"
       },
       {
         "char": "胞",
         "pinyin": "bao1",
-        "definition": "placenta"
+        "definition": "cell",
+        "definitionEs": "célula"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -16799,27 +18656,32 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "卵",
         "pinyin": "luan3",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       },
       {
         "char": "细",
         "pinyin": "xi4",
-        "definition": "thin or slender"
+        "definition": "thin",
+        "definitionEs": "delgado"
       },
       {
         "char": "胞",
         "pinyin": "bao1",
-        "definition": "placenta"
+        "definition": "cell",
+        "definitionEs": "célula"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -16837,27 +18699,32 @@ const pokemonData = [
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "造",
         "pinyin": "zao4",
-        "definition": "to make"
+        "definition": "make",
+        "definitionEs": "hacer"
       },
       {
         "char": "细",
         "pinyin": "xi4",
-        "definition": "thin or slender"
+        "definition": "thin",
+        "definitionEs": "delgado"
       },
       {
         "char": "胞",
         "pinyin": "bao1",
-        "definition": "placenta"
+        "definition": "cell",
+        "definitionEs": "célula"
       },
       {
         "char": "卵",
         "pinyin": "luan3",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       }
     ]
   },
@@ -16875,17 +18742,20 @@ const pokemonData = [
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -16903,17 +18773,20 @@ const pokemonData = [
       {
         "char": "舞",
         "pinyin": "wu3",
-        "definition": "to dance"
+        "definition": "dance",
+        "definitionEs": "bailar"
       },
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "鹅",
         "pinyin": "e2",
-        "definition": "variant of 鵝|鹅[e2]"
+        "definition": "goose",
+        "definitionEs": "ganso"
       }
     ]
   },
@@ -16931,17 +18804,20 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "你",
         "pinyin": "ni3",
-        "definition": "you (informal, as opposed to courteous 您[nin2])"
+        "definition": "you",
+        "definitionEs": "tú"
       },
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       }
     ]
   },
@@ -16959,17 +18835,20 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       }
     ]
   },
@@ -16987,27 +18866,32 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "倍",
         "pinyin": "bei4",
-        "definition": "(two, three etc) -fold"
+        "definition": "multiple",
+        "definitionEs": "múltiple"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       }
     ]
   },
@@ -17025,17 +18909,20 @@ const pokemonData = [
       {
         "char": "四",
         "pinyin": "si4",
-        "definition": "four"
+        "definition": "four",
+        "definitionEs": "cuatro"
       },
       {
         "char": "季",
         "pinyin": "ji4",
-        "definition": "season"
+        "definition": "season",
+        "definitionEs": "estación"
       },
       {
         "char": "鹿",
         "pinyin": "lu4",
-        "definition": "deer"
+        "definition": "deer",
+        "definitionEs": "ciervo"
       }
     ]
   },
@@ -17053,17 +18940,20 @@ const pokemonData = [
       {
         "char": "萌",
         "pinyin": "meng2",
-        "definition": "(bound form) to sprout"
+        "definition": "sprout",
+        "definitionEs": "brote"
       },
       {
         "char": "芽",
         "pinyin": "ya2",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "brote"
       },
       {
         "char": "鹿",
         "pinyin": "lu4",
-        "definition": "deer"
+        "definition": "deer",
+        "definitionEs": "ciervo"
       }
     ]
   },
@@ -17081,17 +18971,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "飞",
         "pinyin": "fei1",
-        "definition": "to fly"
+        "definition": "to fly",
+        "definitionEs": "volar"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -17109,17 +19002,20 @@ const pokemonData = [
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -17137,22 +19033,26 @@ const pokemonData = [
       {
         "char": "骑",
         "pinyin": "qi2",
-        "definition": "to sit astride"
+        "definition": "to ride",
+        "definitionEs": "montar"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       },
       {
         "char": "蜗",
         "pinyin": "wo1",
-        "definition": "snail"
+        "definition": "snail",
+        "definitionEs": "caracol"
       },
       {
         "char": "牛",
         "pinyin": "niu2",
-        "definition": "ox"
+        "definition": "ox",
+        "definitionEs": "buey"
       }
     ]
   },
@@ -17170,22 +19070,26 @@ const pokemonData = [
       {
         "char": "哎",
         "pinyin": "ai1",
-        "definition": "hey!"
+        "definition": "hey",
+        "definitionEs": "¡eh!"
       },
       {
         "char": "呀",
         "pinyin": "ya5",
-        "definition": "(particle equivalent to 啊 after a vowel, expressing surprise or doubt)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -17203,22 +19107,26 @@ const pokemonData = [
       {
         "char": "败",
         "pinyin": "bai4",
-        "definition": "to defeat"
+        "definition": "defeat",
+        "definitionEs": "derrotar"
       },
       {
         "char": "露",
         "pinyin": "lu4",
-        "definition": "dew"
+        "definition": "dew",
+        "definitionEs": "rocío"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -17236,17 +19144,20 @@ const pokemonData = [
       {
         "char": "轻",
         "pinyin": "qing1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "ligero"
       },
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       }
     ]
   },
@@ -17263,18 +19174,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       },
       {
         "char": "嘟",
         "pinyin": "du1",
-        "definition": "toot"
+        "definition": "toot",
+        "definitionEs": "pitido"
       }
     ]
   },
@@ -17292,22 +19206,26 @@ const pokemonData = [
       {
         "char": "保",
         "pinyin": "bao3",
-        "definition": "to defend"
+        "definition": "protect",
+        "definitionEs": "proteger"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "曼",
         "pinyin": "man4",
-        "definition": "handsome"
+        "definition": "elegant",
+        "definitionEs": "elegante"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       }
     ]
   },
@@ -17325,17 +19243,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -17353,17 +19274,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "蜘",
         "pinyin": "zhi1",
-        "definition": "used in 蜘蛛[zhi1 zhu1]"
+        "definition": "spider",
+        "definitionEs": "araña"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       }
     ]
   },
@@ -17381,22 +19305,26 @@ const pokemonData = [
       {
         "char": "种",
         "pinyin": "zhong3",
-        "definition": "seed"
+        "definition": "seed",
+        "definitionEs": "semilla"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       }
     ]
   },
@@ -17414,22 +19342,26 @@ const pokemonData = [
       {
         "char": "坚",
         "pinyin": "jian1",
-        "definition": "strong"
+        "definition": "firm",
+        "definitionEs": "firme"
       },
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       },
       {
         "char": "哑",
         "pinyin": "ya3",
-        "definition": "mute"
+        "definition": "mute",
+        "definitionEs": "mudo"
       },
       {
         "char": "铃",
         "pinyin": "ling2",
-        "definition": "(small) bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       }
     ]
   },
@@ -17447,17 +19379,20 @@ const pokemonData = [
       {
         "char": "齿",
         "pinyin": "chi3",
-        "definition": "(bound form) tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "轮",
         "pinyin": "lun2",
-        "definition": "wheel"
+        "definition": "wheel",
+        "definitionEs": "rueda"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -17475,17 +19410,20 @@ const pokemonData = [
       {
         "char": "齿",
         "pinyin": "chi3",
-        "definition": "(bound form) tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "轮",
         "pinyin": "lun2",
-        "definition": "wheel"
+        "definition": "wheel",
+        "definitionEs": "rueda"
       },
       {
         "char": "组",
         "pinyin": "zu3",
-        "definition": "to form"
+        "definition": "group",
+        "definitionEs": "grupo"
       }
     ]
   },
@@ -17503,17 +19441,20 @@ const pokemonData = [
       {
         "char": "齿",
         "pinyin": "chi3",
-        "definition": "(bound form) tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "轮",
         "pinyin": "lun2",
-        "definition": "wheel"
+        "definition": "wheel",
+        "definitionEs": "rueda"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -17531,22 +19472,26 @@ const pokemonData = [
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -17564,17 +19509,20 @@ const pokemonData = [
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "鳗",
         "pinyin": "man2",
-        "definition": "(bound form) eel (Anguilla japonica)"
+        "definition": "eel",
+        "definitionEs": "anguila"
       }
     ]
   },
@@ -17592,27 +19540,32 @@ const pokemonData = [
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "鳗",
         "pinyin": "man2",
-        "definition": "(bound form) eel (Anguilla japonica)"
+        "definition": "eel",
+        "definitionEs": "anguila"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -17630,17 +19583,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "灰",
         "pinyin": "hui1",
-        "definition": "ash"
+        "definition": "ash",
+        "definitionEs": "ceniza"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -17658,17 +19614,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "宇",
         "pinyin": "yu3",
-        "definition": "room"
+        "definition": "space",
+        "definitionEs": "espacio"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -17686,17 +19645,20 @@ const pokemonData = [
       {
         "char": "烛",
         "pinyin": "zhu2",
-        "definition": "candle"
+        "definition": "candle",
+        "definitionEs": "vela"
       },
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -17714,22 +19676,26 @@ const pokemonData = [
       {
         "char": "灯",
         "pinyin": "deng1",
-        "definition": "lamp"
+        "definition": "lamp",
+        "definitionEs": "lámpara"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "幽",
         "pinyin": "you1",
-        "definition": "remote"
+        "definition": "remote",
+        "definitionEs": "remoto"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -17747,27 +19713,32 @@ const pokemonData = [
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "晶",
         "pinyin": "jing1",
-        "definition": "crystal"
+        "definition": "crystal",
+        "definitionEs": "cristal"
       },
       {
         "char": "灯",
         "pinyin": "deng1",
-        "definition": "lamp"
+        "definition": "lamp",
+        "definitionEs": "lámpara"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -17785,12 +19756,14 @@ const pokemonData = [
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       }
     ]
   },
@@ -17808,17 +19781,20 @@ const pokemonData = [
       {
         "char": "斧",
         "pinyin": "fu3",
-        "definition": "hatchet"
+        "definition": "axe",
+        "definitionEs": "hacha"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -17836,22 +19812,26 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "斧",
         "pinyin": "fu3",
-        "definition": "hatchet"
+        "definition": "axe",
+        "definitionEs": "hacha"
       },
       {
         "char": "战",
         "pinyin": "zhan4",
-        "definition": "to fight"
+        "definition": "fight",
+        "definitionEs": "luchar"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -17869,17 +19849,20 @@ const pokemonData = [
       {
         "char": "喷",
         "pinyin": "pen1",
-        "definition": "to puff"
+        "definition": "to spray",
+        "definitionEs": "rociar"
       },
       {
         "char": "嚏",
         "pinyin": "ti4",
-        "definition": "sneeze"
+        "definition": "sneeze",
+        "definitionEs": "estornudo"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -17897,17 +19880,20 @@ const pokemonData = [
       {
         "char": "冻",
         "pinyin": "dong4",
-        "definition": "to freeze"
+        "definition": "to freeze",
+        "definitionEs": "congelar"
       },
       {
         "char": "原",
         "pinyin": "yuan2",
-        "definition": "former"
+        "definition": "original",
+        "definitionEs": "original"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -17925,22 +19911,26 @@ const pokemonData = [
       {
         "char": "几",
         "pinyin": "ji3",
-        "definition": "how many"
+        "definition": "how many",
+        "definitionEs": "cuántos"
       },
       {
         "char": "何",
         "pinyin": "he2",
-        "definition": "what"
+        "definition": "what",
+        "definitionEs": "qué"
       },
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -17958,17 +19948,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "蜗",
         "pinyin": "wo1",
-        "definition": "snail"
+        "definition": "snail",
+        "definitionEs": "caracol"
       }
     ]
   },
@@ -17986,17 +19979,20 @@ const pokemonData = [
       {
         "char": "敏",
         "pinyin": "min3",
-        "definition": "(bound form) quick"
+        "definition": "quick",
+        "definitionEs": "rápido"
       },
       {
         "char": "捷",
         "pinyin": "jie2",
-        "definition": "victory"
+        "definition": "victory",
+        "definitionEs": "victoria"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -18014,17 +20010,20 @@ const pokemonData = [
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "巴",
         "pinyin": "ba1",
-        "definition": "to long for"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -18042,17 +20041,20 @@ const pokemonData = [
       {
         "char": "功",
         "pinyin": "gong1",
-        "definition": "meritorious deed or service"
+        "definition": "merit",
+        "definitionEs": "mérito"
       },
       {
         "char": "夫",
         "pinyin": "fu2",
-        "definition": "(classical) this, that"
+        "definition": "(classical particle)",
+        "definitionEs": "(partícula clásica)"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       }
     ]
   },
@@ -18070,17 +20072,20 @@ const pokemonData = [
       {
         "char": "师",
         "pinyin": "shi1",
-        "definition": "teacher"
+        "definition": "teacher",
+        "definitionEs": "maestro"
       },
       {
         "char": "父",
         "pinyin": "fu4",
-        "definition": "(bound form) father"
+        "definition": "father",
+        "definitionEs": "padre"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       }
     ]
   },
@@ -18098,17 +20103,20 @@ const pokemonData = [
       {
         "char": "赤",
         "pinyin": "chi4",
-        "definition": "red"
+        "definition": "red",
+        "definitionEs": "rojo"
       },
       {
         "char": "面",
         "pinyin": "mian4",
-        "definition": "flour"
+        "definition": "face",
+        "definitionEs": "cara"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -18126,22 +20134,26 @@ const pokemonData = [
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -18159,22 +20171,26 @@ const pokemonData = [
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -18192,22 +20208,26 @@ const pokemonData = [
       {
         "char": "驹",
         "pinyin": "ju1",
-        "definition": "colt"
+        "definition": "colt",
+        "definitionEs": "potro"
       },
       {
         "char": "刀",
         "pinyin": "dao1",
-        "definition": "knife"
+        "definition": "knife",
+        "definitionEs": "cuchillo"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "兵",
         "pinyin": "bing1",
-        "definition": "soldiers"
+        "definition": "soldier",
+        "definitionEs": "soldado"
       }
     ]
   },
@@ -18225,22 +20245,26 @@ const pokemonData = [
       {
         "char": "劈",
         "pinyin": "pi3",
-        "definition": "to split in two"
+        "definition": "split",
+        "definitionEs": "dividir"
       },
       {
         "char": "斩",
         "pinyin": "zhan3",
-        "definition": "to behead (as form of capital punishment)"
+        "definition": "to chop",
+        "definitionEs": "cortar"
       },
       {
         "char": "司",
         "pinyin": "si1",
-        "definition": "to take charge of"
+        "definition": "manage",
+        "definitionEs": "gestionar"
       },
       {
         "char": "令",
         "pinyin": "ling4",
-        "definition": "to order"
+        "definition": "order",
+        "definitionEs": "ordenar"
       }
     ]
   },
@@ -18258,27 +20282,32 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "炸",
         "pinyin": "zha4",
-        "definition": "to burst"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "牛",
         "pinyin": "niu2",
-        "definition": "ox"
+        "definition": "ox",
+        "definitionEs": "buey"
       }
     ]
   },
@@ -18296,22 +20325,26 @@ const pokemonData = [
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       }
     ]
   },
@@ -18329,22 +20362,26 @@ const pokemonData = [
       {
         "char": "勇",
         "pinyin": "yong3",
-        "definition": "brave"
+        "definition": "brave",
+        "definitionEs": "valiente"
       },
       {
         "char": "士",
         "pinyin": "shi4",
-        "definition": "member of the senior ministerial class (old)"
+        "definition": "scholar",
+        "definitionEs": "erudito"
       },
       {
         "char": "雄",
         "pinyin": "xiong2",
-        "definition": "male"
+        "definition": "male",
+        "definitionEs": "macho"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       }
     ]
   },
@@ -18362,22 +20399,26 @@ const pokemonData = [
       {
         "char": "秃",
         "pinyin": "tu1",
-        "definition": "bald (lacking hair or feathers)"
+        "definition": "bald",
+        "definitionEs": "calvo"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       },
       {
         "char": "丫",
         "pinyin": "ya1",
-        "definition": "fork"
+        "definition": "fork",
+        "definitionEs": "horquilla"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       }
     ]
   },
@@ -18395,17 +20436,20 @@ const pokemonData = [
       {
         "char": "秃",
         "pinyin": "tu1",
-        "definition": "bald (lacking hair or feathers)"
+        "definition": "bald",
+        "definitionEs": "calvo"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       },
       {
         "char": "娜",
         "pinyin": "na4",
-        "definition": "(phonetic na)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -18423,17 +20467,20 @@ const pokemonData = [
       {
         "char": "熔",
         "pinyin": "rong2",
-        "definition": "to smelt"
+        "definition": "smelt",
+        "definitionEs": "fundir"
       },
       {
         "char": "蚁",
         "pinyin": "yi3",
-        "definition": "ant"
+        "definition": "ant",
+        "definitionEs": "hormiga"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -18451,12 +20498,14 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "蚁",
         "pinyin": "yi3",
-        "definition": "ant"
+        "definition": "ant",
+        "definitionEs": "hormiga"
       }
     ]
   },
@@ -18474,17 +20523,20 @@ const pokemonData = [
       {
         "char": "单",
         "pinyin": "dan1",
-        "definition": "bill"
+        "definition": "single",
+        "definitionEs": "único"
       },
       {
         "char": "首",
         "pinyin": "shou3",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -18502,22 +20554,26 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "首",
         "pinyin": "shou3",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -18535,22 +20591,26 @@ const pokemonData = [
       {
         "char": "三",
         "pinyin": "san1",
-        "definition": "three"
+        "definition": "three",
+        "definitionEs": "tres"
       },
       {
         "char": "首",
         "pinyin": "shou3",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "恶",
         "pinyin": "wu4",
-        "definition": "to hate"
+        "definition": "hate",
+        "definitionEs": "odiar"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -18568,17 +20628,20 @@ const pokemonData = [
       {
         "char": "燃",
         "pinyin": "ran2",
-        "definition": "to burn"
+        "definition": "burn",
+        "definitionEs": "quemar"
       },
       {
         "char": "烧",
         "pinyin": "shao1",
-        "definition": "to burn"
+        "definition": "burn",
+        "definitionEs": "quemar"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -18596,17 +20659,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "神",
         "pinyin": "shen2",
-        "definition": "god"
+        "definition": "god",
+        "definitionEs": "dios"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -18623,23 +20689,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "勾",
-        "pinyin": "gou4",
-        "definition": "used in 勾當|勾当[gou4 dang4]"
+        "pinyin": "gou1",
+        "definition": "hook",
+        "definitionEs": "gancho"
       },
       {
         "char": "帕",
         "pinyin": "pa4",
-        "definition": "to wrap"
+        "definition": "to wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       }
     ]
   },
@@ -18657,22 +20727,26 @@ const pokemonData = [
       {
         "char": "代",
         "pinyin": "dai4",
-        "definition": "to be a substitute for"
+        "definition": "to substitute",
+        "definitionEs": "sustituir"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       }
     ]
   },
@@ -18690,22 +20764,26 @@ const pokemonData = [
       {
         "char": "毕",
         "pinyin": "bi4",
-        "definition": "the whole of"
+        "definition": "complete",
+        "definitionEs": "completo"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       }
     ]
   },
@@ -18723,17 +20801,20 @@ const pokemonData = [
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "卷",
         "pinyin": "juan3",
-        "definition": "to roll up"
+        "definition": "to roll",
+        "definitionEs": "enrollar"
       },
       {
         "char": "云",
         "pinyin": "yun2",
-        "definition": "cloud"
+        "definition": "cloud",
+        "definitionEs": "nube"
       }
     ]
   },
@@ -18751,17 +20832,20 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "云",
         "pinyin": "yun2",
-        "definition": "cloud"
+        "definition": "cloud",
+        "definitionEs": "nube"
       }
     ]
   },
@@ -18779,22 +20863,26 @@ const pokemonData = [
       {
         "char": "莱",
         "pinyin": "lai2",
-        "definition": "name of weed plant (fat hen, goosefoot, pigweed etc)"
+        "definition": "weed",
+        "definitionEs": "maleza"
       },
       {
         "char": "希",
         "pinyin": "xi1",
-        "definition": "to hope"
+        "definition": "to hope",
+        "definitionEs": "esperar"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -18812,22 +20900,26 @@ const pokemonData = [
       {
         "char": "捷",
         "pinyin": "jie2",
-        "definition": "victory"
+        "definition": "victory",
+        "definitionEs": "victoria"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "罗",
         "pinyin": "luo2",
-        "definition": "gauze"
+        "definition": "gauze",
+        "definitionEs": "gasa"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -18845,17 +20937,20 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "云",
         "pinyin": "yun2",
-        "definition": "cloud"
+        "definition": "cloud",
+        "definitionEs": "nube"
       }
     ]
   },
@@ -18873,17 +20968,20 @@ const pokemonData = [
       {
         "char": "酋",
         "pinyin": "qiu2",
-        "definition": "tribal chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -18901,22 +20999,26 @@ const pokemonData = [
       {
         "char": "凯",
         "pinyin": "kai3",
-        "definition": "triumphant"
+        "definition": "triumphant",
+        "definitionEs": "triunfante"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "迪",
         "pinyin": "di2",
-        "definition": "to enlighten"
+        "definition": "enlighten",
+        "definitionEs": "iluminar"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       }
     ]
   },
@@ -18934,22 +21036,26 @@ const pokemonData = [
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "耶",
         "pinyin": "ye5",
-        "definition": "final particle indicating enthusiasm etc"
+        "definition": "(final particle)",
+        "definitionEs": "(partícula final)"
       },
       {
         "char": "塔",
         "pinyin": "ta3",
-        "definition": "old variant of 塔[ta3]"
+        "definition": "tower",
+        "definitionEs": "torre"
       }
     ]
   },
@@ -18967,27 +21073,32 @@ const pokemonData = [
       {
         "char": "盖",
         "pinyin": "gai4",
-        "definition": "lid"
+        "definition": "lid",
+        "definitionEs": "tapa"
       },
       {
         "char": "诺",
         "pinyin": "nuo4",
-        "definition": "to consent"
+        "definition": "promise",
+        "definitionEs": "promesa"
       },
       {
         "char": "赛",
         "pinyin": "sai4",
-        "definition": "to compete"
+        "definition": "compete",
+        "definitionEs": "competir"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "特",
         "pinyin": "te4",
-        "definition": "special"
+        "definition": "special",
+        "definitionEs": "especial"
       }
     ]
   },
@@ -19005,17 +21116,20 @@ const pokemonData = [
       {
         "char": "哈",
         "pinyin": "ha1",
-        "definition": "(interj.) ha!"
+        "definition": "ha!",
+        "definitionEs": "¡ja!"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       },
       {
         "char": "栗",
         "pinyin": "li4",
-        "definition": "chestnut"
+        "definition": "chestnut",
+        "definitionEs": "castaña"
       }
     ]
   },
@@ -19032,23 +21146,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "哈",
         "pinyin": "ha1",
-        "definition": "(interj.) ha!"
+        "definition": "ha!",
+        "definitionEs": "¡ja!"
       },
       {
         "char": "力",
         "pinyin": "li4",
-        "definition": "power"
+        "definition": "strength",
+        "definitionEs": "fuerza"
       }
     ]
   },
@@ -19066,22 +21184,26 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "里",
         "pinyin": "li3",
-        "definition": "li, ancient measure of length, approx. 500 m"
+        "definition": "li (unit)",
+        "definitionEs": "li (unidad)"
       },
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       }
     ]
   },
@@ -19099,17 +21221,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "狐",
         "pinyin": "hu2",
-        "definition": "fox"
+        "definition": "fox",
+        "definitionEs": "zorro"
       },
       {
         "char": "狸",
         "pinyin": "li2",
-        "definition": "variant of 狸[li2]"
+        "definition": "raccoon dog",
+        "definitionEs": "tanuki"
       }
     ]
   },
@@ -19127,22 +21252,26 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "狐",
         "pinyin": "hu2",
-        "definition": "fox"
+        "definition": "fox",
+        "definitionEs": "zorro"
       }
     ]
   },
@@ -19160,22 +21289,26 @@ const pokemonData = [
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "红",
         "pinyin": "hong2",
-        "definition": "red"
+        "definition": "red",
+        "definitionEs": "rojo"
       },
       {
         "char": "狐",
         "pinyin": "hu2",
-        "definition": "fox"
+        "definition": "fox",
+        "definitionEs": "zorro"
       }
     ]
   },
@@ -19193,22 +21326,26 @@ const pokemonData = [
       {
         "char": "呱",
         "pinyin": "gua1",
-        "definition": "used in 呱呱[gua1 gua1]"
+        "definition": "quack",
+        "definitionEs": "graznido"
       },
       {
         "char": "呱",
         "pinyin": "gua1",
-        "definition": "used in 呱呱[gua1 gua1]"
+        "definition": "quack",
+        "definitionEs": "graznido"
       },
       {
         "char": "泡",
         "pinyin": "pao4",
-        "definition": "bubble"
+        "definition": "bubble",
+        "definitionEs": "burbuja"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -19226,17 +21363,20 @@ const pokemonData = [
       {
         "char": "呱",
         "pinyin": "gua1",
-        "definition": "used in 呱呱[gua1 gua1]"
+        "definition": "quack",
+        "definitionEs": "graznido"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -19254,22 +21394,26 @@ const pokemonData = [
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "贺",
         "pinyin": "he4",
-        "definition": "to congratulate"
+        "definition": "congratulate",
+        "definitionEs": "felicitar"
       },
       {
         "char": "忍",
         "pinyin": "ren3",
-        "definition": "to bear"
+        "definition": "endure",
+        "definitionEs": "soportar"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -19287,17 +21431,20 @@ const pokemonData = [
       {
         "char": "掘",
         "pinyin": "jue2",
-        "definition": "to dig"
+        "definition": "dig",
+        "definitionEs": "cavar"
       },
       {
         "char": "掘",
         "pinyin": "jue2",
-        "definition": "to dig"
+        "definition": "dig",
+        "definitionEs": "cavar"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       }
     ]
   },
@@ -19315,17 +21462,20 @@ const pokemonData = [
       {
         "char": "掘",
         "pinyin": "jue2",
-        "definition": "to dig"
+        "definition": "dig",
+        "definitionEs": "cavar"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       }
     ]
   },
@@ -19343,17 +21493,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "箭",
         "pinyin": "jian4",
-        "definition": "arrow"
+        "definition": "arrow",
+        "definitionEs": "flecha"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ]
   },
@@ -19371,17 +21524,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "箭",
         "pinyin": "jian4",
-        "definition": "arrow"
+        "definition": "arrow",
+        "definitionEs": "flecha"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ]
   },
@@ -19399,17 +21555,20 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "箭",
         "pinyin": "jian4",
-        "definition": "arrow"
+        "definition": "arrow",
+        "definitionEs": "flecha"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       }
     ]
   },
@@ -19427,17 +21586,20 @@ const pokemonData = [
       {
         "char": "粉",
         "pinyin": "fen3",
-        "definition": "powder"
+        "definition": "powder",
+        "definitionEs": "polvo"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -19455,17 +21617,20 @@ const pokemonData = [
       {
         "char": "粉",
         "pinyin": "fen3",
-        "definition": "powder"
+        "definition": "powder",
+        "definitionEs": "polvo"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       },
       {
         "char": "蛹",
         "pinyin": "yong3",
-        "definition": "chrysalis"
+        "definition": "pupa",
+        "definitionEs": "pupa"
       }
     ]
   },
@@ -19483,17 +21648,20 @@ const pokemonData = [
       {
         "char": "彩",
         "pinyin": "cai3",
-        "definition": "(bright) color"
+        "definition": "color",
+        "definitionEs": "color"
       },
       {
         "char": "粉",
         "pinyin": "fen3",
-        "definition": "powder"
+        "definition": "powder",
+        "definitionEs": "polvo"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       }
     ]
   },
@@ -19511,17 +21679,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -19539,17 +21710,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -19567,17 +21741,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "蓓",
         "pinyin": "bei4",
-        "definition": "used in 蓓蕾[bei4 lei3]"
+        "definition": "bud",
+        "definitionEs": "capullo"
       },
       {
         "char": "蓓",
         "pinyin": "bei4",
-        "definition": "used in 蓓蕾[bei4 lei3]"
+        "definition": "bud",
+        "definitionEs": "capullo"
       }
     ]
   },
@@ -19595,17 +21772,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       },
       {
         "char": "蒂",
         "pinyin": "di4",
-        "definition": "stem (of fruit)"
+        "definition": "stem",
+        "definitionEs": "tallo"
       }
     ]
   },
@@ -19623,22 +21803,26 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "洁",
         "pinyin": "jie2",
-        "definition": "clean"
+        "definition": "clean",
+        "definitionEs": "limpio"
       },
       {
         "char": "夫",
         "pinyin": "fu2",
-        "definition": "(classical) this, that"
+        "definition": "(classical particle)",
+        "definitionEs": "(partícula clásica)"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -19656,22 +21840,26 @@ const pokemonData = [
       {
         "char": "坐",
         "pinyin": "zuo4",
-        "definition": "to sit"
+        "definition": "to sit",
+        "definitionEs": "sentarse"
       },
       {
         "char": "骑",
         "pinyin": "qi2",
-        "definition": "to sit astride"
+        "definition": "to ride",
+        "definitionEs": "montar"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -19689,22 +21877,26 @@ const pokemonData = [
       {
         "char": "坐",
         "pinyin": "zuo4",
-        "definition": "to sit"
+        "definition": "to sit",
+        "definitionEs": "sentarse"
       },
       {
         "char": "骑",
         "pinyin": "qi2",
-        "definition": "to sit astride"
+        "definition": "to ride",
+        "definitionEs": "montar"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -19722,22 +21914,26 @@ const pokemonData = [
       {
         "char": "顽",
         "pinyin": "wan2",
-        "definition": "mischievous"
+        "definition": "mischievous",
+        "definitionEs": "travieso"
       },
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -19755,22 +21951,26 @@ const pokemonData = [
       {
         "char": "霸",
         "pinyin": "ba4",
-        "definition": "hegemon"
+        "definition": "tyrant",
+        "definitionEs": "tirano"
       },
       {
         "char": "道",
         "pinyin": "dao4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       },
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       }
     ]
   },
@@ -19788,22 +21988,26 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "丽",
         "pinyin": "li4",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "米",
         "pinyin": "mi3",
-        "definition": "uncooked rice"
+        "definition": "rice",
+        "definitionEs": "arroz"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -19821,12 +22025,14 @@ const pokemonData = [
       {
         "char": "妙",
         "pinyin": "miao4",
-        "definition": "clever"
+        "definition": "clever",
+        "definitionEs": "ingenioso"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -19844,22 +22050,26 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "能",
         "pinyin": "neng2",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "妙",
         "pinyin": "miao4",
-        "definition": "clever"
+        "definition": "clever",
+        "definitionEs": "ingenioso"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -19877,17 +22087,20 @@ const pokemonData = [
       {
         "char": "独",
         "pinyin": "du2",
-        "definition": "alone"
+        "definition": "lone",
+        "definitionEs": "solo"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       },
       {
         "char": "鞘",
         "pinyin": "qiao4",
-        "definition": "scabbard"
+        "definition": "scabbard",
+        "definitionEs": "vaina"
       }
     ]
   },
@@ -19905,17 +22118,20 @@ const pokemonData = [
       {
         "char": "双",
         "pinyin": "shuang1",
-        "definition": "two"
+        "definition": "double",
+        "definitionEs": "doble"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       },
       {
         "char": "鞘",
         "pinyin": "qiao4",
-        "definition": "scabbard"
+        "definition": "scabbard",
+        "definitionEs": "vaina"
       }
     ]
   },
@@ -19933,22 +22149,26 @@ const pokemonData = [
       {
         "char": "坚",
         "pinyin": "jian1",
-        "definition": "strong"
+        "definition": "firm",
+        "definitionEs": "firme"
       },
       {
         "char": "盾",
         "pinyin": "dun4",
-        "definition": "(currency) Vietnamese dong"
+        "definition": "shield",
+        "definitionEs": "escudo"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -19966,17 +22186,20 @@ const pokemonData = [
       {
         "char": "粉",
         "pinyin": "fen3",
-        "definition": "powder"
+        "definition": "powder",
+        "definitionEs": "polvo"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       }
     ]
   },
@@ -19994,17 +22217,20 @@ const pokemonData = [
       {
         "char": "芳",
         "pinyin": "fang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "精",
         "pinyin": "jing1",
-        "definition": "essence"
+        "definition": "essence",
+        "definitionEs": "esencia"
       }
     ]
   },
@@ -20022,22 +22248,26 @@ const pokemonData = [
       {
         "char": "绵",
         "pinyin": "mian2",
-        "definition": "cotton"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       },
       {
         "char": "绵",
         "pinyin": "mian2",
-        "definition": "cotton"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       },
       {
         "char": "泡",
         "pinyin": "pao4",
-        "definition": "bubble"
+        "definition": "bubble",
+        "definitionEs": "burbuja"
       },
       {
         "char": "芙",
         "pinyin": "fu2",
-        "definition": "used in 芙蓉[fu2 rong2], lotus"
+        "definition": "lotus",
+        "definitionEs": "loto"
       }
     ]
   },
@@ -20054,18 +22284,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "胖",
-        "pinyin": "pan2",
-        "definition": "healthy"
+        "pinyin": "pang4",
+        "definition": "plump",
+        "definitionEs": "regordete"
       },
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "妮",
         "pinyin": "ni1",
-        "definition": "girl"
+        "definition": "girl",
+        "definitionEs": "niña"
       }
     ]
   },
@@ -20083,17 +22316,20 @@ const pokemonData = [
       {
         "char": "好",
         "pinyin": "hao4",
-        "definition": "to be fond of"
+        "definition": "appreciate",
+        "definitionEs": "apreciar"
       },
       {
         "char": "啦",
-        "pinyin": "la1",
-        "definition": "(onom.) sound of singing, cheering etc"
+        "pinyin": "la",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鱿",
         "pinyin": "you2",
-        "definition": "(bound form) squid"
+        "definition": "squid",
+        "definitionEs": "calamar"
       }
     ]
   },
@@ -20110,18 +22346,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "乌",
-        "pinyin": "wu4",
-        "definition": "used in 烏拉|乌拉[wu4 la5]"
+        "pinyin": "wu1",
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "贼",
         "pinyin": "zei2",
-        "definition": "thief"
+        "definition": "thief",
+        "definitionEs": "ladrón"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -20139,17 +22378,20 @@ const pokemonData = [
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       },
       {
         "char": "脚",
         "pinyin": "jue2",
-        "definition": "role (variant of 角[jue2])"
+        "definition": "role",
+        "definitionEs": "papel"
       },
       {
         "char": "脚",
         "pinyin": "jue2",
-        "definition": "role (variant of 角[jue2])"
+        "definition": "role",
+        "definitionEs": "papel"
       }
     ]
   },
@@ -20167,22 +22409,26 @@ const pokemonData = [
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       },
       {
         "char": "足",
         "pinyin": "zu2",
-        "definition": "(bound form) foot"
+        "definition": "foot",
+        "definitionEs": "pie"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "铠",
         "pinyin": "kai3",
-        "definition": "armor"
+        "definition": "armor",
+        "definitionEs": "armadura"
       }
     ]
   },
@@ -20200,17 +22446,20 @@ const pokemonData = [
       {
         "char": "垃",
         "pinyin": "la1",
-        "definition": "Taiwan pr."
+        "definition": "trash",
+        "definitionEs": "basura"
       },
       {
         "char": "垃",
         "pinyin": "la1",
-        "definition": "Taiwan pr."
+        "definition": "trash",
+        "definitionEs": "basura"
       },
       {
         "char": "藻",
         "pinyin": "zao3",
-        "definition": "aquatic grasses"
+        "definition": "algae",
+        "definitionEs": "algas"
       }
     ]
   },
@@ -20228,17 +22477,20 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "藻",
         "pinyin": "zao3",
-        "definition": "aquatic grasses"
+        "definition": "algae",
+        "definitionEs": "algas"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20256,22 +22508,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "臂",
         "pinyin": "bi4",
-        "definition": "arm"
+        "definition": "arm",
+        "definitionEs": "brazo"
       },
       {
         "char": "枪",
         "pinyin": "qiang1",
-        "definition": "rifle"
+        "definition": "gun",
+        "definitionEs": "arma"
       },
       {
         "char": "虾",
         "pinyin": "xia1",
-        "definition": "shrimp"
+        "definition": "shrimp",
+        "definitionEs": "camarón"
       }
     ]
   },
@@ -20289,22 +22545,26 @@ const pokemonData = [
       {
         "char": "钢",
         "pinyin": "gang1",
-        "definition": "steel"
+        "definition": "steel",
+        "definitionEs": "acero"
       },
       {
         "char": "炮",
         "pinyin": "pao4",
-        "definition": "variant of 炮[pao4]"
+        "definition": "cannon",
+        "definitionEs": "cañón"
       },
       {
         "char": "臂",
         "pinyin": "bi4",
-        "definition": "arm"
+        "definition": "arm",
+        "definitionEs": "brazo"
       },
       {
         "char": "虾",
         "pinyin": "xia1",
-        "definition": "shrimp"
+        "definition": "shrimp",
+        "definitionEs": "camarón"
       }
     ]
   },
@@ -20322,17 +22582,20 @@ const pokemonData = [
       {
         "char": "伞",
         "pinyin": "san3",
-        "definition": "damask silk"
+        "definition": "umbrella",
+        "definitionEs": "paraguas"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -20350,22 +22613,26 @@ const pokemonData = [
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "伞",
         "pinyin": "san3",
-        "definition": "damask silk"
+        "definition": "umbrella",
+        "definitionEs": "paraguas"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -20383,22 +22650,26 @@ const pokemonData = [
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       },
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20416,17 +22687,20 @@ const pokemonData = [
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "颚",
         "pinyin": "e4",
-        "definition": "jaw"
+        "definition": "jaw",
+        "definitionEs": "mandíbula"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20444,17 +22718,20 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20472,22 +22749,26 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20505,22 +22786,26 @@ const pokemonData = [
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       },
       {
         "char": "子",
         "pinyin": "zi3",
-        "definition": "(suffix)"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -20538,22 +22823,26 @@ const pokemonData = [
       {
         "char": "摔",
         "pinyin": "shuai1",
-        "definition": "to throw down"
+        "definition": "fall",
+        "definitionEs": "caer"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "鹰",
         "pinyin": "ying1",
-        "definition": "general term for a bird of prey (eagle, hawk or falcon etc)"
+        "definition": "eagle",
+        "definitionEs": "águila"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -20571,17 +22860,20 @@ const pokemonData = [
       {
         "char": "咚",
         "pinyin": "dong1",
-        "definition": "(onom.) boom (of a drum)"
+        "definition": "boom",
+        "definitionEs": "retumbar"
       },
       {
         "char": "咚",
         "pinyin": "dong1",
-        "definition": "(onom.) boom (of a drum)"
+        "definition": "boom",
+        "definitionEs": "retumbar"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -20599,17 +22891,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "碎",
         "pinyin": "sui4",
-        "definition": "(transitive or intransitive) to break into pieces"
+        "definition": "shatter",
+        "definitionEs": "romper"
       },
       {
         "char": "钻",
         "pinyin": "zuan1",
-        "definition": "to drill"
+        "definition": "to drill",
+        "definitionEs": "taladrar"
       }
     ]
   },
@@ -20627,17 +22922,20 @@ const pokemonData = [
       {
         "char": "黏",
         "pinyin": "nian2",
-        "definition": "sticky"
+        "definition": "sticky",
+        "definitionEs": "pegajoso"
       },
       {
         "char": "黏",
         "pinyin": "nian2",
-        "definition": "sticky"
+        "definition": "sticky",
+        "definitionEs": "pegajoso"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -20655,17 +22953,20 @@ const pokemonData = [
       {
         "char": "黏",
         "pinyin": "nian2",
-        "definition": "sticky"
+        "definition": "sticky",
+        "definitionEs": "pegajoso"
       },
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -20683,17 +22984,20 @@ const pokemonData = [
       {
         "char": "黏",
         "pinyin": "nian2",
-        "definition": "sticky"
+        "definition": "sticky",
+        "definitionEs": "pegajoso"
       },
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20711,17 +23015,20 @@ const pokemonData = [
       {
         "char": "钥",
         "pinyin": "yue4",
-        "definition": "key"
+        "definition": "key",
+        "definitionEs": "llave"
       },
       {
         "char": "圈",
         "pinyin": "quan1",
-        "definition": "circle"
+        "definition": "circle",
+        "definitionEs": "círculo"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -20739,17 +23046,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -20767,17 +23077,20 @@ const pokemonData = [
       {
         "char": "朽",
         "pinyin": "xiu3",
-        "definition": "rotten"
+        "definition": "rotten",
+        "definitionEs": "podrido"
       },
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       }
     ]
   },
@@ -20795,17 +23108,20 @@ const pokemonData = [
       {
         "char": "南",
         "pinyin": "nan2",
-        "definition": "south"
+        "definition": "south",
+        "definitionEs": "sur"
       },
       {
         "char": "瓜",
         "pinyin": "gua1",
-        "definition": "melon"
+        "definition": "melon",
+        "definitionEs": "melón"
       },
       {
         "char": "精",
         "pinyin": "jing1",
-        "definition": "essence"
+        "definition": "essence",
+        "definitionEs": "esencia"
       }
     ]
   },
@@ -20823,22 +23139,26 @@ const pokemonData = [
       {
         "char": "南",
         "pinyin": "nan2",
-        "definition": "south"
+        "definition": "south",
+        "definitionEs": "sur"
       },
       {
         "char": "瓜",
         "pinyin": "gua1",
-        "definition": "melon"
+        "definition": "melon",
+        "definitionEs": "melón"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -20856,12 +23176,14 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -20879,17 +23201,20 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "怪",
         "pinyin": "guai4",
-        "definition": "bewildering"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -20907,12 +23232,14 @@ const pokemonData = [
       {
         "char": "嗡",
         "pinyin": "weng1",
-        "definition": "(onom.) buzz"
+        "definition": "buzz",
+        "definitionEs": "zumbar"
       },
       {
         "char": "蝠",
         "pinyin": "fu2",
-        "definition": "bat"
+        "definition": "bat",
+        "definitionEs": "murciélago"
       }
     ]
   },
@@ -20930,17 +23257,20 @@ const pokemonData = [
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -20958,27 +23288,32 @@ const pokemonData = [
       {
         "char": "哲",
         "pinyin": "zhe2",
-        "definition": "wise"
+        "definition": "wise",
+        "definitionEs": "sabio"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -20996,27 +23331,32 @@ const pokemonData = [
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "裴",
         "pinyin": "pei2",
-        "definition": "variant of 裴[pei2]"
+        "definition": "surname",
+        "definitionEs": "apellido"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "塔",
         "pinyin": "ta3",
-        "definition": "old variant of 塔[ta3]"
+        "definition": "tower",
+        "definitionEs": "torre"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       }
     ]
   },
@@ -21034,22 +23374,26 @@ const pokemonData = [
       {
         "char": "基",
         "pinyin": "ji1",
-        "definition": "base"
+        "definition": "base",
+        "definitionEs": "base"
       },
       {
         "char": "格",
         "pinyin": "ge2",
-        "definition": "square"
+        "definition": "grid",
+        "definitionEs": "cuadrícula"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       }
     ]
   },
@@ -21067,17 +23411,20 @@ const pokemonData = [
       {
         "char": "蒂",
         "pinyin": "di4",
-        "definition": "stem (of fruit)"
+        "definition": "stem",
+        "definitionEs": "tallo"
       },
       {
         "char": "安",
         "pinyin": "an1",
-        "definition": "(bound form) calm"
+        "definition": "calm",
+        "definitionEs": "tranquilo"
       },
       {
         "char": "希",
         "pinyin": "xi1",
-        "definition": "to hope"
+        "definition": "to hope",
+        "definitionEs": "esperar"
       }
     ]
   },
@@ -21095,12 +23442,14 @@ const pokemonData = [
       {
         "char": "胡",
         "pinyin": "hu2",
-        "definition": "non-Han people, esp. from central Asia"
+        "definition": "beard",
+        "definitionEs": "barba"
       },
       {
         "char": "帕",
         "pinyin": "pa4",
-        "definition": "to wrap"
+        "definition": "to wrap",
+        "definitionEs": "envolver"
       }
     ]
   },
@@ -21118,27 +23467,32 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "凯",
         "pinyin": "kai3",
-        "definition": "triumphant"
+        "definition": "triumphant",
+        "definitionEs": "triunfante"
       },
       {
         "char": "尼",
         "pinyin": "ni2",
-        "definition": "Buddhist nun"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "恩",
         "pinyin": "en1",
-        "definition": "favor"
+        "definition": "favor",
+        "definitionEs": "favor"
       }
     ]
   },
@@ -21156,17 +23510,20 @@ const pokemonData = [
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       },
       {
         "char": "枭",
         "pinyin": "xiao1",
-        "definition": "owl"
+        "definition": "owl",
+        "definitionEs": "búho"
       }
     ]
   },
@@ -21184,17 +23541,20 @@ const pokemonData = [
       {
         "char": "投",
         "pinyin": "tou2",
-        "definition": "to throw (sth in a specific direction: ball, javelin, grenade etc)"
+        "definition": "throw",
+        "definitionEs": "lanzar"
       },
       {
         "char": "羽",
         "pinyin": "yu3",
-        "definition": "feather"
+        "definition": "feather",
+        "definitionEs": "pluma"
       },
       {
         "char": "枭",
         "pinyin": "xiao1",
-        "definition": "owl"
+        "definition": "owl",
+        "definitionEs": "búho"
       }
     ]
   },
@@ -21212,22 +23572,26 @@ const pokemonData = [
       {
         "char": "狙",
         "pinyin": "ju1",
-        "definition": "macaque"
+        "definition": "snipe",
+        "definitionEs": "acechar"
       },
       {
         "char": "射",
         "pinyin": "she4",
-        "definition": "to shoot"
+        "definition": "shoot",
+        "definitionEs": "disparar"
       },
       {
         "char": "树",
         "pinyin": "shu4",
-        "definition": "tree"
+        "definition": "tree",
+        "definitionEs": "árbol"
       },
       {
         "char": "枭",
         "pinyin": "xiao1",
-        "definition": "owl"
+        "definition": "owl",
+        "definitionEs": "búho"
       }
     ]
   },
@@ -21245,17 +23609,20 @@ const pokemonData = [
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -21273,17 +23640,20 @@ const pokemonData = [
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "热",
         "pinyin": "re4",
-        "definition": "to warm up"
+        "definition": "hot",
+        "definitionEs": "caliente"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -21301,27 +23671,32 @@ const pokemonData = [
       {
         "char": "炽",
         "pinyin": "chi4",
-        "definition": "to burn"
+        "definition": "burning",
+        "definitionEs": "ardiente"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "咆",
         "pinyin": "pao2",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "哮",
         "pinyin": "xiao4",
-        "definition": "pant"
+        "definition": "pant",
+        "definitionEs": "jadear"
       },
       {
         "char": "虎",
         "pinyin": "hu3",
-        "definition": "tiger"
+        "definition": "tiger",
+        "definitionEs": "tigre"
       }
     ]
   },
@@ -21339,22 +23714,26 @@ const pokemonData = [
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "球",
         "pinyin": "qiu2",
-        "definition": "ball"
+        "definition": "ball",
+        "definitionEs": "pelota"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -21372,22 +23751,26 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "漾",
         "pinyin": "yang4",
-        "definition": "to overflow"
+        "definition": "overflow",
+        "definitionEs": "desbordar"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       }
     ]
   },
@@ -21405,22 +23788,26 @@ const pokemonData = [
       {
         "char": "西",
         "pinyin": "xi1",
-        "definition": "west"
+        "definition": "west",
+        "definitionEs": "oeste"
       },
       {
         "char": "狮",
         "pinyin": "shi1",
-        "definition": "lion"
+        "definition": "lion",
+        "definitionEs": "león"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "壬",
         "pinyin": "ren2",
-        "definition": "ninth in order"
+        "definition": "ninth",
+        "definitionEs": "noveno"
       }
     ]
   },
@@ -21438,17 +23825,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "笃",
         "pinyin": "du3",
-        "definition": "(bound form) sincere"
+        "definition": "sincere",
+        "definitionEs": "sincero"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -21465,23 +23855,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "喇",
-        "pinyin": "la1",
-        "definition": "(onom.) sound of wind, rain etc"
+        "pinyin": "la3",
+        "definition": "trumpet",
+        "definitionEs": "trompeta"
       },
       {
         "char": "叭",
         "pinyin": "ba1",
-        "definition": "denote a sound or sharp noise (gunfire etc)"
+        "definition": "(onomatopoeia)",
+        "definitionEs": "(onomatopeya)"
       },
       {
         "char": "啄",
         "pinyin": "zhuo2",
-        "definition": "to peck"
+        "definition": "peck",
+        "definitionEs": "picotear"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -21499,22 +23893,26 @@ const pokemonData = [
       {
         "char": "铳",
         "pinyin": "chong4",
-        "definition": "ancient firearm"
+        "definition": "firearm",
+        "definitionEs": "arma de fuego"
       },
       {
         "char": "嘴",
         "pinyin": "zui3",
-        "definition": "mouth"
+        "definition": "mouth",
+        "definitionEs": "boca"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -21532,17 +23930,20 @@ const pokemonData = [
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       },
       {
         "char": "少",
         "pinyin": "shao4",
-        "definition": "young"
+        "definition": "young",
+        "definitionEs": "joven"
       }
     ]
   },
@@ -21560,22 +23961,26 @@ const pokemonData = [
       {
         "char": "猫",
         "pinyin": "mao1",
-        "definition": "cat"
+        "definition": "cat",
+        "definitionEs": "gato"
       },
       {
         "char": "鼬",
         "pinyin": "you4",
-        "definition": "(zoology) weasel"
+        "definition": "weasel",
+        "definitionEs": "comadreja"
       },
       {
         "char": "探",
         "pinyin": "tan4",
-        "definition": "to explore"
+        "definition": "explore",
+        "definitionEs": "explorar"
       },
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       }
     ]
   },
@@ -21593,27 +23998,32 @@ const pokemonData = [
       {
         "char": "强",
         "pinyin": "qiang3",
-        "definition": "variant of 強|强[qiang3]"
+        "definition": "force",
+        "definitionEs": "forzar"
       },
       {
         "char": "颚",
         "pinyin": "e4",
-        "definition": "jaw"
+        "definition": "jaw",
+        "definitionEs": "mandíbula"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       },
       {
         "char": "母",
         "pinyin": "mu3",
-        "definition": "mother"
+        "definition": "mother",
+        "definitionEs": "madre"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -21631,17 +24041,20 @@ const pokemonData = [
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -21659,22 +24072,26 @@ const pokemonData = [
       {
         "char": "锹",
         "pinyin": "qiao1",
-        "definition": "shovel"
+        "definition": "shovel",
+        "definitionEs": "pala"
       },
       {
         "char": "农",
         "pinyin": "nong2",
-        "definition": "variant of 農|农[nong2]"
+        "definition": "farmer",
+        "definitionEs": "agricultor"
       },
       {
         "char": "炮",
         "pinyin": "pao4",
-        "definition": "variant of 炮[pao4]"
+        "definition": "cannon",
+        "definitionEs": "cañón"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -21692,17 +24109,20 @@ const pokemonData = [
       {
         "char": "好",
         "pinyin": "hao4",
-        "definition": "to be fond of"
+        "definition": "appreciate",
+        "definitionEs": "apreciar"
       },
       {
         "char": "胜",
         "pinyin": "sheng4",
-        "definition": "victory"
+        "definition": "victory",
+        "definitionEs": "victoria"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ]
   },
@@ -21720,22 +24140,26 @@ const pokemonData = [
       {
         "char": "好",
         "pinyin": "hao4",
-        "definition": "to be fond of"
+        "definition": "appreciate",
+        "definitionEs": "apreciar"
       },
       {
         "char": "胜",
         "pinyin": "sheng4",
-        "definition": "victory"
+        "definition": "victory",
+        "definitionEs": "victoria"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ]
   },
@@ -21753,17 +24177,20 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "舞",
         "pinyin": "wu3",
-        "definition": "to dance"
+        "definition": "dance",
+        "definitionEs": "bailar"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -21781,12 +24208,14 @@ const pokemonData = [
       {
         "char": "萌",
         "pinyin": "meng2",
-        "definition": "(bound form) to sprout"
+        "definition": "sprout",
+        "definitionEs": "brote"
       },
       {
         "char": "虻",
         "pinyin": "meng2",
-        "definition": "old variant of 虻[meng2]"
+        "definition": "horsefly",
+        "definitionEs": "tábano"
       }
     ]
   },
@@ -21804,22 +24233,26 @@ const pokemonData = [
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       },
       {
         "char": "结",
         "pinyin": "jie2",
-        "definition": "knot"
+        "definition": "knot",
+        "definitionEs": "nudo"
       },
       {
         "char": "萌",
         "pinyin": "meng2",
-        "definition": "(bound form) to sprout"
+        "definition": "sprout",
+        "definitionEs": "brote"
       },
       {
         "char": "虻",
         "pinyin": "meng2",
-        "definition": "old variant of 虻[meng2]"
+        "definition": "horsefly",
+        "definitionEs": "tábano"
       }
     ]
   },
@@ -21837,17 +24270,20 @@ const pokemonData = [
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -21865,22 +24301,26 @@ const pokemonData = [
       {
         "char": "鬃",
         "pinyin": "zong1",
-        "definition": "disheveled hair"
+        "definition": "mane",
+        "definitionEs": "crin"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "狼",
         "pinyin": "lang2",
-        "definition": "wolf"
+        "definition": "wolf",
+        "definitionEs": "lobo"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       }
     ]
   },
@@ -21898,17 +24338,20 @@ const pokemonData = [
       {
         "char": "弱",
         "pinyin": "ruo4",
-        "definition": "weak"
+        "definition": "weak",
+        "definitionEs": "débil"
       },
       {
         "char": "丁",
         "pinyin": "ding1",
-        "definition": "fourth in order"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -21926,17 +24369,20 @@ const pokemonData = [
       {
         "char": "好",
         "pinyin": "hao4",
-        "definition": "to be fond of"
+        "definition": "appreciate",
+        "definitionEs": "apreciar"
       },
       {
         "char": "坏",
         "pinyin": "huai4",
-        "definition": "bad"
+        "definition": "bad",
+        "definitionEs": "malo"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       }
     ]
   },
@@ -21954,17 +24400,20 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "坏",
         "pinyin": "huai4",
-        "definition": "bad"
+        "definition": "bad",
+        "definitionEs": "malo"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       }
     ]
   },
@@ -21982,17 +24431,20 @@ const pokemonData = [
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "驴",
-        "pinyin": "lu:2",
-        "definition": "donkey"
+        "pinyin": "lü2",
+        "definition": "donkey",
+        "definitionEs": "burro"
       },
       {
         "char": "仔",
         "pinyin": "zi3",
-        "definition": "(bound form) (of domestic animals or fowl) young"
+        "definition": "young",
+        "definitionEs": "joven"
       }
     ]
   },
@@ -22010,22 +24462,26 @@ const pokemonData = [
       {
         "char": "重",
         "pinyin": "zhong4",
-        "definition": "heavy"
+        "definition": "heavy",
+        "definitionEs": "pesado"
       },
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       },
       {
         "char": "挽",
         "pinyin": "wan3",
-        "definition": "to draw (a cart)"
+        "definition": "pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -22043,12 +24499,14 @@ const pokemonData = [
       {
         "char": "滴",
         "pinyin": "di1",
-        "definition": "to drip"
+        "definition": "drip",
+        "definitionEs": "gotear"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       }
     ]
   },
@@ -22066,17 +24524,20 @@ const pokemonData = [
       {
         "char": "滴",
         "pinyin": "di1",
-        "definition": "to drip"
+        "definition": "drip",
+        "definitionEs": "gotear"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       },
       {
         "char": "霸",
         "pinyin": "ba4",
-        "definition": "hegemon"
+        "definition": "tyrant",
+        "definitionEs": "tirano"
       }
     ]
   },
@@ -22094,17 +24555,20 @@ const pokemonData = [
       {
         "char": "伪",
         "pinyin": "wei3",
-        "definition": "variant of 偽|伪[wei3]"
+        "definition": "false",
+        "definitionEs": "falso"
       },
       {
         "char": "螳",
         "pinyin": "tang2",
-        "definition": "praying mantis"
+        "definition": "mantis",
+        "definitionEs": "mantis"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ]
   },
@@ -22122,17 +24586,20 @@ const pokemonData = [
       {
         "char": "兰",
         "pinyin": "lan2",
-        "definition": "orchid (蘭花|兰花 Cymbidium goeringii)"
+        "definition": "orchid",
+        "definitionEs": "orquídea"
       },
       {
         "char": "螳",
         "pinyin": "tang2",
-        "definition": "praying mantis"
+        "definition": "mantis",
+        "definitionEs": "mantis"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -22150,17 +24617,20 @@ const pokemonData = [
       {
         "char": "睡",
         "pinyin": "shui4",
-        "definition": "to sleep"
+        "definition": "sleep",
+        "definitionEs": "dormir"
       },
       {
         "char": "睡",
         "pinyin": "shui4",
-        "definition": "to sleep"
+        "definition": "sleep",
+        "definitionEs": "dormir"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -22178,22 +24648,26 @@ const pokemonData = [
       {
         "char": "灯",
         "pinyin": "deng1",
-        "definition": "lamp"
+        "definition": "lamp",
+        "definitionEs": "lámpara"
       },
       {
         "char": "罩",
         "pinyin": "zhao4",
-        "definition": "to cover"
+        "definition": "cover",
+        "definitionEs": "cubrir"
       },
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -22211,22 +24685,26 @@ const pokemonData = [
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       },
       {
         "char": "盗",
         "pinyin": "dao4",
-        "definition": "to steal"
+        "definition": "steal",
+        "definitionEs": "robar"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -22244,17 +24722,20 @@ const pokemonData = [
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "后",
         "pinyin": "hou4",
-        "definition": "empress"
+        "definition": "queen",
+        "definitionEs": "reina"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -22272,17 +24753,20 @@ const pokemonData = [
       {
         "char": "童",
         "pinyin": "tong2",
-        "definition": "child"
+        "definition": "child",
+        "definitionEs": "niño"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -22300,17 +24784,20 @@ const pokemonData = [
       {
         "char": "穿",
         "pinyin": "chuan1",
-        "definition": "to wear"
+        "definition": "to wear",
+        "definitionEs": "vestir"
       },
       {
         "char": "着",
         "pinyin": "zhuo2",
-        "definition": "to wear (clothes)"
+        "definition": "wear",
+        "definitionEs": "vestir"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -22328,17 +24815,20 @@ const pokemonData = [
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "竹",
         "pinyin": "zhu2",
-        "definition": "(bound form) bamboo"
+        "definition": "bamboo",
+        "definitionEs": "bambú"
       },
       {
         "char": "竹",
         "pinyin": "zhu2",
-        "definition": "(bound form) bamboo"
+        "definition": "bamboo",
+        "definitionEs": "bambú"
       }
     ]
   },
@@ -22356,17 +24846,20 @@ const pokemonData = [
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "舞",
         "pinyin": "wu3",
-        "definition": "to dance"
+        "definition": "dance",
+        "definitionEs": "bailar"
       },
       {
         "char": "妮",
         "pinyin": "ni1",
-        "definition": "girl"
+        "definition": "girl",
+        "definitionEs": "niña"
       }
     ]
   },
@@ -22384,22 +24877,26 @@ const pokemonData = [
       {
         "char": "甜",
         "pinyin": "tian2",
-        "definition": "sweet"
+        "definition": "sweet",
+        "definitionEs": "dulce"
       },
       {
         "char": "冷",
         "pinyin": "leng3",
-        "definition": "cold"
+        "definition": "cold",
+        "definitionEs": "frío"
       },
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "后",
         "pinyin": "hou4",
-        "definition": "empress"
+        "definition": "queen",
+        "definitionEs": "reina"
       }
     ]
   },
@@ -22417,22 +24914,26 @@ const pokemonData = [
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "疗",
         "pinyin": "liao2",
-        "definition": "to treat"
+        "definition": "treat",
+        "definitionEs": "tratar"
       },
       {
         "char": "环",
         "pinyin": "huan2",
-        "definition": "ring"
+        "definition": "ring",
+        "definitionEs": "anillo"
       },
       {
         "char": "环",
         "pinyin": "huan2",
-        "definition": "ring"
+        "definition": "ring",
+        "definitionEs": "anillo"
       }
     ]
   },
@@ -22450,17 +24951,20 @@ const pokemonData = [
       {
         "char": "智",
         "pinyin": "zhi4",
-        "definition": "(literary) wise"
+        "definition": "wise",
+        "definitionEs": "sabio"
       },
       {
         "char": "挥",
         "pinyin": "hui1",
-        "definition": "to wave"
+        "definition": "wave",
+        "definitionEs": "agitar"
       },
       {
         "char": "猩",
         "pinyin": "xing1",
-        "definition": "ape"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -22478,17 +24982,20 @@ const pokemonData = [
       {
         "char": "投",
         "pinyin": "tou2",
-        "definition": "to throw (sth in a specific direction: ball, javelin, grenade etc)"
+        "definition": "throw",
+        "definitionEs": "lanzar"
       },
       {
         "char": "掷",
         "pinyin": "zhi4",
-        "definition": "to toss"
+        "definition": "toss",
+        "definitionEs": "lanzar"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -22506,17 +25013,20 @@ const pokemonData = [
       {
         "char": "胆",
         "pinyin": "dan3",
-        "definition": "gall bladder"
+        "definition": "courage",
+        "definitionEs": "valor"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -22534,22 +25044,26 @@ const pokemonData = [
       {
         "char": "具",
         "pinyin": "ju4",
-        "definition": "tool"
+        "definition": "tool",
+        "definitionEs": "herramienta"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "武",
         "pinyin": "wu3",
-        "definition": "martial"
+        "definition": "martial",
+        "definitionEs": "marcial"
       },
       {
         "char": "者",
         "pinyin": "zhe3",
-        "definition": "(after a verb or adjective) one who (is) ..."
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -22566,18 +25080,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "丘",
         "pinyin": "qiu1",
-        "definition": "mound"
+        "definition": "hill",
+        "definitionEs": "colina"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -22595,22 +25112,26 @@ const pokemonData = [
       {
         "char": "噬",
         "pinyin": "shi4",
-        "definition": "to devour"
+        "definition": "devour",
+        "definitionEs": "devorar"
       },
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "堡",
         "pinyin": "pu4",
-        "definition": "used in place names"
+        "definition": "village",
+        "definitionEs": "aldea"
       },
       {
         "char": "爷",
         "pinyin": "ye2",
-        "definition": "grandpa"
+        "definition": "grandpa",
+        "definitionEs": "abuelo"
       }
     ]
   },
@@ -22628,17 +25149,20 @@ const pokemonData = [
       {
         "char": "拳",
         "pinyin": "quan2",
-        "definition": "fist"
+        "definition": "fist",
+        "definitionEs": "puño"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "参",
         "pinyin": "shen1",
-        "definition": "variant of 參|参[shen1]"
+        "definition": "ginseng",
+        "definitionEs": "ginseng"
       }
     ]
   },
@@ -22655,18 +25179,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "属",
-        "pinyin": "zhu3",
-        "definition": "to join together"
+        "pinyin": "shu3",
+        "definition": "to belong",
+        "definitionEs": "pertenecer"
       },
       {
         "char": "性",
         "pinyin": "xing4",
-        "definition": "nature"
+        "definition": "nature",
+        "definitionEs": "naturaleza"
       },
       {
         "char": "空",
-        "pinyin": "kong4",
-        "definition": "to empty"
+        "pinyin": "kong1",
+        "definition": "empty",
+        "definitionEs": "vacío"
       }
     ]
   },
@@ -22684,22 +25211,26 @@ const pokemonData = [
       {
         "char": "银",
         "pinyin": "yin2",
-        "definition": "silver"
+        "definition": "silver",
+        "definitionEs": "plata"
       },
       {
         "char": "伴",
         "pinyin": "ban4",
-        "definition": "partner"
+        "definition": "partner",
+        "definitionEs": "compañero"
       },
       {
         "char": "战",
         "pinyin": "zhan4",
-        "definition": "to fight"
+        "definition": "fight",
+        "definitionEs": "luchar"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -22717,17 +25248,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "陨",
         "pinyin": "yun3",
-        "definition": "(bound form) to fall from the sky"
+        "definition": "fall",
+        "definitionEs": "caer"
       },
       {
         "char": "星",
         "pinyin": "xing1",
-        "definition": "star"
+        "definition": "star",
+        "definitionEs": "estrella"
       }
     ]
   },
@@ -22745,22 +25279,26 @@ const pokemonData = [
       {
         "char": "树",
         "pinyin": "shu4",
-        "definition": "tree"
+        "definition": "tree",
+        "definitionEs": "árbol"
       },
       {
         "char": "枕",
         "pinyin": "zhen3",
-        "definition": "(bound form) pillow"
+        "definition": "pillow",
+        "definitionEs": "almohada"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -22778,22 +25316,26 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -22811,27 +25353,32 @@ const pokemonData = [
       {
         "char": "托",
         "pinyin": "tuo1",
-        "definition": "to trust"
+        "definition": "support",
+        "definitionEs": "apoyar"
       },
       {
         "char": "戈",
         "pinyin": "ge1",
-        "definition": "dagger-axe"
+        "definition": "dagger-axe",
+        "definitionEs": "daga-hacha"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       },
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       }
     ]
   },
@@ -22849,17 +25396,20 @@ const pokemonData = [
       {
         "char": "谜",
         "pinyin": "mi2",
-        "definition": "riddle"
+        "definition": "riddle",
+        "definitionEs": "acertijo"
       },
       {
         "char": "拟",
         "pinyin": "ni3",
-        "definition": "to plan to"
+        "definition": "plan",
+        "definitionEs": "planear"
       },
       {
         "char": "丘",
         "pinyin": "qiu1",
-        "definition": "mound"
+        "definition": "hill",
+        "definitionEs": "colina"
       }
     ]
   },
@@ -22877,27 +25427,32 @@ const pokemonData = [
       {
         "char": "磨",
         "pinyin": "mo4",
-        "definition": "grindstone"
+        "definition": "grindstone",
+        "definitionEs": "muela"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       },
       {
         "char": "彩",
         "pinyin": "cai3",
-        "definition": "(bright) color"
+        "definition": "color",
+        "definitionEs": "color"
       },
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -22915,17 +25470,20 @@ const pokemonData = [
       {
         "char": "老",
         "pinyin": "lao3",
-        "definition": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity"
+        "definition": "old",
+        "definitionEs": "viejo"
       },
       {
         "char": "翁",
         "pinyin": "weng1",
-        "definition": "elderly man"
+        "definition": "elder",
+        "definitionEs": "anciano"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -22943,22 +25501,26 @@ const pokemonData = [
       {
         "char": "破",
         "pinyin": "po4",
-        "definition": "broken"
+        "definition": "broken",
+        "definitionEs": "roto"
       },
       {
         "char": "破",
         "pinyin": "po4",
-        "definition": "broken"
+        "definition": "broken",
+        "definitionEs": "roto"
       },
       {
         "char": "舵",
         "pinyin": "duo4",
-        "definition": "helm"
+        "definition": "helm",
+        "definitionEs": "timón"
       },
       {
         "char": "轮",
         "pinyin": "lun2",
-        "definition": "wheel"
+        "definition": "wheel",
+        "definitionEs": "rueda"
       }
     ]
   },
@@ -22976,17 +25538,20 @@ const pokemonData = [
       {
         "char": "心",
         "pinyin": "xin1",
-        "definition": "heart"
+        "definition": "heart",
+        "definitionEs": "corazón"
       },
       {
         "char": "鳞",
         "pinyin": "lin2",
-        "definition": "scales (of fish, snakes etc)"
+        "definition": "scale",
+        "definitionEs": "escama"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -23004,17 +25569,20 @@ const pokemonData = [
       {
         "char": "鳞",
         "pinyin": "lin2",
-        "definition": "scales (of fish, snakes etc)"
+        "definition": "scale",
+        "definitionEs": "escama"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -23032,27 +25600,32 @@ const pokemonData = [
       {
         "char": "杖",
         "pinyin": "zhang4",
-        "definition": "a staff"
+        "definition": "staff",
+        "definitionEs": "bastón"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "鳞",
         "pinyin": "lin2",
-        "definition": "scales (of fish, snakes etc)"
+        "definition": "scale",
+        "definitionEs": "escama"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -23070,22 +25643,26 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "璞",
         "pinyin": "pu2",
-        "definition": "unpolished gem"
+        "definition": "unpolished gem",
+        "definitionEs": "gema en bruto"
       },
       {
         "char": "鸣",
         "pinyin": "ming2",
-        "definition": "to cry (of birds, animals and insects)"
+        "definition": "chirp",
+        "definitionEs": "piar"
       },
       {
         "char": "鸣",
         "pinyin": "ming2",
-        "definition": "to cry (of birds, animals and insects)"
+        "definition": "chirp",
+        "definitionEs": "piar"
       }
     ]
   },
@@ -23103,22 +25680,26 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "璞",
         "pinyin": "pu2",
-        "definition": "unpolished gem"
+        "definition": "unpolished gem",
+        "definitionEs": "gema en bruto"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       },
       {
         "char": "蝶",
         "pinyin": "die2",
-        "definition": "butterfly"
+        "definition": "butterfly",
+        "definitionEs": "mariposa"
       }
     ]
   },
@@ -23136,22 +25717,26 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "璞",
         "pinyin": "pu2",
-        "definition": "unpolished gem"
+        "definition": "unpolished gem",
+        "definitionEs": "gema en bruto"
       },
       {
         "char": "哞",
         "pinyin": "mou1",
-        "definition": "moo (sound made by cow)"
+        "definition": "moo",
+        "definitionEs": "mugir"
       },
       {
         "char": "哞",
         "pinyin": "mou1",
-        "definition": "moo (sound made by cow)"
+        "definition": "moo",
+        "definitionEs": "mugir"
       }
     ]
   },
@@ -23169,22 +25754,26 @@ const pokemonData = [
       {
         "char": "卡",
         "pinyin": "ka3",
-        "definition": "to stop"
+        "definition": "card",
+        "definitionEs": "tarjeta"
       },
       {
         "char": "璞",
         "pinyin": "pu2",
-        "definition": "unpolished gem"
+        "definition": "unpolished gem",
+        "definitionEs": "gema en bruto"
       },
       {
         "char": "鳍",
         "pinyin": "qi2",
-        "definition": "fin"
+        "definition": "fin",
+        "definitionEs": "aleta"
       },
       {
         "char": "鳍",
         "pinyin": "qi2",
-        "definition": "fin"
+        "definition": "fin",
+        "definitionEs": "aleta"
       }
     ]
   },
@@ -23202,22 +25791,26 @@ const pokemonData = [
       {
         "char": "科",
         "pinyin": "ke1",
-        "definition": "branch of study"
+        "definition": "science",
+        "definitionEs": "ciencia"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "莫",
         "pinyin": "mo4",
-        "definition": "do not"
+        "definition": "do not",
+        "definitionEs": "no"
       },
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       }
     ]
   },
@@ -23235,22 +25828,26 @@ const pokemonData = [
       {
         "char": "科",
         "pinyin": "ke1",
-        "definition": "branch of study"
+        "definition": "science",
+        "definitionEs": "ciencia"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "莫",
         "pinyin": "mo4",
-        "definition": "do not"
+        "definition": "do not",
+        "definitionEs": "no"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -23268,27 +25865,32 @@ const pokemonData = [
       {
         "char": "索",
         "pinyin": "suo3",
-        "definition": "to search"
+        "definition": "search",
+        "definitionEs": "buscar"
       },
       {
         "char": "尔",
         "pinyin": "er3",
-        "definition": "thus"
+        "definition": "thus",
+        "definitionEs": "así"
       },
       {
         "char": "迦",
         "pinyin": "jia1",
-        "definition": "(phonetic sound for Buddhist terms)"
+        "definition": "phonetic",
+        "definitionEs": "fonético"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       }
     ]
   },
@@ -23306,22 +25908,26 @@ const pokemonData = [
       {
         "char": "露",
         "pinyin": "lu4",
-        "definition": "dew"
+        "definition": "dew",
+        "definitionEs": "rocío"
       },
       {
         "char": "奈",
         "pinyin": "nai4",
-        "definition": "used for its phonetic value in writing foreign words"
+        "definition": "phonetic (part of)",
+        "definitionEs": "fonético (parte de)"
       },
       {
         "char": "雅",
         "pinyin": "ya3",
-        "definition": "elegant"
+        "definition": "elegant",
+        "definitionEs": "elegante"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -23339,22 +25945,26 @@ const pokemonData = [
       {
         "char": "虚",
         "pinyin": "xu1",
-        "definition": "emptiness"
+        "definition": "empty",
+        "definitionEs": "vacío"
       },
       {
         "char": "吾",
         "pinyin": "wu2",
-        "definition": "(old) I"
+        "definition": "I",
+        "definitionEs": "yo"
       },
       {
         "char": "伊",
         "pinyin": "yi1",
-        "definition": "he"
+        "definition": "he",
+        "definitionEs": "él"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       }
     ]
   },
@@ -23372,17 +25982,20 @@ const pokemonData = [
       {
         "char": "爆",
         "pinyin": "bao4",
-        "definition": "to explode"
+        "definition": "explode",
+        "definitionEs": "explotar"
       },
       {
         "char": "肌",
         "pinyin": "ji1",
-        "definition": "(bound form) flesh"
+        "definition": "muscle",
+        "definitionEs": "músculo"
       },
       {
         "char": "蚊",
         "pinyin": "wen2",
-        "definition": "mosquito"
+        "definition": "mosquito",
+        "definitionEs": "mosquito"
       }
     ]
   },
@@ -23400,22 +26013,26 @@ const pokemonData = [
       {
         "char": "费",
         "pinyin": "fei4",
-        "definition": "to cost"
+        "definition": "cost",
+        "definitionEs": "costar"
       },
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "螂",
         "pinyin": "lang2",
-        "definition": "dragonfly"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -23433,17 +26050,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "束",
         "pinyin": "shu4",
-        "definition": "to bind"
+        "definition": "bind",
+        "definitionEs": "atar"
       },
       {
         "char": "木",
         "pinyin": "mu4",
-        "definition": "(bound form) tree"
+        "definition": "wood",
+        "definitionEs": "madera"
       }
     ]
   },
@@ -23461,22 +26081,26 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "辉",
         "pinyin": "hui1",
-        "definition": "(bound form) radiance"
+        "definition": "radiance",
+        "definitionEs": "resplandor"
       },
       {
         "char": "夜",
         "pinyin": "ye4",
-        "definition": "night"
+        "definition": "night",
+        "definitionEs": "noche"
       }
     ]
   },
@@ -23494,17 +26118,20 @@ const pokemonData = [
       {
         "char": "纸",
         "pinyin": "zhi3",
-        "definition": "paper ("
+        "definition": "paper",
+        "definitionEs": "papel"
       },
       {
         "char": "御",
         "pinyin": "yu4",
-        "definition": "(bound form) to defend"
+        "definition": "defend",
+        "definitionEs": "defender"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       }
     ]
   },
@@ -23522,22 +26149,26 @@ const pokemonData = [
       {
         "char": "恶",
         "pinyin": "wu4",
-        "definition": "to hate"
+        "definition": "hate",
+        "definitionEs": "odiar"
       },
       {
         "char": "食",
         "pinyin": "shi2",
-        "definition": "to eat"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -23555,27 +26186,32 @@ const pokemonData = [
       {
         "char": "奈",
         "pinyin": "nai4",
-        "definition": "used for its phonetic value in writing foreign words"
+        "definition": "phonetic (part of)",
+        "definitionEs": "fonético (parte de)"
       },
       {
         "char": "克",
         "pinyin": "ke4",
-        "definition": "to be able to"
+        "definition": "to overcome",
+        "definitionEs": "superar"
       },
       {
         "char": "洛",
         "pinyin": "luo4",
-        "definition": "used in transliteration"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "兹",
         "pinyin": "zi1",
-        "definition": "(literary) this"
+        "definition": "this",
+        "definitionEs": "este"
       },
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       }
     ]
   },
@@ -23593,22 +26229,26 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "机",
         "pinyin": "ji1",
-        "definition": "(bound form) machine"
+        "definition": "machine",
+        "definitionEs": "máquina"
       },
       {
         "char": "雅",
         "pinyin": "ya3",
-        "definition": "elegant"
+        "definition": "elegant",
+        "definitionEs": "elegante"
       },
       {
         "char": "娜",
         "pinyin": "na4",
-        "definition": "(phonetic na)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -23626,17 +26266,20 @@ const pokemonData = [
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "夏",
         "pinyin": "xia4",
-        "definition": "summer"
+        "definition": "summer",
+        "definitionEs": "verano"
       },
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       }
     ]
   },
@@ -23654,17 +26297,20 @@ const pokemonData = [
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "比",
         "pinyin": "bi3",
-        "definition": "(particle used for comparison and \"-er than\")"
+        "definition": "compare",
+        "definitionEs": "comparar"
       }
     ]
   },
@@ -23682,22 +26328,26 @@ const pokemonData = [
       {
         "char": "四",
         "pinyin": "si4",
-        "definition": "four"
+        "definition": "four",
+        "definitionEs": "cuatro"
       },
       {
         "char": "颚",
         "pinyin": "e4",
-        "definition": "jaw"
+        "definition": "jaw",
+        "definitionEs": "mandíbula"
       },
       {
         "char": "针",
         "pinyin": "zhen1",
-        "definition": "needle"
+        "definition": "needle",
+        "definitionEs": "aguja"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -23715,17 +26365,20 @@ const pokemonData = [
       {
         "char": "垒",
         "pinyin": "lei3",
-        "definition": "rampart"
+        "definition": "rampart",
+        "definitionEs": "muralla"
       },
       {
         "char": "磊",
         "pinyin": "lei3",
-        "definition": "lumpy"
+        "definition": "lumpy",
+        "definitionEs": "grumoso"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       }
     ]
   },
@@ -23743,22 +26396,26 @@ const pokemonData = [
       {
         "char": "砰",
         "pinyin": "peng1",
-        "definition": "(onom.) bang"
+        "definition": "bang",
+        "definitionEs": "golpe"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "丑",
         "pinyin": "chou3",
-        "definition": "shameful"
+        "definition": "ugly",
+        "definitionEs": "feo"
       }
     ]
   },
@@ -23776,22 +26433,26 @@ const pokemonData = [
       {
         "char": "捷",
         "pinyin": "jie2",
-        "definition": "victory"
+        "definition": "victory",
+        "definitionEs": "victoria"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "奥",
         "pinyin": "ao4",
-        "definition": "obscure"
+        "definition": "obscure",
+        "definitionEs": "oscuro"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -23809,17 +26470,20 @@ const pokemonData = [
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "录",
         "pinyin": "lu4",
-        "definition": "diary"
+        "definition": "record",
+        "definitionEs": "registro"
       },
       {
         "char": "坦",
         "pinyin": "tan3",
-        "definition": "flat"
+        "definition": "flat",
+        "definitionEs": "plano"
       }
     ]
   },
@@ -23837,22 +26501,26 @@ const pokemonData = [
       {
         "char": "美",
         "pinyin": "mei3",
-        "definition": "beautiful"
+        "definition": "beautiful",
+        "definitionEs": "hermoso"
       },
       {
         "char": "录",
         "pinyin": "lu4",
-        "definition": "diary"
+        "definition": "record",
+        "definitionEs": "registro"
       },
       {
         "char": "梅",
         "pinyin": "mei2",
-        "definition": "old variant of 梅[mei2]"
+        "definition": "plum",
+        "definitionEs": "ciruela"
       },
       {
         "char": "塔",
         "pinyin": "ta3",
-        "definition": "old variant of 塔[ta3]"
+        "definition": "tower",
+        "definitionEs": "torre"
       }
     ]
   },
@@ -23870,17 +26538,20 @@ const pokemonData = [
       {
         "char": "敲",
         "pinyin": "qiao1",
-        "definition": "to hit"
+        "definition": "hit",
+        "definitionEs": "golpear"
       },
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -23898,17 +26569,20 @@ const pokemonData = [
       {
         "char": "啪",
         "pinyin": "pa1",
-        "definition": "(onom.) bang"
+        "definition": "bang",
+        "definitionEs": "chasquido"
       },
       {
         "char": "咚",
         "pinyin": "dong1",
-        "definition": "(onom.) boom (of a drum)"
+        "definition": "boom",
+        "definitionEs": "retumbar"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -23926,27 +26600,32 @@ const pokemonData = [
       {
         "char": "轰",
         "pinyin": "hong1",
-        "definition": "explosion"
+        "definition": "explosion",
+        "definitionEs": "explosión"
       },
       {
         "char": "擂",
         "pinyin": "lei4",
-        "definition": "(bound form) platform for a martial art contest"
+        "definition": "platform",
+        "definitionEs": "plataforma"
       },
       {
         "char": "金",
         "pinyin": "jin1",
-        "definition": "gold"
+        "definition": "gold",
+        "definitionEs": "oro"
       },
       {
         "char": "刚",
         "pinyin": "gang1",
-        "definition": "(literary) hard"
+        "definition": "hard",
+        "definitionEs": "duro"
       },
       {
         "char": "猩",
         "pinyin": "xing1",
-        "definition": "ape"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -23964,17 +26643,20 @@ const pokemonData = [
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "兔",
         "pinyin": "tu4",
-        "definition": "rabbit"
+        "definition": "rabbit",
+        "definitionEs": "conejo"
       },
       {
         "char": "儿",
-        "pinyin": "r5",
-        "definition": "non-syllabic diminutive suffix"
+        "pinyin": "er2",
+        "definition": "child",
+        "definitionEs": "niño"
       }
     ]
   },
@@ -23992,22 +26674,26 @@ const pokemonData = [
       {
         "char": "腾",
         "pinyin": "teng2",
-        "definition": "(bound form) to gallop"
+        "definition": "gallop",
+        "definitionEs": "galope"
       },
       {
         "char": "蹴",
         "pinyin": "cu4",
-        "definition": "variant of 蹴[cu4]"
+        "definition": "kick",
+        "definitionEs": "patear"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "将",
         "pinyin": "qiang1",
-        "definition": "to desire"
+        "definition": "desire",
+        "definitionEs": "desear"
       }
     ]
   },
@@ -24025,22 +26711,26 @@ const pokemonData = [
       {
         "char": "闪",
         "pinyin": "shan3",
-        "definition": "to dodge"
+        "definition": "to flash",
+        "definitionEs": "destellar"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "牌",
         "pinyin": "pai2",
-        "definition": "signboard"
+        "definition": "sign",
+        "definitionEs": "cartel"
       }
     ]
   },
@@ -24058,17 +26748,20 @@ const pokemonData = [
       {
         "char": "泪",
         "pinyin": "lei4",
-        "definition": "(bound form) tears"
+        "definition": "tear",
+        "definitionEs": "lágrima"
       },
       {
         "char": "眼",
         "pinyin": "yan3",
-        "definition": "a glance"
+        "definition": "eye",
+        "definitionEs": "ojo"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -24086,17 +26779,20 @@ const pokemonData = [
       {
         "char": "变",
         "pinyin": "bian4",
-        "definition": "to change"
+        "definition": "to change",
+        "definitionEs": "cambiar"
       },
       {
         "char": "涩",
         "pinyin": "se4",
-        "definition": "old variant of 澀|涩[se4]"
+        "definition": "astringent",
+        "definitionEs": "astringente"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -24114,22 +26810,26 @@ const pokemonData = [
       {
         "char": "千",
         "pinyin": "qian1",
-        "definition": "used in 鞦韆|秋千[qiu1 qian1]"
+        "definition": "thousand",
+        "definitionEs": "mil"
       },
       {
         "char": "面",
         "pinyin": "mian4",
-        "definition": "flour"
+        "definition": "face",
+        "definitionEs": "cara"
       },
       {
         "char": "避",
         "pinyin": "bi4",
-        "definition": "to avoid"
+        "definition": "avoid",
+        "definitionEs": "evitar"
       },
       {
         "char": "役",
         "pinyin": "yi4",
-        "definition": "forced labor"
+        "definition": "labor",
+        "definitionEs": "trabajo"
       }
     ]
   },
@@ -24147,22 +26847,26 @@ const pokemonData = [
       {
         "char": "贪",
         "pinyin": "tan1",
-        "definition": "to have a voracious desire for"
+        "definition": "greedy",
+        "definitionEs": "codicioso"
       },
       {
         "char": "心",
         "pinyin": "xin1",
-        "definition": "heart"
+        "definition": "heart",
+        "definitionEs": "corazón"
       },
       {
         "char": "栗",
         "pinyin": "li4",
-        "definition": "chestnut"
+        "definition": "chestnut",
+        "definitionEs": "castaña"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -24180,22 +26884,26 @@ const pokemonData = [
       {
         "char": "藏",
         "pinyin": "zang4",
-        "definition": "storehouse"
+        "definition": "storehouse",
+        "definitionEs": "almacén"
       },
       {
         "char": "饱",
         "pinyin": "bao3",
-        "definition": "to eat till full"
+        "definition": "full",
+        "definitionEs": "satisfecho"
       },
       {
         "char": "栗",
         "pinyin": "li4",
-        "definition": "chestnut"
+        "definition": "chestnut",
+        "definitionEs": "castaña"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -24213,17 +26921,20 @@ const pokemonData = [
       {
         "char": "稚",
         "pinyin": "zhi4",
-        "definition": "variant of 稚[zhi4]"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       },
       {
         "char": "雀",
-        "pinyin": "qiao1",
-        "definition": "a freckle"
+        "pinyin": "que4",
+        "definition": "sparrow",
+        "definitionEs": "gorrión"
       }
     ]
   },
@@ -24241,12 +26952,14 @@ const pokemonData = [
       {
         "char": "蓝",
         "pinyin": "lan2",
-        "definition": "blue"
+        "definition": "blue",
+        "definitionEs": "azul"
       },
       {
         "char": "鸦",
         "pinyin": "ya1",
-        "definition": "variant of 鴉|鸦[ya1]"
+        "definition": "crow",
+        "definitionEs": "cuervo"
       }
     ]
   },
@@ -24264,17 +26977,20 @@ const pokemonData = [
       {
         "char": "钢",
         "pinyin": "gang1",
-        "definition": "steel"
+        "definition": "steel",
+        "definitionEs": "acero"
       },
       {
         "char": "铠",
         "pinyin": "kai3",
-        "definition": "armor"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "鸦",
         "pinyin": "ya1",
-        "definition": "variant of 鴉|鸦[ya1]"
+        "definition": "crow",
+        "definitionEs": "cuervo"
       }
     ]
   },
@@ -24292,17 +27008,20 @@ const pokemonData = [
       {
         "char": "索",
         "pinyin": "suo3",
-        "definition": "to search"
+        "definition": "search",
+        "definitionEs": "buscar"
       },
       {
         "char": "侦",
         "pinyin": "zhen1",
-        "definition": "old variant of 偵|侦[zhen1]"
+        "definition": "scout",
+        "definitionEs": "explorar"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -24320,17 +27039,20 @@ const pokemonData = [
       {
         "char": "天",
         "pinyin": "tian1",
-        "definition": "day"
+        "definition": "day",
+        "definitionEs": "día"
       },
       {
         "char": "罩",
         "pinyin": "zhao4",
-        "definition": "to cover"
+        "definition": "cover",
+        "definitionEs": "cubrir"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -24348,22 +27070,26 @@ const pokemonData = [
       {
         "char": "以",
         "pinyin": "yi3",
-        "definition": "to use"
+        "definition": "use",
+        "definitionEs": "usar"
       },
       {
         "char": "欧",
         "pinyin": "ou1",
-        "definition": "used in transliteration"
+        "definition": "Europe",
+        "definitionEs": "Europa"
       },
       {
         "char": "路",
         "pinyin": "lu4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "普",
         "pinyin": "pu3",
-        "definition": "general"
+        "definition": "general",
+        "definitionEs": "general"
       }
     ]
   },
@@ -24381,17 +27107,20 @@ const pokemonData = [
       {
         "char": "狡",
         "pinyin": "jiao3",
-        "definition": "crafty"
+        "definition": "crafty",
+        "definitionEs": "astuto"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "狐",
         "pinyin": "hu2",
-        "definition": "fox"
+        "definition": "fox",
+        "definitionEs": "zorro"
       }
     ]
   },
@@ -24409,17 +27138,20 @@ const pokemonData = [
       {
         "char": "猾",
         "pinyin": "hua2",
-        "definition": "sly"
+        "definition": "sly",
+        "definitionEs": "astuto"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "狐",
         "pinyin": "hu2",
-        "definition": "fox"
+        "definition": "fox",
+        "definitionEs": "zorro"
       }
     ]
   },
@@ -24437,17 +27169,20 @@ const pokemonData = [
       {
         "char": "幼",
         "pinyin": "you4",
-        "definition": "young"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "棉",
         "pinyin": "mian2",
-        "definition": "generic term for cotton or kapok"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       },
       {
         "char": "棉",
         "pinyin": "mian2",
-        "definition": "generic term for cotton or kapok"
+        "definition": "cotton",
+        "definitionEs": "algodón"
       }
     ]
   },
@@ -24465,17 +27200,20 @@ const pokemonData = [
       {
         "char": "白",
         "pinyin": "bai2",
-        "definition": "white"
+        "definition": "white",
+        "definitionEs": "blanco"
       },
       {
         "char": "蓬",
         "pinyin": "peng2",
-        "definition": "fleabane (family Asteraceae)"
+        "definition": "fleabane",
+        "definitionEs": "hierba de pulgas"
       },
       {
         "char": "蓬",
         "pinyin": "peng2",
-        "definition": "fleabane (family Asteraceae)"
+        "definition": "fleabane",
+        "definitionEs": "hierba de pulgas"
       }
     ]
   },
@@ -24493,17 +27231,20 @@ const pokemonData = [
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "辫",
         "pinyin": "bian4",
-        "definition": "a braid or queue"
+        "definition": "braid",
+        "definitionEs": "trenza"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -24521,22 +27262,26 @@ const pokemonData = [
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "羊",
         "pinyin": "yang2",
-        "definition": "sheep"
+        "definition": "sheep",
+        "definitionEs": "oveja"
       }
     ]
   },
@@ -24554,17 +27299,20 @@ const pokemonData = [
       {
         "char": "咬",
         "pinyin": "yao3",
-        "definition": "variant of 咬[yao3]"
+        "definition": "to bite",
+        "definitionEs": "morder"
       },
       {
         "char": "咬",
         "pinyin": "yao3",
-        "definition": "variant of 咬[yao3]"
+        "definition": "to bite",
+        "definitionEs": "morder"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -24582,17 +27330,20 @@ const pokemonData = [
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "噬",
         "pinyin": "shi4",
-        "definition": "to devour"
+        "definition": "devour",
+        "definitionEs": "devorar"
       },
       {
         "char": "龟",
         "pinyin": "gui1",
-        "definition": "tortoise"
+        "definition": "turtle",
+        "definitionEs": "tortuga"
       }
     ]
   },
@@ -24610,17 +27361,20 @@ const pokemonData = [
       {
         "char": "来",
         "pinyin": "lai2",
-        "definition": "to come"
+        "definition": "come",
+        "definitionEs": "venir"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "汪",
         "pinyin": "wang1",
-        "definition": "expanse of water"
+        "definition": "vast",
+        "definitionEs": "vasto"
       }
     ]
   },
@@ -24638,17 +27392,20 @@ const pokemonData = [
       {
         "char": "逐",
         "pinyin": "zhu2",
-        "definition": "(bound form) to pursue"
+        "definition": "pursue",
+        "definitionEs": "perseguir"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -24666,17 +27423,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "炭",
         "pinyin": "tan4",
-        "definition": "wood charcoal"
+        "definition": "charcoal",
+        "definitionEs": "carbón"
       },
       {
         "char": "仔",
         "pinyin": "zi3",
-        "definition": "(bound form) (of domestic animals or fowl) young"
+        "definition": "young",
+        "definitionEs": "joven"
       }
     ]
   },
@@ -24694,17 +27454,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "炭",
         "pinyin": "tan4",
-        "definition": "wood charcoal"
+        "definition": "charcoal",
+        "definitionEs": "carbón"
       },
       {
         "char": "车",
         "pinyin": "ju1",
-        "definition": "war chariot (archaic)"
+        "definition": "chariot",
+        "definitionEs": "carro"
       }
     ]
   },
@@ -24722,17 +27485,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "炭",
         "pinyin": "tan4",
-        "definition": "wood charcoal"
+        "definition": "charcoal",
+        "definitionEs": "carbón"
       },
       {
         "char": "山",
         "pinyin": "shan1",
-        "definition": "mountain"
+        "definition": "mountain",
+        "definitionEs": "montaña"
       }
     ]
   },
@@ -24750,17 +27516,20 @@ const pokemonData = [
       {
         "char": "啃",
         "pinyin": "ken3",
-        "definition": "to gnaw"
+        "definition": "gnaw",
+        "definitionEs": "roer"
       },
       {
         "char": "果",
         "pinyin": "guo3",
-        "definition": "fruit"
+        "definition": "fruit",
+        "definitionEs": "fruta"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -24778,17 +27547,20 @@ const pokemonData = [
       {
         "char": "苹",
         "pinyin": "ping2",
-        "definition": "used in 蘋果|苹果[ping2 guo3]"
+        "definition": "apple",
+        "definitionEs": "manzana"
       },
       {
         "char": "裹",
         "pinyin": "guo3",
-        "definition": "to wrap around"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -24806,17 +27578,20 @@ const pokemonData = [
       {
         "char": "丰",
         "pinyin": "feng1",
-        "definition": "abundant"
+        "definition": "abundant",
+        "definitionEs": "abundante"
       },
       {
         "char": "蜜",
         "pinyin": "mi4",
-        "definition": "honey"
+        "definition": "honey",
+        "definitionEs": "miel"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -24833,18 +27608,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "包",
         "pinyin": "bao1",
-        "definition": "to cover"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -24861,18 +27639,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "螺",
         "pinyin": "luo2",
-        "definition": "spiral shell"
+        "definition": "spiral",
+        "definitionEs": "espiral"
       },
       {
         "char": "蟒",
         "pinyin": "mang3",
-        "definition": "python"
+        "definition": "python",
+        "definitionEs": "pitón"
       }
     ]
   },
@@ -24890,17 +27671,20 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -24917,18 +27701,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "刺",
-        "pinyin": "ci1",
-        "definition": "(onom.) whoosh"
+        "pinyin": "ci4",
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "梭",
         "pinyin": "suo1",
-        "definition": "(textiles) shuttle"
+        "definition": "shuttle",
+        "definitionEs": "lanzadera"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -24946,22 +27733,26 @@ const pokemonData = [
       {
         "char": "戽",
         "pinyin": "hu4",
-        "definition": "water bucket for irrigation"
+        "definition": "bucket",
+        "definitionEs": "cubo"
       },
       {
         "char": "斗",
         "pinyin": "dou4",
-        "definition": "variant of 鬥|斗[dou4]"
+        "definition": "fight",
+        "definitionEs": "lucha"
       },
       {
         "char": "尖",
         "pinyin": "jian1",
-        "definition": "pointed"
+        "definition": "pointed",
+        "definitionEs": "puntiagudo"
       },
       {
         "char": "梭",
         "pinyin": "suo1",
-        "definition": "(textiles) shuttle"
+        "definition": "shuttle",
+        "definitionEs": "lanzadera"
       }
     ]
   },
@@ -24979,17 +27770,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "音",
         "pinyin": "yin1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "婴",
         "pinyin": "ying1",
-        "definition": "infant"
+        "definition": "infant",
+        "definitionEs": "infante"
       }
     ]
   },
@@ -25007,22 +27801,26 @@ const pokemonData = [
       {
         "char": "颤",
         "pinyin": "chan4",
-        "definition": "to tremble"
+        "definition": "tremble",
+        "definitionEs": "temblar"
       },
       {
         "char": "弦",
         "pinyin": "xian2",
-        "definition": "bow string"
+        "definition": "string",
+        "definitionEs": "cuerda"
       },
       {
         "char": "蝾",
         "pinyin": "rong2",
-        "definition": "salamander"
+        "definition": "salamander",
+        "definitionEs": "salamandra"
       },
       {
         "char": "螈",
         "pinyin": "yuan2",
-        "definition": "salamander"
+        "definition": "salamander",
+        "definitionEs": "salamandra"
       }
     ]
   },
@@ -25040,17 +27838,20 @@ const pokemonData = [
       {
         "char": "烧",
         "pinyin": "shao1",
-        "definition": "to burn"
+        "definition": "burn",
+        "definitionEs": "quemar"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "蚣",
         "pinyin": "gong1",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       }
     ]
   },
@@ -25068,17 +27869,20 @@ const pokemonData = [
       {
         "char": "焚",
         "pinyin": "fen2",
-        "definition": "to burn"
+        "definition": "burn",
+        "definitionEs": "quemar"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "蚣",
         "pinyin": "gong1",
-        "definition": "used in 蜈蚣[wu2 gong1]"
+        "definition": "centipede",
+        "definitionEs": "ciempiés"
       }
     ]
   },
@@ -25096,17 +27900,20 @@ const pokemonData = [
       {
         "char": "拳",
         "pinyin": "quan2",
-        "definition": "fist"
+        "definition": "fist",
+        "definitionEs": "puño"
       },
       {
         "char": "拳",
         "pinyin": "quan2",
-        "definition": "fist"
+        "definition": "fist",
+        "definitionEs": "puño"
       },
       {
         "char": "蛸",
         "pinyin": "xiao1",
-        "definition": "used in 螵蛸[piao1 xiao1]"
+        "definition": "octopus",
+        "definitionEs": "pulpo"
       }
     ]
   },
@@ -25124,22 +27931,26 @@ const pokemonData = [
       {
         "char": "八",
         "pinyin": "ba1",
-        "definition": "eight"
+        "definition": "eight",
+        "definitionEs": "ocho"
       },
       {
         "char": "爪",
         "pinyin": "zhua3",
-        "definition": "(coll.) foot of an animal or bird"
+        "definition": "claw",
+        "definitionEs": "garra"
       },
       {
         "char": "武",
         "pinyin": "wu3",
-        "definition": "martial"
+        "definition": "martial",
+        "definitionEs": "marcial"
       },
       {
         "char": "师",
         "pinyin": "shi1",
-        "definition": "teacher"
+        "definition": "teacher",
+        "definitionEs": "maestro"
       }
     ]
   },
@@ -25157,17 +27968,20 @@ const pokemonData = [
       {
         "char": "来",
         "pinyin": "lai2",
-        "definition": "to come"
+        "definition": "come",
+        "definitionEs": "venir"
       },
       {
         "char": "悲",
         "pinyin": "bei1",
-        "definition": "sad"
+        "definition": "sad",
+        "definitionEs": "triste"
       },
       {
         "char": "茶",
         "pinyin": "cha2",
-        "definition": "tea"
+        "definition": "tea",
+        "definitionEs": "té"
       }
     ]
   },
@@ -25185,17 +27999,20 @@ const pokemonData = [
       {
         "char": "怖",
         "pinyin": "bu4",
-        "definition": "terror"
+        "definition": "terror",
+        "definitionEs": "terror"
       },
       {
         "char": "思",
         "pinyin": "si1",
-        "definition": "to think"
+        "definition": "think",
+        "definitionEs": "pensar"
       },
       {
         "char": "壶",
         "pinyin": "hu2",
-        "definition": "pot"
+        "definition": "pot",
+        "definitionEs": "olla"
       }
     ]
   },
@@ -25213,22 +28030,26 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "莉",
         "pinyin": "li4",
-        "definition": "used in the transliteration of female names"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -25246,22 +28067,26 @@ const pokemonData = [
       {
         "char": "提",
         "pinyin": "ti2",
-        "definition": "to carry (hanging down from the hand)"
+        "definition": "to carry",
+        "definitionEs": "llevar"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "莉",
         "pinyin": "li4",
-        "definition": "used in the transliteration of female names"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -25279,22 +28104,26 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "莉",
         "pinyin": "li4",
-        "definition": "used in the transliteration of female names"
+        "definition": "transliteration (part of)",
+        "definitionEs": "transliteración (parte de)"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       },
       {
         "char": "温",
         "pinyin": "wen1",
-        "definition": "warm"
+        "definition": "warm",
+        "definitionEs": "cálido"
       }
     ]
   },
@@ -25312,22 +28141,26 @@ const pokemonData = [
       {
         "char": "捣",
         "pinyin": "dao3",
-        "definition": "to pound"
+        "definition": "pound",
+        "definitionEs": "golpear"
       },
       {
         "char": "蛋",
         "pinyin": "dan4",
-        "definition": "egg"
+        "definition": "egg",
+        "definitionEs": "huevo"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "妖",
         "pinyin": "yao1",
-        "definition": "goblin"
+        "definition": "goblin",
+        "definitionEs": "duende"
       }
     ]
   },
@@ -25345,17 +28178,20 @@ const pokemonData = [
       {
         "char": "诈",
         "pinyin": "zha4",
-        "definition": "to cheat"
+        "definition": "cheat",
+        "definitionEs": "engañar"
       },
       {
         "char": "唬",
         "pinyin": "hu3",
-        "definition": "a tiger's roar"
+        "definition": "roar",
+        "definitionEs": "rugido"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       }
     ]
   },
@@ -25373,22 +28209,26 @@ const pokemonData = [
       {
         "char": "长",
         "pinyin": "zhang3",
-        "definition": "chief"
+        "definition": "chief",
+        "definitionEs": "jefe"
       },
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       }
     ]
   },
@@ -25406,17 +28246,20 @@ const pokemonData = [
       {
         "char": "堵",
         "pinyin": "du3",
-        "definition": "to block up (a road, pipe etc)"
+        "definition": "block",
+        "definitionEs": "bloquear"
       },
       {
         "char": "拦",
         "pinyin": "lan2",
-        "definition": "to block sb's path"
+        "definition": "block",
+        "definitionEs": "bloquear"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -25434,17 +28277,20 @@ const pokemonData = [
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "目",
         "pinyin": "mu4",
-        "definition": "eye"
+        "definition": "eye",
+        "definitionEs": "ojo"
       }
     ]
   },
@@ -25462,22 +28308,26 @@ const pokemonData = [
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       },
       {
         "char": "珊",
         "pinyin": "shan1",
-        "definition": "coral"
+        "definition": "coral",
+        "definitionEs": "coral"
       },
       {
         "char": "瑚",
         "pinyin": "hu2",
-        "definition": "used in 珊瑚[shan1 hu2]"
+        "definition": "coral (part of)",
+        "definitionEs": "coral (parte de)"
       }
     ]
   },
@@ -25495,17 +28345,20 @@ const pokemonData = [
       {
         "char": "葱",
         "pinyin": "cong1",
-        "definition": "scallion"
+        "definition": "scallion",
+        "definitionEs": "cebolleta"
       },
       {
         "char": "游",
         "pinyin": "you2",
-        "definition": "to walk"
+        "definition": "swim",
+        "definitionEs": "nadar"
       },
       {
         "char": "兵",
         "pinyin": "bing1",
-        "definition": "soldiers"
+        "definition": "soldier",
+        "definitionEs": "soldado"
       }
     ]
   },
@@ -25523,22 +28376,26 @@ const pokemonData = [
       {
         "char": "踏",
         "pinyin": "ta4",
-        "definition": "to tread"
+        "definition": "tread",
+        "definitionEs": "pisar"
       },
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "人",
         "pinyin": "ren2",
-        "definition": "man"
+        "definition": "person",
+        "definitionEs": "persona"
       },
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       }
     ]
   },
@@ -25556,17 +28413,20 @@ const pokemonData = [
       {
         "char": "迭",
         "pinyin": "die2",
-        "definition": "alternately"
+        "definition": "alternate",
+        "definitionEs": "alternar"
       },
       {
         "char": "失",
         "pinyin": "shi1",
-        "definition": "to lose"
+        "definition": "lose",
+        "definitionEs": "perder"
       },
       {
         "char": "板",
-        "pinyin": "pan4",
-        "definition": "to catch sight of in a doorway (old)"
+        "pinyin": "ban3",
+        "definition": "board",
+        "definitionEs": "tabla"
       }
     ]
   },
@@ -25584,17 +28444,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       },
       {
         "char": "奶",
         "pinyin": "nai3",
-        "definition": "mother"
+        "definition": "milk",
+        "definitionEs": "leche"
       }
     ]
   },
@@ -25612,17 +28475,20 @@ const pokemonData = [
       {
         "char": "霜",
         "pinyin": "shuang1",
-        "definition": "frost"
+        "definition": "frost",
+        "definitionEs": "escarcha"
       },
       {
         "char": "奶",
         "pinyin": "nai3",
-        "definition": "mother"
+        "definition": "milk",
+        "definitionEs": "leche"
       },
       {
         "char": "仙",
         "pinyin": "xian1",
-        "definition": "variant of 仙[xian1]"
+        "definition": "immortal",
+        "definitionEs": "inmortal"
       }
     ]
   },
@@ -25640,17 +28506,20 @@ const pokemonData = [
       {
         "char": "列",
         "pinyin": "lie4",
-        "definition": "to arrange"
+        "definition": "arrange",
+        "definitionEs": "arreglar"
       },
       {
         "char": "阵",
         "pinyin": "zhen4",
-        "definition": "disposition of troops"
+        "definition": "formation",
+        "definitionEs": "formación"
       },
       {
         "char": "兵",
         "pinyin": "bing1",
-        "definition": "soldiers"
+        "definition": "soldier",
+        "definitionEs": "soldado"
       }
     ]
   },
@@ -25668,22 +28537,26 @@ const pokemonData = [
       {
         "char": "啪",
         "pinyin": "pa1",
-        "definition": "(onom.) bang"
+        "definition": "bang",
+        "definitionEs": "chasquido"
       },
       {
         "char": "嚓",
         "pinyin": "cha1",
-        "definition": "Taiwan pr."
+        "definition": "scrape",
+        "definitionEs": "raspar"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "胆",
         "pinyin": "dan3",
-        "definition": "gall bladder"
+        "definition": "courage",
+        "definitionEs": "valor"
       }
     ]
   },
@@ -25701,17 +28574,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "吞",
         "pinyin": "tun1",
-        "definition": "to swallow"
+        "definition": "to swallow",
+        "definitionEs": "tragar"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -25729,17 +28605,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "绒",
         "pinyin": "rong2",
-        "definition": "velvet"
+        "definition": "velvet",
+        "definitionEs": "terciopelo"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -25757,17 +28636,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "丁",
         "pinyin": "ding1",
-        "definition": "fourth in order"
+        "definition": "small",
+        "definitionEs": "pequeño"
       }
     ]
   },
@@ -25785,17 +28667,20 @@ const pokemonData = [
       {
         "char": "冰",
         "pinyin": "bing1",
-        "definition": "variant of 冰[bing1]"
+        "definition": "ice",
+        "definitionEs": "hielo"
       },
       {
         "char": "砌",
         "pinyin": "qie4",
-        "definition": "used in 砌末[qie4 mo5]"
+        "definition": "pave",
+        "definitionEs": "pavimentar"
       },
       {
         "char": "鹅",
         "pinyin": "e2",
-        "definition": "variant of 鵝|鹅[e2]"
+        "definition": "goose",
+        "definitionEs": "ganso"
       }
     ]
   },
@@ -25813,17 +28698,20 @@ const pokemonData = [
       {
         "char": "爱",
         "pinyin": "ai4",
-        "definition": "to love"
+        "definition": "to love",
+        "definitionEs": "amar"
       },
       {
         "char": "管",
         "pinyin": "guan3",
-        "definition": "to take care (of)"
+        "definition": "manage",
+        "definitionEs": "gestionar"
       },
       {
         "char": "侍",
         "pinyin": "shi4",
-        "definition": "to serve"
+        "definition": "serve",
+        "definitionEs": "servir"
       }
     ]
   },
@@ -25841,22 +28729,26 @@ const pokemonData = [
       {
         "char": "莫",
         "pinyin": "mo4",
-        "definition": "do not"
+        "definition": "do not",
+        "definitionEs": "no"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "贝",
         "pinyin": "bei4",
-        "definition": "cowrie"
+        "definition": "shell",
+        "definitionEs": "concha"
       },
       {
         "char": "可",
         "pinyin": "ke3",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       }
     ]
   },
@@ -25874,12 +28766,14 @@ const pokemonData = [
       {
         "char": "铜",
         "pinyin": "tong2",
-        "definition": "copper (chemistry)"
+        "definition": "copper",
+        "definitionEs": "cobre"
       },
       {
         "char": "象",
         "pinyin": "xiang4",
-        "definition": "elephant"
+        "definition": "elephant",
+        "definitionEs": "elefante"
       }
     ]
   },
@@ -25897,22 +28791,26 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       },
       {
         "char": "铜",
         "pinyin": "tong2",
-        "definition": "copper (chemistry)"
+        "definition": "copper",
+        "definitionEs": "cobre"
       },
       {
         "char": "象",
         "pinyin": "xiang4",
-        "definition": "elephant"
+        "definition": "elephant",
+        "definitionEs": "elefante"
       }
     ]
   },
@@ -25930,17 +28828,20 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -25958,22 +28859,26 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -25991,17 +28896,20 @@ const pokemonData = [
       {
         "char": "鳃",
         "pinyin": "sai1",
-        "definition": "gills of fish"
+        "definition": "gill",
+        "definitionEs": "branquia"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -26019,22 +28927,26 @@ const pokemonData = [
       {
         "char": "鳃",
         "pinyin": "sai1",
-        "definition": "gills of fish"
+        "definition": "gill",
+        "definitionEs": "branquia"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "兽",
         "pinyin": "shou4",
-        "definition": "beast"
+        "definition": "beast",
+        "definitionEs": "bestia"
       }
     ]
   },
@@ -26051,18 +28963,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "铝",
-        "pinyin": "lu:3",
-        "definition": "aluminum (chemistry)"
+        "pinyin": "lü3",
+        "definition": "aluminum",
+        "definitionEs": "aluminio"
       },
       {
         "char": "钢",
         "pinyin": "gang1",
-        "definition": "steel"
+        "definition": "steel",
+        "definitionEs": "acero"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -26080,27 +28995,32 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "梅",
         "pinyin": "mei2",
-        "definition": "old variant of 梅[mei2]"
+        "definition": "plum",
+        "definitionEs": "ciruela"
       },
       {
         "char": "西",
         "pinyin": "xi1",
-        "definition": "west"
+        "definition": "west",
+        "definitionEs": "oeste"
       },
       {
         "char": "亚",
         "pinyin": "ya4",
-        "definition": "second"
+        "definition": "sub-",
+        "definitionEs": "sub-"
       }
     ]
   },
@@ -26118,17 +29038,20 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -26146,27 +29069,32 @@ const pokemonData = [
       {
         "char": "多",
         "pinyin": "duo1",
-        "definition": "many"
+        "definition": "many",
+        "definitionEs": "muchos"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "巴",
         "pinyin": "ba1",
-        "definition": "to long for"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "鲁",
         "pinyin": "lu3",
-        "definition": "crass"
+        "definition": "crude",
+        "definitionEs": "grosero"
       },
       {
         "char": "托",
         "pinyin": "tuo1",
-        "definition": "to trust"
+        "definition": "support",
+        "definitionEs": "apoyar"
       }
     ]
   },
@@ -26184,12 +29112,14 @@ const pokemonData = [
       {
         "char": "苍",
         "pinyin": "cang1",
-        "definition": "dark blue"
+        "definition": "dark blue",
+        "definitionEs": "azul oscuro"
       },
       {
         "char": "响",
         "pinyin": "xiang3",
-        "definition": "echo"
+        "definition": "sound",
+        "definitionEs": "sonido"
       }
     ]
   },
@@ -26207,22 +29137,26 @@ const pokemonData = [
       {
         "char": "藏",
         "pinyin": "zang4",
-        "definition": "storehouse"
+        "definition": "storehouse",
+        "definitionEs": "almacén"
       },
       {
         "char": "玛",
         "pinyin": "ma3",
-        "definition": "agate"
+        "definition": "agate",
+        "definitionEs": "ágata"
       },
       {
         "char": "然",
         "pinyin": "ran2",
-        "definition": "correct"
+        "definition": "naturally",
+        "definitionEs": "naturalmente"
       },
       {
         "char": "特",
         "pinyin": "te4",
-        "definition": "special"
+        "definition": "special",
+        "definitionEs": "especial"
       }
     ]
   },
@@ -26240,22 +29174,26 @@ const pokemonData = [
       {
         "char": "无",
         "pinyin": "wu2",
-        "definition": "not to have"
+        "definition": "without",
+        "definitionEs": "sin"
       },
       {
         "char": "极",
         "pinyin": "ji2",
-        "definition": "extremely"
+        "definition": "extreme",
+        "definitionEs": "extremo"
       },
       {
         "char": "汰",
         "pinyin": "tai4",
-        "definition": "to discard"
+        "definition": "discard",
+        "definitionEs": "descartar"
       },
       {
         "char": "那",
-        "pinyin": "nuo2",
-        "definition": "(archaic) many"
+        "pinyin": "na4",
+        "definition": "that",
+        "definitionEs": "ese"
       }
     ]
   },
@@ -26273,17 +29211,20 @@ const pokemonData = [
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       },
       {
         "char": "徒",
         "pinyin": "tu2",
-        "definition": "(bound form) disciple"
+        "definition": "disciple",
+        "definitionEs": "discípulo"
       },
       {
         "char": "弟",
-        "pinyin": "ti4",
-        "definition": "variant of 悌[ti4]"
+        "pinyin": "di4",
+        "definition": "younger brother",
+        "definitionEs": "hermano menor"
       }
     ]
   },
@@ -26301,22 +29242,26 @@ const pokemonData = [
       {
         "char": "武",
         "pinyin": "wu3",
-        "definition": "martial"
+        "definition": "martial",
+        "definitionEs": "marcial"
       },
       {
         "char": "道",
         "pinyin": "dao4",
-        "definition": "road"
+        "definition": "road",
+        "definitionEs": "camino"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       },
       {
         "char": "师",
         "pinyin": "shi1",
-        "definition": "teacher"
+        "definition": "teacher",
+        "definitionEs": "maestro"
       }
     ]
   },
@@ -26334,17 +29279,20 @@ const pokemonData = [
       {
         "char": "萨",
         "pinyin": "sa4",
-        "definition": "used in transliteration"
+        "definition": "bodhisattva",
+        "definitionEs": "bodhisattva"
       },
       {
         "char": "戮",
         "pinyin": "lu4",
-        "definition": "(bound form) to kill"
+        "definition": "kill",
+        "definitionEs": "matar"
       },
       {
         "char": "德",
         "pinyin": "de2",
-        "definition": "variant of 德[de2]"
+        "definition": "virtue",
+        "definitionEs": "virtud"
       }
     ]
   },
@@ -26362,27 +29310,32 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "艾",
-        "pinyin": "yi4",
-        "definition": "variant of 刈[yi4]"
+        "pinyin": "ai4",
+        "definition": "mugwort",
+        "definitionEs": "artemisa"
       },
       {
         "char": "勒",
         "pinyin": "lei1",
-        "definition": "to strap tightly"
+        "definition": "to strap",
+        "definitionEs": "ceñir"
       },
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       }
     ]
   },
@@ -26400,27 +29353,32 @@ const pokemonData = [
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "铎",
         "pinyin": "duo2",
-        "definition": "large ancient bell"
+        "definition": "bell",
+        "definitionEs": "campana"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       },
       {
         "char": "戈",
         "pinyin": "ge1",
-        "definition": "dagger-axe"
+        "definition": "dagger-axe",
+        "definitionEs": "daga-hacha"
       }
     ]
   },
@@ -26438,17 +29396,20 @@ const pokemonData = [
       {
         "char": "雪",
         "pinyin": "xue3",
-        "definition": "snow"
+        "definition": "snow",
+        "definitionEs": "nieve"
       },
       {
         "char": "暴",
         "pinyin": "bao4",
-        "definition": "sudden"
+        "definition": "violent",
+        "definitionEs": "violento"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -26466,17 +29427,20 @@ const pokemonData = [
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       },
       {
         "char": "幽",
         "pinyin": "you1",
-        "definition": "remote"
+        "definition": "remote",
+        "definitionEs": "remoto"
       },
       {
         "char": "马",
         "pinyin": "ma3",
-        "definition": "horse"
+        "definition": "horse",
+        "definitionEs": "caballo"
       }
     ]
   },
@@ -26494,17 +29458,20 @@ const pokemonData = [
       {
         "char": "蕾",
         "pinyin": "lei3",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "capullo"
       },
       {
         "char": "冠",
-        "pinyin": "guan4",
-        "definition": "to put on a hat"
+        "pinyin": "guan1",
+        "definition": "crown",
+        "definitionEs": "corona"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -26522,17 +29489,20 @@ const pokemonData = [
       {
         "char": "诡",
         "pinyin": "gui3",
-        "definition": "(bound form) sly"
+        "definition": "sly",
+        "definitionEs": "astuto"
       },
       {
         "char": "角",
         "pinyin": "jiao3",
-        "definition": "angle"
+        "definition": "horn",
+        "definitionEs": "cuerno"
       },
       {
         "char": "鹿",
         "pinyin": "lu4",
-        "definition": "deer"
+        "definition": "deer",
+        "definitionEs": "ciervo"
       }
     ]
   },
@@ -26550,22 +29520,26 @@ const pokemonData = [
       {
         "char": "劈",
         "pinyin": "pi3",
-        "definition": "to split in two"
+        "definition": "split",
+        "definitionEs": "dividir"
       },
       {
         "char": "斧",
         "pinyin": "fu3",
-        "definition": "hatchet"
+        "definition": "axe",
+        "definitionEs": "hacha"
       },
       {
         "char": "螳",
         "pinyin": "tang2",
-        "definition": "praying mantis"
+        "definition": "mantis",
+        "definitionEs": "mantis"
       },
       {
         "char": "螂",
         "pinyin": "lang2",
-        "definition": "dragonfly"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -26583,17 +29557,20 @@ const pokemonData = [
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       },
       {
         "char": "熊",
         "pinyin": "xiong2",
-        "definition": "bear"
+        "definition": "bear",
+        "definitionEs": "oso"
       }
     ]
   },
@@ -26611,22 +29588,26 @@ const pokemonData = [
       {
         "char": "幽",
         "pinyin": "you1",
-        "definition": "remote"
+        "definition": "remote",
+        "definitionEs": "remoto"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       },
       {
         "char": "玄",
         "pinyin": "xuan2",
-        "definition": "black"
+        "definition": "black",
+        "definitionEs": "negro"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -26644,17 +29625,20 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "狃",
         "pinyin": "niu3",
-        "definition": "accustomed to"
+        "definition": "accustomed",
+        "definitionEs": "acostumbrado"
       },
       {
         "char": "拉",
         "pinyin": "la1",
-        "definition": "to pull"
+        "definition": "to pull",
+        "definitionEs": "tirar"
       }
     ]
   },
@@ -26672,17 +29656,20 @@ const pokemonData = [
       {
         "char": "万",
         "pinyin": "wan4",
-        "definition": "ten thousand"
+        "definition": "ten thousand",
+        "definitionEs": "diez mil"
       },
       {
         "char": "针",
         "pinyin": "zhen1",
-        "definition": "needle"
+        "definition": "needle",
+        "definitionEs": "aguja"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -26700,17 +29687,20 @@ const pokemonData = [
       {
         "char": "眷",
         "pinyin": "juan4",
-        "definition": "(literary) to regard with love and affection"
+        "definition": "affection",
+        "definitionEs": "afecto"
       },
       {
         "char": "恋",
         "pinyin": "lian4",
-        "definition": "to feel attached to"
+        "definition": "love",
+        "definitionEs": "amor"
       },
       {
         "char": "云",
         "pinyin": "yun2",
-        "definition": "cloud"
+        "definition": "cloud",
+        "definitionEs": "nube"
       }
     ]
   },
@@ -26728,17 +29718,20 @@ const pokemonData = [
       {
         "char": "新",
         "pinyin": "xin1",
-        "definition": "new"
+        "definition": "new",
+        "definitionEs": "nuevo"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -26756,17 +29749,20 @@ const pokemonData = [
       {
         "char": "蒂",
         "pinyin": "di4",
-        "definition": "stem (of fruit)"
+        "definition": "stem",
+        "definitionEs": "tallo"
       },
       {
         "char": "蕾",
         "pinyin": "lei3",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "capullo"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -26784,27 +29780,32 @@ const pokemonData = [
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "幻",
         "pinyin": "huan4",
-        "definition": "fantasy"
+        "definition": "fantasy",
+        "definitionEs": "fantasía"
       },
       {
         "char": "假",
         "pinyin": "jia3",
-        "definition": "to borrow"
+        "definition": "borrow",
+        "definitionEs": "pedir prestado"
       },
       {
         "char": "面",
         "pinyin": "mian4",
-        "definition": "flour"
+        "definition": "face",
+        "definitionEs": "cara"
       },
       {
         "char": "喵",
         "pinyin": "miao1",
-        "definition": "(onom.) meow"
+        "definition": "meow",
+        "definitionEs": "miau"
       }
     ]
   },
@@ -26822,17 +29823,20 @@ const pokemonData = [
       {
         "char": "呆",
         "pinyin": "dai1",
-        "definition": "foolish"
+        "definition": "foolish",
+        "definitionEs": "tonto"
       },
       {
         "char": "火",
         "pinyin": "huo3",
-        "definition": "fire"
+        "definition": "fire",
+        "definitionEs": "fuego"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -26850,17 +29854,20 @@ const pokemonData = [
       {
         "char": "炙",
         "pinyin": "zhi4",
-        "definition": "to broil"
+        "definition": "to broil",
+        "definitionEs": "asar"
       },
       {
         "char": "烫",
         "pinyin": "tang4",
-        "definition": "to scald"
+        "definition": "to scald",
+        "definitionEs": "escaldar"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -26878,27 +29885,32 @@ const pokemonData = [
       {
         "char": "骨",
         "pinyin": "gu3",
-        "definition": "bone"
+        "definition": "bone",
+        "definitionEs": "hueso"
       },
       {
         "char": "纹",
         "pinyin": "wen2",
-        "definition": "line"
+        "definition": "pattern",
+        "definitionEs": "patrón"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "声",
         "pinyin": "sheng1",
-        "definition": "sound"
+        "definition": "sound",
+        "definitionEs": "sonido"
       },
       {
         "char": "鳄",
         "pinyin": "e4",
-        "definition": "(bound form) alligator"
+        "definition": "alligator",
+        "definitionEs": "aligátor"
       }
     ]
   },
@@ -26916,17 +29928,20 @@ const pokemonData = [
       {
         "char": "润",
         "pinyin": "run4",
-        "definition": "moist"
+        "definition": "moist",
+        "definitionEs": "húmedo"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ]
   },
@@ -26944,17 +29959,20 @@ const pokemonData = [
       {
         "char": "涌",
         "pinyin": "yong3",
-        "definition": "to well up"
+        "definition": "to surge",
+        "definitionEs": "surgir"
       },
       {
         "char": "跃",
         "pinyin": "yue4",
-        "definition": "to jump"
+        "definition": "jump",
+        "definitionEs": "saltar"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ]
   },
@@ -26972,27 +29990,32 @@ const pokemonData = [
       {
         "char": "狂",
         "pinyin": "kuang2",
-        "definition": "mad"
+        "definition": "mad",
+        "definitionEs": "loco"
       },
       {
         "char": "欢",
         "pinyin": "huan1",
-        "definition": "a breed of horse"
+        "definition": "joy",
+        "definitionEs": "alegría"
       },
       {
         "char": "浪",
         "pinyin": "lang4",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "舞",
         "pinyin": "wu3",
-        "definition": "to dance"
+        "definition": "dance",
+        "definitionEs": "bailar"
       },
       {
         "char": "鸭",
         "pinyin": "ya1",
-        "definition": "duck"
+        "definition": "duck",
+        "definitionEs": "pato"
       }
     ]
   },
@@ -27010,17 +30033,20 @@ const pokemonData = [
       {
         "char": "爱",
         "pinyin": "ai4",
-        "definition": "to love"
+        "definition": "to love",
+        "definitionEs": "amar"
       },
       {
         "char": "吃",
         "pinyin": "chi1",
-        "definition": "variant of 吃[chi1]"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "豚",
         "pinyin": "tun2",
-        "definition": "suckling pig"
+        "definition": "piglet",
+        "definitionEs": "lechón"
       }
     ]
   },
@@ -27038,17 +30064,20 @@ const pokemonData = [
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "香",
         "pinyin": "xiang1",
-        "definition": "fragrant"
+        "definition": "fragrant",
+        "definitionEs": "fragante"
       },
       {
         "char": "豚",
         "pinyin": "tun2",
-        "definition": "suckling pig"
+        "definition": "piglet",
+        "definitionEs": "lechón"
       }
     ]
   },
@@ -27066,17 +30095,20 @@ const pokemonData = [
       {
         "char": "团",
         "pinyin": "tuan2",
-        "definition": "dumpling"
+        "definition": "group",
+        "definitionEs": "grupo"
       },
       {
         "char": "珠",
         "pinyin": "zhu1",
-        "definition": "bead"
+        "definition": "bead",
+        "definitionEs": "perla"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       }
     ]
   },
@@ -27094,17 +30126,20 @@ const pokemonData = [
       {
         "char": "操",
         "pinyin": "cao4",
-        "definition": "variant of 肏[cao4]"
+        "definition": "fuck",
+        "definitionEs": "joder"
       },
       {
         "char": "陷",
         "pinyin": "xian4",
-        "definition": "pitfall"
+        "definition": "pitfall",
+        "definitionEs": "trampa"
       },
       {
         "char": "蛛",
         "pinyin": "zhu1",
-        "definition": "(bound form) spider"
+        "definition": "spider",
+        "definitionEs": "araña"
       }
     ]
   },
@@ -27122,17 +30157,20 @@ const pokemonData = [
       {
         "char": "豆",
         "pinyin": "dou4",
-        "definition": "legume"
+        "definition": "legume",
+        "definitionEs": "legumbre"
       },
       {
         "char": "蟋",
         "pinyin": "xi1",
-        "definition": "used in 蟋蟀[xi1 shuai4]"
+        "definition": "cricket",
+        "definitionEs": "grillo"
       },
       {
         "char": "蟀",
         "pinyin": "shuai4",
-        "definition": "used in 蟋蟀[xi1 shuai4]"
+        "definition": "cricket",
+        "definitionEs": "grillo"
       }
     ]
   },
@@ -27150,17 +30188,20 @@ const pokemonData = [
       {
         "char": "烈",
         "pinyin": "lie4",
-        "definition": "ardent"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "腿",
         "pinyin": "tui3",
-        "definition": "leg"
+        "definition": "leg",
+        "definitionEs": "pierna"
       },
       {
         "char": "蝗",
         "pinyin": "huang2",
-        "definition": "locust"
+        "definition": "locust",
+        "definitionEs": "langosta"
       }
     ]
   },
@@ -27178,12 +30219,14 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "拨",
         "pinyin": "bo1",
-        "definition": "to push aside with the hand, foot, a stick etc"
+        "definition": "to push aside",
+        "definitionEs": "apartar"
       }
     ]
   },
@@ -27201,17 +30244,20 @@ const pokemonData = [
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "拨",
         "pinyin": "bo1",
-        "definition": "to push aside with the hand, foot, a stick etc"
+        "definition": "to push aside",
+        "definitionEs": "apartar"
       }
     ]
   },
@@ -27229,22 +30275,26 @@ const pokemonData = [
       {
         "char": "巴",
         "pinyin": "ba1",
-        "definition": "to long for"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "布",
         "pinyin": "bu4",
-        "definition": "cloth"
+        "definition": "cloth",
+        "definitionEs": "tela"
       },
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "拨",
         "pinyin": "bo1",
-        "definition": "to push aside with the hand, foot, a stick etc"
+        "definition": "to push aside",
+        "definitionEs": "apartar"
       }
     ]
   },
@@ -27262,17 +30312,20 @@ const pokemonData = [
       {
         "char": "一",
         "pinyin": "yi1",
-        "definition": "one"
+        "definition": "one",
+        "definitionEs": "uno"
       },
       {
         "char": "对",
         "pinyin": "dui4",
-        "definition": "right"
+        "definition": "right",
+        "definitionEs": "correcto"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -27290,17 +30343,20 @@ const pokemonData = [
       {
         "char": "一",
         "pinyin": "yi1",
-        "definition": "one"
+        "definition": "one",
+        "definitionEs": "uno"
       },
       {
         "char": "家",
         "pinyin": "jia1",
-        "definition": "home"
+        "definition": "home",
+        "definitionEs": "hogar"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -27318,17 +30374,20 @@ const pokemonData = [
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       },
       {
         "char": "仔",
         "pinyin": "zi3",
-        "definition": "(bound form) (of domestic animals or fowl) young"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "包",
         "pinyin": "bao1",
-        "definition": "to cover"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       }
     ]
   },
@@ -27346,17 +30405,20 @@ const pokemonData = [
       {
         "char": "麻",
         "pinyin": "ma2",
-        "definition": "generic name for hemp, flax etc"
+        "definition": "hemp",
+        "definitionEs": "cáñamo"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -27374,17 +30436,20 @@ const pokemonData = [
       {
         "char": "迷",
         "pinyin": "mi2",
-        "definition": "to bewilder"
+        "definition": "to bewilder",
+        "definitionEs": "desconcertar"
       },
       {
         "char": "你",
         "pinyin": "ni3",
-        "definition": "you (informal, as opposed to courteous 您[nin2])"
+        "definition": "you",
+        "definitionEs": "tú"
       },
       {
         "char": "芙",
         "pinyin": "fu2",
-        "definition": "used in 芙蓉[fu2 rong2], lotus"
+        "definition": "lotus",
+        "definitionEs": "loto"
       }
     ]
   },
@@ -27402,17 +30467,20 @@ const pokemonData = [
       {
         "char": "奥",
         "pinyin": "ao4",
-        "definition": "obscure"
+        "definition": "obscure",
+        "definitionEs": "oscuro"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "纽",
         "pinyin": "niu3",
-        "definition": "to turn"
+        "definition": "button",
+        "definitionEs": "botón"
       }
     ]
   },
@@ -27430,17 +30498,20 @@ const pokemonData = [
       {
         "char": "奥",
         "pinyin": "ao4",
-        "definition": "obscure"
+        "definition": "obscure",
+        "definitionEs": "oscuro"
       },
       {
         "char": "利",
         "pinyin": "li4",
-        "definition": "sharp"
+        "definition": "sharp",
+        "definitionEs": "afilado"
       },
       {
         "char": "瓦",
         "pinyin": "wa3",
-        "definition": "roof tile"
+        "definition": "tile",
+        "definitionEs": "teja"
       }
     ]
   },
@@ -27458,17 +30529,20 @@ const pokemonData = [
       {
         "char": "怒",
         "pinyin": "nu4",
-        "definition": "anger"
+        "definition": "anger",
+        "definitionEs": "ira"
       },
       {
         "char": "鹦",
         "pinyin": "ying1",
-        "definition": "(bound form) parrot"
+        "definition": "parrot",
+        "definitionEs": "loro"
       },
       {
         "char": "哥",
         "pinyin": "ge1",
-        "definition": "elder brother"
+        "definition": "brother",
+        "definitionEs": "hermano"
       }
     ]
   },
@@ -27486,17 +30560,20 @@ const pokemonData = [
       {
         "char": "盐",
         "pinyin": "yan2",
-        "definition": "salt"
+        "definition": "salt",
+        "definitionEs": "sal"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "宝",
         "pinyin": "bao3",
-        "definition": "jewel"
+        "definition": "jewel",
+        "definitionEs": "joya"
       }
     ]
   },
@@ -27514,17 +30591,20 @@ const pokemonData = [
       {
         "char": "盐",
         "pinyin": "yan2",
-        "definition": "salt"
+        "definition": "salt",
+        "definitionEs": "sal"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "垒",
         "pinyin": "lei3",
-        "definition": "rampart"
+        "definition": "rampart",
+        "definitionEs": "muralla"
       }
     ]
   },
@@ -27542,22 +30622,26 @@ const pokemonData = [
       {
         "char": "盐",
         "pinyin": "yan2",
-        "definition": "salt"
+        "definition": "salt",
+        "definitionEs": "sal"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -27575,17 +30659,20 @@ const pokemonData = [
       {
         "char": "炭",
         "pinyin": "tan4",
-        "definition": "wood charcoal"
+        "definition": "charcoal",
+        "definitionEs": "carbón"
       },
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "侍",
         "pinyin": "shi4",
-        "definition": "to serve"
+        "definition": "serve",
+        "definitionEs": "servir"
       }
     ]
   },
@@ -27603,22 +30690,26 @@ const pokemonData = [
       {
         "char": "红",
         "pinyin": "hong2",
-        "definition": "red"
+        "definition": "red",
+        "definitionEs": "rojo"
       },
       {
         "char": "莲",
         "pinyin": "lian2",
-        "definition": "lotus"
+        "definition": "lotus",
+        "definitionEs": "loto"
       },
       {
         "char": "铠",
         "pinyin": "kai3",
-        "definition": "armor"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "骑",
         "pinyin": "qi2",
-        "definition": "to sit astride"
+        "definition": "to ride",
+        "definitionEs": "montar"
       }
     ]
   },
@@ -27636,22 +30727,26 @@ const pokemonData = [
       {
         "char": "苍",
         "pinyin": "cang1",
-        "definition": "dark blue"
+        "definition": "dark blue",
+        "definitionEs": "azul oscuro"
       },
       {
         "char": "炎",
         "pinyin": "yan2",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       },
       {
         "char": "刃",
         "pinyin": "ren4",
-        "definition": "edge of blade"
+        "definition": "edge",
+        "definitionEs": "filo"
       },
       {
         "char": "鬼",
         "pinyin": "gui3",
-        "definition": "ghost"
+        "definition": "ghost",
+        "definitionEs": "fantasma"
       }
     ]
   },
@@ -27669,17 +30764,20 @@ const pokemonData = [
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "蚪",
         "pinyin": "dou3",
-        "definition": "tadpole"
+        "definition": "tadpole",
+        "definitionEs": "renacuajo"
       },
       {
         "char": "仔",
         "pinyin": "zi3",
-        "definition": "(bound form) (of domestic animals or fowl) young"
+        "definition": "young",
+        "definitionEs": "joven"
       }
     ]
   },
@@ -27697,17 +30795,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "肚",
         "pinyin": "du4",
-        "definition": "belly"
+        "definition": "belly",
+        "definitionEs": "vientre"
       },
       {
         "char": "蛙",
         "pinyin": "wa1",
-        "definition": "frog"
+        "definition": "frog",
+        "definitionEs": "rana"
       }
     ]
   },
@@ -27725,17 +30826,20 @@ const pokemonData = [
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "燕",
         "pinyin": "yan4",
-        "definition": "variant of 燕[yan4]"
+        "definition": "swallow",
+        "definitionEs": "golondrina"
       }
     ]
   },
@@ -27753,22 +30857,26 @@ const pokemonData = [
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "电",
         "pinyin": "dian4",
-        "definition": "electric"
+        "definition": "electricity",
+        "definitionEs": "electricidad"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "燕",
         "pinyin": "yan4",
-        "definition": "variant of 燕[yan4]"
+        "definition": "swallow",
+        "definitionEs": "golondrina"
       }
     ]
   },
@@ -27786,17 +30894,20 @@ const pokemonData = [
       {
         "char": "偶",
         "pinyin": "ou3",
-        "definition": "accidental"
+        "definition": "doll",
+        "definitionEs": "muñeca"
       },
       {
         "char": "叫",
         "pinyin": "jiao4",
-        "definition": "variant of 叫[jiao4]"
+        "definition": "to call",
+        "definitionEs": "llamar"
       },
       {
         "char": "獒",
         "pinyin": "ao2",
-        "definition": "(bound form) mastiff"
+        "definition": "mastiff",
+        "definitionEs": "mastín"
       }
     ]
   },
@@ -27814,17 +30925,20 @@ const pokemonData = [
       {
         "char": "獒",
         "pinyin": "ao2",
-        "definition": "(bound form) mastiff"
+        "definition": "mastiff",
+        "definitionEs": "mastín"
       },
       {
         "char": "教",
         "pinyin": "jiao4",
-        "definition": "(bound form) to teach"
+        "definition": "to teach",
+        "definitionEs": "enseñar"
       },
       {
         "char": "父",
         "pinyin": "fu4",
-        "definition": "(bound form) father"
+        "definition": "father",
+        "definitionEs": "padre"
       }
     ]
   },
@@ -27842,17 +30956,20 @@ const pokemonData = [
       {
         "char": "滋",
         "pinyin": "zi1",
-        "definition": "to grow"
+        "definition": "to grow",
+        "definitionEs": "crecer"
       },
       {
         "char": "汁",
         "pinyin": "zhi1",
-        "definition": "juice"
+        "definition": "juice",
+        "definitionEs": "jugo"
       },
       {
         "char": "鼹",
         "pinyin": "yan3",
-        "definition": "mole"
+        "definition": "mole",
+        "definitionEs": "topo"
       }
     ]
   },
@@ -27870,17 +30987,20 @@ const pokemonData = [
       {
         "char": "涂",
         "pinyin": "tu2",
-        "definition": "variant of 途[tu2]"
+        "definition": "path",
+        "definitionEs": "camino"
       },
       {
         "char": "标",
         "pinyin": "biao1",
-        "definition": "mark"
+        "definition": "mark",
+        "definitionEs": "marca"
       },
       {
         "char": "客",
         "pinyin": "ke4",
-        "definition": "customer"
+        "definition": "guest",
+        "definitionEs": "huésped"
       }
     ]
   },
@@ -27898,17 +31018,20 @@ const pokemonData = [
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       },
       {
         "char": "噬",
         "pinyin": "shi4",
-        "definition": "to devour"
+        "definition": "devour",
+        "definitionEs": "devorar"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ]
   },
@@ -27926,22 +31049,26 @@ const pokemonData = [
       {
         "char": "怖",
         "pinyin": "bu4",
-        "definition": "terror"
+        "definition": "terror",
+        "definitionEs": "terror"
       },
       {
         "char": "纳",
         "pinyin": "na4",
-        "definition": "to receive"
+        "definition": "to receive",
+        "definitionEs": "recibir"
       },
       {
         "char": "噬",
         "pinyin": "shi4",
-        "definition": "to devour"
+        "definition": "devour",
+        "definitionEs": "devorar"
       },
       {
         "char": "草",
         "pinyin": "cao3",
-        "definition": "grass"
+        "definition": "grass",
+        "definitionEs": "hierba"
       }
     ]
   },
@@ -27959,22 +31086,26 @@ const pokemonData = [
       {
         "char": "原",
         "pinyin": "yuan2",
-        "definition": "former"
+        "definition": "original",
+        "definitionEs": "original"
       },
       {
         "char": "野",
         "pinyin": "ye3",
-        "definition": "field"
+        "definition": "field",
+        "definitionEs": "campo"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "母",
         "pinyin": "mu3",
-        "definition": "mother"
+        "definition": "mother",
+        "definitionEs": "madre"
       }
     ]
   },
@@ -27992,22 +31123,26 @@ const pokemonData = [
       {
         "char": "陆",
         "pinyin": "lu4",
-        "definition": "(bound form) land (as opposed to the sea)"
+        "definition": "land",
+        "definitionEs": "tierra"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       },
       {
         "char": "母",
         "pinyin": "mu3",
-        "definition": "mother"
+        "definition": "mother",
+        "definitionEs": "madre"
       }
     ]
   },
@@ -28025,17 +31160,20 @@ const pokemonData = [
       {
         "char": "毛",
         "pinyin": "mao2",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       },
       {
         "char": "崖",
         "pinyin": "ya2",
-        "definition": "precipice"
+        "definition": "cliff",
+        "definitionEs": "acantilado"
       },
       {
         "char": "蟹",
         "pinyin": "xie4",
-        "definition": "crab"
+        "definition": "crab",
+        "definitionEs": "cangrejo"
       }
     ]
   },
@@ -28053,17 +31191,20 @@ const pokemonData = [
       {
         "char": "热",
         "pinyin": "re4",
-        "definition": "to warm up"
+        "definition": "hot",
+        "definitionEs": "caliente"
       },
       {
         "char": "辣",
         "pinyin": "la4",
-        "definition": "hot (spicy)"
+        "definition": "spicy",
+        "definitionEs": "picante"
       },
       {
         "char": "娃",
         "pinyin": "wa2",
-        "definition": "baby"
+        "definition": "baby",
+        "definitionEs": "bebé"
       }
     ]
   },
@@ -28081,17 +31222,20 @@ const pokemonData = [
       {
         "char": "狠",
         "pinyin": "hen3",
-        "definition": "ruthless"
+        "definition": "ruthless",
+        "definitionEs": "despiadado"
       },
       {
         "char": "辣",
         "pinyin": "la4",
-        "definition": "hot (spicy)"
+        "definition": "spicy",
+        "definitionEs": "picante"
       },
       {
         "char": "椒",
         "pinyin": "jiao1",
-        "definition": "pepper"
+        "definition": "pepper",
+        "definitionEs": "pimiento"
       }
     ]
   },
@@ -28109,17 +31253,20 @@ const pokemonData = [
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       },
       {
         "char": "滚",
         "pinyin": "gun3",
-        "definition": "to boil"
+        "definition": "boil",
+        "definitionEs": "hervir"
       },
       {
         "char": "泥",
         "pinyin": "ni2",
-        "definition": "mud"
+        "definition": "mud",
+        "definitionEs": "barro"
       }
     ]
   },
@@ -28137,17 +31284,20 @@ const pokemonData = [
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       },
       {
         "char": "甲",
         "pinyin": "jia3",
-        "definition": "(used for an unspecified person or thing)"
+        "definition": "armor",
+        "definitionEs": "armadura"
       },
       {
         "char": "圣",
         "pinyin": "sheng4",
-        "definition": "(bound form) peerless (in wisdom, moral virtue, skill etc)"
+        "definition": "holy",
+        "definitionEs": "santo"
       }
     ]
   },
@@ -28165,17 +31315,20 @@ const pokemonData = [
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "飘",
         "pinyin": "piao1",
-        "definition": "to float (in the air)"
+        "definition": "to float",
+        "definitionEs": "flotar"
       },
       {
         "char": "雏",
         "pinyin": "chu2",
-        "definition": "(bound form) chick"
+        "definition": "chick",
+        "definitionEs": "polluelo"
       }
     ]
   },
@@ -28193,22 +31346,26 @@ const pokemonData = [
       {
         "char": "超",
         "pinyin": "chao1",
-        "definition": "to exceed"
+        "definition": "super",
+        "definitionEs": "súper"
       },
       {
         "char": "能",
         "pinyin": "neng2",
-        "definition": "can"
+        "definition": "can",
+        "definitionEs": "poder"
       },
       {
         "char": "艳",
         "pinyin": "yan4",
-        "definition": "bright"
+        "definition": "bright",
+        "definitionEs": "brillante"
       },
       {
         "char": "鸵",
         "pinyin": "tuo2",
-        "definition": "ostrich"
+        "definition": "ostrich",
+        "definitionEs": "avestruz"
       }
     ]
   },
@@ -28226,17 +31383,20 @@ const pokemonData = [
       {
         "char": "小",
         "pinyin": "xiao3",
-        "definition": "small"
+        "definition": "small",
+        "definitionEs": "pequeño"
       },
       {
         "char": "锻",
         "pinyin": "duan4",
-        "definition": "to forge"
+        "definition": "to forge",
+        "definitionEs": "forjar"
       },
       {
         "char": "匠",
         "pinyin": "jiang4",
-        "definition": "craftsman"
+        "definition": "craftsman",
+        "definitionEs": "artesano"
       }
     ]
   },
@@ -28254,17 +31414,20 @@ const pokemonData = [
       {
         "char": "巧",
         "pinyin": "qiao3",
-        "definition": "opportunely"
+        "definition": "skillful",
+        "definitionEs": "hábil"
       },
       {
         "char": "锻",
         "pinyin": "duan4",
-        "definition": "to forge"
+        "definition": "to forge",
+        "definitionEs": "forjar"
       },
       {
         "char": "匠",
         "pinyin": "jiang4",
-        "definition": "craftsman"
+        "definition": "craftsman",
+        "definitionEs": "artesano"
       }
     ]
   },
@@ -28282,17 +31445,20 @@ const pokemonData = [
       {
         "char": "巨",
         "pinyin": "ju4",
-        "definition": "very large"
+        "definition": "giant",
+        "definitionEs": "gigante"
       },
       {
         "char": "锻",
         "pinyin": "duan4",
-        "definition": "to forge"
+        "definition": "to forge",
+        "definitionEs": "forjar"
       },
       {
         "char": "匠",
         "pinyin": "jiang4",
-        "definition": "craftsman"
+        "definition": "craftsman",
+        "definitionEs": "artesano"
       }
     ]
   },
@@ -28310,17 +31476,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -28338,22 +31507,26 @@ const pokemonData = [
       {
         "char": "三",
         "pinyin": "san1",
-        "definition": "three"
+        "definition": "three",
+        "definitionEs": "tres"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "鼠",
         "pinyin": "shu3",
-        "definition": "rat"
+        "definition": "mouse",
+        "definitionEs": "ratón"
       }
     ]
   },
@@ -28371,17 +31544,20 @@ const pokemonData = [
       {
         "char": "下",
         "pinyin": "xia4",
-        "definition": "down"
+        "definition": "down",
+        "definitionEs": "abajo"
       },
       {
         "char": "石",
-        "pinyin": "dan4",
-        "definition": "ten pecks"
+        "pinyin": "shi2",
+        "definition": "stone",
+        "definitionEs": "piedra"
       },
       {
         "char": "鸟",
         "pinyin": "niao3",
-        "definition": "bird"
+        "definition": "bird",
+        "definitionEs": "pájaro"
       }
     ]
   },
@@ -28399,22 +31575,26 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "普",
         "pinyin": "pu3",
-        "definition": "general"
+        "definition": "general",
+        "definitionEs": "general"
       },
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "豚",
         "pinyin": "tun2",
-        "definition": "suckling pig"
+        "definition": "piglet",
+        "definitionEs": "lechón"
       }
     ]
   },
@@ -28432,17 +31612,20 @@ const pokemonData = [
       {
         "char": "海",
         "pinyin": "hai3",
-        "definition": "ocean"
+        "definition": "sea",
+        "definitionEs": "mar"
       },
       {
         "char": "豚",
         "pinyin": "tun2",
-        "definition": "suckling pig"
+        "definition": "piglet",
+        "definitionEs": "lechón"
       },
       {
         "char": "侠",
         "pinyin": "xia2",
-        "definition": "knight-errant"
+        "definition": "knight",
+        "definitionEs": "caballero"
       }
     ]
   },
@@ -28460,17 +31643,20 @@ const pokemonData = [
       {
         "char": "噗",
         "pinyin": "pu1",
-        "definition": "(onom.) pop"
+        "definition": "pop",
+        "definitionEs": "puf"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       }
     ]
   },
@@ -28488,22 +31674,26 @@ const pokemonData = [
       {
         "char": "普",
         "pinyin": "pu3",
-        "definition": "general"
+        "definition": "general",
+        "definitionEs": "general"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "隆",
-        "pinyin": "long1",
-        "definition": "sound of drums"
+        "pinyin": "long2",
+        "definition": "grand",
+        "definitionEs": "grandioso"
       },
       {
         "char": "姆",
         "pinyin": "mu3",
-        "definition": "(old) female tutor"
+        "definition": "governess",
+        "definitionEs": "institutriz"
       }
     ]
   },
@@ -28521,17 +31711,20 @@ const pokemonData = [
       {
         "char": "摩",
         "pinyin": "mo2",
-        "definition": "to rub"
+        "definition": "to rub",
+        "definitionEs": "frotar"
       },
       {
         "char": "托",
         "pinyin": "tuo1",
-        "definition": "to trust"
+        "definition": "support",
+        "definitionEs": "apoyar"
       },
       {
         "char": "蜥",
         "pinyin": "xi1",
-        "definition": "(bound form) lizard"
+        "definition": "lizard (part of)",
+        "definitionEs": "lagarto (parte de)"
       }
     ]
   },
@@ -28549,17 +31742,20 @@ const pokemonData = [
       {
         "char": "拖",
         "pinyin": "tuo1",
-        "definition": "to drag"
+        "definition": "to drag",
+        "definitionEs": "arrastrar"
       },
       {
         "char": "拖",
         "pinyin": "tuo1",
-        "definition": "to drag"
+        "definition": "to drag",
+        "definitionEs": "arrastrar"
       },
       {
         "char": "蚓",
         "pinyin": "yin3",
-        "definition": "used in 蚯蚓[qiu1 yin3]"
+        "definition": "earthworm",
+        "definitionEs": "lombriz"
       }
     ]
   },
@@ -28577,17 +31773,20 @@ const pokemonData = [
       {
         "char": "晶",
         "pinyin": "jing1",
-        "definition": "crystal"
+        "definition": "crystal",
+        "definitionEs": "cristal"
       },
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "芽",
         "pinyin": "ya2",
-        "definition": "bud"
+        "definition": "bud",
+        "definitionEs": "brote"
       }
     ]
   },
@@ -28605,17 +31804,20 @@ const pokemonData = [
       {
         "char": "晶",
         "pinyin": "jing1",
-        "definition": "crystal"
+        "definition": "crystal",
+        "definitionEs": "cristal"
       },
       {
         "char": "光",
         "pinyin": "guang1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "luz"
       },
       {
         "char": "花",
         "pinyin": "hua1",
-        "definition": "flower"
+        "definition": "flower",
+        "definitionEs": "flor"
       }
     ]
   },
@@ -28633,17 +31835,20 @@ const pokemonData = [
       {
         "char": "墓",
         "pinyin": "mu4",
-        "definition": "grave"
+        "definition": "grave",
+        "definitionEs": "tumba"
       },
       {
         "char": "仔",
         "pinyin": "zi3",
-        "definition": "(bound form) (of domestic animals or fowl) young"
+        "definition": "young",
+        "definitionEs": "joven"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -28661,17 +31866,20 @@ const pokemonData = [
       {
         "char": "墓",
         "pinyin": "mu4",
-        "definition": "grave"
+        "definition": "grave",
+        "definitionEs": "tumba"
       },
       {
         "char": "扬",
         "pinyin": "yang2",
-        "definition": "variant of 揚|扬[yang2]"
+        "definition": "to raise",
+        "definitionEs": "elevar"
       },
       {
         "char": "犬",
         "pinyin": "quan3",
-        "definition": "(literary) dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -28689,17 +31897,20 @@ const pokemonData = [
       {
         "char": "缠",
         "pinyin": "chan2",
-        "definition": "to wind around"
+        "definition": "to entwine",
+        "definitionEs": "enredar"
       },
       {
         "char": "红",
         "pinyin": "hong2",
-        "definition": "red"
+        "definition": "red",
+        "definitionEs": "rojo"
       },
       {
         "char": "鹤",
         "pinyin": "he4",
-        "definition": "crane"
+        "definition": "crane",
+        "definitionEs": "grulla"
       }
     ]
   },
@@ -28717,12 +31928,14 @@ const pokemonData = [
       {
         "char": "走",
         "pinyin": "zou3",
-        "definition": "to walk"
+        "definition": "to walk",
+        "definitionEs": "caminar"
       },
       {
         "char": "鲸",
         "pinyin": "jing1",
-        "definition": "whale"
+        "definition": "whale",
+        "definitionEs": "ballena"
       }
     ]
   },
@@ -28740,17 +31953,20 @@ const pokemonData = [
       {
         "char": "浩",
         "pinyin": "hao4",
-        "definition": "grand"
+        "definition": "vast",
+        "definitionEs": "vasto"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "鲸",
         "pinyin": "jing1",
-        "definition": "whale"
+        "definition": "whale",
+        "definitionEs": "ballena"
       }
     ]
   },
@@ -28768,17 +31984,20 @@ const pokemonData = [
       {
         "char": "轻",
         "pinyin": "qing1",
-        "definition": "light"
+        "definition": "light",
+        "definitionEs": "ligero"
       },
       {
         "char": "身",
         "pinyin": "shen1",
-        "definition": "body"
+        "definition": "body",
+        "definitionEs": "cuerpo"
       },
       {
         "char": "鳕",
         "pinyin": "xue3",
-        "definition": "codfish"
+        "definition": "cod",
+        "definitionEs": "bacalao"
       }
     ]
   },
@@ -28796,17 +32015,20 @@ const pokemonData = [
       {
         "char": "吃",
         "pinyin": "chi1",
-        "definition": "variant of 吃[chi1]"
+        "definition": "to eat",
+        "definitionEs": "comer"
       },
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "霸",
         "pinyin": "ba4",
-        "definition": "hegemon"
+        "definition": "tyrant",
+        "definitionEs": "tirano"
       }
     ]
   },
@@ -28824,17 +32046,20 @@ const pokemonData = [
       {
         "char": "米",
         "pinyin": "mi3",
-        "definition": "uncooked rice"
+        "definition": "rice",
+        "definitionEs": "arroz"
       },
       {
         "char": "立",
         "pinyin": "li4",
-        "definition": "to stand"
+        "definition": "to stand",
+        "definitionEs": "levantar"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -28852,17 +32077,20 @@ const pokemonData = [
       {
         "char": "弃",
         "pinyin": "qi4",
-        "definition": "to abandon"
+        "definition": "to abandon",
+        "definitionEs": "abandonar"
       },
       {
         "char": "世",
         "pinyin": "shi4",
-        "definition": "life"
+        "definition": "world",
+        "definitionEs": "mundo"
       },
       {
         "char": "猴",
         "pinyin": "hou2",
-        "definition": "monkey"
+        "definition": "monkey",
+        "definitionEs": "mono"
       }
     ]
   },
@@ -28880,12 +32108,14 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "王",
         "pinyin": "wang2",
-        "definition": "king or monarch"
+        "definition": "king",
+        "definitionEs": "rey"
       }
     ]
   },
@@ -28903,17 +32133,20 @@ const pokemonData = [
       {
         "char": "奇",
         "pinyin": "qi2",
-        "definition": "strange"
+        "definition": "strange",
+        "definitionEs": "extraño"
       },
       {
         "char": "麒",
         "pinyin": "qi2",
-        "definition": "used in 麒麟[qi2 lin2]"
+        "definition": "qilin (part of)",
+        "definitionEs": "qilin (parte de)"
       },
       {
         "char": "麟",
         "pinyin": "lin2",
-        "definition": "see 麒麟[qi2 lin2]"
+        "definition": "qilin (part of)",
+        "definitionEs": "qilin (parte de)"
       }
     ]
   },
@@ -28931,22 +32164,26 @@ const pokemonData = [
       {
         "char": "土",
         "pinyin": "tu3",
-        "definition": "earth"
+        "definition": "earth",
+        "definitionEs": "tierra"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       },
       {
         "char": "节",
         "pinyin": "jie2",
-        "definition": "joint"
+        "definition": "joint",
+        "definitionEs": "articulación"
       },
       {
         "char": "节",
         "pinyin": "jie2",
-        "definition": "joint"
+        "definition": "joint",
+        "definitionEs": "articulación"
       }
     ]
   },
@@ -28964,22 +32201,26 @@ const pokemonData = [
       {
         "char": "仆",
         "pinyin": "pu2",
-        "definition": "servant"
+        "definition": "servant",
+        "definitionEs": "sirviente"
       },
       {
         "char": "刀",
         "pinyin": "dao1",
-        "definition": "knife"
+        "definition": "knife",
+        "definitionEs": "cuchillo"
       },
       {
         "char": "将",
         "pinyin": "qiang1",
-        "definition": "to desire"
+        "definition": "desire",
+        "definitionEs": "desear"
       },
       {
         "char": "军",
         "pinyin": "jun1",
-        "definition": "(bound form) army"
+        "definition": "army",
+        "definitionEs": "ejército"
       }
     ]
   },
@@ -28997,17 +32238,20 @@ const pokemonData = [
       {
         "char": "雄",
         "pinyin": "xiong2",
-        "definition": "male"
+        "definition": "male",
+        "definitionEs": "macho"
       },
       {
         "char": "伟",
         "pinyin": "wei3",
-        "definition": "big"
+        "definition": "great",
+        "definitionEs": "grande"
       },
       {
         "char": "牙",
         "pinyin": "ya2",
-        "definition": "tooth"
+        "definition": "tooth",
+        "definitionEs": "diente"
       }
     ]
   },
@@ -29025,17 +32269,20 @@ const pokemonData = [
       {
         "char": "吼",
         "pinyin": "hou3",
-        "definition": "to roar"
+        "definition": "roar",
+        "definitionEs": "rugir"
       },
       {
         "char": "叫",
         "pinyin": "jiao4",
-        "definition": "variant of 叫[jiao4]"
+        "definition": "to call",
+        "definitionEs": "llamar"
       },
       {
         "char": "尾",
         "pinyin": "wei3",
-        "definition": "tail"
+        "definition": "tail",
+        "definitionEs": "cola"
       }
     ]
   },
@@ -29053,17 +32300,20 @@ const pokemonData = [
       {
         "char": "猛",
         "pinyin": "meng3",
-        "definition": "ferocious"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "恶",
         "pinyin": "wu4",
-        "definition": "to hate"
+        "definition": "hate",
+        "definitionEs": "odiar"
       },
       {
         "char": "菇",
         "pinyin": "gu1",
-        "definition": "(bound form) mushroom"
+        "definition": "mushroom (part of)",
+        "definitionEs": "hongo (parte de)"
       }
     ]
   },
@@ -29081,17 +32331,20 @@ const pokemonData = [
       {
         "char": "振",
         "pinyin": "zhen4",
-        "definition": "to shake"
+        "definition": "to shake",
+        "definitionEs": "sacudir"
       },
       {
         "char": "翼",
         "pinyin": "yi4",
-        "definition": "wing"
+        "definition": "wing",
+        "definitionEs": "ala"
       },
       {
         "char": "发",
         "pinyin": "fa4",
-        "definition": "hair"
+        "definition": "hair",
+        "definitionEs": "pelo"
       }
     ]
   },
@@ -29109,17 +32362,20 @@ const pokemonData = [
       {
         "char": "爬",
         "pinyin": "pa2",
-        "definition": "to crawl"
+        "definition": "to crawl",
+        "definitionEs": "gatear"
       },
       {
         "char": "地",
-        "pinyin": "de5",
-        "definition": "-ly"
+        "pinyin": "de",
+        "definition": "(particle)",
+        "definitionEs": "(partícula)"
       },
       {
         "char": "翅",
         "pinyin": "chi4",
-        "definition": "(bound form) wing (of a bird or insect)"
+        "definition": "wing",
+        "definitionEs": "ala"
       }
     ]
   },
@@ -29136,18 +32392,21 @@ const pokemonData = [
     "characters": [
       {
         "char": "沙",
-        "pinyin": "sha4",
-        "definition": "(dialect) to sift"
+        "pinyin": "sha1",
+        "definition": "sand",
+        "definitionEs": "arena"
       },
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "皮",
         "pinyin": "pi2",
-        "definition": "leather"
+        "definition": "skin",
+        "definitionEs": "piel"
       }
     ]
   },
@@ -29165,17 +32424,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "辙",
         "pinyin": "zhe2",
-        "definition": "rut"
+        "definition": "rut",
+        "definitionEs": "surco"
       },
       {
         "char": "迹",
         "pinyin": "ji4",
-        "definition": "variant of 跡|迹[ji4]"
+        "definition": "trace",
+        "definitionEs": "rastro"
       }
     ]
   },
@@ -29193,17 +32455,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "包",
         "pinyin": "bao1",
-        "definition": "to cover"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "袱",
         "pinyin": "fu2",
-        "definition": "(bound form) a cloth used to wrap or cover"
+        "definition": "cloth",
+        "definitionEs": "tela"
       }
     ]
   },
@@ -29221,17 +32486,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "臂",
         "pinyin": "bi4",
-        "definition": "arm"
+        "definition": "arm",
+        "definitionEs": "brazo"
       },
       {
         "char": "膀",
         "pinyin": "bang3",
-        "definition": "variant of 膀[bang3]"
+        "definition": "wing",
+        "definitionEs": "ala"
       }
     ]
   },
@@ -29249,17 +32517,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "脖",
         "pinyin": "bo2",
-        "definition": "neck"
+        "definition": "neck",
+        "definitionEs": "cuello"
       },
       {
         "char": "颈",
         "pinyin": "jing3",
-        "definition": "neck"
+        "definition": "neck",
+        "definitionEs": "cuello"
       }
     ]
   },
@@ -29277,17 +32548,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "毒",
         "pinyin": "du2",
-        "definition": "poison"
+        "definition": "poison",
+        "definitionEs": "veneno"
       },
       {
         "char": "蛾",
         "pinyin": "e2",
-        "definition": "moth"
+        "definition": "moth",
+        "definitionEs": "polilla"
       }
     ]
   },
@@ -29305,17 +32579,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "荆",
         "pinyin": "jing1",
-        "definition": "chaste tree or its berry (Vitex agnus-castus)"
+        "definition": "thorn",
+        "definitionEs": "espina"
       },
       {
         "char": "棘",
         "pinyin": "ji2",
-        "definition": "thorns"
+        "definition": "thorn",
+        "definitionEs": "espina"
       }
     ]
   },
@@ -29333,17 +32610,20 @@ const pokemonData = [
       {
         "char": "凉",
         "pinyin": "liang4",
-        "definition": "to let sth cool down"
+        "definition": "to cool",
+        "definitionEs": "enfriar"
       },
       {
         "char": "脊",
         "pinyin": "ji3",
-        "definition": "(bound form) spine"
+        "definition": "spine",
+        "definitionEs": "columna"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -29361,17 +32641,20 @@ const pokemonData = [
       {
         "char": "冻",
         "pinyin": "dong4",
-        "definition": "to freeze"
+        "definition": "to freeze",
+        "definitionEs": "congelar"
       },
       {
         "char": "脊",
         "pinyin": "ji3",
-        "definition": "(bound form) spine"
+        "definition": "spine",
+        "definitionEs": "columna"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -29389,17 +32672,20 @@ const pokemonData = [
       {
         "char": "戟",
         "pinyin": "ji3",
-        "definition": "halberd"
+        "definition": "halberd",
+        "definitionEs": "alabarda"
       },
       {
         "char": "脊",
         "pinyin": "ji3",
-        "definition": "(bound form) spine"
+        "definition": "spine",
+        "definitionEs": "columna"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -29417,17 +32703,20 @@ const pokemonData = [
       {
         "char": "索",
         "pinyin": "suo3",
-        "definition": "to search"
+        "definition": "search",
+        "definitionEs": "buscar"
       },
       {
         "char": "财",
         "pinyin": "cai2",
-        "definition": "money"
+        "definition": "wealth",
+        "definitionEs": "riqueza"
       },
       {
         "char": "灵",
         "pinyin": "ling2",
-        "definition": "quick"
+        "definition": "spirit",
+        "definitionEs": "espíritu"
       }
     ]
   },
@@ -29445,17 +32734,20 @@ const pokemonData = [
       {
         "char": "赛",
         "pinyin": "sai4",
-        "definition": "to compete"
+        "definition": "compete",
+        "definitionEs": "competir"
       },
       {
         "char": "富",
         "pinyin": "fu4",
-        "definition": "rich"
+        "definition": "rich",
+        "definitionEs": "rico"
       },
       {
         "char": "豪",
         "pinyin": "hao2",
-        "definition": "grand"
+        "definition": "grand",
+        "definitionEs": "grandioso"
       }
     ]
   },
@@ -29473,17 +32765,20 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "简",
         "pinyin": "jian3",
-        "definition": "simple"
+        "definition": "simple",
+        "definitionEs": "simple"
       },
       {
         "char": "蜗",
         "pinyin": "wo1",
-        "definition": "snail"
+        "definition": "snail",
+        "definitionEs": "caracol"
       }
     ]
   },
@@ -29501,17 +32796,20 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "剑",
         "pinyin": "jian4",
-        "definition": "variant of 劍|剑[jian4]"
+        "definition": "sword",
+        "definitionEs": "espada"
       },
       {
         "char": "豹",
         "pinyin": "bao4",
-        "definition": "leopard"
+        "definition": "leopard",
+        "definitionEs": "leopardo"
       }
     ]
   },
@@ -29529,17 +32827,20 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "鼎",
         "pinyin": "ding3",
-        "definition": "ancient cooking cauldron with two looped handles and three or four legs"
+        "definition": "cauldron",
+        "definitionEs": "caldero"
       },
       {
         "char": "鹿",
         "pinyin": "lu4",
-        "definition": "deer"
+        "definition": "deer",
+        "definitionEs": "ciervo"
       }
     ]
   },
@@ -29557,17 +32858,20 @@ const pokemonData = [
       {
         "char": "古",
         "pinyin": "gu3",
-        "definition": "ancient"
+        "definition": "ancient",
+        "definitionEs": "antiguo"
       },
       {
         "char": "玉",
         "pinyin": "yu4",
-        "definition": "jade"
+        "definition": "jade",
+        "definitionEs": "jade"
       },
       {
         "char": "鱼",
         "pinyin": "yu2",
-        "definition": "fish"
+        "definition": "fish",
+        "definitionEs": "pez"
       }
     ]
   },
@@ -29585,17 +32889,20 @@ const pokemonData = [
       {
         "char": "轰",
         "pinyin": "hong1",
-        "definition": "explosion"
+        "definition": "explosion",
+        "definitionEs": "explosión"
       },
       {
         "char": "鸣",
         "pinyin": "ming2",
-        "definition": "to cry (of birds, animals and insects)"
+        "definition": "chirp",
+        "definitionEs": "piar"
       },
       {
         "char": "月",
         "pinyin": "yue4",
-        "definition": "moon"
+        "definition": "moon",
+        "definitionEs": "luna"
       }
     ]
   },
@@ -29613,17 +32920,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "武",
         "pinyin": "wu3",
-        "definition": "martial"
+        "definition": "martial",
+        "definitionEs": "marcial"
       },
       {
         "char": "者",
         "pinyin": "zhe3",
-        "definition": "(after a verb or adjective) one who (is) ..."
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       }
     ]
   },
@@ -29641,17 +32951,20 @@ const pokemonData = [
       {
         "char": "故",
         "pinyin": "gu4",
-        "definition": "happening"
+        "definition": "old",
+        "definitionEs": "antiguo"
       },
       {
         "char": "勒",
         "pinyin": "lei1",
-        "definition": "to strap tightly"
+        "definition": "to strap",
+        "definitionEs": "ceñir"
       },
       {
         "char": "顿",
         "pinyin": "dun4",
-        "definition": "to stop"
+        "definition": "stop",
+        "definitionEs": "parar"
       }
     ]
   },
@@ -29669,17 +32982,20 @@ const pokemonData = [
       {
         "char": "密",
         "pinyin": "mi4",
-        "definition": "dense"
+        "definition": "dense",
+        "definitionEs": "denso"
       },
       {
         "char": "勒",
         "pinyin": "lei1",
-        "definition": "to strap tightly"
+        "definition": "to strap",
+        "definitionEs": "ceñir"
       },
       {
         "char": "顿",
         "pinyin": "dun4",
-        "definition": "to stop"
+        "definition": "stop",
+        "definitionEs": "parar"
       }
     ]
   },
@@ -29697,17 +33013,20 @@ const pokemonData = [
       {
         "char": "波",
         "pinyin": "bo1",
-        "definition": "wave"
+        "definition": "wave",
+        "definitionEs": "ola"
       },
       {
         "char": "荡",
         "pinyin": "dang4",
-        "definition": "to wash"
+        "definition": "swing",
+        "definitionEs": "balancear"
       },
       {
         "char": "水",
         "pinyin": "shui3",
-        "definition": "water"
+        "definition": "water",
+        "definitionEs": "agua"
       }
     ]
   },
@@ -29725,17 +33044,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "斑",
         "pinyin": "ban1",
-        "definition": "spot"
+        "definition": "spot",
+        "definitionEs": "mancha"
       },
       {
         "char": "叶",
         "pinyin": "ye4",
-        "definition": "leaf"
+        "definition": "leaf",
+        "definitionEs": "hoja"
       }
     ]
   },
@@ -29753,17 +33075,20 @@ const pokemonData = [
       {
         "char": "裹",
         "pinyin": "guo3",
-        "definition": "to wrap around"
+        "definition": "wrap",
+        "definitionEs": "envolver"
       },
       {
         "char": "蜜",
         "pinyin": "mi4",
-        "definition": "honey"
+        "definition": "honey",
+        "definitionEs": "miel"
       },
       {
         "char": "虫",
         "pinyin": "chong2",
-        "definition": "lower form of animal life, including insects, insect larvae, worms and similar creatures"
+        "definition": "insect",
+        "definitionEs": "insecto"
       }
     ]
   },
@@ -29781,17 +33106,20 @@ const pokemonData = [
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       },
       {
         "char": "魔",
         "pinyin": "mo2",
-        "definition": "devil"
+        "definition": "demon",
+        "definitionEs": "demonio"
       },
       {
         "char": "茶",
         "pinyin": "cha2",
-        "definition": "tea"
+        "definition": "tea",
+        "definitionEs": "té"
       }
     ]
   },
@@ -29809,22 +33137,26 @@ const pokemonData = [
       {
         "char": "來",
         "pinyin": "lai2",
-        "definition": "to come"
+        "definition": "come",
+        "definitionEs": "venir"
       },
       {
         "char": "悲",
         "pinyin": "bei1",
-        "definition": "sad"
+        "definition": "sad",
+        "definitionEs": "triste"
       },
       {
         "char": "粗",
         "pinyin": "cu1",
-        "definition": "remote"
+        "definition": "coarse",
+        "definitionEs": "áspero"
       },
       {
         "char": "茶",
         "pinyin": "cha2",
-        "definition": "tea"
+        "definition": "tea",
+        "definitionEs": "té"
       }
     ]
   },
@@ -29842,17 +33174,20 @@ const pokemonData = [
       {
         "char": "够",
         "pinyin": "gou4",
-        "definition": "enough (sufficient)"
+        "definition": "enough",
+        "definitionEs": "suficiente"
       },
       {
         "char": "赞",
         "pinyin": "zan4",
-        "definition": "(bound form) to patronize"
+        "definition": "praise",
+        "definitionEs": "alabar"
       },
       {
         "char": "狗",
         "pinyin": "gou3",
-        "definition": "dog"
+        "definition": "dog",
+        "definitionEs": "perro"
       }
     ]
   },
@@ -29870,17 +33205,20 @@ const pokemonData = [
       {
         "char": "愿",
         "pinyin": "yuan4",
-        "definition": "(bound form) wish"
+        "definition": "wish",
+        "definitionEs": "deseo"
       },
       {
         "char": "增",
         "pinyin": "zeng1",
-        "definition": "(bound form) to increase"
+        "definition": "increase",
+        "definitionEs": "aumentar"
       },
       {
         "char": "猿",
         "pinyin": "yuan2",
-        "definition": "variant of 猿[yuan2]"
+        "definition": "ape",
+        "definitionEs": "simio"
       }
     ]
   },
@@ -29898,17 +33236,20 @@ const pokemonData = [
       {
         "char": "吉",
         "pinyin": "ji2",
-        "definition": "lucky"
+        "definition": "lucky",
+        "definitionEs": "afortunado"
       },
       {
         "char": "雉",
         "pinyin": "zhi4",
-        "definition": "ringed pheasant"
+        "definition": "pheasant",
+        "definitionEs": "faisán"
       },
       {
         "char": "鸡",
         "pinyin": "ji1",
-        "definition": "variant of 雞|鸡[ji1]"
+        "definition": "chicken",
+        "definitionEs": "pollo"
       }
     ]
   },
@@ -29926,17 +33267,20 @@ const pokemonData = [
       {
         "char": "厄",
         "pinyin": "e4",
-        "definition": "variant of 厄[e4]"
+        "definition": "distress",
+        "definitionEs": "angustia"
       },
       {
         "char": "诡",
         "pinyin": "gui3",
-        "definition": "(bound form) sly"
+        "definition": "sly",
+        "definitionEs": "astuto"
       },
       {
         "char": "椪",
         "pinyin": "peng4",
-        "definition": "used in 椪柑[peng4 gan1]"
+        "definition": "bump",
+        "definitionEs": "chocar"
       }
     ]
   },
@@ -29953,23 +33297,27 @@ const pokemonData = [
     "characters": [
       {
         "char": "铝",
-        "pinyin": "lu:3",
-        "definition": "aluminum (chemistry)"
+        "pinyin": "lü3",
+        "definition": "aluminum",
+        "definitionEs": "aluminio"
       },
       {
         "char": "钢",
         "pinyin": "gang1",
-        "definition": "steel"
+        "definition": "steel",
+        "definitionEs": "acero"
       },
       {
         "char": "桥",
         "pinyin": "qiao2",
-        "definition": "bridge"
+        "definition": "bridge",
+        "definitionEs": "puente"
       },
       {
         "char": "龙",
         "pinyin": "long2",
-        "definition": "dragon"
+        "definition": "dragon",
+        "definitionEs": "dragón"
       }
     ]
   },
@@ -29987,22 +33335,26 @@ const pokemonData = [
       {
         "char": "蜜",
         "pinyin": "mi4",
-        "definition": "honey"
+        "definition": "honey",
+        "definitionEs": "miel"
       },
       {
         "char": "集",
         "pinyin": "ji2",
-        "definition": "to gather"
+        "definition": "gather",
+        "definitionEs": "reunir"
       },
       {
         "char": "大",
         "pinyin": "da4",
-        "definition": "big"
+        "definition": "big",
+        "definitionEs": "grande"
       },
       {
         "char": "蛇",
         "pinyin": "she2",
-        "definition": "snake"
+        "definition": "snake",
+        "definitionEs": "serpiente"
       }
     ]
   },
@@ -30020,17 +33372,20 @@ const pokemonData = [
       {
         "char": "破",
         "pinyin": "po4",
-        "definition": "broken"
+        "definition": "broken",
+        "definitionEs": "roto"
       },
       {
         "char": "空",
-        "pinyin": "kong4",
-        "definition": "to empty"
+        "pinyin": "kong1",
+        "definition": "empty",
+        "definitionEs": "vacío"
       },
       {
         "char": "焰",
         "pinyin": "yan4",
-        "definition": "flame"
+        "definition": "flame",
+        "definitionEs": "llama"
       }
     ]
   },
@@ -30048,17 +33403,20 @@ const pokemonData = [
       {
         "char": "猛",
         "pinyin": "meng3",
-        "definition": "ferocious"
+        "definition": "fierce",
+        "definitionEs": "feroz"
       },
       {
         "char": "雷",
         "pinyin": "lei2",
-        "definition": "thunder"
+        "definition": "thunder",
+        "definitionEs": "trueno"
       },
       {
         "char": "鼓",
         "pinyin": "gu3",
-        "definition": "drum"
+        "definition": "drum",
+        "definitionEs": "tambor"
       }
     ]
   },
@@ -30076,17 +33434,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "磐",
         "pinyin": "pan2",
-        "definition": "firm"
+        "definition": "rock",
+        "definitionEs": "roca"
       },
       {
         "char": "岩",
         "pinyin": "yan2",
-        "definition": "cliff"
+        "definition": "rock",
+        "definitionEs": "roca"
       }
     ]
   },
@@ -30104,17 +33465,20 @@ const pokemonData = [
       {
         "char": "铁",
         "pinyin": "tie3",
-        "definition": "iron (metal)"
+        "definition": "iron",
+        "definitionEs": "hierro"
       },
       {
         "char": "头",
         "pinyin": "tou2",
-        "definition": "head"
+        "definition": "head",
+        "definitionEs": "cabeza"
       },
       {
         "char": "壳",
-        "pinyin": "qiao4",
-        "definition": "shell"
+        "pinyin": "ke2",
+        "definition": "shell",
+        "definitionEs": "concha"
       }
     ]
   },
@@ -30132,27 +33496,32 @@ const pokemonData = [
       {
         "char": "太",
         "pinyin": "tai4",
-        "definition": "highest"
+        "definition": "supreme",
+        "definitionEs": "supremo"
       },
       {
         "char": "乐",
         "pinyin": "yue4",
-        "definition": "music"
+        "definition": "music",
+        "definitionEs": "música"
       },
       {
         "char": "巴",
         "pinyin": "ba1",
-        "definition": "to long for"
+        "definition": "(suffix)",
+        "definitionEs": "(sufijo)"
       },
       {
         "char": "戈",
         "pinyin": "ge1",
-        "definition": "dagger-axe"
+        "definition": "dagger-axe",
+        "definitionEs": "daga-hacha"
       },
       {
         "char": "斯",
         "pinyin": "si1",
-        "definition": "(phonetic)"
+        "definition": "(phonetic)",
+        "definitionEs": "(fonético)"
       }
     ]
   },
@@ -30170,17 +33539,20 @@ const pokemonData = [
       {
         "char": "桃",
         "pinyin": "tao2",
-        "definition": "peach"
+        "definition": "peach",
+        "definitionEs": "melocotón"
       },
       {
         "char": "歹",
         "pinyin": "dai3",
-        "definition": "bad"
+        "definition": "bad",
+        "definitionEs": "malo"
       },
       {
         "char": "郎",
         "pinyin": "lang2",
-        "definition": "(arch.) minister"
+        "definition": "minister",
+        "definitionEs": "ministro"
       }
     ]
   }

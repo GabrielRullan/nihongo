@@ -635,13 +635,21 @@
 
                 <div class="stats-view-toggle">
                     <span>Encontrados: <strong>{{ filteredCards.length }}</strong> Pokémon</span>
-                    <div style="display: flex; gap: 8px;">
-                        <button class="view-btn" :class="{ active: viewMode === 'carousel' }" @click="viewMode = 'carousel'">
-                            🎴 Tarjeta 3D
-                        </button>
-                        <button class="view-btn" :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">
-                            🎛️ Rejilla
-                        </button>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <!-- Language Selector -->
+                        <div style="display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; padding: 2px;">
+                            <button @click="defLang = 'es'" style="background: none; border: none; padding: 4px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: bold; cursor: pointer; color: var(--text-secondary); transition: all 0.2s;" :style="defLang === 'es' ? { backgroundColor: 'var(--accent-poke)', color: '#0b0f19' } : {}">ESP</button>
+                            <button @click="defLang = 'en'" style="background: none; border: none; padding: 4px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: bold; cursor: pointer; color: var(--text-secondary); transition: all 0.2s;" :style="defLang === 'en' ? { backgroundColor: 'var(--accent-poke)', color: '#0b0f19' } : {}">ENG</button>
+                        </div>
+
+                        <div style="display: flex; gap: 8px;">
+                            <button class="view-btn" :class="{ active: viewMode === 'carousel' }" @click="viewMode = 'carousel'">
+                                🎴 Tarjeta 3D
+                            </button>
+                            <button class="view-btn" :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">
+                                🎛️ Rejilla
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -691,7 +699,7 @@
                                     <div v-for="c in currentCard.characters" :key="c.char" class="breakdown-row">
                                         <span class="breakdown-char">{{ c.char }}</span>
                                         <span class="breakdown-pinyin">[{{ formatPinyin(c.pinyin) }}]</span>
-                                        <span class="breakdown-def" :title="c.definition">{{ c.definition }}</span>
+                                        <span class="breakdown-def" :title="defLang === 'es' ? (c.definitionEs || c.definition) : c.definition">{{ defLang === 'es' ? (c.definitionEs || c.definition) : c.definition }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -757,6 +765,7 @@
                 const activeType = ref(null);
                 const activeGen = ref('Gén 1');
                 const viewMode = ref('carousel');
+                const defLang = ref('es');
                 
                 const currentIndex = ref(0);
                 const isFlipped = ref(false);
@@ -944,6 +953,7 @@
                     uniqueGens,
                     filteredCards,
                     viewMode,
+                    defLang,
                     currentIndex,
                     isFlipped,
                     currentCard,

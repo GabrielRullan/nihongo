@@ -857,6 +857,15 @@
                 </div>
 
                 <div class="panel-section">
+                    <div class="section-title">Idioma de Definiciones</div>
+                    <p style="font-size:0.72rem; color:var(--text-secondary); margin-bottom:8px;">Selecciona el idioma de traducción en el desglose de Hanzi.</p>
+                    <div style="display: flex; gap: 8px; margin-top: 6px;">
+                        <button style="flex: 1; padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--accent-pink); transition: all 0.2s;" :style="defLang === 'es' ? { backgroundColor: 'var(--accent-pink)', color: '#ffffff' } : { backgroundColor: 'transparent', color: 'var(--text-primary)' }" @click="defLang = 'es'">Español</button>
+                        <button style="flex: 1; padding: 6px 12px; font-size: 0.8rem; border-radius: 6px; cursor: pointer; border: 1px solid var(--accent-pink); transition: all 0.2s;" :style="defLang === 'en' ? { backgroundColor: 'var(--accent-pink)', color: '#ffffff' } : { backgroundColor: 'transparent', color: 'var(--text-primary)' }" @click="defLang = 'en'">English</button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
                     <div class="section-title">Selección de Tarjetas ({{ selectedCards.length }} / {{ filteredSelectorCards.length }})</div>
                     <div style="display:flex; gap:8px; margin-bottom:8px;">
                         <button style="flex:1; padding:4px 8px; font-size:0.75rem;" @click="selectAllCards">Todos</button>
@@ -931,7 +940,7 @@
                                         <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
                                             <span class="char-hanzi-print">{{ ch.char }}</span>
                                             <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
-                                            <span class="char-def-print">{{ ch.definition }}</span>
+                                            <span class="char-def-print">{{ defLang === 'es' ? (ch.definitionEs || ch.definition) : ch.definition }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -961,7 +970,7 @@
                                         <div v-for="ch in card.characters" :key="ch.char" class="char-row-print">
                                             <span class="char-hanzi-print">{{ ch.char }}</span>
                                             <span class="char-pinyin-print">[{{ ch.pinyin }}]</span>
-                                            <span class="char-def-print">{{ ch.definition }}</span>
+                                            <span class="char-def-print">{{ defLang === 'es' ? (ch.definitionEs || ch.definition) : ch.definition }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1305,6 +1314,8 @@
                     };
                 };
 
+                const defLang = ref('es');
+
                 onMounted(() => {
                     updateCSSEffects();
                     handleGenFilterChange(); // Populate selectedCards with Gen 1 on load
@@ -1321,6 +1332,7 @@
                     getCardStyle,
                     getHeaderStyle,
                     getBadgeStyle,
+                    defLang,
                     frontOffsetX,
                     frontOffsetY,
                     backOffsetX,
