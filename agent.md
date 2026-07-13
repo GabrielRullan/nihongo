@@ -68,3 +68,8 @@ Al realizar cambios en `saveAsPDF` o en las hojas de estilo de impresión, sigue
     - Limita las definiciones extensas del diccionario CEDICT seleccionando únicamente la primera acepción principal.
     - Filtra y elimina todos los contadores del formato `CL:...` o aclaraciones gramaticales de clasificadores, así como cualquier carácter chino dentro de las definiciones.
     - Caracteres como "子" (zi) y "了" (le) deben simplificarse directamente al valor neutro `(suffix)` para evitar traducciones confusas o literales.
+7.  **Formato Micro-Collectible (18 cartas/A4)**:
+    - Para maximizar la densidad y portabilidad, se admite el diseño de micro-tarjetas de **44mm x 63mm** (18 cartas en hoja A4 horizontal).
+    - En Duplex fronts/backs, el reverso de la página debe invertirse horizontalmente fila por fila en el array de Vue (6 columnas por 3 filas, total 18 cartas) para lograr una correspondencia física exacta cara-reverso al imprimir a doble cara.
+    - Las fuentes e imágenes del contenido de las micro-tarjetas deben reducirse proporcionalmente con CSS (usando el selector `.size-micro`) para evitar solapamientos e invasión de márgenes.
+
