@@ -431,6 +431,85 @@
             transform: rotate(180deg);
         }
 
+        /* Page Layout Styles - Grid 6x3 (18 per page) Micro */
+        .print-container.size-micro {
+            --card-width: 44mm;
+            --card-height: 63mm;
+        }
+        .print-container.size-micro .print-page {
+            width: 297mm;
+            height: 210mm;
+            grid-template-columns: repeat(6, var(--card-width));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 1.5mm;
+        }
+        .print-container.size-micro.mode-folding .print-page {
+            width: 297mm;
+            height: 210mm;
+            grid-template-columns: repeat(3, calc(var(--card-width) * 2));
+            grid-template-rows: repeat(3, var(--card-height));
+            gap: 1.5mm;
+        }
+        
+        /* Font scaling and adjustments for Micro size */
+        .size-micro .card-face {
+            padding: 5px;
+        }
+        .size-micro .chinese-title-print {
+            font-size: 1.4rem !important;
+        }
+        .size-micro .pinyin-header-print {
+            font-size: 8px !important;
+        }
+        .size-micro .meaning-text {
+            font-size: 8px !important;
+            margin-top: 2px !important;
+        }
+        .size-micro .card-header-print {
+            padding: 3px 5px !important;
+            font-size: 6.5px !important;
+            margin: -5px -5px 5px -5px !important;
+            width: calc(100% + 10px) !important;
+        }
+        .size-micro .pokemon-num-print {
+            font-size: 6px !important;
+            padding: 0.5px 2px !important;
+        }
+        .size-micro .type-badge-print {
+            font-size: 5.5px !important;
+            padding: 0.5px 3px !important;
+        }
+        .size-micro .illustration-box {
+            height: 36px !important;
+            margin-bottom: 2px !important;
+        }
+        .size-micro .illustration-box-single {
+            height: 24px !important;
+            margin-bottom: 2px !important;
+        }
+        .size-micro .names-section-single {
+            gap: 1px !important;
+        }
+        .size-micro .chinese-title-print-single {
+            font-size: 1.1rem !important;
+        }
+        .size-micro .pinyin-header-print-single {
+            font-size: 7px !important;
+        }
+        .size-micro .english-name-print-single {
+            font-size: 8px !important;
+        }
+        .size-micro .char-row-print {
+            font-size: 5.5px !important;
+            gap: 2px !important;
+        }
+        .size-micro .char-hanzi-print {
+            font-size: 7px !important;
+        }
+        .size-micro .char-pinyin-print {
+            width: 32px !important;
+        }
+
         /* Duplex Alignment Calibrator transform rules */
         .print-page.fronts-page .print-unit {
             transform: translate(var(--front-offset-x), var(--front-offset-y));
@@ -797,6 +876,9 @@
                             <option value="8_landscape_duplex">8 por página (A4 Horizontal) - Duplex</option>
                             <option value="8_landscape_folding">8 por página (A4 Horizontal) - Plegable</option>
                             <option value="8_landscape_single">8 por página (A4 Horizontal) - Solo Frente (Todo en uno)</option>
+                            <option value="18_landscape_duplex">18 por página (A4 Horizontal) - Duplex Micro</option>
+                            <option value="18_landscape_folding">18 por página (A4 Horizontal) - Plegable Micro</option>
+                            <option value="18_landscape_single">18 por página (A4 Horizontal) - Solo Frente Micro</option>
                         </select>
                     </div>
 
@@ -1058,7 +1140,9 @@
                         classes.push('mode-duplex');
                     }
 
-                    if (layoutMode.value.includes('landscape')) {
+                    if (layoutMode.value.includes('18_landscape')) {
+                        classes.push('size-micro');
+                    } else if (layoutMode.value.includes('8_landscape') || layoutMode.value.includes('landscape')) {
                         classes.push('size-grid2x4');
                     } else {
                         classes.push('size-standard');
@@ -1101,13 +1185,16 @@
                     const isLandscape = layoutMode.value.includes('landscape');
                     const isFolding = layoutMode.value.includes('folding');
                     const isSingle = layoutMode.value.includes('single');
+                    const isMicro = layoutMode.value.includes('18_landscape');
 
                     let cardsPerPage = 3;
-                    if (isLandscape) {
+                    if (isMicro) {
+                        cardsPerPage = isFolding ? 9 : 18;
+                    } else if (isLandscape) {
                         cardsPerPage = isFolding ? 4 : 8;
                     }
                     if (isSingle && isLandscape) {
-                        cardsPerPage = 8;
+                        cardsPerPage = isMicro ? 18 : 8;
                     }
 
                     const frontsPages = [];
@@ -1147,7 +1234,13 @@
 
                             // Mirror columns for back page to print correctly
                             let backChunk = [...paddedChunk];
-                            if (isLandscape && paddedChunk.length === 8) {
+                            if (isMicro && paddedChunk.length === 18) {
+                                backChunk = [
+                                    paddedChunk[5], paddedChunk[4], paddedChunk[3], paddedChunk[2], paddedChunk[1], paddedChunk[0],
+                                    paddedChunk[11], paddedChunk[10], paddedChunk[9], paddedChunk[8], paddedChunk[7], paddedChunk[6],
+                                    paddedChunk[17], paddedChunk[16], paddedChunk[15], paddedChunk[14], paddedChunk[13], paddedChunk[12]
+                                ];
+                            } else if (isLandscape && paddedChunk.length === 8) {
                                 backChunk = [
                                     paddedChunk[3], paddedChunk[2], paddedChunk[1], paddedChunk[0],
                                     paddedChunk[7], paddedChunk[6], paddedChunk[5], paddedChunk[4]
