@@ -1,0 +1,1003 @@
+Paragraph 0:
+  TEXT: ICHÍ   SILLON pasar a Numero 1
+
+Paragraph 1:
+  TEXT: MIGÍ
+
+Paragraph 2:
+  TEXT: KANJI
+  TEXT: ^(
+  TEXT: HE puesto acentos donde sonaba mal)
+
+Paragraph 3:
+  TEXT: DIBUJO ACTUAL
+
+Paragraph 5:
+  TEXT: CAMBIAR A DIBUJO:
+
+Paragraph 6:
+  TEXT: DIBUJO
+
+Paragraph 7:
+  TEXT: ICHÍ
+
+Paragraph 8:
+  TEXT: sillón
+
+Paragraph 9:
+  TEXT: Numero 1
+
+Paragraph 10:
+  IMAGE: rId4 (rId4)
+
+Paragraph 11:
+  TEXT: MIGÍ
+
+Paragraph 12:
+  TEXT: RATON
+
+Paragraph 14:
+  IMAGE: rId5 (rId5)
+
+Paragraph 15:
+  TEXT: AME
+
+Paragraph 16:
+  TEXT: ARCOIRIS
+
+Paragraph 17:
+  TEXT: LLUVIA
+
+Paragraph 18:
+  IMAGE: rId6 (rId6)
+
+Paragraph 20:
+  TEXT: YEN
+
+Paragraph 21:
+  TEXT: OK
+
+Paragraph 23:
+  TEXT: OK
+
+Paragraph 24:
+  TEXT: REY
+
+Paragraph 25:
+  TEXT: TREN
+
+Paragraph 26:
+  TEXT: REY
+
+Paragraph 27:
+  IMAGE: rId7 (rId7)
+
+Paragraph 28:
+  TEXT: SONIDO ON
+
+Paragraph 29:
+  TEXT: SONIDO MALO
+
+Paragraph 30:
+  TEXT: SONIDO BUENO
+
+Paragraph 31:
+  IMAGE: rId8 (rId8)
+
+Paragraph 33:
+  TEXT: SHITA
+
+Paragraph 34:
+  TEXT: ABAJO
+
+Paragraph 35:
+  TEXT: NIÑA MIEDO
+
+Paragraph 36:
+  TEXT: NIÑA ALEGRE DEBAJO
+
+Paragraph 37:
+  IMAGE: rId9 (rId9)
+  IMAGE: rId10 (rId10)
+
+Paragraph 38:
+  TEXT: HI FUEGO
+
+Paragraph 39:
+  TEXT: HANABI
+
+Paragraph 40:
+  TEXT: FUEGO
+
+Paragraph 41:
+  IMAGE: rId11 (rId11)
+  IMAGE: rId12 (rId12)
+
+Paragraph 42:
+  TEXT: HANÁ
+
+Paragraph 44:
+  TEXT: FLOR GRANDE
+
+Paragraph 45:
+  IMAGE: rId13 (rId13)
+
+Paragraph 47:
+  TEXT: KAI
+
+Paragraph 48:
+  TEXT: NO ES MARISCO
+
+Paragraph 49:
+  TEXT: CONCHA
+
+Paragraph 50:
+  TEXT: ZAMBURIÑA
+
+Paragraph 51:
+  TEXT: PONER KAI
+
+Paragraph 52:
+  IMAGE: rId14 (rId14)
+
+Paragraph 53:
+  TEXT: MANABU
+
+Paragraph 55:
+  TEXT: CHANGE
+
+Paragraph 56:
+  IMAGE: rId15 (rId15)
+
+Paragraph 57:
+  TEXT: KI
+
+Paragraph 58:
+  TEXT: NIÑA
+
+Paragraph 59:
+  TEXT: POWER
+
+Paragraph 60:
+  IMAGE: rId16 (rId16)
+  IMAGE: rId17 (rId17)
+
+Paragraph 61:
+  TEXT: 9
+
+Paragraph 62:
+  TEXT: ¿??
+
+Paragraph 63:
+  TEXT: NUMERO
+
+Paragraph 64:
+  IMAGE: rId18 (rId18)
+
+Paragraph 65:
+  TEXT: YASUMU
+
+Paragraph 66:
+  TEXT: COLEGIO
+
+Paragraph 67:
+  TEXT: CAMBIAR
+
+Paragraph 68:
+  IMAGE: rId19 (rId19)
+
+Paragraph 69:
+  TEXT: TAMA
+
+Paragraph 70:
+  TEXT: PROVINCIA
+
+Paragraph 71:
+  TEXT: BOLA
+
+Paragraph 72:
+  IMAGE: rId20 (rId20)
+
+Paragraph 74:
+  TEXT: OKANE
+
+Paragraph 75:
+  TEXT: OK
+
+Paragraph 76:
+  TEXT: CHANGE CLEAR ONE. THIS I
+  TEXT: S FALSE MONEY
+
+Paragraph 77:
+  IMAGE: rId21 (rId21)
+
+Paragraph 78:
+  TEXT: SORA
+
+Paragraph 79:
+  TEXT: NEVERA
+
+Paragraph 80:
+  TEXT: CIELO
+
+Paragraph 81:
+  IMAGE: rId22 (rId22)
+
+Paragraph 83:
+  TEXT: TSUKI
+
+Paragraph 84:
+  TEXT: MOON
+
+Paragraph 85:
+  TEXT: IMPROVE
+
+Paragraph 86:
+  IMAGE: rId23 (rId23)
+
+Paragraph 88:
+  TEXT: INÚ
+
+Paragraph 89:
+  TEXT: DOG HEART
+
+Paragraph 90:
+  TEXT: CHANGE
+
+Paragraph 91:
+  IMAGE: rId24 (rId24)
+
+Paragraph 92:
+  TEXT: MIRU
+
+Paragraph 93:
+  TEXT: OKURIGANA RU
+
+Paragraph 96:
+  IMAGE: rId25 (rId25)
+
+Paragraph 97:
+  TEXT: 5
+
+Paragraph 99:
+  TEXT: STAR
+
+Paragraph 100:
+  TEXT: FINGERS
+
+Paragraph 101:
+  IMAGE: rId26 (rId26)
+
+Paragraph 102:
+  TEXT: KUCHI
+
+Paragraph 103:
+  TEXT: SEÑAL
+
+Paragraph 104:
+  TEXT: MOUTH
+
+Paragraph 105:
+  IMAGE: rId27 (rId27)
+
+Paragraph 106:
+  TEXT: KOU
+
+Paragraph 107:
+  TEXT: MOCHILA
+
+Paragraph 108:
+  TEXT: COLEGIO
+
+Paragraph 109:
+  IMAGE: rId28 (rId28)
+
+Paragraph 110:
+  TEXT: HIDARI
+
+Paragraph 111:
+  TEXT: HANDKERCHIEF
+
+Paragraph 112:
+  TEXT: CHANGE
+
+Paragraph 113:
+  IMAGE: rId29 (rId29)
+
+Paragraph 114:
+  TEXT: SAN
+
+Paragraph 115:
+  TEXT: DANGO
+
+Paragraph 116:
+  TEXT: FINGERS
+
+Paragraph 117:
+  IMAGE: rId30 (rId30)
+
+Paragraph 118:
+  TEXT: YAMÁ
+
+Paragraph 119:
+  TEXT: TREN
+
+Paragraph 120:
+  TEXT: MONTE
+
+Paragraph 121:
+  IMAGE: rId31 (rId31)
+
+Paragraph 123:
+  TEXT: KO
+
+Paragraph 125:
+  TEXT: JUDO
+
+Paragraph 126:
+  TEXT: CHANGE
+
+Paragraph 127:
+  IMAGE: rId32 (rId32)
+
+Paragraph 128:
+  TEXT: YON
+
+Paragraph 129:
+  TEXT: CUADRADO
+
+Paragraph 130:
+  TEXT: DEDOS
+
+Paragraph 131:
+  IMAGE: rId33 (rId33)
+
+Paragraph 132:
+  TEXT: ITO
+
+Paragraph 133:
+  TEXT: OK
+
+Paragraph 134:
+  TEXT: OK
+
+Paragraph 135:
+  TEXT: OK
+
+Paragraph 136:
+  TEXT: JI
+
+Paragraph 137:
+  TEXT: 2026
+
+Paragraph 138:
+  TEXT: KANJI
+
+Paragraph 139:
+  TEXT: CHANGE
+
+Paragraph 140:
+  IMAGE: rId34 (rId34)
+
+Paragraph 141:
+  TEXT: MIMI
+
+Paragraph 142:
+  TEXT: MIMIKAKI
+
+Paragraph 144:
+  IMAGE: rId35 (rId35)
+
+Paragraph 145:
+  TEXT: NANA
+
+Paragraph 148:
+  IMAGE: rId36 (rId36)
+
+Paragraph 149:
+  TEXT: KURUMÁ
+
+Paragraph 150:
+  TEXT: TREN
+
+Paragraph 151:
+  TEXT: COCHE
+
+Paragraph 152:
+  IMAGE: rId37 (rId37)
+
+Paragraph 154:
+  TEXT: TÉ
+
+Paragraph 155:
+  TEXT: NIÑA
+
+Paragraph 156:
+  TEXT: MANO
+
+Paragraph 157:
+  IMAGE: rId38 (rId38)
+
+Paragraph 159:
+  TEXT: JYUU
+
+Paragraph 160:
+  TEXT: ESTRELLA
+
+Paragraph 162:
+  IMAGE: rId39 (rId39)
+
+Paragraph 163:
+  TEXT: DERU
+
+Paragraph 164:
+  TEXT: PLANTA
+
+Paragraph 165:
+  TEXT: OK CHECK
+
+Paragraph 166:
+  IMAGE: rId40 (rId40)
+
+Paragraph 167:
+  TEXT: ONNA OK
+
+Paragraph 168:
+  TEXT: OK
+
+Paragraph 169:
+  TEXT: OK
+
+Paragraph 170:
+  TEXT: OK
+
+Paragraph 171:
+  TEXT: CHIISAI
+
+Paragraph 172:
+  TEXT: ADD OKURIGANA
+
+Paragraph 173:
+  TEXT: TREN
+
+Paragraph 174:
+  TEXT: THINK
+
+Paragraph 175:
+  IMAGE: rId41 (rId41)
+  IMAGE: rId42 (rId42)
+
+Paragraph 176:
+  TEXT: UE
+
+Paragraph 177:
+  TEXT: CALENDARIO
+
+Paragraph 178:
+  TEXT: CHANGE
+
+Paragraph 179:
+  IMAGE: rId43 (rId43)
+  IMAGE: rId44 (rId44)
+  IMAGE: rId45 (rId45)
+
+Paragraph 180:
+  TEXT: MORI
+
+Paragraph 181:
+  TEXT: MAPA
+
+Paragraph 182:
+  TEXT: CHANGE
+
+Paragraph 183:
+  IMAGE: rId46 (rId46)
+  IMAGE: rId47 (rId47)
+
+Paragraph 184:
+  TEXT: HITO
+
+Paragraph 185:
+  TEXT: ABUELA
+
+Paragraph 186:
+  TEXT: CHANGE
+
+Paragraph 187:
+  IMAGE: rId48 (rId48)
+
+Paragraph 188:
+  TEXT: MIZU
+
+Paragraph 189:
+  TEXT: CASA CON LLUVIA
+
+Paragraph 190:
+  TEXT: BOTELLA
+
+Paragraph 191:
+  TEXT: CAMBIAR CON LLUVIA
+  IMAGE: rId49 (rId49)
+
+Paragraph 192:
+  TEXT: TADASHII
+
+Paragraph 193:
+  TEXT: OKURI
+
+Paragraph 194:
+  TEXT: KANJI
+
+Paragraph 195:
+  TEXT: CHANGE
+
+Paragraph 196:
+  IMAGE: rId50 (rId50)
+
+Paragraph 197:
+  TEXT: SEI/ IKIRU
+
+Paragraph 198:
+  TEXT: JOVEN
+
+Paragraph 199:
+  TEXT: CHANGE
+
+Paragraph 201:
+  IMAGE: rId51 (rId51)
+
+Paragraph 202:
+  TEXT: YUU
+
+Paragraph 203:
+  TEXT: ATARDECER
+
+Paragraph 204:
+  TEXT: 2 JOVENES
+
+Paragraph 205:
+  TEXT: CHANGE
+
+Paragraph 206:
+  IMAGE: rId52 (rId52)
+
+Paragraph 207:
+  TEXT: AO
+
+Paragraph 208:
+  TEXT: FUEGO ARTIFICIAL
+
+Paragraph 209:
+  TEXT: CHECK
+
+Paragraph 210:
+  IMAGE: rId53 (rId53)
+
+Paragraph 212:
+  TEXT: ISHI
+
+Paragraph 213:
+  TEXT: MOCHI
+
+Paragraph 214:
+  TEXT: CHANGE
+
+Paragraph 215:
+  IMAGE: rId54 (rId54)
+
+Paragraph 216:
+  TEXT: AKA
+
+Paragraph 217:
+  TEXT: MAPA DESCONOICDO. MAPA ROJO
+
+Paragraph 218:
+  TEXT: CAMABIR.
+
+Paragraph 219:
+  IMAGE: rId55 (rId55)
+
+Paragraph 220:
+  TEXT: SEN
+
+Paragraph 221:
+  TEXT: TREN
+
+Paragraph 222:
+  TEXT: 1000
+
+Paragraph 223:
+  IMAGE: rId56 (rId56)
+
+Paragraph 224:
+  TEXT: KAWA
+
+Paragraph 225:
+  TEXT: HOMBRE SAMURAI
+
+Paragraph 226:
+  TEXT: RIO
+
+Paragraph 227:
+  IMAGE: rId57 (rId57)
+
+Paragraph 229:
+  TEXT: SEI ANTERIOR.
+
+Paragraph 230:
+  TEXT: MUJER E HIJO
+
+Paragraph 231:
+  TEXT: SEI
+
+Paragraph 232:
+  IMAGE: rId58 (rId58)
+
+Paragraph 233:
+  TEXT: HAYAI
+
+Paragraph 234:
+  TEXT: NIÑO CAZANDO
+
+Paragraph 235:
+  TEXT: ?RAPIDO
+
+Paragraph 236:
+  IMAGE: rId59 (rId59)
+
+Paragraph 237:
+  TEXT: KUSA
+
+Paragraph 238:
+  TEXT: PODANDO
+
+Paragraph 239:
+  TEXT: HIERBA
+
+Paragraph 240:
+  IMAGE: rId60 (rId60)
+
+Paragraph 241:
+  TEXT: ASHI
+
+Paragraph 242:
+  TEXT: KANI
+
+Paragraph 243:
+  TEXT: CHANGE
+
+Paragraph 244:
+  IMAGE: rId61 (rId61)
+
+Paragraph 245:
+  TEXT: MURÁ
+
+Paragraph 248:
+  IMAGE: rId62 (rId62)
+
+Paragraph 249:
+  TEXT: OOKII
+
+Paragraph 250:
+  TEXT: FURIGANA
+
+Paragraph 251:
+  TEXT: OOKII
+
+Paragraph 252:
+  TEXT: SMARTPHONE
+
+Paragraph 253:
+  TEXT: ALGO GRANDE COMO BUDA
+
+Paragraph 254:
+  IMAGE: rId63 (rId63)
+
+Paragraph 255:
+  TEXT: OTOKO
+
+Paragraph 256:
+  TEXT: OK
+
+Paragraph 257:
+  TEXT: OK
+  TEXT: CAN BE IMPROVED
+
+Paragraph 258:
+  TEXT: CHECK
+  IMAGE: rId64 (rId64)
+
+Paragraph 259:
+  TEXT: TAKÉ
+
+Paragraph 262:
+  IMAGE: rId65 (rId65)
+
+Paragraph 263:
+  TEXT: NAKA
+
+Paragraph 264:
+  TEXT: BANDERA
+
+Paragraph 265:
+  TEXT: CARICATUREA
+
+Paragraph 266:
+  IMAGE: rId66 (rId66)
+
+Paragraph 267:
+  IMAGE: rId67 (rId67)
+
+Paragraph 268:
+  TEXT: MUSHI.
+
+Paragraph 269:
+  TEXT: OKKAY
+
+Paragraph 270:
+  TEXT: OKKAY
+
+Paragraph 271:
+  IMAGE: rId68 (rId68)
+
+Paragraph 272:
+  TEXT: MACHI
+
+Paragraph 273:
+  TEXT: KANJI
+
+Paragraph 274:
+  TEXT: CIUDAD
+
+Paragraph 275:
+  IMAGE: rId69 (rId69)
+
+Paragraph 276:
+  TEXT: TEN
+
+Paragraph 278:
+  TEXT: SKY TREE
+
+Paragraph 279:
+  TEXT: FIX
+
+Paragraph 281:
+  IMAGE: rId70 (rId70)
+
+Paragraph 282:
+  TEXT: TA
+
+Paragraph 283:
+  TEXT: MAP
+
+Paragraph 284:
+  TEXT: FIX
+
+Paragraph 285:
+  TEXT: TAMB
+  IMAGE: rId71 (rId71)
+  TEXT: O
+
+Paragraph 286:
+  TEXT: TSUCHI
+
+Paragraph 287:
+  TEXT: GALLETA
+
+Paragraph 288:
+  TEXT: FIX
+
+Paragraph 289:
+  IMAGE: rId72 (rId72)
+
+Paragraph 291:
+  TEXT: 2
+
+Paragraph 292:
+  TEXT: LITERA
+
+Paragraph 293:
+  TEXT: FINGER
+
+Paragraph 294:
+  IMAGE: rId73 (rId73)
+
+Paragraph 295:
+  TEXT: HI
+
+Paragraph 296:
+  TEXT: NIÑA
+
+Paragraph 297:
+  TEXT: SOL
+
+Paragraph 298:
+  IMAGE: rId74 (rId74)
+
+Paragraph 299:
+  TEXT: HAIRU
+
+Paragraph 300:
+  TEXT: ARROZ
+
+Paragraph 301:
+  TEXT: FIX
+
+Paragraph 302:
+  IMAGE: rId75 (rId75)
+
+Paragraph 304:
+  TEXT: NEN TOSHI
+
+Paragraph 305:
+  TEXT: CABALLO
+
+Paragraph 306:
+  TEXT: FIX
+
+Paragraph 307:
+  IMAGE: rId76 (rId76)
+
+Paragraph 309:
+  TEXT: SHIROI
+
+Paragraph 310:
+  TEXT: ????
+
+Paragraph 311:
+  TEXT: FIX
+
+Paragraph 312:
+  IMAGE: rId77 (rId77)
+
+Paragraph 313:
+  TEXT: 8
+
+Paragraph 315:
+  TEXT: FIX
+
+Paragraph 316:
+  IMAGE: rId78 (rId78)
+
+Paragraph 317:
+  TEXT: HYAKU
+
+Paragraph 318:
+  TEXT: 500
+
+Paragraph 319:
+  TEXT: 100
+  TEXT: COIN
+
+Paragraph 320:
+  IMAGE: rId79 (rId79)
+
+Paragraph 321:
+  TEXT: KANJI
+  TEXT: ^(
+  TEXT: HE puesto acentos donde sonaba mal)
+
+Paragraph 322:
+  TEXT: DIBUJO ACTUAL
+
+Paragraph 324:
+  TEXT: CAMBIAR A DIBUJO:
+
+Paragraph 325:
+  TEXT: DIBUJO
+
+Paragraph 326:
+  TEXT: BUN
+
+Paragraph 327:
+  TEXT: Thankyou???
+
+Paragraph 328:
+  TEXT: TEXTO
+
+Paragraph 329:
+  IMAGE: rId80 (rId80)
+
+Paragraph 331:
+  TEXT: KI
+
+Paragraph 332:
+  TEXT: ARBOL
+
+Paragraph 333:
+  TEXT: OK
+
+Paragraph 334:
+  TEXT: OK
+
+Paragraph 335:
+  TEXT: HON
+
+Paragraph 336:
+  TEXT: LIBRO
+
+Paragraph 337:
+  TEXT: CHANGE TO prettier book
+
+Paragraph 338:
+  IMAGE: rId81 (rId81)
+
+Paragraph 339:
+  TEXT: Namae
+
+Paragraph 340:
+  TEXT: Add
+
+Paragraph 341:
+  TEXT: 名前
+
+Paragraph 342:
+  TEXT: MEISHI
+
+Paragraph 343:
+  TEXT: CHECK
+
+Paragraph 344:
+  IMAGE: rId82 (rId82)
+
+Paragraph 345:
+  TEXT: ME
+
+Paragraph 346:
+  TEXT: Niña
+  TEXT: mareada
+
+Paragraph 347:
+  TEXT: change
+
+Paragraph 348:
+  IMAGE: rId83 (rId83)
+
+Paragraph 349:
+  TEXT: TATSU
+
+Paragraph 350:
+  TEXT: pino
+
+Paragraph 351:
+  TEXT: change
+
+Paragraph 352:
+  IMAGE: rId84 (rId84)
+
+Paragraph 353:
+  TEXT: CHIKARA
+
+Paragraph 354:
+  TEXT: oculista
+
+Paragraph 355:
+  TEXT: CHANGE
+
+Paragraph 356:
+  IMAGE: rId16 (rId16)
+
+Paragraph 357:
+  TEXT: HAYASHI
+
+Paragraph 358:
+  TEXT: NO HAY
+
+Paragraph 359:
+  TEXT: METER
+
+Paragraph 361:
+  TEXT: 2 DE ESTOS
+
+Paragraph 362:
+  IMAGE: rId85 (rId85)
+
+Paragraph 363:
+  TEXT: 6 ROKU
+
+Paragraph 366:
+  IMAGE: rId86 (rId86)
+
+Paragraph 370:
+  IMAGE: rId39 (rId39)
+

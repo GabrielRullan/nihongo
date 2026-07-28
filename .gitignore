@@ -1,8 +1,5 @@
 # Ignore downloaded images
-images/
-images-chosen/
-kanji-images/
-*.png
+
 # Ignore Python artifacts
 __pycache__/
 *.py[cod]

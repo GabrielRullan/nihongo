@@ -43,6 +43,10 @@ def generate_cards_data(kanji_path="data/kanjis-80.csv", summary_path="data/summ
             }
             type_val = type_map.get(raw_type, raw_type)
 
+            img_path = image_choices.get(kanji)
+            if not img_path and os.path.exists(f"images-chosen/{kanji}.png"):
+                img_path = f"../images-chosen/{kanji}.png"
+
             # Basic card structure
             card = {
                 "kanji": kanji,
@@ -54,7 +58,7 @@ def generate_cards_data(kanji_path="data/kanjis-80.csv", summary_path="data/summ
                 "phraseJp": row.get("PhraseJp", ""),
                 "phraseRomaji": row.get("PhraseRomaji", ""),
                 "phraseEs": row.get("PhraseEs", ""),
-                "image": image_choices.get(kanji)
+                "image": img_path
             }
             
             cards.append(card)

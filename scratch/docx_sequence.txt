@@ -1,0 +1,482 @@
+=== KANJI: 一 (ICHÍ) ===
+  P 7: text='ICHÍ' | images=[]
+  P 8: text='sillón' | images=[]
+  P 9: text='Numero 1' | images=[]
+  P 10: text='' | images=['rId4']
+
+=== KANJI: 右 (MIGÍ) ===
+  P 11: text='MIGÍ' | images=[]
+  P 12: text='RATON' | images=[]
+  P 14: text='' | images=['rId5']
+
+=== KANJI: 雨 (AME) ===
+  P 15: text='AME' | images=[]
+  P 16: text='ARCOIRIS' | images=[]
+  P 17: text='LLUVIA' | images=[]
+  P 18: text='' | images=['rId6']
+
+=== KANJI: 円 (YEN) ===
+  P 20: text='YEN' | images=[]
+  P 21: text='OK' | images=[]
+  P 23: text='OK' | images=[]
+
+=== KANJI: 王 (REY) ===
+  P 24: text='REY' | images=[]
+  P 25: text='TREN' | images=[]
+  P 26: text='REY' | images=[]
+  P 27: text='' | images=['rId7']
+
+=== KANJI: 音 (SONIDO ON) ===
+  P 28: text='SONIDO ON' | images=[]
+  P 29: text='SONIDO MALO' | images=[]
+  P 30: text='SONIDO BUENO' | images=[]
+  P 31: text='' | images=['rId8']
+
+=== KANJI: 下 (SHITA) ===
+  P 33: text='SHITA' | images=[]
+  P 34: text='ABAJO' | images=[]
+  P 35: text='NIÑA MIEDO' | images=[]
+  P 36: text='NIÑA ALEGRE DEBAJO' | images=[]
+  P 37: text='' | images=['rId9', 'rId10']
+
+=== KANJI: 火 (HI FUEGO) ===
+  P 38: text='HI FUEGO' | images=[]
+  P 39: text='HANABI' | images=[]
+  P 40: text='FUEGO' | images=[]
+  P 41: text='' | images=['rId11', 'rId12']
+
+=== KANJI: 花 (HANÁ) ===
+  P 42: text='HANÁ' | images=[]
+  P 44: text='FLOR GRANDE' | images=[]
+  P 45: text='' | images=['rId13']
+
+=== KANJI: 貝 (KAI) ===
+  P 47: text='KAI' | images=[]
+  P 48: text='NO ES MARISCO' | images=[]
+  P 49: text='CONCHA' | images=[]
+  P 50: text='ZAMBURIÑA' | images=[]
+  P 51: text='PONER KAI' | images=[]
+  P 52: text='' | images=['rId14']
+
+=== KANJI: 学 (MANABU) ===
+  P 53: text='MANABU' | images=[]
+  P 55: text='CHANGE' | images=[]
+  P 56: text='' | images=['rId15']
+
+=== KANJI: 気 (KI) ===
+  P 57: text='KI' | images=[]
+  P 58: text='NIÑA' | images=[]
+  P 59: text='POWER' | images=[]
+  P 60: text='' | images=['rId16', 'rId17']
+
+=== KANJI: 九 (9) ===
+  P 61: text='9' | images=[]
+  P 62: text='¿??' | images=[]
+  P 63: text='NUMERO' | images=[]
+  P 64: text='' | images=['rId18']
+
+=== KANJI: 休 (YASUMU) ===
+  P 65: text='YASUMU' | images=[]
+  P 66: text='COLEGIO' | images=[]
+  P 67: text='CAMBIAR' | images=[]
+  P 68: text='' | images=['rId19']
+
+=== KANJI: 玉 (TAMA) ===
+  P 69: text='TAMA' | images=[]
+  P 70: text='PROVINCIA' | images=[]
+  P 71: text='BOLA' | images=[]
+  P 72: text='' | images=['rId20']
+
+=== KANJI: 金 (OKANE) ===
+  P 74: text='OKANE' | images=[]
+  P 75: text='OK' | images=[]
+  P 76: text='CHANGE CLEAR ONE. THIS IS FALSE MONEY' | images=[]
+  P 77: text='' | images=['rId21']
+
+=== KANJI: 空 (SORA) ===
+  P 78: text='SORA' | images=[]
+  P 79: text='NEVERA' | images=[]
+  P 80: text='CIELO' | images=[]
+  P 81: text='' | images=['rId22']
+
+=== KANJI: 月 (TSUKI) ===
+  P 83: text='TSUKI' | images=[]
+  P 84: text='MOON' | images=[]
+  P 85: text='IMPROVE' | images=[]
+  P 86: text='' | images=['rId23']
+
+=== KANJI: 犬 (INÚ) ===
+  P 88: text='INÚ' | images=[]
+  P 89: text='DOG HEART' | images=[]
+  P 90: text='CHANGE' | images=[]
+  P 91: text='' | images=['rId24']
+
+=== KANJI: 見 (MIRU) ===
+  P 92: text='MIRU' | images=[]
+  P 93: text='OKURIGANA RU' | images=[]
+  P 96: text='' | images=['rId25']
+
+=== KANJI: 五 (5) ===
+  P 97: text='5' | images=[]
+  P 99: text='STAR' | images=[]
+  P 100: text='FINGERS' | images=[]
+  P 101: text='' | images=['rId26']
+
+=== KANJI: 口 (KUCHI) ===
+  P 102: text='KUCHI' | images=[]
+  P 103: text='SEÑAL' | images=[]
+  P 104: text='MOUTH' | images=[]
+  P 105: text='' | images=['rId27']
+
+=== KANJI: 校 (KOU) ===
+  P 106: text='KOU' | images=[]
+  P 107: text='MOCHILA' | images=[]
+  P 108: text='COLEGIO' | images=[]
+  P 109: text='' | images=['rId28']
+
+=== KANJI: 左 (HIDARI) ===
+  P 110: text='HIDARI' | images=[]
+  P 111: text='HANDKERCHIEF' | images=[]
+  P 112: text='CHANGE' | images=[]
+  P 113: text='' | images=['rId29']
+
+=== KANJI: 三 (SAN) ===
+  P 114: text='SAN' | images=[]
+  P 115: text='DANGO' | images=[]
+  P 116: text='FINGERS' | images=[]
+  P 117: text='' | images=['rId30']
+
+=== KANJI: 山 (YAMÁ) ===
+  P 118: text='YAMÁ' | images=[]
+  P 119: text='TREN' | images=[]
+  P 120: text='MONTE' | images=[]
+  P 121: text='' | images=['rId31']
+
+=== KANJI: 子 (KO) ===
+  P 123: text='KO' | images=[]
+  P 125: text='JUDO' | images=[]
+  P 126: text='CHANGE' | images=[]
+  P 127: text='' | images=['rId32']
+
+=== KANJI: 四 (YON) ===
+  P 128: text='YON' | images=[]
+  P 129: text='CUADRADO' | images=[]
+  P 130: text='DEDOS' | images=[]
+  P 131: text='' | images=['rId33']
+
+=== KANJI: 糸 (ITO) ===
+  P 132: text='ITO' | images=[]
+  P 133: text='OK' | images=[]
+  P 134: text='OK' | images=[]
+  P 135: text='OK' | images=[]
+
+=== KANJI: 字 (JI) ===
+  P 136: text='JI' | images=[]
+  P 137: text='2026' | images=[]
+  P 138: text='KANJI' | images=[]
+  P 139: text='CHANGE' | images=[]
+  P 140: text='' | images=['rId34']
+
+=== KANJI: 耳 (MIMI) ===
+  P 141: text='MIMI' | images=[]
+  P 142: text='MIMIKAKI' | images=[]
+  P 144: text='' | images=['rId35']
+
+=== KANJI: 七 (NANA) ===
+  P 145: text='NANA' | images=[]
+  P 148: text='' | images=['rId36']
+
+=== KANJI: 車 (KURUMÁ) ===
+  P 149: text='KURUMÁ' | images=[]
+  P 150: text='TREN' | images=[]
+  P 151: text='COCHE' | images=[]
+  P 152: text='' | images=['rId37']
+
+=== KANJI: 手 (TÉ) ===
+  P 154: text='TÉ' | images=[]
+  P 155: text='NIÑA' | images=[]
+  P 156: text='MANO' | images=[]
+  P 157: text='' | images=['rId38']
+
+=== KANJI: 十 (JYUU) ===
+  P 159: text='JYUU' | images=[]
+  P 160: text='ESTRELLA' | images=[]
+  P 162: text='' | images=['rId39']
+
+=== KANJI: 出 (DERU) ===
+  P 163: text='DERU' | images=[]
+  P 164: text='PLANTA' | images=[]
+  P 165: text='OK CHECK' | images=[]
+  P 166: text='' | images=['rId40']
+
+=== KANJI: 女 (ONNA OK) ===
+  P 167: text='ONNA OK' | images=[]
+  P 168: text='OK' | images=[]
+  P 169: text='OK' | images=[]
+  P 170: text='OK' | images=[]
+
+=== KANJI: 小 (CHIISAI) ===
+  P 171: text='CHIISAI' | images=[]
+  P 172: text='ADD OKURIGANA' | images=[]
+  P 173: text='TREN' | images=[]
+  P 174: text='THINK' | images=[]
+  P 175: text='' | images=['rId41', 'rId42']
+
+=== KANJI: 上 (UE) ===
+  P 176: text='UE' | images=[]
+  P 177: text='CALENDARIO' | images=[]
+  P 178: text='CHANGE' | images=[]
+  P 179: text='' | images=['rId43', 'rId44', 'rId45']
+
+=== KANJI: 森 (MORI) ===
+  P 180: text='MORI' | images=[]
+  P 181: text='MAPA' | images=[]
+  P 182: text='CHANGE' | images=[]
+  P 183: text='' | images=['rId46', 'rId47']
+
+=== KANJI: 人 (HITO) ===
+  P 184: text='HITO' | images=[]
+  P 185: text='ABUELA' | images=[]
+  P 186: text='CHANGE' | images=[]
+  P 187: text='' | images=['rId48']
+
+=== KANJI: 水 (MIZU) ===
+  P 188: text='MIZU' | images=[]
+  P 189: text='CASA CON LLUVIA' | images=[]
+  P 190: text='BOTELLA' | images=[]
+  P 191: text='CAMBIAR CON LLUVIA' | images=['rId49']
+
+=== KANJI: 正 (TADASHII) ===
+  P 192: text='TADASHII' | images=[]
+  P 193: text='OKURI' | images=[]
+  P 194: text='KANJI' | images=[]
+  P 195: text='CHANGE' | images=[]
+  P 196: text='' | images=['rId50']
+
+=== KANJI: 生 (SEI/ IKIRU) ===
+  P 197: text='SEI/ IKIRU' | images=[]
+  P 198: text='JOVEN' | images=[]
+  P 199: text='CHANGE' | images=[]
+  P 201: text='' | images=['rId51']
+
+=== KANJI: 夕 (YUU) ===
+  P 202: text='YUU' | images=[]
+  P 203: text='ATARDECER' | images=[]
+  P 204: text='2 JOVENES' | images=[]
+  P 205: text='CHANGE' | images=[]
+  P 206: text='' | images=['rId52']
+
+=== KANJI: 青 (AO) ===
+  P 207: text='AO' | images=[]
+  P 208: text='FUEGO ARTIFICIAL' | images=[]
+  P 209: text='CHECK' | images=[]
+  P 210: text='' | images=['rId53']
+
+=== KANJI: 石 (ISHI) ===
+  P 212: text='ISHI' | images=[]
+  P 213: text='MOCHI' | images=[]
+  P 214: text='CHANGE' | images=[]
+  P 215: text='' | images=['rId54']
+
+=== KANJI: 赤 (AKA) ===
+  P 216: text='AKA' | images=[]
+  P 217: text='MAPA DESCONOICDO. MAPA ROJO' | images=[]
+  P 218: text='CAMABIR.' | images=[]
+  P 219: text='' | images=['rId55']
+
+=== KANJI: 千 (SEN) ===
+  P 220: text='SEN' | images=[]
+  P 221: text='TREN' | images=[]
+  P 222: text='1000' | images=[]
+  P 223: text='' | images=['rId56']
+
+=== KANJI: 川 (KAWA) ===
+  P 224: text='KAWA' | images=[]
+  P 225: text='HOMBRE SAMURAI' | images=[]
+  P 226: text='RIO' | images=[]
+  P 227: text='' | images=['rId57']
+
+=== KANJI: 先 (SEI ANTERIOR.) ===
+  P 229: text='SEI ANTERIOR.' | images=[]
+  P 230: text='MUJER E HIJO' | images=[]
+  P 231: text='SEI' | images=[]
+  P 232: text='' | images=['rId58']
+
+=== KANJI: 早 (HAYAI) ===
+  P 233: text='HAYAI' | images=[]
+  P 234: text='NIÑO CAZANDO' | images=[]
+  P 235: text='?RAPIDO' | images=[]
+  P 236: text='' | images=['rId59']
+
+=== KANJI: 草 (KUSA) ===
+  P 237: text='KUSA' | images=[]
+  P 238: text='PODANDO' | images=[]
+  P 239: text='HIERBA' | images=[]
+  P 240: text='' | images=['rId60']
+
+=== KANJI: 足 (ASHI) ===
+  P 241: text='ASHI' | images=[]
+  P 242: text='KANI' | images=[]
+  P 243: text='CHANGE' | images=[]
+  P 244: text='' | images=['rId61']
+
+=== KANJI: 村 (MURÁ) ===
+  P 245: text='MURÁ' | images=[]
+  P 248: text='' | images=['rId62']
+
+=== KANJI: 大 (OOKII) ===
+  P 249: text='OOKII' | images=[]
+  P 250: text='FURIGANA' | images=[]
+  P 251: text='OOKII' | images=[]
+  P 252: text='SMARTPHONE' | images=[]
+  P 253: text='ALGO GRANDE COMO BUDA' | images=[]
+  P 254: text='' | images=['rId63']
+
+=== KANJI: 男 (OTOKO) ===
+  P 255: text='OTOKO' | images=[]
+  P 256: text='OK' | images=[]
+  P 257: text='OK CAN BE IMPROVED' | images=[]
+  P 258: text='CHECK' | images=['rId64']
+
+=== KANJI: 竹 (TAKÉ) ===
+  P 259: text='TAKÉ' | images=[]
+  P 262: text='' | images=['rId65']
+
+=== KANJI: 中 (NAKA) ===
+  P 263: text='NAKA' | images=[]
+  P 264: text='BANDERA' | images=[]
+  P 265: text='CARICATUREA' | images=[]
+  P 266: text='' | images=['rId66']
+  P 267: text='' | images=['rId67']
+
+=== KANJI: 虫 (MUSHI.) ===
+  P 268: text='MUSHI.' | images=[]
+  P 269: text='OKKAY' | images=[]
+  P 270: text='OKKAY' | images=[]
+  P 271: text='' | images=['rId68']
+
+=== KANJI: 町 (MACHI) ===
+  P 272: text='MACHI' | images=[]
+  P 273: text='KANJI' | images=[]
+  P 274: text='CIUDAD' | images=[]
+  P 275: text='' | images=['rId69']
+
+=== KANJI: 天 (TEN) ===
+  P 276: text='TEN' | images=[]
+  P 278: text='SKY TREE' | images=[]
+  P 279: text='FIX' | images=[]
+  P 281: text='' | images=['rId70']
+
+=== KANJI: 田 (TA) ===
+  P 282: text='TA' | images=[]
+  P 283: text='MAP' | images=[]
+  P 284: text='FIX' | images=[]
+  P 285: text='TAMBO' | images=['rId71']
+
+=== KANJI: 土 (TSUCHI) ===
+  P 286: text='TSUCHI' | images=[]
+  P 287: text='GALLETA' | images=[]
+  P 288: text='FIX' | images=[]
+  P 289: text='' | images=['rId72']
+
+=== KANJI: 二 (2) ===
+  P 291: text='2' | images=[]
+  P 292: text='LITERA' | images=[]
+  P 293: text='FINGER' | images=[]
+  P 294: text='' | images=['rId73']
+
+=== KANJI: 日 (HI) ===
+  P 295: text='HI' | images=[]
+  P 296: text='NIÑA' | images=[]
+  P 297: text='SOL' | images=[]
+  P 298: text='' | images=['rId74']
+
+=== KANJI: 入 (HAIRU) ===
+  P 299: text='HAIRU' | images=[]
+  P 300: text='ARROZ' | images=[]
+  P 301: text='FIX' | images=[]
+  P 302: text='' | images=['rId75']
+
+=== KANJI: 年 (NEN TOSHI) ===
+  P 304: text='NEN TOSHI' | images=[]
+  P 305: text='CABALLO' | images=[]
+  P 306: text='FIX' | images=[]
+  P 307: text='' | images=['rId76']
+
+=== KANJI: 白 (SHIROI) ===
+  P 309: text='SHIROI' | images=[]
+  P 310: text='????' | images=[]
+  P 311: text='FIX' | images=[]
+  P 312: text='' | images=['rId77']
+
+=== KANJI: 八 (8) ===
+  P 313: text='8' | images=[]
+  P 315: text='FIX' | images=[]
+  P 316: text='' | images=['rId78']
+
+=== KANJI: 百 (HYAKU) ===
+  P 317: text='HYAKU' | images=[]
+  P 318: text='500' | images=[]
+  P 319: text='100 COIN' | images=[]
+  P 320: text='' | images=['rId79']
+  P 321: text='KANJI ^(HE puesto acentos donde sonaba mal)' | images=[]
+  P 322: text='DIBUJO ACTUAL' | images=[]
+  P 324: text='CAMBIAR A DIBUJO:' | images=[]
+  P 325: text='DIBUJO' | images=[]
+
+=== KANJI: 文 (BUN) ===
+  P 326: text='BUN' | images=[]
+  P 327: text='Thankyou???' | images=[]
+  P 328: text='TEXTO' | images=[]
+  P 329: text='' | images=['rId80']
+
+=== KANJI: 木 (KI) ===
+  P 331: text='KI' | images=[]
+  P 332: text='ARBOL' | images=[]
+  P 333: text='OK' | images=[]
+  P 334: text='OK' | images=[]
+
+=== KANJI: 本 (HON) ===
+  P 335: text='HON' | images=[]
+  P 336: text='LIBRO' | images=[]
+  P 337: text='CHANGE TO prettier book' | images=[]
+  P 338: text='' | images=['rId81']
+
+=== KANJI: 名 (Namae) ===
+  P 339: text='Namae' | images=[]
+  P 340: text='Add' | images=[]
+  P 341: text='名前' | images=[]
+  P 342: text='MEISHI' | images=[]
+  P 343: text='CHECK' | images=[]
+  P 344: text='' | images=['rId82']
+
+=== KANJI: 目 (ME) ===
+  P 345: text='ME' | images=[]
+  P 346: text='Niña mareada' | images=[]
+  P 347: text='change' | images=[]
+  P 348: text='' | images=['rId83']
+
+=== KANJI: 立 (TATSU) ===
+  P 349: text='TATSU' | images=[]
+  P 350: text='pino' | images=[]
+  P 351: text='change' | images=[]
+  P 352: text='' | images=['rId84']
+
+=== KANJI: 力 (CHIKARA) ===
+  P 353: text='CHIKARA' | images=[]
+  P 354: text='oculista' | images=[]
+  P 355: text='CHANGE' | images=[]
+  P 356: text='' | images=['rId16']
+
+=== KANJI: 林 (HAYASHI) ===
+  P 357: text='HAYASHI' | images=[]
+  P 358: text='NO HAY' | images=[]
+  P 359: text='METER' | images=[]
+  P 361: text='2 DE ESTOS' | images=[]
+  P 362: text='' | images=['rId85']
+
+=== KANJI: 六 (6 ROKU) ===
+  P 363: text='6 ROKU' | images=[]
+  P 366: text='' | images=['rId86']
+  P 370: text='' | images=['rId39']
+
