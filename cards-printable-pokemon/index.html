@@ -377,6 +377,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             border-radius: 4px;
             border: 1px solid #334155;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         /* Sheet Labels for preview */
@@ -451,63 +454,82 @@
             gap: 1.5mm;
         }
         
-        /* Font scaling and adjustments for Micro size */
+        /* Font scaling and crisp rendering adjustments for Micro size */
         .size-micro .card-face {
             padding: 5px;
         }
         .size-micro .chinese-title-print {
-            font-size: 1.4rem !important;
+            font-size: 1.45rem !important;
+            font-weight: 900 !important;
         }
         .size-micro .pinyin-header-print {
             font-size: 8px !important;
+            font-weight: 700 !important;
         }
         .size-micro .meaning-text {
-            font-size: 8px !important;
+            font-size: 8.5px !important;
+            font-weight: 700 !important;
             margin-top: 2px !important;
         }
         .size-micro .card-header-print {
             padding: 3px 5px !important;
-            font-size: 6.5px !important;
+            font-size: 7px !important;
+            font-weight: 700 !important;
             margin: -5px -5px 5px -5px !important;
             width: calc(100% + 10px) !important;
         }
         .size-micro .pokemon-num-print {
-            font-size: 6px !important;
-            padding: 0.5px 2px !important;
+            font-size: 6.5px !important;
+            padding: 0.5px 3px !important;
+            font-weight: 800 !important;
         }
         .size-micro .type-badge-print {
-            font-size: 5.5px !important;
+            font-size: 6px !important;
             padding: 0.5px 3px !important;
+            font-weight: 800 !important;
         }
         .size-micro .illustration-box {
-            height: 36px !important;
-            margin-bottom: 2px !important;
+            flex: 1;
+            min-height: 0;
+            margin-bottom: 1px !important;
         }
         .size-micro .illustration-box-single {
-            height: 24px !important;
-            margin-bottom: 2px !important;
+            flex: 1;
+            min-height: 0;
+            margin-bottom: 1px !important;
         }
         .size-micro .names-section-single {
             gap: 1px !important;
         }
         .size-micro .chinese-title-print-single {
-            font-size: 1.1rem !important;
+            font-size: 1.15rem !important;
+            font-weight: 900 !important;
         }
         .size-micro .pinyin-header-print-single {
-            font-size: 7px !important;
+            font-size: 7.5px !important;
+            font-weight: 700 !important;
         }
         .size-micro .english-name-print-single {
-            font-size: 8px !important;
+            font-size: 8.5px !important;
+            font-weight: 700 !important;
         }
         .size-micro .char-row-print {
-            font-size: 5.5px !important;
+            font-size: 6px !important;
             gap: 2px !important;
+            font-weight: 600 !important;
         }
         .size-micro .char-hanzi-print {
-            font-size: 7px !important;
+            font-size: 7.5px !important;
+            font-weight: 800 !important;
         }
         .size-micro .char-pinyin-print {
             width: 32px !important;
+            font-weight: 700 !important;
+        }
+        .size-micro img {
+            image-rendering: auto !important;
+            image-rendering: smooth !important;
+            image-rendering: high-quality !important;
         }
 
         /* Duplex Alignment Calibrator transform rules */
@@ -605,7 +627,9 @@
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+            image-rendering: auto !important;
+            image-rendering: smooth !important;
+            image-rendering: high-quality !important;
         }
 
         .names-section-single {
@@ -711,22 +735,46 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex: 1;
+            flex: 1 1 auto;
             min-height: 0;
+            height: 100%;
             width: 100%;
             padding: 4px 0;
+            overflow: hidden;
         }
 
-        .illustration-img {
+        .illustration-box-single {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+            min-height: 0;
             height: 100%;
-            max-height: 48px;
-            max-width: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+            width: 100%;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            overflow: hidden;
         }
 
-        .size-standard .illustration-img {
-            max-height: 58px;
+        .illustration-img,
+        .illustration-img-single {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100% !important;
+            object-fit: contain;
+            image-rendering: auto !important;
+            image-rendering: smooth !important;
+            image-rendering: high-quality !important;
+        }
+
+        .no-shadows .illustration-img,
+        .no-shadows .illustration-img-single,
+        .size-micro .illustration-img,
+        .size-micro .illustration-img-single,
+        body.exporting-pdf .illustration-img,
+        body.exporting-pdf .illustration-img-single {
+            filter: none !important;
         }
 
         .meaning-text { 
@@ -882,6 +930,15 @@
                         </select>
                     </div>
 
+                    <div class="slider-row">
+                        <label>Calidad PDF (Resolución / DPI)</label>
+                        <select v-model="pdfQuality">
+                            <option value="ultra">Ultra HD (~400 DPI / Scale 4x) - Máxima Nitidez Micro</option>
+                            <option value="high">Alta Def (~300 DPI / Scale 3x)</option>
+                            <option value="standard">Estándar (Scale 2x)</option>
+                        </select>
+                    </div>
+
                     <div class="slider-row" v-if="!layoutMode.includes('folding') && !layoutMode.includes('single')">
                         <label>Orden de Páginas</label>
                         <select v-model="pageOrder">
@@ -936,6 +993,16 @@
                             <input type="checkbox" :value="gen" v-model="selectedGens" @change="handleGenFilterChange"> {{ gen }}
                         </label>
                     </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="section-title">Opciones de Ilustración</div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="showIllustrations"> Mostrar Ilustraciones
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" v-model="cleanArtwork"> Ilustraciones Limpias HD (Sin Sombras)
+                    </label>
                 </div>
 
                 <div class="panel-section">
@@ -1058,7 +1125,7 @@
                                 </div>
 
                                 <!-- Horizontal/vertical fold line indicators in folding layouts -->
-                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
+                                <div v-if="layoutMode.includes('folding')" :class="[layoutMode.includes('8_landscape') ? 'fold-line-horizontal' : 'fold-line']"></div>
                             </div>
                         </div>
                     </template>
@@ -1080,6 +1147,7 @@
                 const cards = ref(pokemonData || []);
                 const layoutMode = ref('3_portrait_duplex');
                 const pageOrder = ref('interleaved');
+                const pdfQuality = ref('ultra');
                 const selectedGens = ref(['Gén 1']);
                 const selectedCards = ref([]);
                 const isGeneratingPDF = ref(false);
@@ -1117,6 +1185,7 @@
 
                 // Option filters
                 const showIllustrations = ref(true);
+                const cleanArtwork = ref(true);
                 const showBreakdown = ref(true);
 
                 // Sync offsets to CSS variables
@@ -1146,6 +1215,10 @@
                         classes.push('size-grid2x4');
                     } else {
                         classes.push('size-standard');
+                    }
+
+                    if (cleanArtwork.value) {
+                        classes.push('no-shadows');
                     }
                     return classes.join(' ');
                 });
@@ -1297,15 +1370,22 @@
                     
                     const pages = document.querySelectorAll('.print-container .print-page');
                     const isLandscape = layoutMode.value.includes('landscape');
+                    const isMicro = layoutMode.value.includes('18_landscape');
+
+                    // Determine resolution scale: default to 4x (Ultra ~400 DPI) for micro cards
+                    const scaleMap = { standard: 2, high: 3, ultra: 4 };
+                    const pdfScale = scaleMap[pdfQuality.value] || (isMicro ? 4 : 3);
                     
                     const opt = {
                         margin: 0,
                         filename: `pokemon-cards-${layoutMode.value}.pdf`,
-                        image: { type: 'jpeg', quality: 0.98 },
+                        image: { type: 'jpeg', quality: 1.0 },
                         html2canvas: { 
-                            scale: 2, 
+                            scale: pdfScale, 
                             useCORS: true,
-                            logging: true,
+                            allowTaint: true,
+                            letterRendering: true,
+                            logging: false,
                             onclone: function(clonedDoc) {
                                 if (window.location.protocol === 'file:') {
                                     const images = clonedDoc.querySelectorAll('img');
@@ -1319,7 +1399,8 @@
                         jsPDF: { 
                             unit: 'mm', 
                             format: 'a4', 
-                            orientation: isLandscape ? 'landscape' : 'portrait' 
+                            orientation: isLandscape ? 'landscape' : 'portrait',
+                            compress: true
                         }
                     };
                     
@@ -1431,6 +1512,7 @@
                     backOffsetX,
                     backOffsetY,
                     showIllustrations,
+                    cleanArtwork,
                     showBreakdown,
                     layoutClass,
                     compiledPages,
@@ -1440,7 +1522,8 @@
                     triggerPrint,
                     saveAsPDF,
                     isGeneratingPDF,
-                    pageOrder
+                    pageOrder,
+                    pdfQuality
                 };
             }
         }).mount('#app');
